@@ -42,8 +42,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, persisted: true }, { status: 201 })
   } catch (err) {
     console.error('[contact] D1 insert failed:', err)
-    // TEMP DEBUG: surface the real cause to the client to diagnose env/token issues
-    const detail = err instanceof Error ? err.message : String(err)
-    return NextResponse.json({ error: `DB error: ${detail}` }, { status: 500 })
+    return NextResponse.json({ error: 'Could not save submission. Please try again.' }, { status: 500 })
   }
 }
