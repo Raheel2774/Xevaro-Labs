@@ -1,0 +1,14 @@
+# Optional helper for managing the Cloudflare D1 database from the CLI.
+# Install: npm i -D wrangler  ·  Login: npx wrangler login
+#
+# Create the DB:   npx wrangler d1 create xevaro_db
+#   → copy the printed database_id into database_id below AND into CF_D1_DATABASE_ID
+# Apply schema:    npx wrangler d1 execute xevaro_db --remote --file=./db/schema.sql
+# Read entries:    npx wrangler d1 execute xevaro_db --remote --command="SELECT * FROM submissions ORDER BY created_at DESC LIMIT 20"
+
+name = "xevaro-labs"
+
+[[d1_databases]]
+binding       = "DB"
+database_name = "xevaro_db"
+database_id   = "PASTE_DATABASE_ID_HERE"
