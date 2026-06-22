@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next
+/out
+/build
+
+# production
+/dist
+
+# env / secrets
+.env
+.env*.local
+.env.production
+
+# source frame archives (served copies live in /public)
+/Frames Zip
+/Robot
+
+# misc
+.DS_Store
+*.log
+/tmp
+
+# claude code local
+/.claude
