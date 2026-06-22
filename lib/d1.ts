@@ -10,9 +10,9 @@ interface D1Result<T = Record<string, unknown>> {
 }
 
 function config() {
-  const accountId  = process.env.CF_ACCOUNT_ID
-  const databaseId = process.env.CF_D1_DATABASE_ID
-  const token      = process.env.CF_D1_API_TOKEN
+  const accountId  = process.env.CF_ACCOUNT_ID?.trim()
+  const databaseId = process.env.CF_D1_DATABASE_ID?.trim()
+  const token      = process.env.CF_D1_API_TOKEN?.trim()
   if (!accountId || !databaseId || !token) {
     throw new Error('Cloudflare D1 env vars missing (CF_ACCOUNT_ID, CF_D1_DATABASE_ID, CF_D1_API_TOKEN)')
   }
