@@ -25,3 +25,10 @@
 
 # claude code local
 /.claude
+
+# outbound engine: scraped leads, generated demos, send logs, SMTP creds
+/outbound/data
+/outbound/send/inboxes.json
+
+# social engine: content plan, posts, harvested engagers, leads, queues
+/social/data

@@ -1,0 +1,18 @@
+[
+  {
+    "host": "smtp.your-provider.com",
+    "port": 587,
+    "user": "ben@xevaro-outreach.com",
+    "pass": "APP_PASSWORD_OR_SMTP_KEY",
+    "fromName": "Ben at Xevaro",
+    "dailyCap": 25
+  },
+  {
+    "host": "smtp.your-provider.com",
+    "port": 587,
+    "user": "ben@getxevaro.com",
+    "pass": "APP_PASSWORD_OR_SMTP_KEY",
+    "fromName": "Ben at Xevaro",
+    "dailyCap": 25
+  }
+]

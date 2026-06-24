@@ -1,0 +1,14 @@
+name = "xevaro-demos"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Create the namespace once, then paste its id here:
+#   wrangler kv namespace create DEMOS
+[[kv_namespaces]]
+binding = "DEMOS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Optional: serve demos from your own domain (demos.xevaro.app).
+# [[routes]]
+# pattern = "demos.xevaro.app/*"
+# custom_domain = true
