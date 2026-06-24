@@ -18,8 +18,10 @@ export default function ContactPage() {
       name:    fd.get('name'),
       company: fd.get('company'),
       email:   fd.get('email'),
+      phone:   fd.get('phone'),
       system:  fd.get('system'),
       message: fd.get('message'),
+      source:  'contact',
     }
     try {
       const res = await fetch('/api/contact', {
@@ -85,7 +87,10 @@ export default function ContactPage() {
                     <Field label="Name" name="name" placeholder="Your name" />
                     <Field label="Company" name="company" placeholder="Organization" />
                   </div>
-                  <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
+                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
+                    <Field label="Phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
+                  </div>
                   <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">System of interest</label>
                     <select name="system" className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#00D6FF]/50">

@@ -11,8 +11,15 @@ export const NAV = [
   { label: 'Services',     href: '/services' },
   { label: 'Products',     href: '/products' },
   { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Pricing',      href: '/pricing' },
   { label: 'About',        href: '/about' },
   { label: 'Contact',      href: '/contact' },
+]
+
+export const LEGAL = [
+  { label: 'Terms of Service', href: '/terms' },
+  { label: 'Privacy Policy',   href: '/privacy' },
+  { label: 'Refund Policy',    href: '/refund' },
 ]
 
 /**

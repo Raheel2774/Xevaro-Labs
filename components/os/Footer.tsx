@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { NAV, CONTACT } from '@/lib/os'
+import { NAV, LEGAL, CONTACT } from '@/lib/os'
 
 export default function Footer() {
   return (
@@ -44,9 +44,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/[0.06] pt-6 text-xs text-white/30 md:flex-row">
-          <span>© 2026 Xevaro Labs · All systems operational</span>
-          <span className="font-mono tracking-widest">XEVARO OS · v4.0</span>
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/[0.06] pt-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            {LEGAL.map(({ label, href }) => (
+              <Link key={href} href={href} className="text-xs text-white/40 transition-colors hover:text-[#00D6FF]">{label}</Link>
+            ))}
+          </div>
+          <div className="flex flex-col gap-1 text-xs text-white/30 md:flex-row md:items-center md:gap-4">
+            <span>© 2026 Xevaro Labs · All systems operational</span>
+            <span className="font-mono tracking-widest">XEVARO OS · v4.0</span>
+          </div>
         </div>
       </div>
     </footer>

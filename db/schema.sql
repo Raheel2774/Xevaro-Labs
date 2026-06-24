@@ -6,8 +6,10 @@ CREATE TABLE IF NOT EXISTS submissions (
   name       TEXT,
   company    TEXT,
   email      TEXT NOT NULL,
+  phone      TEXT,
   system     TEXT,
   message    TEXT,
+  source     TEXT,
   ip         TEXT,
   user_agent TEXT,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
