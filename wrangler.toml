@@ -11,4 +11,4 @@ name = "xevaro-labs"
 [[d1_databases]]
 binding       = "DB"
 database_name = "xevaro_db"
-database_id   = "PASTE_DATABASE_ID_HERE"
+database_id   = "2ad373dc-def4-4633-9265-381b12de40f8"

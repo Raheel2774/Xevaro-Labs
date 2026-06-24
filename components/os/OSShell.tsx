@@ -7,7 +7,7 @@ import Footer from './Footer'
 import HUD from './HUD'
 
 // Standalone immersive experiences manage their own chrome / background.
-const STANDALONE = ['/system', '/deconstruct']
+const STANDALONE = ['/system', '/deconstruct', '/admin']
 
 export default function OSShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
