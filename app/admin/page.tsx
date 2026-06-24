@@ -11,8 +11,10 @@ interface Submission {
   name: string | null
   company: string | null
   email: string
+  phone: string | null
   system: string | null
   message: string | null
+  source: string | null
   created_at: string
 }
 
@@ -39,7 +41,7 @@ export default async function AdminPage() {
   if (isD1Configured()) {
     try {
       const r = await d1Query<Submission>(
-        `SELECT id, name, company, email, system, message, created_at
+        `SELECT id, name, company, email, phone, system, message, source, created_at
          FROM submissions ORDER BY id DESC LIMIT 500`,
       )
       rows = r.results
@@ -86,15 +88,17 @@ export default async function AdminPage() {
                 <th className="px-4 py-3 font-medium">#</th>
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Email</th>
+                <th className="px-4 py-3 font-medium">Phone</th>
                 <th className="px-4 py-3 font-medium">Company</th>
                 <th className="px-4 py-3 font-medium">System</th>
+                <th className="px-4 py-3 font-medium">Type</th>
                 <th className="px-4 py-3 font-medium">Message</th>
                 <th className="px-4 py-3 font-medium whitespace-nowrap">Received</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/[0.05]">
               {rows.length === 0 && !error && (
-                <tr><td colSpan={7} className="px-4 py-12 text-center text-white/40">No submissions yet.</td></tr>
+                <tr><td colSpan={9} className="px-4 py-12 text-center text-white/40">No submissions yet.</td></tr>
               )}
               {rows.map((r) => (
                 <tr key={r.id} className="align-top transition-colors hover:bg-white/[0.02]">
@@ -103,8 +107,14 @@ export default async function AdminPage() {
                   <td className="px-4 py-3">
                     <a href={`mailto:${r.email}`} className="text-[#00D6FF] hover:underline">{r.email}</a>
                   </td>
+                  <td className="px-4 py-3 whitespace-nowrap">
+                    {r.phone ? <a href={`tel:${r.phone}`} className="text-[#00D6FF] hover:underline">{r.phone}</a> : <span className="text-white/40">—</span>}
+                  </td>
                   <td className="px-4 py-3 text-white/60">{r.company || '—'}</td>
                   <td className="px-4 py-3 text-white/60">{r.system || '—'}</td>
+                  <td className="px-4 py-3">
+                    <span className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${r.source === 'pricing' ? 'bg-[#00D6FF]/15 text-[#00D6FF]' : 'bg-white/10 text-white/50'}`}>{r.source || 'contact'}</span>
+                  </td>
                   <td className="px-4 py-3 max-w-xs text-white/55">{r.message || '—'}</td>
                   <td className="px-4 py-3 whitespace-nowrap font-mono text-xs text-white/40">{r.created_at}</td>
                 </tr>

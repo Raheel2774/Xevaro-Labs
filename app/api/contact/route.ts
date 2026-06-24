@@ -16,8 +16,10 @@ export async function POST(req: NextRequest) {
   const name    = (body.name    ?? '').toString().trim().slice(0, 200)
   const company = (body.company ?? '').toString().trim().slice(0, 200)
   const email   = (body.email   ?? '').toString().trim().slice(0, 320)
+  const phone   = (body.phone   ?? '').toString().trim().slice(0, 40)
   const system  = (body.system  ?? '').toString().trim().slice(0, 200)
   const message = (body.message ?? '').toString().trim().slice(0, 5000)
+  const source  = (body.source  ?? 'contact').toString().trim().slice(0, 40)
 
   if (!email || !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: 'A valid email is required.' }, { status: 422 })
@@ -34,9 +36,9 @@ export async function POST(req: NextRequest) {
     const ua = req.headers.get('user-agent') ?? null
 
     await d1Query(
-      `INSERT INTO submissions (name, company, email, system, message, ip, user_agent)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [name || null, company || null, email, system || null, message || null, ip, ua],
+      `INSERT INTO submissions (name, company, email, phone, system, message, source, ip, user_agent)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [name || null, company || null, email, phone || null, system || null, message || null, source || 'contact', ip, ua],
     )
 
     return NextResponse.json({ ok: true, persisted: true }, { status: 201 })
