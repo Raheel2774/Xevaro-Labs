@@ -2,7 +2,7 @@
 
 export const CONTACT = {
   email: 'Info@xevarolabs.com',
-  phone: '+192924252623',
+  phone: '+12519106505',
   site:  'xevarolabs.com',
 }
 
