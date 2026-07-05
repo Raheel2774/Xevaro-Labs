@@ -27,8 +27,10 @@ export const SITE = {
   ogWidth: 1500,
   ogHeight: 844,
   // Real public-profile URLs are a strong entity/GEO signal for AI engines.
-  // Paste LinkedIn / X / Instagram / Clutch / G2 URLs here once they exist.
-  sameAs: [] as string[],
+  // Add more (X, Instagram, Crunchbase, Clutch, G2) here as they go live.
+  sameAs: [
+    'https://www.linkedin.com/company/xevaro-labs/',
+  ] as string[],
 } as const
 
 // ─── Per-page metadata helper ────────────────────────────────────────────────
