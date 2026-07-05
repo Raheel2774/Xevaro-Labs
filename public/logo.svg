@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Xevaro Labs">
+  <defs>
+    <linearGradient id="xg" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0050FF"/>
+      <stop offset="1" stop-color="#00D6FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="112" fill="url(#xg)"/>
+  <path d="M188 188 L324 324 M324 188 L188 324" stroke="#050505" stroke-width="44" stroke-linecap="round"/>
+</svg>

@@ -12,6 +12,7 @@ export const NAV = [
   { label: 'Products',     href: '/products' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'Pricing',      href: '/pricing' },
+  { label: 'FAQ',          href: '/faq' },
   { label: 'About',        href: '/about' },
   { label: 'Contact',      href: '/contact' },
 ]
@@ -31,6 +32,7 @@ export const ROBOT_STATES: Record<string, { start: number; end: number; state: s
   '/services':     { start: 40,  end: 90,  state: 'MODULES DEPLOYED',   sub: 'Automation systems executing' },
   '/products':     { start: 60,  end: 110, state: 'CATALOG ENGINE',     sub: 'Productized AI systems indexed' },
   '/case-studies': { start: 85,  end: 125, state: 'DATA INTELLIGENCE',  sub: 'Analyzing performance telemetry' },
+  '/faq':          { start: 70,  end: 115, state: 'KNOWLEDGE BASE',     sub: 'Resolving common operator queries' },
   '/about':        { start: 100, end: 150, state: 'EVOLUTION',          sub: 'Intelligence narrative loading' },
   '/contact':      { start: 120, end: 150, state: 'CONTROL INTERFACE',  sub: 'Operator channel open' },
 }

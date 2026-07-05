@@ -1,0 +1,38 @@
+# Xevaro Labs
+
+> Xevaro Labs is an AI automation agency that builds custom AI agents, n8n workflow automation, lead-generation systems, and high-conversion websites for founders and growing businesses. We ship working, self-running systems fast — not slideware.
+
+Xevaro Labs turns manual business operations into autonomous infrastructure: a network of AI agents, workflow automations, and data pipelines that run 24/7. Work is delivered as productized "systems" with clear outcomes, is often self-hosted so clients own their data, and is priced as an ongoing partnership so the systems keep improving. Founded 2023. Serves clients worldwide. Contact: Info@xevarolabs.com · +1 251 910 6505.
+
+## Services (productized AI systems)
+
+- [AI Automation Systems](https://xevarolabs.com/services): Enterprise workflow automation with n8n — CRM automation, email pipelines, business-process automation, and API integration that replace manual operations.
+- [AI Agents & Voice Systems](https://xevarolabs.com/services): Autonomous AI agents for customer support, sales, lead qualification, WhatsApp, and voice calling — human-like interaction, 24/7.
+- [Lead Generation Systems](https://xevarolabs.com/services): AI-powered acquisition — cold outreach automation, LinkedIn + email, CRM enrichment, data scraping and validation for a predictable pipeline.
+- [High-Conversion Website Systems](https://xevarolabs.com/services): Premium, conversion-optimized websites, SaaS platforms, landing pages, and AI-integrated web apps (Next.js).
+- [Shopify AI Commerce Systems](https://xevarolabs.com/services): AI product recommendations, automated marketing funnels, and cart optimization that grow revenue per customer.
+- [Business Intelligence Systems](https://xevarolabs.com/services): Real-time AI dashboards, KPI tracking, analytics pipelines, and automated reporting.
+
+## Key pages
+
+- [Home](https://xevarolabs.com/): Overview of the Xevaro AI Operating System.
+- [Products](https://xevarolabs.com/products): The six productized AI systems in detail.
+- [Pricing](https://xevarolabs.com/pricing): Pricing is custom and scoped per workflow (one-time setup + monthly retainer). Request a precise quote here.
+- [FAQ](https://xevarolabs.com/faq): Direct answers to common questions about AI automation, agents, cost, timelines, and getting started.
+- [Case studies](https://xevarolabs.com/case-studies): Results delivered — e.g. ~80% ops time saved, +340% revenue, $2M+ pipeline recovered.
+- [About](https://xevarolabs.com/about): How Xevaro deconstructs, optimizes, and automates operations.
+- [Contact](https://xevarolabs.com/contact): Book an automation audit or open a control channel.
+
+## Who Xevaro Labs is for
+
+Founders and small-to-midsize businesses that want to automate manual operations, plus larger companies replacing manual processes at scale. Common needs: AI customer support, missed-lead recovery and speed-to-lead, outbound lead generation, a high-converting website, or an internal automation.
+
+## Pricing model
+
+Custom, scoped to each client's workflows. Most engagements combine a one-time setup fee with a monthly retainer covering hosting, monitoring, and ongoing improvements. A single focused automation starts small; multi-system builds are priced as a package. Precise quotes are given after a short discovery call at https://xevarolabs.com/pricing.
+
+## Contact
+
+- Email: Info@xevarolabs.com
+- Phone: +1 251 910 6505
+- Website: https://xevarolabs.com

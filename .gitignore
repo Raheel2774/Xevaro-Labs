@@ -37,3 +37,6 @@
 /outbound/
 /CO_cleaning_no_website_leads.xlsx
 /CO_plumbers_no_website_leads.csv
+
+# internal marketing strategy (Reddit/GEO playbooks) — keep out of public repo
+/marketing/
