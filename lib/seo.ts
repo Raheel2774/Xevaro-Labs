@@ -173,14 +173,64 @@ export function servicesItemListSchema() {
   }
 }
 
-export function faqSchema() {
+export function faqSchema(faqs: { q: string; a: string }[] = FAQS) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: FAQS.map((f) => ({
+    mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+}
+
+// Article + blog-listing schema. Structural param types (not an import from
+// lib/blog) to avoid a module cycle.
+type ArticleInput = {
+  slug: string
+  title: string
+  description: string
+  date: string
+  updated?: string
+  author: string
+  keywords: string[]
+}
+
+export function articleSchema(post: ArticleInput) {
+  const url = `${SITE.url}/blog/${post.slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.updated ?? post.date,
+    author: { '@type': 'Organization', name: post.author, url: SITE.url },
+    publisher: { '@id': ORG_ID },
+    mainEntityOfPage: url,
+    image: SITE.ogImage,
+    inLanguage: 'en',
+    keywords: post.keywords.join(', '),
+    url,
+  }
+}
+
+export function blogListingSchema(posts: ArticleInput[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${SITE.url}/blog#blog`,
+    name: 'Xevaro Labs Blog',
+    url: `${SITE.url}/blog`,
+    publisher: { '@id': ORG_ID },
+    blogPost: posts.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      description: p.description,
+      url: `${SITE.url}/blog/${p.slug}`,
+      datePublished: p.date,
     })),
   }
 }
