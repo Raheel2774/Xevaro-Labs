@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Reveal, Eyebrow, GlassCard, MagneticButton, H2, useGlow } from '@/components/os/ui'
 import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
+import { POSTS } from '@/lib/blog'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -123,6 +124,31 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── LATEST INSIGHTS ── */}
+      <section className="relative px-6 py-28 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal><Eyebrow>From the blog</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-4xl md:text-6xl">Automation, explained.</H2></Reveal>
+          <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {[...POSTS].sort((a, b) => +new Date(b.date) - +new Date(a.date)).slice(0, 3).map((p, i) => (
+              <Reveal key={p.slug} delay={(i % 3) * 0.08}>
+                <Link href={`/blog/${p.slug}`} onMouseMove={glow}>
+                  <GlassCard glow className="flex h-full flex-col p-7">
+                    <span className="font-mono text-xs tracking-widest text-[#00D6FF]">{p.category}</span>
+                    <h3 className="mt-4 font-display text-lg font-semibold text-white/90 transition-transform duration-300 group-hover:translate-x-1">{p.title}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">{p.description}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm text-white/40 transition-colors group-hover:text-[#00D6FF]">Read article <span className="transition-transform group-hover:translate-x-1">→</span></span>
+                  </GlassCard>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.1}>
+            <div className="mt-10 flex justify-center"><MagneticButton href="/blog" variant="ghost">View all articles</MagneticButton></div>
+          </Reveal>
         </div>
       </section>
 
