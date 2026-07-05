@@ -23,6 +23,13 @@ Xevaro Labs turns manual business operations into autonomous infrastructure: a n
 - [About](https://xevarolabs.com/about): How Xevaro deconstructs, optimizes, and automates operations.
 - [Contact](https://xevarolabs.com/contact): Book an automation audit or open a control channel.
 
+## Blog — answer-first guides
+
+- [How to Automate Customer Support with AI (2026 Guide)](https://xevarolabs.com/blog/how-to-automate-customer-support-with-ai): What to automate first, the tools involved (AI agents + n8n), a step-by-step approach, and keeping a human in the loop.
+- [n8n vs Zapier vs Make: Which Automation Tool Is Right for You?](https://xevarolabs.com/blog/n8n-vs-zapier-vs-make): Honest comparison on cost, flexibility, AI, and data ownership — and which to choose for your situation.
+- [What Does an AI Automation Agency Actually Do?](https://xevarolabs.com/blog/what-does-an-ai-automation-agency-do): The systems an AI automation agency builds, how they price, and when to hire one vs. do it yourself.
+- [Blog index](https://xevarolabs.com/blog): All Xevaro Labs guides on AI automation, agents, and workflow tools.
+
 ## Who Xevaro Labs is for
 
 Founders and small-to-midsize businesses that want to automate manual operations, plus larger companies replacing manual processes at scale. Common needs: AI customer support, missed-lead recovery and speed-to-lead, outbound lead generation, a high-converting website, or an internal automation.
