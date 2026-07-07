@@ -30,6 +30,9 @@ export const SITE = {
   // Add more (X, Instagram, Crunchbase, Clutch, G2) here as they go live.
   sameAs: [
     'https://www.linkedin.com/company/xevaro-labs/',
+    'https://clutch.co/profile/xevarolabs',
+    'https://www.crunchbase.com/organization/xevaro-labs',
+    'https://www.facebook.com/people/Xevaro-Labs/61563330963890/',
   ] as string[],
 } as const
 
