@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Reveal, Eyebrow, GlassCard, H2 } from '@/components/os/ui'
 import { CONTACT } from '@/lib/os'
+import { trackLead } from '@/components/Analytics'
 
 export default function ContactPage() {
   const [sent, setSent]       = useState(false)
@@ -34,6 +35,7 @@ export default function ContactPage() {
         throw new Error(data.error ?? 'Transmission failed. Please try again.')
       }
       setSent(true)
+      trackLead() // fire Reddit/GA conversion on a real submission
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Transmission failed.')
     } finally {

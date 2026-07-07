@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import OSShell from '@/components/os/OSShell'
 import JsonLd from '@/components/JsonLd'
+import Analytics from '@/components/Analytics'
 import { SITE, organizationSchema, websiteSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -70,6 +71,7 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
       <body className="bg-[#050505] text-white antialiased overflow-x-hidden">
+        <Analytics />
         <OSShell>{children}</OSShell>
       </body>
     </html>
