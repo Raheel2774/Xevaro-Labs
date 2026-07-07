@@ -394,6 +394,157 @@ export const POSTS: BlogPost[] = [
       { q: 'Is AI automation worth the cost for a small business?', a: 'Usually yes, if it targets a real bottleneck — recovered leads, reclaimed staff hours, and faster response often return several times the monthly cost. The key is automating a high-value task first so the ROI is clear.' },
     ],
   },
+
+  {
+    slug: 'how-to-choose-an-ai-automation-agency',
+    title: 'How to Choose an AI Automation Agency: 7 Questions to Ask',
+    description:
+      'The seven questions that separate real AI automation agencies from resellers — so you hire someone who ships reliable systems and measurable ROI, not buzzwords.',
+    date: '2026-07-06',
+    author: 'Xevaro Labs',
+    readingMinutes: 6,
+    category: 'Guides',
+    keywords: ['how to choose an AI automation agency', 'hire AI automation agency', 'best AI automation agency', 'questions to ask automation agency'],
+    body: [
+      { type: 'p', text: 'To choose an AI automation agency, look past the AI buzzwords and judge five things: do they start from your business problem instead of a tool, do they ship working systems fast, do they own reliability and maintenance, can they show measurable outcomes, and do you keep ownership of your data and accounts. The seven questions below make those easy to check in a single call.' },
+
+      { type: 'h2', text: 'Why this matters' },
+      { type: 'p', text: 'The space is flooded with people who watched a few tutorials and resell the same template. The difference between a real operator and a reseller does not show up in their pitch — it shows up in the answers to these questions.' },
+
+      { type: 'h2', text: 'The 7 questions to ask' },
+      { type: 'h3', text: '1. "What business outcome will this drive?"' },
+      { type: 'p', text: 'Good agencies talk in outcomes — leads recovered, hours saved, revenue added. If the answer is all about tools and models, that is a red flag.' },
+      { type: 'h3', text: '2. "Can I see something working in the first week?"' },
+      { type: 'p', text: 'Real operators ship fast and in stages. Be wary of anyone who wants months of discovery and slide decks before anything runs.' },
+      { type: 'h3', text: '3. "Who owns the systems, data, and accounts?"' },
+      { type: 'p', text: 'It should be you. Ask whether the automations live on infrastructure you control. Watch for lock-in where leaving means losing everything.' },
+      { type: 'h3', text: '4. "What happens when it breaks?"' },
+      { type: 'p', text: 'Automations are not build-once-and-forget — they need monitoring and maintenance. Ask exactly how issues get caught and fixed, and what the ongoing support covers.' },
+      { type: 'h3', text: '5. "Can you show real results or references?"' },
+      { type: 'p', text: 'Look for concrete outcomes or clients who will vouch for them, not just confident promises.' },
+      { type: 'h3', text: '6. "Will this be self-hosted or on your platform?"' },
+      { type: 'p', text: 'Self-hosting generally means you own it and costs stay flat as you scale, instead of paying per task forever on someone else infrastructure.' },
+      { type: 'h3', text: '7. "What is the simplest version we can start with?"' },
+      { type: 'p', text: 'A good partner starts small, proves value on one high-impact system, then expands — rather than selling you everything at once.' },
+
+      { type: 'h2', text: 'Red flags to walk away from' },
+      { type: 'ul', items: [
+        'All buzzwords, no measurable outcomes.',
+        'A large upfront fee with nothing working for weeks.',
+        'Vague answers on maintenance and what happens when something breaks.',
+        'Lock-in — you cannot take your systems, data, or accounts with you.',
+        'They cannot explain what they will build in plain language.',
+      ] },
+
+      { type: 'h2', text: 'How Xevaro Labs answers these' },
+      { type: 'p', text: 'Xevaro Labs starts from your biggest bottleneck, ships working systems in stages, and self-hosts where it makes sense so you own your data and accounts. Pricing is an ongoing partnership so the systems stay monitored and keep improving. Ask us all seven questions on a [free automation audit](/contact) — or browse [common questions](/faq) first.' },
+    ],
+    faqs: [
+      { q: 'What should I look for in an AI automation agency?', a: 'Look for outcome-focused thinking (leads, hours, revenue — not tools), fast delivery of working systems, clear ownership of your data and accounts, a real plan for maintenance, and evidence of past results. The way an agency answers "what happens when it breaks?" tells you a lot.' },
+      { q: 'How much should an AI automation agency cost?', a: 'Most price custom, commonly as a setup fee plus a monthly retainer that covers hosting, monitoring, and improvements. A single automation costs less than a multi-system build. Be cautious of large upfront fees with no quick win to prove value.' },
+      { q: 'How do I avoid hiring the wrong automation agency?', a: 'Ask to see something working in week one, confirm you keep ownership of your systems and data, and get specifics on maintenance. Avoid anyone who leads with buzzwords, cannot show outcomes, or cannot explain the build in plain language.' },
+    ],
+  },
+
+  {
+    slug: 'ai-automation-examples',
+    title: '15 AI Automation Examples That Save Businesses Hours Every Week',
+    description:
+      'Concrete AI automation examples across sales, support, operations, and marketing — real, high-ROI automations grouped so you can spot your quickest win.',
+    date: '2026-07-06',
+    author: 'Xevaro Labs',
+    readingMinutes: 6,
+    category: 'Automation',
+    keywords: ['AI automation examples', 'automation use cases', 'business automation ideas', 'what to automate'],
+    body: [
+      { type: 'p', text: 'The most valuable AI automations handle the repetitive, rule-based work that quietly eats your week: instant lead follow-up, answering common customer questions, moving data between tools, and generating reports. Here are 15 concrete examples grouped by area, so you can spot the one that would save you the most time or money first.' },
+
+      { type: 'h2', text: 'Sales and leads' },
+      { type: 'ul', items: [
+        '**Missed-call text-back** — the instant a call is missed, an automatic text keeps the lead from calling a competitor.',
+        '**Instant lead follow-up** — new inquiries get a reply in seconds, day or night (speed-to-lead wins deals).',
+        '**Lead qualification agent** — an AI agent asks the right questions and routes hot leads to you.',
+        '**Auto-booking** — qualified leads get offered real calendar slots and book themselves.',
+        '**CRM enrichment** — new contacts are automatically researched and filled in.',
+      ] },
+
+      { type: 'h2', text: 'Customer support' },
+      { type: 'ul', items: [
+        '**AI FAQ agent** — answers common questions instantly from your own knowledge base.',
+        '**Ticket triage and routing** — classifies incoming messages and sends them to the right person with context.',
+        '**Order and status lookups** — pulls answers from your systems so customers get them in seconds.',
+        '**After-hours coverage** — instant first responses when your team is offline.',
+      ] },
+
+      { type: 'h2', text: 'Operations' },
+      { type: 'ul', items: [
+        '**Data entry between tools** — no more copying the same info from one app to another.',
+        '**Document and invoice processing** — extract, sort, and file automatically.',
+        '**Automated reporting** — dashboards and summaries that build themselves on a schedule.',
+      ] },
+
+      { type: 'h2', text: 'Marketing' },
+      { type: 'ul', items: [
+        '**Review requests** — automatically ask happy customers for a review at the right moment.',
+        '**Content repurposing** — turn one piece of content into posts for every channel.',
+        '**Abandoned-cart recovery** — nudge shoppers who did not check out (see [AI automation for e-commerce](/blog/ai-automation-for-ecommerce)).',
+      ] },
+
+      { type: 'h2', text: 'How to pick your first automation' },
+      { type: 'p', text: 'Start with the task that is high-volume, rule-based, and clearly costs you money or leads. For most businesses that is [lead follow-up or missed calls](/blog/how-to-stop-losing-leads-to-missed-calls). Automate one thing well, prove the return, then expand.' },
+
+      { type: 'h2', text: 'How Xevaro Labs helps' },
+      { type: 'p', text: 'Xevaro Labs builds these systems end to end and connects them to the tools you already use. Tell us your biggest time-sink on a [free automation audit](/contact) and we will point you to the highest-ROI place to start.' },
+    ],
+    faqs: [
+      { q: 'What are the best tasks to automate first?', a: 'The best first automations are high-volume, rule-based, and tied to money or leads — like instant lead follow-up, missed-call text-back, answering common support questions, and re-entering data between tools. Automate one well before adding more.' },
+      { q: 'What can AI automation actually do for a small business?', a: 'It can follow up with leads instantly, answer customer questions 24/7, qualify and book appointments, move data between your tools, process documents, and generate reports — reclaiming hours and recovering leads without adding staff.' },
+      { q: 'Do I need a lot of tools to start automating?', a: 'No. Most businesses start with one workflow tool, one AI model, their CRM, and a messaging channel, then automate a single high-value task first before expanding.' },
+    ],
+  },
+
+  {
+    slug: 'ai-automation-for-ecommerce',
+    title: 'AI Automation for E-commerce: Use Cases That Grow Revenue',
+    description:
+      'How online stores use AI automation to recover carts, answer shoppers instantly, personalize recommendations, and run 24/7 support — the highest-ROI e-commerce automations.',
+    date: '2026-07-06',
+    author: 'Xevaro Labs',
+    readingMinutes: 6,
+    category: 'E-commerce',
+    keywords: ['AI automation for ecommerce', 'ecommerce automation', 'Shopify automation', 'AI for online store'],
+    body: [
+      { type: 'p', text: 'E-commerce brands use AI automation to recover abandoned carts, answer shopper questions instantly, personalize product recommendations, request reviews automatically, and run 24/7 support — all of which lift revenue per customer without adding staff. Here are the use cases that pay for themselves fastest.' },
+
+      { type: 'h2', text: 'The highest-ROI e-commerce automations' },
+      { type: 'h3', text: 'Abandoned-cart recovery' },
+      { type: 'p', text: 'Automatically follow up with shoppers who added to cart but did not buy, across email and SMS, timed to catch them while intent is still warm. This is usually the single fastest automation to pay for itself.' },
+      { type: 'h3', text: 'Instant shopper support' },
+      { type: 'p', text: 'An AI agent answers sizing, shipping, and returns questions in seconds from your own policies and product data — removing the doubts that stop a purchase.' },
+      { type: 'h3', text: 'Personalized recommendations' },
+      { type: 'p', text: 'Suggest the right next product based on what a customer viewed or bought, raising average order value automatically.' },
+      { type: 'h3', text: 'Automatic review requests' },
+      { type: 'p', text: 'Ask each customer for a review at the perfect moment after delivery, building the social proof that drives future sales.' },
+      { type: 'h3', text: 'Order and shipping updates' },
+      { type: 'p', text: 'Keep customers informed automatically, cutting "where is my order?" tickets before they arrive.' },
+      { type: 'h3', text: 'Inventory and restock alerts' },
+      { type: 'p', text: 'Flag low stock and notify waiting customers the moment a product is back, so you never lose a ready buyer.' },
+
+      { type: 'h2', text: 'The tools behind it' },
+      { type: 'p', text: 'Most e-commerce automation combines your store (for example Shopify) with a workflow tool like n8n, an AI model, and a messaging channel. If you are choosing tools, see [best AI automation tools for small business](/blog/best-ai-automation-tools-for-small-business-2026) and [n8n vs Zapier vs Make](/blog/n8n-vs-zapier-vs-make).' },
+
+      { type: 'h2', text: 'Where to start' },
+      { type: 'p', text: 'For most stores, cart recovery or instant shopper support delivers the fastest return. Start with one, measure the lift, then layer in the rest.' },
+
+      { type: 'h2', text: 'How Xevaro Labs helps' },
+      { type: 'p', text: 'Xevaro Labs builds [Shopify AI commerce systems](/services) — cart recovery, AI support, recommendations, and review automation — wired into your store so revenue per customer climbs on autopilot. [Book an automation audit](/contact) to see what would move your numbers first.' },
+    ],
+    faqs: [
+      { q: 'How can AI automation increase e-commerce revenue?', a: 'It lifts revenue in several ways: recovering abandoned carts, answering shopper questions instantly so fewer sales stall, recommending relevant products to raise order value, and automatically collecting reviews that drive future sales — all without extra staff.' },
+      { q: 'What is the best e-commerce automation to start with?', a: 'For most stores, abandoned-cart recovery or instant AI shopper support pays for itself fastest. Start with one, measure the revenue lift, then add recommendations, review requests, and order updates.' },
+      { q: 'Does AI automation work with Shopify?', a: 'Yes. Shopify connects cleanly to workflow tools like n8n and to AI models, so you can automate cart recovery, support, recommendations, and reviews on top of your existing store.' },
+    ],
+  },
 ]
 
 export function getPost(slug: string): BlogPost | undefined {
