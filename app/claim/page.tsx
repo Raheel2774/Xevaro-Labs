@@ -112,13 +112,14 @@ export default function ClaimPage() {
                   <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/[0.1] bg-white/[0.02] p-4">
                     <input type="checkbox" name="smsConsent" value="yes" className="mt-1 h-4 w-4 shrink-0 accent-[#00D6FF]" />
                     <span className="text-[13px] leading-relaxed text-white/55">
-                      Text me my website demo. By checking this box, I agree to receive SMS messages from
-                      Xevaro Labs about my demo and related services at the number provided. Message
-                      frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for
-                      help. See our{' '}
+                      Text me my website demo. By checking this box, I agree to receive automated and
+                      conversational SMS text messages from Xevaro Labs at the mobile number provided —
+                      including my website demo link, replies to my questions, appointment scheduling, and
+                      related follow-ups. Message frequency varies. Message and data rates may apply. Reply
+                      STOP to unsubscribe or HELP for help. Consent is not a condition of any purchase. See
+                      our{' '}
                       <Link href="/privacy" className="text-[#00D6FF] hover:underline">Privacy Policy</Link> and{' '}
                       <Link href="/terms" className="text-[#00D6FF] hover:underline">Terms of Service</Link>.
-                      Consent is not a condition of any purchase.
                     </span>
                   </label>
 
