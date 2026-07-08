@@ -2,10 +2,14 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Rocket, ShieldCheck, Wrench, LineChart, Star, Quote } from 'lucide-react'
 import { Reveal, Eyebrow, GlassCard, MagneticButton, H2, useGlow } from '@/components/os/ui'
 import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
 import { FLAGSHIP_AGENTS, TOTAL_AGENTS } from '@/lib/agents'
+import { TESTIMONIALS, INDUSTRIES_SERVED, PROCESS, PROMISES } from '@/lib/social'
 import { POSTS } from '@/lib/blog'
+
+const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wrench, LineChart }
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -52,6 +56,27 @@ export default function Home() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-white/30">
           Scroll · System initializing
+        </div>
+      </section>
+
+      {/* ── TRUST BAR ── */}
+      <section className="relative border-y border-white/[0.06] bg-white/[0.015] py-8">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-white/35">
+            Deployed across 25+ industries worldwide
+          </p>
+          <div className="group relative mt-6 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+            <div className="flex shrink-0 animate-marquee items-center gap-10 pr-10">
+              {INDUSTRIES_SERVED.concat(INDUSTRIES_SERVED).map((name, i) => (
+                <span key={i} className="whitespace-nowrap font-display text-lg font-medium text-white/40">{name}</span>
+              ))}
+            </div>
+            <div className="flex shrink-0 animate-marquee items-center gap-10 pr-10" aria-hidden>
+              {INDUSTRIES_SERVED.concat(INDUSTRIES_SERVED).map((name, i) => (
+                <span key={i} className="whitespace-nowrap font-display text-lg font-medium text-white/40">{name}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -147,6 +172,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PROCESS ── */}
+      <section className="relative px-6 py-28 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal><Eyebrow>How we work</Eyebrow></Reveal>
+          <Reveal delay={0.05}>
+            <H2 className="text-4xl md:text-6xl">From audit to autonomous<br />in four steps.</H2>
+          </Reveal>
+          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {PROCESS.map((p, i) => (
+              <Reveal key={p.step} delay={(i % 4) * 0.08}>
+                <div className="relative h-full rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
+                  <span className="font-mono text-3xl font-bold text-[#00D6FF]/20">{p.step}</span>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-white/90">{p.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-white/55">{p.desc}</p>
+                  {i < PROCESS.length - 1 && (
+                    <span className="absolute right-5 top-8 hidden text-white/15 lg:block">→</span>
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CASE PREVIEW ── */}
       <section className="relative px-6 py-28 md:px-10">
         <div className="mx-auto max-w-7xl">
@@ -171,6 +220,68 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="relative px-6 py-28 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal><Eyebrow>What clients say</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-4xl md:text-6xl">Results people feel.</H2></Reveal>
+          <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {TESTIMONIALS.map((t, i) => (
+              <Reveal key={t.name} delay={(i % 3) * 0.08}>
+                <div onMouseMove={glow} className="h-full">
+                  <GlassCard glow className="flex h-full flex-col p-7">
+                    <Quote className="h-6 w-6 text-[#00D6FF]/50" />
+                    <p className="mt-4 flex-1 text-[15px] leading-relaxed text-white/70">“{t.quote}”</p>
+                    <div className="mt-6 flex items-center justify-between border-t border-white/[0.07] pt-5">
+                      <div>
+                        <div className="text-sm font-semibold text-white/85">{t.name}</div>
+                        <div className="text-xs text-white/45">{t.role} · {t.industry}</div>
+                      </div>
+                      <span className="rounded-full border border-[#00D6FF]/30 bg-[#00D6FF]/5 px-3 py-1 font-mono text-[10px] text-[#00D6FF]">{t.result}</span>
+                    </div>
+                  </GlassCard>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.1}>
+            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-white/45">
+              <span className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-[#00D6FF] text-[#00D6FF]" />
+                ))}
+              </span>
+              <span>Rated 4.9/5 across client engagements</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── GUARANTEE BAND ── */}
+      <section className="relative px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#0050FF]/[0.08] via-white/[0.02] to-transparent p-10 md:p-14">
+              <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#00D6FF]/12 blur-3xl" />
+              <div className="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                {PROMISES.map(({ icon, title, desc }) => {
+                  const Icon = PROMISE_ICONS[icon] ?? Rocket
+                  return (
+                    <div key={title}>
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#00D6FF]/20 bg-[#00D6FF]/5 text-[#00D6FF]">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <h4 className="mt-4 font-display text-lg font-semibold text-white/90">{title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-white/55">{desc}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

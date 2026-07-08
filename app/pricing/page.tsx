@@ -1,8 +1,53 @@
 'use client'
 
 import { useState } from 'react'
+import { Check, Rocket, ShieldCheck, Wrench, LineChart } from 'lucide-react'
 import { Reveal, Eyebrow, GlassCard, H2 } from '@/components/os/ui'
 import { PRODUCTS, CONTACT } from '@/lib/os'
+import { PROMISES } from '@/lib/social'
+
+const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wrench, LineChart }
+
+const PACKAGES = [
+  {
+    name: 'Launch',
+    tagline: 'One high-impact system, live fast.',
+    for: 'Best for a single flagship agent or automation.',
+    features: [
+      '1 AI agent or automation',
+      'Core integration (calendar / CRM / SMS)',
+      'Setup, testing & go-live',
+      'Email support',
+    ],
+    featured: false,
+  },
+  {
+    name: 'Growth',
+    tagline: 'A connected stack that compounds.',
+    for: 'Best for businesses automating multiple workflows.',
+    features: [
+      'Up to 3 agents + automations',
+      'Multi-tool integration layer',
+      'Lead capture + follow-up + support',
+      'Monthly optimization & reporting',
+      'Priority support',
+    ],
+    featured: true,
+  },
+  {
+    name: 'Command',
+    tagline: 'Your entire operation, autonomous.',
+    for: 'Best for scaling companies going all-in.',
+    features: [
+      'Unlimited agents + full automation suite',
+      'Custom website / web app',
+      'Business intelligence dashboards',
+      'Dedicated build & strategy partner',
+      'Continuous optimization',
+    ],
+    featured: false,
+  },
+]
 
 export default function PricingPage() {
   const [sent, setSent]   = useState(false)
@@ -53,15 +98,81 @@ export default function PricingPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
-              Every Xevaro system is scoped to your workflows, so pricing is custom. Tell us which
-              system you need and a few details — we&apos;ll call or email you with a precise quote.
+              Every Xevaro system is scoped to your workflows, so pricing is tailored. Most engagements
+              pair a one-time build with a monthly retainer for hosting, monitoring and improvements.
+              Pick the tier that fits and we&apos;ll send a precise quote.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="relative px-6 pb-32 md:px-10">
+      {/* ── Packages ── */}
+      <section className="relative px-6 pb-16 md:px-10">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 lg:grid-cols-3">
+          {PACKAGES.map((pkg, i) => (
+            <Reveal key={pkg.name} delay={(i % 3) * 0.08}>
+              <div className={`relative flex h-full flex-col rounded-3xl border p-8 ${
+                pkg.featured
+                  ? 'border-[#00D6FF]/40 bg-gradient-to-b from-[#0050FF]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(0,214,255,0.12)]'
+                  : 'border-white/[0.08] bg-white/[0.02]'
+              }`}>
+                {pkg.featured && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#0050FF] to-[#00D6FF] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
+                    Most Popular
+                  </span>
+                )}
+                <h3 className="font-display text-2xl font-bold text-white/90">{pkg.name}</h3>
+                <p className="mt-2 text-sm text-white/60">{pkg.tagline}</p>
+                <div className="mt-5 border-t border-white/[0.07] pt-5">
+                  <span className="font-display text-3xl font-bold text-white/90">Custom</span>
+                  <span className="ml-2 text-sm text-white/40">tailored quote</span>
+                </div>
+                <ul className="mt-6 flex-1 space-y-3">
+                  {pkg.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-white/65">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#00D6FF]" />{f}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-xs text-white/40">{pkg.for}</p>
+                <a
+                  href="#quote"
+                  className={`group relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-semibold ${
+                    pkg.featured ? 'text-white' : 'border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:text-white'
+                  }`}
+                >
+                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />}
+                  <span className="relative">Get {pkg.name} Quote</span>
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Guarantee band ── */}
+      <section className="relative px-6 pb-20 md:px-10">
+        <div className="mx-auto max-w-6xl">
+          <Reveal>
+            <div className="grid grid-cols-2 gap-6 rounded-3xl border border-white/[0.07] bg-white/[0.02] p-8 md:grid-cols-4 md:p-10">
+              {PROMISES.map(({ icon, title, desc }) => {
+                const Icon = PROMISE_ICONS[icon] ?? Rocket
+                return (
+                  <div key={title}>
+                    <Icon className="h-5 w-5 text-[#00D6FF]" />
+                    <h4 className="mt-3 font-display text-sm font-semibold text-white/90">{title}</h4>
+                    <p className="mt-1.5 text-xs leading-relaxed text-white/50">{desc}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="quote" className="relative scroll-mt-24 px-6 pb-32 md:px-10">
         <div className="mx-auto max-w-2xl">
+          <Reveal><div className="mb-8 text-center"><Eyebrow>Get your custom quote</Eyebrow></div></Reveal>
           <GlassCard className="p-8 md:p-10">
             {sent ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">

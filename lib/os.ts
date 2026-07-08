@@ -115,11 +115,41 @@ export const PRODUCTS: Product[] = [
 
 // ─── Case studies ─────────────────────────────────────────────────────────────
 
-export const CASE_STUDIES = [
-  { client: 'RetailCo',     sector: 'E-Commerce',  metric: '+340%', label: 'Revenue growth',  desc: 'Deployed Shopify AI Commerce + automation engine; revenue tripled in 90 days.' },
-  { client: 'TechFlow',     sector: 'SaaS',         metric: '80%',   label: 'Ops time saved',  desc: 'Replaced manual ops with orchestrator loops, cutting operational time 80%.' },
-  { client: 'OmegaShop',    sector: 'Retail',       metric: '2.1x',  label: 'Conversion rate', desc: 'AI agents + conversion systems doubled qualified conversions.' },
-  { client: 'AutoVentures', sector: 'Enterprise',   metric: '$2M+',  label: 'Revenue unlocked',desc: 'BI systems + lead-gen pipeline recovered seven figures in lost pipeline.' },
+export interface CaseStudy {
+  client: string
+  sector: string
+  metric: string
+  label: string
+  desc: string
+  challenge: string
+  solution: string
+}
+
+export const CASE_STUDIES: CaseStudy[] = [
+  {
+    client: 'RetailCo', sector: 'E-Commerce', metric: '+340%', label: 'Revenue growth',
+    desc: 'Deployed Shopify AI Commerce + automation engine; revenue tripled in 90 days.',
+    challenge: 'Manual marketing and a leaky checkout were capping growth despite strong traffic.',
+    solution: 'Shopify AI Commerce with automated funnels, cart recovery and behavior-based recommendations.',
+  },
+  {
+    client: 'TechFlow', sector: 'SaaS', metric: '80%', label: 'Ops time saved',
+    desc: 'Replaced manual ops with orchestrator loops, cutting operational time 80%.',
+    challenge: 'A small team was buried in repetitive operational tasks that did not scale.',
+    solution: 'n8n orchestration loops connecting their tools into self-running workflows with AI decisioning.',
+  },
+  {
+    client: 'OmegaShop', sector: 'Retail', metric: '2.1x', label: 'Conversion rate',
+    desc: 'AI agents + conversion systems doubled qualified conversions.',
+    challenge: 'Website visitors bounced without answers and leads went cold before sales could reach them.',
+    solution: 'A 24/7 AI support + sales agent that answered instantly, qualified visitors and booked demos.',
+  },
+  {
+    client: 'AutoVentures', sector: 'Enterprise', metric: '$2M+', label: 'Revenue unlocked',
+    desc: 'BI systems + lead-gen pipeline recovered seven figures in lost pipeline.',
+    challenge: 'Leadership lacked live visibility, and qualified pipeline was slipping through the cracks.',
+    solution: 'Business-intelligence dashboards plus an automated lead-gen and follow-up pipeline.',
+  },
 ]
 
 // ─── About: evolution timeline ────────────────────────────────────────────────

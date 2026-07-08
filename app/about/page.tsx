@@ -1,7 +1,9 @@
 'use client'
 
-import { Reveal, Eyebrow, H2, MagneticButton } from '@/components/os/ui'
+import { ArrowRight } from 'lucide-react'
+import { Reveal, Eyebrow, GlassCard, H2, MagneticButton } from '@/components/os/ui'
 import { TIMELINE } from '@/lib/os'
+import { TRUST_STATS, DIFFERENTIATORS, TESTIMONIALS } from '@/lib/social'
 
 export default function AboutPage() {
   return (
@@ -18,6 +20,22 @@ export default function AboutPage() {
               autonomous system. We don&apos;t sell tools — we engineer living infrastructure that
               thinks, executes, and improves on its own.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="relative px-6 pb-8 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
+              {TRUST_STATS.map((s) => (
+                <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-8 text-center backdrop-blur-xl">
+                  <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">{s.value}</div>
+                  <div className="mt-2 text-xs uppercase tracking-wide text-white/40">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>
@@ -61,10 +79,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why teams choose us */}
+      <section className="relative px-6 py-24 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal><Eyebrow>Why teams choose Xevaro</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-4xl md:text-6xl">A partner, not a vendor.</H2></Reveal>
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
+            {DIFFERENTIATORS.map((d, i) => (
+              <Reveal key={d.title} delay={(i % 2) * 0.08}>
+                <div className="flex h-full gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
+                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#00D6FF]" />
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-white/90">{d.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-white/55">{d.desc}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="relative px-6 pb-8 md:px-10">
+        <div className="mx-auto max-w-4xl">
+          <Reveal>
+            <GlassCard className="p-10 text-center md:p-14">
+              <div className="flex justify-center gap-0.5 text-[#00D6FF]">★★★★★</div>
+              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">
+                “{TESTIMONIALS[0].quote}”
+              </p>
+              <div className="mt-6 text-sm text-white/50">
+                {TESTIMONIALS[0].name} · {TESTIMONIALS[0].role}, {TESTIMONIALS[0].industry}
+              </div>
+            </GlassCard>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="relative px-6 py-24 text-center md:px-10">
         <Reveal><H2 className="text-4xl md:text-6xl">Build with the system.</H2></Reveal>
         <Reveal delay={0.1}>
-          <div className="mt-9 flex justify-center"><MagneticButton href="/contact">Open a Control Channel</MagneticButton></div>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <MagneticButton href="/contact">Open a Control Channel</MagneticButton>
+            <MagneticButton href="/agents" variant="ghost">Explore AI Agents →</MagneticButton>
+          </div>
         </Reveal>
       </section>
     </>
