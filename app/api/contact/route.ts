@@ -20,6 +20,10 @@ export async function POST(req: NextRequest) {
   const system  = (body.system  ?? '').toString().trim().slice(0, 200)
   const message = (body.message ?? '').toString().trim().slice(0, 5000)
   const source  = (body.source  ?? 'contact').toString().trim().slice(0, 40)
+  // A2P 10DLC opt-in record: normalize any truthy value to 'yes', otherwise 'no'.
+  const smsConsent = ['yes', 'true', 'on', '1', 'checked'].includes(
+    (body.smsConsent ?? '').toString().trim().toLowerCase(),
+  ) ? 'yes' : 'no'
 
   if (!email || !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: 'A valid email is required.' }, { status: 422 })
@@ -36,9 +40,9 @@ export async function POST(req: NextRequest) {
     const ua = req.headers.get('user-agent') ?? null
 
     await d1Query(
-      `INSERT INTO submissions (name, company, email, phone, system, message, source, ip, user_agent)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [name || null, company || null, email, phone || null, system || null, message || null, source || 'contact', ip, ua],
+      `INSERT INTO submissions (name, company, email, phone, system, message, source, sms_consent, ip, user_agent)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [name || null, company || null, email, phone || null, system || null, message || null, source || 'contact', smsConsent, ip, ua],
     )
 
     return NextResponse.json({ ok: true, persisted: true }, { status: 201 })

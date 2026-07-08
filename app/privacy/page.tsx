@@ -51,7 +51,18 @@ export default function PrivacyPage() {
         the Services. These providers access data only as needed to perform their functions.</p>
       </Clause>
 
-      <Clause heading="9. Contact">
+      <Clause heading="9. SMS / text messaging">
+        <p>If you provide your phone number and check the SMS consent box on our demo request form, you
+        agree to receive text messages from Xevaro Labs about your website demo and related services.
+        Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any
+        time, or HELP for help.</p>
+        <p>No mobile information will be shared with third parties or affiliates for marketing or
+        promotional purposes. Text-messaging originator opt-in data and consent are not shared with any
+        third parties. We share information with subprocessors (such as our messaging provider) solely to
+        deliver the messaging service you requested.</p>
+      </Clause>
+
+      <Clause heading="10. Contact">
         <p>For privacy questions or requests, email <a href={`mailto:${CONTACT.email}`} className="text-[#00D6FF] hover:underline">{CONTACT.email}</a> or
         call <a href={`tel:${CONTACT.phone}`} className="text-[#00D6FF] hover:underline">{CONTACT.phone}</a>.</p>
       </Clause>
