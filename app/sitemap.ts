@@ -7,6 +7,8 @@ type Freq = 'weekly' | 'monthly' | 'yearly'
 // Public, indexable routes. /admin and /api are intentionally excluded.
 const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
+  { path: '/agents', priority: 0.95, changeFrequency: 'weekly' },
+  { path: '/best-sellers', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/services', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/products', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/blog', priority: 0.8, changeFrequency: 'weekly' },

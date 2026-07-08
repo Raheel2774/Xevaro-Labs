@@ -8,8 +8,9 @@ export const CONTACT = {
 
 export const NAV = [
   { label: 'Home',         href: '/' },
+  { label: 'AI Agents',    href: '/agents' },
+  { label: 'Best Sellers', href: '/best-sellers' },
   { label: 'Services',     href: '/services' },
-  { label: 'Products',     href: '/products' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'Blog',         href: '/blog' },
   { label: 'Pricing',      href: '/pricing' },
@@ -30,6 +31,8 @@ export const LEGAL = [
  */
 export const ROBOT_STATES: Record<string, { start: number; end: number; state: string; sub: string }> = {
   '/':             { start: 1,   end: 55,  state: 'CORE ONLINE',        sub: 'System active · all modules nominal' },
+  '/agents':       { start: 45,  end: 95,  state: 'AGENT SWARM',        sub: 'Autonomous agents indexed · 25 industries' },
+  '/best-sellers': { start: 60,  end: 105, state: 'FLAGSHIP UNITS',     sub: 'Top-performing agents online' },
   '/services':     { start: 40,  end: 90,  state: 'MODULES DEPLOYED',   sub: 'Automation systems executing' },
   '/products':     { start: 60,  end: 110, state: 'CATALOG ENGINE',     sub: 'Productized AI systems indexed' },
   '/case-studies': { start: 85,  end: 125, state: 'DATA INTELLIGENCE',  sub: 'Analyzing performance telemetry' },

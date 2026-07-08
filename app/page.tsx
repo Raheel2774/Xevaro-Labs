@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Reveal, Eyebrow, GlassCard, MagneticButton, H2, useGlow } from '@/components/os/ui'
 import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
+import { FLAGSHIP_AGENTS, TOTAL_AGENTS } from '@/lib/agents'
 import { POSTS } from '@/lib/blog'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -81,6 +82,52 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── AI AGENTS ── */}
+      <section className="relative px-6 py-28 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal><Eyebrow>Deployable AI Agents</Eyebrow></Reveal>
+          <Reveal delay={0.05}>
+            <H2 className="text-4xl md:text-6xl">
+              {TOTAL_AGENTS} AI agents.{' '}
+              <span className="bg-gradient-to-r from-[#0050FF] to-[#00D6FF] bg-clip-text text-transparent">25 industries.</span>
+            </H2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-6 max-w-2xl text-lg font-light text-white/55">
+              Pre-built AI agents that capture leads, book appointments, recover revenue and run support —
+              tailored to your industry. Pick the one you need and we set it up for you.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {FLAGSHIP_AGENTS.slice(0, 3).map((a, i) => (
+              <Reveal key={a.id} delay={(i % 3) * 0.08}>
+                <Link href="/best-sellers" onMouseMove={glow}>
+                  <GlassCard glow className="flex h-full flex-col p-7">
+                    <div className="flex items-center justify-between">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#0050FF] to-[#00D6FF] font-display text-sm font-bold text-white shadow-[0_0_18px_rgba(0,214,255,0.3)]">{a.rank}</span>
+                      <span className="rounded-full border border-[#00D6FF]/30 bg-[#00D6FF]/5 px-3 py-1 font-mono text-[9px] uppercase tracking-widest text-[#00D6FF]">{a.badge}</span>
+                    </div>
+                    <h3 className="mt-5 font-display text-lg font-semibold text-white/90 transition-transform duration-300 group-hover:translate-x-1">{a.name}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">{a.tagline}</p>
+                    <div className="mt-5 inline-flex items-center gap-2 text-sm text-white/40 transition-colors group-hover:text-[#00D6FF]">
+                      View best seller <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </div>
+                  </GlassCard>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.1}>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <MagneticButton href="/agents">Browse All AI Agents</MagneticButton>
+              <MagneticButton href="/best-sellers" variant="ghost">See the Best Sellers →</MagneticButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 
