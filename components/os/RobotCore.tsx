@@ -118,17 +118,23 @@ export default function RobotCore() {
   return (
     <div className="fixed inset-0 z-0">
       <canvas ref={canvasRef} className="h-full w-full" />
-      {/* Legibility + brand grade: darken and cool-tint the cinematic plate */}
+      {/* Brand grade: convert the plate's cool lighting to maroon.
+          mix-blend-color keeps the image's light and dark but recolors the hue. */}
+      <div className="absolute inset-0 mix-blend-color" style={{
+        background: 'linear-gradient(180deg, rgba(150,26,30,0.9), rgba(110,15,26,0.92))',
+      }} />
+      {/* Darken for legibility, warm maroon black */}
       <div className="absolute inset-0" style={{
         background:
-          'linear-gradient(180deg, rgba(5,5,5,0.72) 0%, rgba(5,5,7,0.55) 35%, rgba(5,5,10,0.78) 100%)',
+          'linear-gradient(180deg, rgba(8,3,4,0.74) 0%, rgba(10,4,6,0.58) 35%, rgba(6,2,4,0.82) 100%)',
       }} />
-      <div className="absolute inset-0 mix-blend-color" style={{
-        background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,80,255,0.18), transparent 70%)',
+      {/* Maroon glow hotspot for drama */}
+      <div className="absolute inset-0 mix-blend-screen" style={{
+        background: 'radial-gradient(ellipse 65% 55% at 50% 42%, rgba(229,62,62,0.16), transparent 70%)',
       }} />
       {/* Vignette */}
       <div className="absolute inset-0" style={{
-        background: 'radial-gradient(ellipse at center, transparent 45%, rgba(3,3,8,0.65) 100%)',
+        background: 'radial-gradient(ellipse at center, transparent 42%, rgba(4,1,3,0.7) 100%)',
       }} />
       {/* Scanline texture */}
       <div className="absolute inset-0 opacity-[0.05]" style={{

@@ -47,12 +47,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       <article className="relative px-6 pb-24 pt-32 md:px-10">
         <div className="mx-auto max-w-3xl">
-          <Link href="/blog" className="font-mono text-xs uppercase tracking-widest text-white/40 transition-colors hover:text-[#00D6FF]">
+          <Link href="/blog" className="font-mono text-xs uppercase tracking-widest text-white/40 transition-colors hover:text-[#E53E3E]">
             ← All articles
           </Link>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-widest text-white/35">
-            <span className="text-[#00D6FF]">{post.category}</span>
+            <span className="text-[#E53E3E]">{post.category}</span>
             <span>·</span>
             <span>{fmt(post.date)}</span>
             <span>·</span>
@@ -88,10 +88,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-7 py-3 text-sm font-semibold text-white">
-                <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
+                <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
                 <span className="relative">Book an automation audit</span>
               </Link>
-              <Link href="/services" className="text-sm text-white/50 transition-colors hover:text-[#00D6FF]">Explore our systems →</Link>
+              <Link href="/services" className="text-sm text-white/50 transition-colors hover:text-[#E53E3E]">Explore our systems →</Link>
             </div>
           </div>
         </div>

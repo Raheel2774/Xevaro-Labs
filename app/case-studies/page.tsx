@@ -15,7 +15,7 @@ export default function CaseStudiesPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Real systems.<br />
-              <span className="bg-gradient-to-r from-[#0050FF] to-[#00D6FF] bg-clip-text text-transparent">Measurable impact.</span>
+              <span className="bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] bg-clip-text text-transparent">Measurable impact.</span>
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -34,7 +34,7 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-7 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
+                  <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
                   <div className="mt-1.5 text-[11px] uppercase tracking-wide text-white/40">{s.label}</div>
                 </div>
               ))}
@@ -53,18 +53,18 @@ export default function CaseStudiesPage() {
                   <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_0.6fr]">
                     <div>
                       <div className="flex items-center gap-4">
-                        <span className="font-mono text-xs tracking-widest text-[#00D6FF]">CASE-0{i + 1}</span>
+                        <span className="font-mono text-xs tracking-widest text-[#E53E3E]">CASE-0{i + 1}</span>
                         <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white/40">{c.sector}</span>
                       </div>
                       <h3 className="mt-5 font-display text-2xl font-bold text-white/90 md:text-3xl">{c.client}</h3>
 
                       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                         <div>
-                          <div className="font-mono text-[10px] uppercase tracking-widest text-[#FF6b63]/80">Challenge</div>
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-[#E0A86A]/80">Challenge</div>
                           <p className="mt-2 text-sm leading-relaxed text-white/60">{c.challenge}</p>
                         </div>
                         <div>
-                          <div className="font-mono text-[10px] uppercase tracking-widest text-[#00D6FF]/80">System deployed</div>
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-[#E53E3E]/80">System deployed</div>
                           <p className="mt-2 text-sm leading-relaxed text-white/60">{c.solution}</p>
                         </div>
                       </div>
@@ -73,11 +73,11 @@ export default function CaseStudiesPage() {
                     {/* Result */}
                     <div className="flex flex-col justify-center rounded-2xl border border-white/[0.07] bg-gradient-to-b from-white/[0.04] to-transparent p-7 text-center">
                       <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">Result</div>
-                      <div className="mt-2 bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">{c.metric}</div>
+                      <div className="mt-2 bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">{c.metric}</div>
                       <div className="mt-1 text-xs uppercase tracking-wide text-white/40">{c.label}</div>
                       <div className="mt-5 flex h-10 items-end justify-center gap-1">
                         {[40, 65, 50, 80, 95].map((h, k) => (
-                          <span key={k} className="w-1.5 rounded-t bg-gradient-to-t from-[#0050FF] to-[#00D6FF]" style={{ height: `${h}%` }} />
+                          <span key={k} className="w-1.5 rounded-t bg-gradient-to-t from-[#7F1D1D] to-[#E53E3E]" style={{ height: `${h}%` }} />
                         ))}
                       </div>
                     </div>
@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-4xl">
           <Reveal>
             <GlassCard className="p-10 text-center md:p-14">
-              <div className="flex justify-center gap-0.5 text-[#00D6FF]">★★★★★</div>
+              <div className="flex justify-center gap-0.5 text-[#E53E3E]">★★★★★</div>
               <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">
                 “{TESTIMONIALS[3].quote}”
               </p>

@@ -63,7 +63,7 @@ function Coda() {
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.05] md:grid-cols-4">
           {specs.map(([label, value]) => (
             <div key={label} className="bg-[#050505] p-8 md:p-10">
-              <div className="bg-gradient-to-br from-white to-[#FF6b63] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">
+              <div className="bg-gradient-to-br from-white to-[#E0A86A] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">
                 {value}
               </div>
               <div className="mt-2 text-xs uppercase tracking-wide text-white/40">{label}</div>

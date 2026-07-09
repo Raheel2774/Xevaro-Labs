@@ -27,7 +27,7 @@ export default function HUD() {
       {/* Top-left: system state */}
       <div className="absolute left-6 top-20">
         <div className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#00D6FF] shadow-[0_0_8px_#00D6FF]" />
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#E53E3E] shadow-[0_0_8px_#E53E3E]" />
           <span className="text-white/70">{st.state}</span>
         </div>
         <div className="mt-1 text-white/30">{st.sub}</div>
@@ -37,7 +37,7 @@ export default function HUD() {
       <div className="absolute bottom-6 left-6">
         <div>NEURAL LOAD · {load}%</div>
         <div className="mt-1.5 h-px w-32 bg-white/10">
-          <div className="h-full bg-gradient-to-r from-[#0050FF] to-[#00D6FF] transition-all duration-700" style={{ width: `${load}%` }} />
+          <div className="h-full bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] transition-all duration-700" style={{ width: `${load}%` }} />
         </div>
       </div>
 

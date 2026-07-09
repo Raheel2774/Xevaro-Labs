@@ -28,7 +28,7 @@ export function Reveal({
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-5 inline-flex items-center gap-2.5">
-      <span className="h-1.5 w-1.5 rounded-full bg-[#00D6FF] shadow-[0_0_10px_rgba(0,214,255,0.9)]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[#E53E3E] shadow-[0_0_10px_rgba(229,62,62,0.9)]" />
       <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-white/45">{children}</span>
     </div>
   )
@@ -41,11 +41,11 @@ export function GlassCard({
 }: { children: React.ReactNode; className?: string; glow?: boolean }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] backdrop-blur-xl transition-all duration-500 hover:border-[#00D6FF]/40 ${className}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] backdrop-blur-xl transition-all duration-500 hover:border-[#E53E3E]/40 ${className}`}
     >
       {glow && (
         <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(0,214,255,0.08), transparent 60%)' }} />
+          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(229,62,62,0.08), transparent 60%)' }} />
       )}
       <div className="relative">{children}</div>
     </div>
@@ -87,8 +87,8 @@ export function MagneticButton({
     >
       {variant === 'primary' && (
         <>
-          <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
-          <span className="absolute inset-0 opacity-0 shadow-[0_0_36px_rgba(0,214,255,0.55)] transition-opacity duration-300 hover:opacity-100" />
+          <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+          <span className="absolute inset-0 opacity-0 shadow-[0_0_36px_rgba(229,62,62,0.55)] transition-opacity duration-300 hover:opacity-100" />
         </>
       )}
       <span className="relative">{children}</span>

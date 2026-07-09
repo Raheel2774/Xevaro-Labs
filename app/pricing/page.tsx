@@ -113,11 +113,11 @@ export default function PricingPage() {
             <Reveal key={pkg.name} delay={(i % 3) * 0.08}>
               <div className={`relative flex h-full flex-col rounded-3xl border p-8 ${
                 pkg.featured
-                  ? 'border-[#00D6FF]/40 bg-gradient-to-b from-[#0050FF]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(0,214,255,0.12)]'
+                  ? 'border-[#E53E3E]/40 bg-gradient-to-b from-[#7F1D1D]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(229,62,62,0.12)]'
                   : 'border-white/[0.08] bg-white/[0.02]'
               }`}>
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#0050FF] to-[#00D6FF] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
                     Most Popular
                   </span>
                 )}
@@ -130,7 +130,7 @@ export default function PricingPage() {
                 <ul className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm text-white/65">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#00D6FF]" />{f}
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#E53E3E]" />{f}
                     </li>
                   ))}
                 </ul>
@@ -141,7 +141,7 @@ export default function PricingPage() {
                     pkg.featured ? 'text-white' : 'border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:text-white'
                   }`}
                 >
-                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />}
+                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />}
                   <span className="relative">Get {pkg.name} Quote</span>
                 </a>
               </div>
@@ -159,7 +159,7 @@ export default function PricingPage() {
                 const Icon = PROMISE_ICONS[icon] ?? Rocket
                 return (
                   <div key={title}>
-                    <Icon className="h-5 w-5 text-[#00D6FF]" />
+                    <Icon className="h-5 w-5 text-[#E53E3E]" />
                     <h4 className="mt-3 font-display text-sm font-semibold text-white/90">{title}</h4>
                     <p className="mt-1.5 text-xs leading-relaxed text-white/50">{desc}</p>
                   </div>
@@ -176,7 +176,7 @@ export default function PricingPage() {
           <GlassCard className="p-8 md:p-10">
             {sent ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00D6FF]/10 text-2xl text-[#00D6FF]">✓</span>
+                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E53E3E]/10 text-2xl text-[#E53E3E]">✓</span>
                 <h3 className="font-display text-2xl text-white/90">Request received.</h3>
                 <p className="mt-2 max-w-sm text-sm text-white/55">
                   Thanks, we&apos;ll review your needs and reach out within one business day with pricing.
@@ -185,19 +185,19 @@ export default function PricingPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <p className="text-sm text-white/55">
-                  Request a custom quote. Fields marked <span className="text-[#00D6FF]">*</span> are required.
+                  Request a custom quote. Fields marked <span className="text-[#E53E3E]">*</span> are required.
                 </p>
 
                 {/* Required service */}
                 <div>
                   <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-                    Service you need pricing for <span className="text-[#00D6FF]">*</span>
+                    Service you need pricing for <span className="text-[#E53E3E]">*</span>
                   </label>
                   <select
                     name="system"
                     required
                     defaultValue=""
-                    className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#00D6FF]/50"
+                    className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#E53E3E]/50"
                   >
                     <option value="" disabled className="bg-[#0A0A0C]">Select a system…</option>
                     {PRODUCTS.map(p => (
@@ -216,19 +216,19 @@ export default function PricingPage() {
                 </div>
                 <div>
                   <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">Project details</label>
-                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50" />
+                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50" />
                 </div>
 
                 <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-white disabled:opacity-60">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
-                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(0,214,255,0.5)] transition-opacity group-hover:opacity-100" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
                   <span className="relative">{busy ? 'Sending…' : 'Request My Quote'}</span>
                 </button>
-                {error && <p className="text-center text-sm text-[#FF6b63]" role="alert">{error}</p>}
+                {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
 
                 <p className="text-center text-xs text-white/30">
-                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-white/50 hover:text-[#00D6FF]">{CONTACT.phone}</a> or
-                  email <a href={`mailto:${CONTACT.email}`} className="text-white/50 hover:text-[#00D6FF]">{CONTACT.email}</a>.
+                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-white/50 hover:text-[#E53E3E]">{CONTACT.phone}</a> or
+                  email <a href={`mailto:${CONTACT.email}`} className="text-white/50 hover:text-[#E53E3E]">{CONTACT.email}</a>.
                 </p>
               </form>
             )}
@@ -243,11 +243,11 @@ function Field({ label, name, type = 'text', placeholder, required }: { label: s
   return (
     <div>
       <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-        {label} {required && <span className="text-[#00D6FF]">*</span>}
+        {label} {required && <span className="text-[#E53E3E]">*</span>}
       </label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50"
+        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
       />
     </div>
   )

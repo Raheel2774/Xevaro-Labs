@@ -17,7 +17,7 @@ export default function ServicesPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Automation that runs<br />
-              <span className="bg-gradient-to-r from-[#0050FF] to-[#00D6FF] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] bg-clip-text text-transparent">
                 your business for you.
               </span>
             </H2>
@@ -44,7 +44,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-7 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
+                  <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
                   <div className="mt-1.5 text-[11px] uppercase tracking-wide text-white/40">{s.label}</div>
                 </div>
               ))}
@@ -64,7 +64,7 @@ export default function ServicesPage() {
                 <div onMouseMove={glow} className="h-full">
                   <GlassCard glow className="h-full p-8 md:p-10">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs tracking-widest text-[#00D6FF]">{p.index}</span>
+                      <span className="font-mono text-xs tracking-widest text-[#E53E3E]">{p.index}</span>
                       <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white/40">{p.integration}</span>
                     </div>
                     <h3 className="mt-6 font-display text-2xl font-semibold text-white/90 md:text-3xl">{p.name}</h3>
@@ -73,7 +73,7 @@ export default function ServicesPage() {
                     <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                       {p.includes.map((inc) => (
                         <li key={inc} className="flex items-center gap-2 text-sm text-white/50">
-                          <Check className="h-3.5 w-3.5 flex-shrink-0 text-[#00D6FF]" />{inc}
+                          <Check className="h-3.5 w-3.5 flex-shrink-0 text-[#E53E3E]" />{inc}
                         </li>
                       ))}
                     </ul>
@@ -94,8 +94,8 @@ export default function ServicesPage() {
       <section className="relative px-6 py-12 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-[#00D6FF]/20 bg-gradient-to-br from-[#0050FF]/[0.08] via-white/[0.02] to-transparent p-8 md:p-12">
-              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#0050FF]/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-[#E53E3E]/20 bg-gradient-to-br from-[#7F1D1D]/[0.08] via-white/[0.02] to-transparent p-8 md:p-12">
+              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#7F1D1D]/20 blur-3xl" />
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
                   <h3 className="max-w-xl font-display text-2xl font-semibold text-white/90 md:text-3xl">
@@ -122,7 +122,7 @@ export default function ServicesPage() {
             {PROCESS.map((p, i) => (
               <Reveal key={p.step} delay={(i % 4) * 0.08}>
                 <div className="relative h-full rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
-                  <span className="font-mono text-3xl font-bold text-[#00D6FF]/20">{p.step}</span>
+                  <span className="font-mono text-3xl font-bold text-[#E53E3E]/20">{p.step}</span>
                   <h3 className="mt-3 font-display text-xl font-semibold text-white/90">{p.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-white/55">{p.desc}</p>
                 </div>
@@ -141,7 +141,7 @@ export default function ServicesPage() {
             {DIFFERENTIATORS.map((d, i) => (
               <Reveal key={d.title} delay={(i % 2) * 0.08}>
                 <div className="flex h-full gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
-                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#00D6FF]" />
+                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#E53E3E]" />
                   <div>
                     <h3 className="font-display text-lg font-semibold text-white/90">{d.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/55">{d.desc}</p>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
             <GlassCard className="p-10 text-center md:p-14">
               <div className="flex justify-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="text-[#00D6FF]">★</span>
+                  <span key={i} className="text-[#E53E3E]">★</span>
                 ))}
               </div>
               <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">

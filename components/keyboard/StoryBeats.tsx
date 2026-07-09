@@ -108,7 +108,7 @@ export default function StoryBeats({ progress }: { progress: MotionValue<number>
         <Eyebrow>Press Enter</Eyebrow>
         <h2 className={`${H} text-5xl md:text-7xl leading-[0.95]`}>
           Press Enter on<br />
-          <span className="bg-gradient-to-b from-white to-[#FF6b63] bg-clip-text text-transparent">Automation.</span>
+          <span className="bg-gradient-to-b from-white to-[#E0A86A] bg-clip-text text-transparent">Automation.</span>
         </h2>
         <p className={`${P} mx-auto mt-6 max-w-md text-lg`}>
           Your infrastructure, fully autonomous. Let&apos;s build your digital workforce.

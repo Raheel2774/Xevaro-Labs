@@ -89,7 +89,7 @@ export default function ClaimPage() {
             <GlassCard className="p-8 md:p-10">
               {sent ? (
                 <div className="flex h-full min-h-[340px] flex-col items-center justify-center text-center">
-                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00D6FF]/10 text-2xl text-[#00D6FF]">✓</span>
+                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E53E3E]/10 text-2xl text-[#E53E3E]">✓</span>
                   <h3 className="font-display text-2xl text-white/90">Request received.</h3>
                   <p className="mt-2 text-sm text-white/55">We&apos;ll build your demo and send you the link shortly.</p>
                 </div>
@@ -105,29 +105,29 @@ export default function ClaimPage() {
                   </div>
                   <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">Anything we should know? (optional)</label>
-                    <textarea name="message" rows={3} placeholder="Your city, trade, or what you'd like on the site..." className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50" />
+                    <textarea name="message" rows={3} placeholder="Your city, trade, or what you'd like on the site..." className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50" />
                   </div>
 
                   {/* SMS consent, unchecked by default, not required to submit */}
                   <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/[0.1] bg-white/[0.02] p-4">
-                    <input type="checkbox" name="smsConsent" value="yes" className="mt-1 h-4 w-4 shrink-0 accent-[#00D6FF]" />
+                    <input type="checkbox" name="smsConsent" value="yes" className="mt-1 h-4 w-4 shrink-0 accent-[#E53E3E]" />
                     <span className="text-[13px] leading-relaxed text-white/55">
                       Text me my website demo. By checking this box, I agree to receive automated and
                       conversational SMS text messages from Xevaro Labs at the mobile number provided,                       including my website demo link, replies to my questions, appointment scheduling, and
                       related follow ups. Message frequency varies. Message and data rates may apply. Reply
                       STOP to unsubscribe or HELP for help. Consent is not a condition of any purchase. See
                       our{' '}
-                      <Link href="/privacy" className="text-[#00D6FF] hover:underline">Privacy Policy</Link> and{' '}
-                      <Link href="/terms" className="text-[#00D6FF] hover:underline">Terms of Service</Link>.
+                      <Link href="/privacy" className="text-[#E53E3E] hover:underline">Privacy Policy</Link> and{' '}
+                      <Link href="/terms" className="text-[#E53E3E] hover:underline">Terms of Service</Link>.
                     </span>
                   </label>
 
                   <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-white disabled:opacity-60">
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
-                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(0,214,255,0.5)] transition-opacity group-hover:opacity-100" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
                     <span className="relative">{busy ? 'Sending…' : 'Send me my demo'}</span>
                   </button>
-                  {error && <p className="text-center text-sm text-[#FF6b63]" role="alert">{error}</p>}
+                  {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
                 </form>
               )}
             </GlassCard>
@@ -144,7 +144,7 @@ function Field({ label, name, type = 'text', placeholder, required }: { label: s
       <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">{label}</label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50"
+        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
       />
     </div>
   )

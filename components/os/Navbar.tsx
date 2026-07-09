@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-5 md:px-10">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#0050FF] to-[#00D6FF] shadow-[0_0_14px_rgba(0,214,255,0.5)]" />
+          <span className="relative h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#7F1D1D] to-[#E53E3E] shadow-[0_0_14px_rgba(229,62,62,0.5)]" />
           <span className="font-display text-[15px] font-semibold tracking-tight text-white/90">Xevaro Labs</span>
         </Link>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                 }`}
               >
                 {active && (
-                  <span className="absolute inset-0 rounded-full bg-white/[0.06] border border-white/10 shadow-[0_0_18px_rgba(0,214,255,0.15)]" />
+                  <span className="absolute inset-0 rounded-full bg-white/[0.06] border border-white/10 shadow-[0_0_18px_rgba(229,62,62,0.15)]" />
                 )}
                 <span className="relative">{label}</span>
               </Link>
@@ -56,8 +56,8 @@ export default function Navbar() {
           href="/contact"
           className="group relative hidden sm:inline-flex items-center rounded-full px-4 py-1.5 text-[13px] font-semibold text-white"
         >
-          <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#0050FF] to-[#00D6FF] opacity-90 group-hover:opacity-100 transition-opacity" />
-          <span className="absolute inset-0 rounded-full opacity-0 shadow-[0_0_20px_rgba(0,214,255,0.4)] group-hover:opacity-100 transition-opacity" />
+          <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] opacity-90 group-hover:opacity-100 transition-opacity" />
+          <span className="absolute inset-0 rounded-full opacity-0 shadow-[0_0_20px_rgba(229,62,62,0.4)] group-hover:opacity-100 transition-opacity" />
           <span className="relative">Deploy Systems</span>
         </Link>
 
@@ -72,7 +72,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-white/[0.07] bg-[rgba(5,5,5,0.95)] backdrop-blur-xl px-5 py-4">
           {NAV.map(({ label, href }) => (
-            <Link key={href} href={href} className={`block py-3 text-base ${pathname === href ? 'text-[#00D6FF]' : 'text-white/70'}`}>
+            <Link key={href} href={href} className={`block py-3 text-base ${pathname === href ? 'text-[#E53E3E]' : 'text-white/70'}`}>
               {label}
             </Link>
           ))}

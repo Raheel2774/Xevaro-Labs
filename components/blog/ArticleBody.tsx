@@ -20,9 +20,9 @@ function renderInline(text: string): React.ReactNode[] {
       const href = m[3]
       nodes.push(
         href.startsWith('/') ? (
-          <Link key={key++} href={href} className="text-[#00D6FF] underline-offset-2 hover:underline">{label}</Link>
+          <Link key={key++} href={href} className="text-[#E53E3E] underline-offset-2 hover:underline">{label}</Link>
         ) : (
-          <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="text-[#00D6FF] underline-offset-2 hover:underline">{label}</a>
+          <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="text-[#E53E3E] underline-offset-2 hover:underline">{label}</a>
         ),
       )
     }
@@ -45,12 +45,12 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
             return <p key={i} className="text-[15px] leading-relaxed text-white/60 md:text-base">{renderInline(b.text)}</p>
           case 'ul':
             return (
-              <ul key={i} className="ml-5 list-disc space-y-2 text-[15px] leading-relaxed text-white/60 marker:text-[#00D6FF] md:text-base">
+              <ul key={i} className="ml-5 list-disc space-y-2 text-[15px] leading-relaxed text-white/60 marker:text-[#E53E3E] md:text-base">
                 {b.items.map((it, j) => <li key={j}>{renderInline(it)}</li>)}
               </ul>
             )
           case 'quote':
-            return <blockquote key={i} className="border-l-2 border-[#00D6FF]/50 pl-4 italic text-white/70">{renderInline(b.text)}</blockquote>
+            return <blockquote key={i} className="border-l-2 border-[#E53E3E]/50 pl-4 italic text-white/70">{renderInline(b.text)}</blockquote>
         }
       })}
     </div>

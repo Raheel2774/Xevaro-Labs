@@ -26,7 +26,7 @@ export default async function AdminPage() {
       <Shell>
         <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8 text-center">
           <h1 className="font-display text-xl text-white/90">Admin not configured</h1>
-          <p className="mt-2 text-sm text-white/50">Set <code className="text-[#00D6FF]">ADMIN_PASSWORD</code> in your environment variables, then redeploy.</p>
+          <p className="mt-2 text-sm text-white/50">Set <code className="text-[#E53E3E]">ADMIN_PASSWORD</code> in your environment variables, then redeploy.</p>
         </div>
       </Shell>
     )
@@ -62,7 +62,7 @@ export default async function AdminPage() {
     <Shell>
       <div className="mb-8 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <span className="h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#0050FF] to-[#00D6FF] shadow-[0_0_14px_rgba(0,214,255,0.5)]" />
+          <span className="h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#7F1D1D] to-[#E53E3E] shadow-[0_0_14px_rgba(229,62,62,0.5)]" />
           <span className="font-display font-semibold tracking-tight text-white/90">Xevaro OS · Admin</span>
         </div>
         <LogoutButton />
@@ -76,7 +76,7 @@ export default async function AdminPage() {
       </div>
 
       {error && (
-        <div className="mb-6 rounded-xl border border-[#FF6b63]/30 bg-[#FF6b63]/[0.06] p-4 text-sm text-[#FF9b94]">{error}</div>
+        <div className="mb-6 rounded-xl border border-[#E0A86A]/30 bg-[#E0A86A]/[0.06] p-4 text-sm text-[#FF9b94]">{error}</div>
       )}
 
       {/* Table */}
@@ -105,15 +105,15 @@ export default async function AdminPage() {
                   <td className="px-4 py-3 font-mono text-white/40">{r.id}</td>
                   <td className="px-4 py-3 text-white/85">{r.name || ', '}</td>
                   <td className="px-4 py-3">
-                    <a href={`mailto:${r.email}`} className="text-[#00D6FF] hover:underline">{r.email}</a>
+                    <a href={`mailto:${r.email}`} className="text-[#E53E3E] hover:underline">{r.email}</a>
                   </td>
                   <td className="px-4 py-3 whitespace-nowrap">
-                    {r.phone ? <a href={`tel:${r.phone}`} className="text-[#00D6FF] hover:underline">{r.phone}</a> : <span className="text-white/40">, </span>}
+                    {r.phone ? <a href={`tel:${r.phone}`} className="text-[#E53E3E] hover:underline">{r.phone}</a> : <span className="text-white/40">, </span>}
                   </td>
                   <td className="px-4 py-3 text-white/60">{r.company || ', '}</td>
                   <td className="px-4 py-3 text-white/60">{r.system || ', '}</td>
                   <td className="px-4 py-3">
-                    <span className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${r.source === 'pricing' ? 'bg-[#00D6FF]/15 text-[#00D6FF]' : 'bg-white/10 text-white/50'}`}>{r.source || 'contact'}</span>
+                    <span className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${r.source === 'pricing' ? 'bg-[#E53E3E]/15 text-[#E53E3E]' : 'bg-white/10 text-white/50'}`}>{r.source || 'contact'}</span>
                   </td>
                   <td className="px-4 py-3 max-w-xs text-white/55">{r.message || ', '}</td>
                   <td className="px-4 py-3 whitespace-nowrap font-mono text-xs text-white/40">{r.created_at}</td>
@@ -138,7 +138,7 @@ function Shell({ children }: { children: React.ReactNode }) {
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
-      <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-4xl font-bold text-transparent">{value}</div>
+      <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-4xl font-bold text-transparent">{value}</div>
       <div className="mt-1 text-xs uppercase tracking-wide text-white/40">{label}</div>
     </div>
   )

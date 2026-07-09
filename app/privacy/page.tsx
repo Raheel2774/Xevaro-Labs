@@ -63,8 +63,8 @@ export default function PrivacyPage() {
       </Clause>
 
       <Clause heading="10. Contact">
-        <p>For privacy questions or requests, email <a href={`mailto:${CONTACT.email}`} className="text-[#00D6FF] hover:underline">{CONTACT.email}</a> or
-        call <a href={`tel:${CONTACT.phone}`} className="text-[#00D6FF] hover:underline">{CONTACT.phone}</a>.</p>
+        <p>For privacy questions or requests, email <a href={`mailto:${CONTACT.email}`} className="text-[#E53E3E] hover:underline">{CONTACT.email}</a> or
+        call <a href={`tel:${CONTACT.phone}`} className="text-[#E53E3E] hover:underline">{CONTACT.phone}</a>.</p>
       </Clause>
     </LegalPage>
   )

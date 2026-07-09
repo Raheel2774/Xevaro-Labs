@@ -57,13 +57,13 @@ export default function ContactPage() {
             <div className="flex h-full flex-col gap-5">
               <GlassCard className="p-7">
                 <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">Direct uplink</div>
-                <a href={`mailto:${CONTACT.email}`} className="mt-3 block font-display text-xl text-white/90 transition-colors hover:text-[#00D6FF]">{CONTACT.email}</a>
-                <a href={`tel:${CONTACT.phone}`} className="mt-2 block font-display text-xl text-white/90 transition-colors hover:text-[#00D6FF]">{CONTACT.phone}</a>
+                <a href={`mailto:${CONTACT.email}`} className="mt-3 block font-display text-xl text-white/90 transition-colors hover:text-[#E53E3E]">{CONTACT.email}</a>
+                <a href={`tel:${CONTACT.phone}`} className="mt-2 block font-display text-xl text-white/90 transition-colors hover:text-[#E53E3E]">{CONTACT.phone}</a>
               </GlassCard>
               <GlassCard className="p-7">
                 <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">System status</div>
                 <div className="mt-3 flex items-center gap-2.5">
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-[#00D6FF] shadow-[0_0_10px_#00D6FF]" />
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-[#E53E3E] shadow-[0_0_10px_#E53E3E]" />
                   <span className="text-white/70">All systems operational · accepting deployments</span>
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-white/50">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     ['3', 'We build and launch your system, usually within one to two weeks.'],
                   ].map(([n, t]) => (
                     <li key={n} className="flex gap-3">
-                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#00D6FF]/30 bg-[#00D6FF]/5 font-mono text-[11px] text-[#00D6FF]">{n}</span>
+                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#E53E3E]/30 bg-[#E53E3E]/5 font-mono text-[11px] text-[#E53E3E]">{n}</span>
                       <span className="text-sm leading-relaxed text-white/60">{t}</span>
                     </li>
                   ))}
@@ -97,7 +97,7 @@ export default function ContactPage() {
             <GlassCard className="p-8 md:p-10">
               {sent ? (
                 <div className="flex h-full min-h-[340px] flex-col items-center justify-center text-center">
-                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00D6FF]/10 text-2xl text-[#00D6FF]">✓</span>
+                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E53E3E]/10 text-2xl text-[#E53E3E]">✓</span>
                   <h3 className="font-display text-2xl text-white/90">Signal received.</h3>
                   <p className="mt-2 text-sm text-white/55">Our core will respond to your channel shortly.</p>
                 </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">System of interest</label>
-                    <select name="system" className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#00D6FF]/50">
+                    <select name="system" className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#E53E3E]/50">
                       <option className="bg-[#0A0A0C]">AI Automation Systems</option>
                       <option className="bg-[#0A0A0C]">AI Agents &amp; Voice Systems</option>
                       <option className="bg-[#0A0A0C]">Lead Generation Systems</option>
@@ -124,14 +124,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">Message</label>
-                    <textarea name="message" rows={4} placeholder="Describe your operations..." className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50" />
+                    <textarea name="message" rows={4} placeholder="Describe your operations..." className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50" />
                   </div>
                   <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-white disabled:opacity-60">
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
-                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(0,214,255,0.5)] transition-opacity group-hover:opacity-100" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
                     <span className="relative">{busy ? 'Transmitting…' : 'Transmit to Core'}</span>
                   </button>
-                  {error && <p className="text-center text-sm text-[#FF6b63]" role="alert">{error}</p>}
+                  {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
                 </form>
               )}
             </GlassCard>
@@ -148,7 +148,7 @@ function Field({ label, name, type = 'text', placeholder, required }: { label: s
       <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">{label}</label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50"
+        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
       />
     </div>
   )

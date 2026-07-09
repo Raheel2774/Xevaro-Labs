@@ -47,7 +47,7 @@ export default function AgentsPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-5xl text-5xl md:text-7xl">
               {TOTAL_AGENTS} AI agents.<br />
-              <span className="bg-gradient-to-r from-[#0050FF] to-[#00D6FF] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] bg-clip-text text-transparent">
                 25 industries.
               </span>{' '}
               One command layer.
@@ -72,11 +72,11 @@ export default function AgentsPage() {
       <section className="relative px-6 pb-16 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-[#00D6FF]/20 bg-gradient-to-br from-[#0050FF]/[0.08] via-white/[0.02] to-transparent p-8 md:p-10">
-              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#0050FF]/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-[#E53E3E]/20 bg-gradient-to-br from-[#7F1D1D]/[0.08] via-white/[0.02] to-transparent p-8 md:p-10">
+              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#7F1D1D]/20 blur-3xl" />
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-[#00D6FF]/30 bg-[#00D6FF]/5 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#00D6FF]">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-[#E53E3E]/30 bg-[#E53E3E]/5 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#E53E3E]">
                     <Zap className="h-3 w-3" /> Top 5 Best Sellers
                   </div>
                   <h3 className="mt-4 max-w-xl font-display text-2xl font-semibold text-white/90 md:text-3xl">
@@ -104,7 +104,7 @@ export default function AgentsPage() {
                   onClick={() => setCategory(cat)}
                   className={`rounded-full border px-4 py-2 text-[13px] font-medium transition-all ${
                     category === cat
-                      ? 'border-[#00D6FF]/50 bg-[#00D6FF]/10 text-white'
+                      ? 'border-[#E53E3E]/50 bg-[#E53E3E]/10 text-white'
                       : 'border-white/10 text-white/50 hover:border-white/25 hover:text-white/80'
                   }`}
                 >
@@ -118,7 +118,7 @@ export default function AgentsPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search agents or industries…"
-                className="w-full rounded-full border border-white/10 bg-white/[0.03] py-2.5 pl-10 pr-4 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-[#00D6FF]/50"
+                className="w-full rounded-full border border-white/10 bg-white/[0.03] py-2.5 pl-10 pr-4 text-sm text-white/80 outline-none transition-colors placeholder:text-white/30 focus:border-[#E53E3E]/50"
               />
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function AgentsPage() {
                     <div onMouseMove={glow} className="h-full">
                       <GlassCard glow className="flex h-full flex-col p-7">
                         <div className="flex items-start justify-between">
-                          <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#00D6FF]/20 bg-[#00D6FF]/5 text-[#00D6FF]">
+                          <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E53E3E]/20 bg-[#E53E3E]/5 text-[#E53E3E]">
                             <Icon className="h-5 w-5" />
                           </span>
                           <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-white/40">
@@ -156,13 +156,13 @@ export default function AgentsPage() {
                             <button
                               key={agent.id}
                               onClick={() => setSelected({ agent, niche: niche.name })}
-                              className="group/agent flex items-center justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-left transition-all hover:border-[#00D6FF]/40 hover:bg-[#00D6FF]/[0.04]"
+                              className="group/agent flex items-center justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-left transition-all hover:border-[#E53E3E]/40 hover:bg-[#E53E3E]/[0.04]"
                             >
                               <span>
                                 <span className="block text-[13px] font-medium text-white/85">{agent.name}</span>
                                 <span className="mt-0.5 block text-[11px] leading-snug text-white/40">{agent.desc}</span>
                               </span>
-                              <ArrowRight className="h-4 w-4 flex-shrink-0 text-white/25 transition-all group-hover/agent:translate-x-0.5 group-hover/agent:text-[#00D6FF]" />
+                              <ArrowRight className="h-4 w-4 flex-shrink-0 text-white/25 transition-all group-hover/agent:translate-x-0.5 group-hover/agent:text-[#E53E3E]" />
                             </button>
                           ))}
                         </div>
@@ -246,7 +246,7 @@ function InquiryModal({ agent, niche, onClose }: { agent: Agent; niche: string; 
       onClick={onClose}
     >
       <div
-        className="relative my-auto w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0C] shadow-[0_0_60px_rgba(0,214,255,0.12)]"
+        className="relative my-auto w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0C] shadow-[0_0_60px_rgba(229,62,62,0.12)]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -259,7 +259,7 @@ function InquiryModal({ agent, niche, onClose }: { agent: Agent; niche: string; 
 
         {sent ? (
           <div className="flex min-h-[320px] flex-col items-center justify-center px-8 py-12 text-center">
-            <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00D6FF]/10 text-[#00D6FF]">
+            <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E53E3E]/10 text-[#E53E3E]">
               <Check className="h-7 w-7" />
             </span>
             <h3 className="font-display text-2xl text-white/90">Request received.</h3>
@@ -273,14 +273,14 @@ function InquiryModal({ agent, niche, onClose }: { agent: Agent; niche: string; 
         ) : (
           <div className="max-h-[85vh] overflow-y-auto">
             {/* Agent summary header */}
-            <div className="border-b border-white/[0.06] bg-gradient-to-br from-[#0050FF]/[0.08] to-transparent p-6 pr-14">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-[#00D6FF]">Set up this agent</div>
+            <div className="border-b border-white/[0.06] bg-gradient-to-br from-[#7F1D1D]/[0.08] to-transparent p-6 pr-14">
+              <div className="font-mono text-[10px] uppercase tracking-widest text-[#E53E3E]">Set up this agent</div>
               <h3 className="mt-2 font-display text-xl font-semibold text-white/90">{agent.name}</h3>
               <p className="mt-1 text-[13px] text-white/50">{niche}</p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {agent.features.map((f) => (
                   <li key={f} className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] text-white/60">
-                    <Check className="h-3 w-3 text-[#00D6FF]" /> {f}
+                    <Check className="h-3 w-3 text-[#E53E3E]" /> {f}
                   </li>
                 ))}
               </ul>
@@ -302,7 +302,7 @@ function InquiryModal({ agent, niche, onClose }: { agent: Agent; niche: string; 
                   name="message"
                   rows={3}
                   placeholder={`Tell us about your ${niche.toLowerCase()} business…`}
-                  className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50"
+                  className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
                 />
               </div>
               <button
@@ -310,11 +310,11 @@ function InquiryModal({ agent, niche, onClose }: { agent: Agent; niche: string; 
                 disabled={busy}
                 className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-3.5 text-sm font-semibold text-white disabled:opacity-60"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-[#0050FF] to-[#00D6FF]" />
-                <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(0,214,255,0.5)] transition-opacity group-hover:opacity-100" />
+                <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+                <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
                 <span className="relative">{busy ? 'Sending…' : 'Request Setup'}</span>
               </button>
-              {error && <p className="text-center text-sm text-[#FF6b63]" role="alert">{error}</p>}
+              {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
               <p className="text-center text-[11px] text-white/35">
                 No obligation. We&apos;ll reply within one business day.
               </p>
@@ -335,7 +335,7 @@ function ModalField({ label, name, type = 'text', placeholder, required }: { lab
         name={name}
         placeholder={placeholder}
         required={required}
-        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50"
+        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
       />
     </div>
   )

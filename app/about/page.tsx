@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-8 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">{s.value}</div>
+                  <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">{s.value}</div>
                   <div className="mt-2 text-xs uppercase tracking-wide text-white/40">{s.label}</div>
                 </div>
               ))}
@@ -50,7 +50,7 @@ export default function AboutPage() {
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.1}>
               <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-8 backdrop-blur-xl">
-                <span className="font-mono text-xs tracking-widest text-[#00D6FF]">0{i + 1}</span>
+                <span className="font-mono text-xs tracking-widest text-[#E53E3E]">0{i + 1}</span>
                 <h3 className="mt-4 font-display text-2xl font-semibold text-white/90">{t}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/55">{d}</p>
               </div>
@@ -66,8 +66,8 @@ export default function AboutPage() {
           <div className="mt-12 space-y-px">
             {TIMELINE.map((t, i) => (
               <Reveal key={t.year} delay={i * 0.08}>
-                <div className="group flex gap-8 border-l border-white/10 py-7 pl-8 transition-colors hover:border-[#00D6FF]/50">
-                  <span className="font-mono text-sm text-[#00D6FF]">{t.year}</span>
+                <div className="group flex gap-8 border-l border-white/10 py-7 pl-8 transition-colors hover:border-[#E53E3E]/50">
+                  <span className="font-mono text-sm text-[#E53E3E]">{t.year}</span>
                   <div>
                     <h3 className="font-display text-xl font-semibold text-white/90">{t.title}</h3>
                     <p className="mt-1.5 text-sm text-white/55">{t.desc}</p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             {DIFFERENTIATORS.map((d, i) => (
               <Reveal key={d.title} delay={(i % 2) * 0.08}>
                 <div className="flex h-full gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
-                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#00D6FF]" />
+                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#E53E3E]" />
                   <div>
                     <h3 className="font-display text-lg font-semibold text-white/90">{d.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/55">{d.desc}</p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <Reveal>
             <GlassCard className="p-10 text-center md:p-14">
-              <div className="flex justify-center gap-0.5 text-[#00D6FF]">★★★★★</div>
+              <div className="flex justify-center gap-0.5 text-[#E53E3E]">★★★★★</div>
               <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">
                 “{TESTIMONIALS[0].quote}”
               </p>

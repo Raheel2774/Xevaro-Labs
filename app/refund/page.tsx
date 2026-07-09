@@ -40,8 +40,8 @@ export default function RefundPage() {
       </Clause>
 
       <Clause heading="7. How to request a refund">
-        <p>To request a refund or discuss your engagement, email <a href={`mailto:${CONTACT.email}`} className="text-[#00D6FF] hover:underline">{CONTACT.email}</a> or
-        call <a href={`tel:${CONTACT.phone}`} className="text-[#00D6FF] hover:underline">{CONTACT.phone}</a>. We aim to respond within one business day and resolve
+        <p>To request a refund or discuss your engagement, email <a href={`mailto:${CONTACT.email}`} className="text-[#E53E3E] hover:underline">{CONTACT.email}</a> or
+        call <a href={`tel:${CONTACT.phone}`} className="text-[#E53E3E] hover:underline">{CONTACT.phone}</a>. We aim to respond within one business day and resolve
         requests fairly.</p>
       </Clause>
     </LegalPage>

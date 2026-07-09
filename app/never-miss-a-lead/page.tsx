@@ -55,7 +55,7 @@ export default function NeverMissALeadPage() {
           <Reveal delay={0.18}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Get the missed call system</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#00D6FF]">
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#E53E3E]">
                 {CONTACT.email}
               </a>
             </div>
@@ -73,7 +73,7 @@ export default function NeverMissALeadPage() {
           ].map((s, i) => (
             <Reveal key={s.stat} delay={i * 0.08}>
               <GlassCard className="h-full p-7 text-center">
-                <div className="font-display text-4xl font-bold text-[#00D6FF] md:text-5xl">{s.stat}</div>
+                <div className="font-display text-4xl font-bold text-[#E53E3E] md:text-5xl">{s.stat}</div>
                 <p className="mt-3 text-sm leading-relaxed text-white/55">{s.label}</p>
               </GlassCard>
             </Reveal>
@@ -91,7 +91,7 @@ export default function NeverMissALeadPage() {
           {STEPS.map((s, i) => (
             <Reveal key={s.n} delay={i * 0.1}>
               <GlassCard className="h-full p-7">
-                <div className="font-mono text-xs tracking-[0.3em] text-[#00D6FF]/80">{s.n}</div>
+                <div className="font-mono text-xs tracking-[0.3em] text-[#E53E3E]/80">{s.n}</div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-white/90">{s.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/55">{s.body}</p>
               </GlassCard>
@@ -111,7 +111,7 @@ export default function NeverMissALeadPage() {
             <Reveal key={c.title} delay={(i % 2) * 0.08}>
               <GlassCard className="h-full p-7">
                 <div className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-[#00D6FF] shadow-[0_0_10px_rgba(0,214,255,0.9)]" />
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-[#E53E3E] shadow-[0_0_10px_rgba(229,62,62,0.9)]" />
                   <div>
                     <h3 className="font-display text-lg font-semibold text-white/90">{c.title}</h3>
                     <p className="mt-2 text-[15px] leading-relaxed text-white/55">{c.body}</p>
@@ -136,7 +136,7 @@ export default function NeverMissALeadPage() {
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Book my free lead audit</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#00D6FF]">
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#E53E3E]">
                 {CONTACT.email}
               </a>
             </div>

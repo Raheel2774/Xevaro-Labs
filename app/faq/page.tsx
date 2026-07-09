@@ -48,8 +48,8 @@ export default function FaqPage() {
                         className={`relative mt-1 h-5 w-5 flex-none transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
                         aria-hidden
                       >
-                        <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 bg-[#00D6FF]" />
-                        <span className="absolute left-1/2 top-1/2 h-4 w-px -translate-x-1/2 -translate-y-1/2 bg-[#00D6FF]" />
+                        <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 bg-[#E53E3E]" />
+                        <span className="absolute left-1/2 top-1/2 h-4 w-px -translate-x-1/2 -translate-y-1/2 bg-[#E53E3E]" />
                       </span>
                     </button>
                   </h3>
@@ -80,7 +80,7 @@ export default function FaqPage() {
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Book an Automation Audit</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#00D6FF]">
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#E53E3E]">
                 {CONTACT.email}
               </a>
             </div>
