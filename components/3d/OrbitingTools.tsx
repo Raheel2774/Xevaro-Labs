@@ -90,7 +90,7 @@ function OrbitRing({ radius, opacity = 0.08 }: { radius: number; opacity?: numbe
   }, [points])
 
   return (
-    // @ts-expect-error — R3F 'line' overrides SVG line element
+    // @ts-expect-error, R3F 'line' overrides SVG line element
     <line geometry={geometry}>
       <lineBasicMaterial color="#9B1C1C" transparent opacity={opacity} />
     </line>

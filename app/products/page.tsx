@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Reveal, Eyebrow, GlassCard, H2, MagneticButton, useGlow } from '@/components/os/ui'
 import { PRODUCTS } from '@/lib/os'
+import { TOTAL_AGENTS } from '@/lib/agents'
+import { TRUST_STATS } from '@/lib/social'
 
 export default function ProductsPage() {
   const [active, setActive] = useState(PRODUCTS[0].id)
@@ -24,10 +26,20 @@ export default function ProductsPage() {
               outcome, and integration level.
             </p>
           </Reveal>
+          <Reveal delay={0.15}>
+            <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
+              {TRUST_STATS.map((s) => (
+                <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-6 text-center backdrop-blur-xl">
+                  <div className="bg-gradient-to-br from-white to-[#00D6FF] bg-clip-text font-display text-2xl font-bold text-transparent md:text-3xl">{s.value}</div>
+                  <div className="mt-1.5 text-[10px] uppercase tracking-wide text-white/40">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="relative px-6 pb-32 md:px-10">
+      <section className="relative px-6 pb-20 md:px-10">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr]">
           {/* Node selector */}
           <div className="flex flex-col gap-2.5">
@@ -90,6 +102,39 @@ export default function ProductsPage() {
             </GlassCard>
           </div>
         </div>
+      </section>
+
+      {/* ── Agents cross link ── */}
+      <section className="relative px-6 pb-16 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-3xl border border-[#00D6FF]/20 bg-gradient-to-br from-[#0050FF]/[0.08] via-white/[0.02] to-transparent p-8 md:p-12">
+              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#0050FF]/20 blur-3xl" />
+              <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+                <div>
+                  <h3 className="max-w-xl font-display text-2xl font-semibold text-white/90 md:text-3xl">
+                    Prefer a ready made agent?
+                  </h3>
+                  <p className="mt-3 max-w-lg text-sm text-white/55">
+                    Explore {TOTAL_AGENTS} deployable AI agents across 25 industries, then pick the one you want and we set it up for you.
+                  </p>
+                </div>
+                <MagneticButton href="/agents">Browse AI Agents</MagneticButton>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="relative px-6 py-24 text-center md:px-10">
+        <Reveal><H2 className="text-4xl md:text-6xl">Deploy a system that pays for itself.</H2></Reveal>
+        <Reveal delay={0.1}>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <MagneticButton href="/contact">Book a Free Automation Audit</MagneticButton>
+            <MagneticButton href="/pricing" variant="ghost">See Pricing →</MagneticButton>
+          </div>
+        </Reveal>
       </section>
     </>
   )

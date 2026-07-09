@@ -55,7 +55,7 @@ export default function CTA() {
           style={{ background: 'rgba(155,28,28,0.12)', borderColor: 'rgba(155,28,28,0.3)', color: '#FC8181' }}
         >
           <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#E53E3E' }} />
-          Free Strategy Session — No commitment required
+          Free Strategy Session, No commitment required
         </motion.div>
 
         {/* Headline */}
@@ -106,7 +106,7 @@ export default function CTA() {
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500"
         >
-          {['✓ No-pressure consultation', '✓ Custom roadmap included', '✓ Response within 24 hours', '✓ 100% confidential'].map((item, i) => (
+          {['✓ No pressure consultation', '✓ Custom roadmap included', '✓ Response within 24 hours', '✓ 100% confidential'].map((item, i) => (
             <span key={i}>{item}</span>
           ))}
         </motion.div>

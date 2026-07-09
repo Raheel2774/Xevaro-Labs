@@ -112,7 +112,7 @@ export default function CaseStudiesPage() {
         <Reveal delay={0.1}>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <MagneticButton href="/contact">Start Your Deployment</MagneticButton>
-            <MagneticButton href="/best-sellers" variant="ghost">See Best-Selling Agents →</MagneticButton>
+            <MagneticButton href="/best-sellers" variant="ghost">See Best Selling Agents →</MagneticButton>
           </div>
         </Reveal>
       </section>

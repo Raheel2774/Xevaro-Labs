@@ -15,7 +15,7 @@ export default function Footer() {
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/45">
               The AI Operating System for autonomous business. We deconstruct, optimize, and
-              automate enterprise operations into self-executing infrastructure.
+              automate enterprise operations into self executing infrastructure.
             </p>
           </div>
 

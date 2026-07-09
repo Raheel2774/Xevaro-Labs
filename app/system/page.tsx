@@ -27,7 +27,7 @@ export default function Page() {
       <div className="custom-cursor-active contents">
       <CustomCursor />
 
-      {/* Fixed full-screen 3D canvas */}
+      {/* Fixed full screen 3D canvas */}
       <Experience scrollProgress={scrollProgress} />
 
       {/* Subtle vignette + grain over the canvas for depth */}

@@ -1,7 +1,7 @@
 import { LegalPage, Clause } from '@/components/os/Legal'
 import { CONTACT } from '@/lib/os'
 
-export const metadata = { title: 'Terms of Service — Xevaro Labs' }
+export const metadata = { title: 'Terms of Service, Xevaro Labs' }
 
 export default function TermsPage() {
   return (
@@ -20,7 +20,7 @@ export default function TermsPage() {
       </Clause>
 
       <Clause heading="3. Quotes & pricing">
-        <p>Pricing is provided on a per-project basis after we assess your requirements. Any quote
+        <p>Pricing is provided on a per project basis after we assess your requirements. Any quote
         we issue is valid for the period stated within it and is subject to the agreed scope.
         Changes to scope may affect pricing and timelines.</p>
       </Clause>
@@ -33,8 +33,8 @@ export default function TermsPage() {
 
       <Clause heading="5. Intellectual property">
         <p>Upon full payment, you own the custom deliverables created specifically for you. Xevaro
-        Labs retains ownership of its pre-existing tools, frameworks, and know-how used to deliver
-        the Services. Third-party software and APIs remain subject to their own licenses.</p>
+        Labs retains ownership of its preexisting tools, frameworks, and know how used to deliver
+        the Services. Third party software and APIs remain subject to their own licenses.</p>
       </Clause>
 
       <Clause heading="6. Confidentiality">
@@ -49,8 +49,8 @@ export default function TermsPage() {
         giving rise to the claim.</p>
       </Clause>
 
-      <Clause heading="8. Third-party platforms">
-        <p>Our automations may rely on third-party services (e.g. hosting, AI model providers,
+      <Clause heading="8. Third party platforms">
+        <p>Our automations may rely on third party services (e.g. hosting, AI model providers,
         messaging and CRM platforms). We are not responsible for outages, changes, or pricing of
         those providers.</p>
       </Clause>

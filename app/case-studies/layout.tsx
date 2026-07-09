@@ -5,7 +5,7 @@ import { pageMeta, breadcrumbSchema } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Case Studies & Results',
   description:
-    'Real outcomes from Xevaro Labs AI systems — roughly 80% operational time saved, +340% revenue growth, 2.1x conversion, and $2M+ pipeline recovered across e-commerce, SaaS, and enterprise.',
+    'Real outcomes from Xevaro Labs AI systems, roughly 80% operational time saved, +340% revenue growth, 2.1x conversion, and $2M+ pipeline recovered across e-commerce, SaaS, and enterprise.',
   path: '/case-studies',
   keywords: ['AI automation case studies', 'automation ROI', 'AI agency results'],
 })

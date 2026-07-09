@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd'
 export const metadata: Metadata = pageMeta({
   title: 'AI Automation Blog',
   description:
-    'Practical, answer-first guides on AI automation, AI agents, n8n, and lead systems from Xevaro Labs — how to automate the parts of your business that eat your week.',
+    'Practical, answer first guides on AI automation, AI agents, n8n, and lead systems from Xevaro Labs, how to automate the parts of your business that eat your week.',
   path: '/blog',
   keywords: ['AI automation blog', 'AI agents guide', 'n8n tutorials', 'business automation guides'],
 })
@@ -37,7 +37,7 @@ export default function BlogIndex() {
             The automation<br />playbook.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
-            Plain-English guides on AI agents, workflow automation, and the systems that quietly run a business — written to actually be useful.
+            Plain English guides on AI agents, workflow automation, and the systems that quietly run a business, written to actually be useful.
           </p>
         </div>
       </section>

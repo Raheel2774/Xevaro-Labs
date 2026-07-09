@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
 /**
- * Floating AI modules — each represents a real Xevaro capability and orbits
+ * Floating AI modules, each represents a real Xevaro capability and orbits
  * the core with organic motion, emitting a glow tied to its "activity".
  *
  *  agent    → energy-core sphere (AI agent)

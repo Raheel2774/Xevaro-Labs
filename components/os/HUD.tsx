@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { ROBOT_STATES, CONTACT } from '@/lib/os'
 
 /**
- * System HUD — floating operating-system telemetry that reinforces the
+ * System HUD, floating operating-system telemetry that reinforces the
  * "living AI OS" feel. Reads the active route's robot state.
  */
 export default function HUD() {

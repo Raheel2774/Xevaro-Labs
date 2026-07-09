@@ -8,7 +8,7 @@ import { ArrowRight, TrendingUp, Users, Zap, DollarSign, Sparkles } from 'lucide
 const cases = [
   {
     client: 'FinTech SaaS',
-    project: 'AI-Powered Lead Qualification System',
+    project: 'AI Powered Lead Qualification System',
     description: 'Built an n8n + GPT-4 workflow that automatically scores and qualifies inbound leads, routing hot prospects to sales instantly.',
     tag: 'AI Automation',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
@@ -50,8 +50,8 @@ const cases = [
   },
   {
     client: 'Real Estate Agency',
-    project: 'AI CRM & Follow-up System',
-    description: 'Integrated AI agents with HubSpot to automate follow-ups, property matching, and client nurture across email and WhatsApp.',
+    project: 'AI CRM & Follow up System',
+    description: 'Integrated AI agents with HubSpot to automate follow ups, property matching, and client nurture across email and WhatsApp.',
     tag: 'AI + CRM',
     img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
     imgAlt: 'Real estate property',

@@ -46,7 +46,7 @@ export default function AICore({ scale = 1, visible = true }: AICoreProps) {
 
   return (
     <group ref={groupRef} scale={scale}>
-      {/* Deep core — inner dark sphere */}
+      {/* Deep core, inner dark sphere */}
       <mesh>
         <icosahedronGeometry args={[1.1, 4]} />
         <meshStandardMaterial color="#200000" roughness={0.6} metalness={0.8} />
@@ -66,7 +66,7 @@ export default function AICore({ scale = 1, visible = true }: AICoreProps) {
         />
       </mesh>
 
-      {/* Inner fresnel glow — back face */}
+      {/* Inner fresnel glow, back face */}
       <mesh ref={glowRef} scale={1.05}>
         <icosahedronGeometry args={[1.5, 16]} />
         <shaderMaterial

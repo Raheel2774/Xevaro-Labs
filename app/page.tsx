@@ -7,6 +7,7 @@ import { Reveal, Eyebrow, GlassCard, MagneticButton, H2, useGlow } from '@/compo
 import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
 import { FLAGSHIP_AGENTS, TOTAL_AGENTS } from '@/lib/agents'
 import { TESTIMONIALS, INDUSTRIES_SERVED, PROCESS, PROMISES } from '@/lib/social'
+import ProofStrip from '@/components/sections/ProofStrip'
 import { POSTS } from '@/lib/blog'
 
 const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wrench, LineChart }
@@ -41,7 +42,7 @@ export default function Home() {
             className="mx-auto mt-7 max-w-2xl text-lg font-light leading-relaxed text-white/55 md:text-xl"
           >
             Xevaro Labs deconstructs, optimizes, and automates enterprise operations into
-            self-executing infrastructure — a network of AI agents, workflows, and data pipelines
+            self executing infrastructure, a network of AI agents, workflows, and data pipelines
             running in real time.
           </motion.p>
 
@@ -122,7 +123,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-2xl text-lg font-light text-white/55">
-              Pre-built AI agents that capture leads, book appointments, recover revenue and run support —
+              Prebuilt AI agents that capture leads, book appointments, recover revenue and run support,
               tailored to your industry. Pick the one you need and we set it up for you.
             </p>
           </Reveal>
@@ -257,6 +258,11 @@ export default function Home() {
               <span>Rated 4.9/5 across client engagements</span>
             </div>
           </Reveal>
+          <Reveal delay={0.15}>
+            <div className="mt-8 flex justify-center">
+              <MagneticButton href="/testimonials" variant="ghost">Read More Stories →</MagneticButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -284,6 +290,9 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* ── PROOF STRIP ── */}
+      <ProofStrip />
 
       {/* ── LATEST INSIGHTS ── */}
       <section className="relative px-6 py-28 md:px-10">

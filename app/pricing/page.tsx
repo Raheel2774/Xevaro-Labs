@@ -11,12 +11,12 @@ const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wren
 const PACKAGES = [
   {
     name: 'Launch',
-    tagline: 'One high-impact system, live fast.',
+    tagline: 'One high impact system, live fast.',
     for: 'Best for a single flagship agent or automation.',
     features: [
       '1 AI agent or automation',
       'Core integration (calendar / CRM / SMS)',
-      'Setup, testing & go-live',
+      'Setup, testing & go live',
       'Email support',
     ],
     featured: false,
@@ -27,8 +27,8 @@ const PACKAGES = [
     for: 'Best for businesses automating multiple workflows.',
     features: [
       'Up to 3 agents + automations',
-      'Multi-tool integration layer',
-      'Lead capture + follow-up + support',
+      'Multi tool integration layer',
+      'Lead capture + follow up + support',
       'Monthly optimization & reporting',
       'Priority support',
     ],
@@ -37,7 +37,7 @@ const PACKAGES = [
   {
     name: 'Command',
     tagline: 'Your entire operation, autonomous.',
-    for: 'Best for scaling companies going all-in.',
+    for: 'Best for scaling companies going all in.',
     features: [
       'Unlimited agents + full automation suite',
       'Custom website / web app',
@@ -99,7 +99,7 @@ export default function PricingPage() {
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
               Every Xevaro system is scoped to your workflows, so pricing is tailored. Most engagements
-              pair a one-time build with a monthly retainer for hosting, monitoring and improvements.
+              pair a one time build with a monthly retainer for hosting, monitoring and improvements.
               Pick the tier that fits and we&apos;ll send a precise quote.
             </p>
           </Reveal>
@@ -179,7 +179,7 @@ export default function PricingPage() {
                 <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00D6FF]/10 text-2xl text-[#00D6FF]">✓</span>
                 <h3 className="font-display text-2xl text-white/90">Request received.</h3>
                 <p className="mt-2 max-w-sm text-sm text-white/55">
-                  Thanks — we&apos;ll review your needs and reach out within one business day with pricing.
+                  Thanks, we&apos;ll review your needs and reach out within one business day with pricing.
                 </p>
               </div>
             ) : (

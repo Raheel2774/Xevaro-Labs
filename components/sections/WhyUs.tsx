@@ -14,12 +14,12 @@ const stats = [
 ]
 
 const advantages = [
-  { icon: Zap,          title: 'Fast Delivery',           description: 'We move at startup speed. Most projects go live in 2–6 weeks, not months.', color: '#E53E3E' },
-  { icon: TrendingUp,   title: 'ROI-Driven Solutions',    description: 'Every decision is tied back to your revenue and growth metrics.', color: '#FC8181' },
-  { icon: Shield,       title: 'Enterprise-Grade Quality',description: 'Production-ready code with security, scalability, and performance built in.', color: '#FBBFBF' },
+  { icon: Zap,          title: 'Fast Delivery',           description: 'We move at startup speed. Most projects go live in 2 to 6 weeks, not months.', color: '#E53E3E' },
+  { icon: TrendingUp,   title: 'ROI Driven Solutions',    description: 'Every decision is tied back to your revenue and growth metrics.', color: '#FC8181' },
+  { icon: Shield,       title: 'Enterprise Grade Quality',description: 'Production ready code with security, scalability, and performance built in.', color: '#FBBFBF' },
   { icon: Clock,        title: '24/7 Support',            description: 'Dedicated support team available around the clock, whenever you need us.', color: '#E53E3E' },
   { icon: HeartHandshake, title: 'True Partnership',      description: 'We act as your dedicated tech team, not just a vendor. Your success is ours.', color: '#FC8181' },
-  { icon: Target,       title: 'Precision-Built Systems', description: 'Every automation is custom-built for your specific business needs.', color: '#FBBFBF' },
+  { icon: Target,       title: 'Precision Built Systems', description: 'Every automation is custom built for your specific business needs.', color: '#FBBFBF' },
 ]
 
 export default function WhyUs() {
@@ -57,7 +57,7 @@ export default function WhyUs() {
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 text-lg max-w-xl mx-auto"
           >
-            We don&apos;t just build technology — we build competitive advantages.
+            We don&apos;t just build technology, we build competitive advantages.
           </motion.p>
         </div>
 

@@ -8,8 +8,8 @@ import { useEffect } from 'react'
 // Env-gated. Nothing loads and nothing breaks unless the matching public env
 // var is set, so the site is safe to deploy before you have the IDs.
 //
-//   NEXT_PUBLIC_REDDIT_PIXEL_ID   — Reddit Ads → Events Manager → your Pixel ID
-//   NEXT_PUBLIC_GA_ID             — (optional) GA4 Measurement ID, e.g. G-XXXX
+//   NEXT_PUBLIC_REDDIT_PIXEL_ID  , Reddit Ads → Events Manager → your Pixel ID
+//   NEXT_PUBLIC_GA_ID            , (optional) GA4 Measurement ID, e.g. G-XXXX
 //
 // The Reddit pixel is the important one for the ad campaign: it reports
 // PageVisit + Lead conversions back into Reddit Ads Manager and lets Reddit

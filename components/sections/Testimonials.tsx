@@ -32,14 +32,14 @@ const testimonials = [
     role: 'VP Growth, ScaleUp SaaS',
     img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80',
     rating: 5,
-    text: "Working with Xevaro is like having a world-class tech team on-demand. Their AI chatbot handles 70% of our support tickets automatically. Outstanding results.",
+    text: "Working with Xevaro is like having a world class tech team on demand. Their AI chatbot handles 70% of our support tickets automatically. Outstanding results.",
   },
   {
     name: 'James Whitfield',
     role: 'Director, PrimeRealty',
     img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80',
     rating: 5,
-    text: "The CRM automation and AI follow-up system made every agent 3× more productive. The ROI was evident within the first month. Highly recommend.",
+    text: "The CRM automation and AI follow up system made every agent 3× more productive. The ROI was evident within the first month. Highly recommend.",
   },
   {
     name: 'Elena Vasquez',

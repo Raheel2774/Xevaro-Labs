@@ -17,7 +17,7 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <p className="mt-7 max-w-2xl text-lg font-light leading-relaxed text-white/60">
               Xevaro Labs exists on one conviction: every manual business operation can become an
-              autonomous system. We don&apos;t sell tools — we engineer living infrastructure that
+              autonomous system. We don&apos;t sell tools, we engineer living infrastructure that
               thinks, executes, and improves on its own.
             </p>
           </Reveal>
@@ -46,7 +46,7 @@ export default function AboutPage() {
           {[
             ['Deconstruct', 'We map operational complexity and break it into modular, automatable nodes.'],
             ['Optimize', 'We tune each node for velocity, reliability, and zero overhead.'],
-            ['Automate', 'We reassemble everything into a self-executing autonomous system.'],
+            ['Automate', 'We reassemble everything into a self executing autonomous system.'],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.1}>
               <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-8 backdrop-blur-xl">

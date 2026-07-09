@@ -3,8 +3,8 @@
 import { Reveal, Eyebrow, H2, MagneticButton, GlassCard } from '@/components/os/ui'
 import { CONTACT } from '@/lib/os'
 
-// ─── Ad-matched landing page ─────────────────────────────────────────────────
-// Message-matches the Reddit "missed call" campaign for local service
+// ─── Ad matched landing page ─────────────────────────────────────────────────
+// Message matches the Reddit "missed call" campaign for local service
 // businesses (roofers, plumbers, HVAC, electricians). Every headline here
 // echoes the ad promise: answer + text back in 60 seconds + book the job.
 
@@ -12,27 +12,27 @@ const STEPS = [
   {
     n: '01',
     title: 'A lead calls or fills out a form',
-    body: 'Missed calls, web forms, Google, Facebook — every new lead is captured the second it comes in, no matter where you are.',
+    body: 'Missed calls, web forms, Google, Facebook, every new lead is captured the second it comes in, no matter where you are.',
   },
   {
     n: '02',
     title: 'AI texts back in 60 seconds',
-    body: 'An AI assistant instantly replies by text, answers their questions, qualifies the job, and books the estimate straight onto your calendar — 24/7.',
+    body: 'An AI assistant instantly replies by text, answers their questions, qualifies the job, and books the estimate straight onto your calendar, 24/7.',
   },
   {
     n: '03',
     title: 'You show up and close',
-    body: 'You get a booked appointment with all the details. Follow-ups, reminders, and review requests run on autopilot so nothing slips.',
+    body: 'You get a booked appointment with all the details. Follow ups, reminders, and review requests run on autopilot so nothing slips.',
   },
 ]
 
 const INCLUDED = [
-  { title: 'Missed-call text-back', body: 'Every unanswered call gets an instant text so the lead never calls your competitor next.' },
-  { title: 'AI booking assistant', body: 'Answers, qualifies, and books jobs by text or chat around the clock — even at 2am.' },
-  { title: 'Speed-to-lead follow-up', body: 'Automated sequences chase every new lead until they book or reply. No more “I forgot to call them back.”' },
-  { title: 'Calendar + reminders', body: 'Appointments land on your calendar with automatic reminders that cut no-shows.' },
-  { title: 'Review requests', body: 'Happy customers get an automatic ask for a Google review — more 5-stars, more inbound calls.' },
-  { title: 'Done-for-you setup', body: 'We build, connect, and launch the whole system for you in about a week. You keep running your business.' },
+  { title: 'Missed call text back', body: 'Every unanswered call gets an instant text so the lead never calls your competitor next.' },
+  { title: 'AI booking assistant', body: 'Answers, qualifies, and books jobs by text or chat around the clock, even at 2am.' },
+  { title: 'Speed to lead follow up', body: 'Automated sequences chase every new lead until they book or reply. No more “I forgot to call them back.”' },
+  { title: 'Calendar + reminders', body: 'Appointments land on your calendar with automatic reminders that cut no shows.' },
+  { title: 'Review requests', body: 'Happy customers get an automatic ask for a Google review, more 5-stars, more inbound calls.' },
+  { title: 'Done for you setup', body: 'We build, connect, and launch the whole system for you in about a week. You keep running your business.' },
 ]
 
 export default function NeverMissALeadPage() {
@@ -47,14 +47,14 @@ export default function NeverMissALeadPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
-              You&apos;re on a roof, under a sink, or on the road — and the phone rings. When you can&apos;t pick up,
+              You&apos;re on a roof, under a sink, or on the road, and the phone rings. When you can&apos;t pick up,
               that lead calls the next contractor. We install the AI that <span className="text-white/80">texts every
-              missed call back in 60 seconds</span>, answers questions, and books the job for you. Done-for-you, live in about a week.
+              missed call back in 60 seconds</span>, answers questions, and books the job for you. Done for you, live in about a week.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <MagneticButton href="/contact">Get the missed-call system</MagneticButton>
+              <MagneticButton href="/contact">Get the missed call system</MagneticButton>
               <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-white/50 transition-colors hover:text-[#00D6FF]">
                 {CONTACT.email}
               </a>
@@ -130,7 +130,7 @@ export default function NeverMissALeadPage() {
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-lg text-lg font-light text-white/55">
               Book a 15-minute call. We&apos;ll map exactly where leads are slipping through and set up the system that
-              catches them — with nothing for you to manage.
+              catches them, with nothing for you to manage.
             </p>
           </Reveal>
           <Reveal delay={0.2}>

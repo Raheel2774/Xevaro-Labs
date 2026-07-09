@@ -49,7 +49,7 @@ export default function Navbar() {
         >
           <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#760115] to-[#FF3B30] opacity-90 group-hover:opacity-100 transition-opacity" />
           <span className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(255,59,48,0.35)] opacity-0 group-hover:opacity-100 transition-opacity" />
-          <span className="relative hidden sm:inline">Deploy Multi-Agent Systems</span>
+          <span className="relative hidden sm:inline">Deploy Multi Agent Systems</span>
           <span className="relative sm:hidden">Deploy</span>
         </a>
       </nav>

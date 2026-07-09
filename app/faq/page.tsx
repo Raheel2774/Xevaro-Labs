@@ -21,7 +21,7 @@ export default function FaqPage() {
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
               Everything you might ask about AI automation, AI agents, timelines, pricing, and
-              working with Xevaro Labs — in plain language.
+              working with Xevaro Labs, in plain language.
             </p>
           </Reveal>
         </div>
@@ -74,7 +74,7 @@ export default function FaqPage() {
           <Reveal><H2 className="text-4xl md:text-6xl">Still have a question?</H2></Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-lg text-lg font-light text-white/55">
-              Tell us what you want to automate and we&apos;ll map the highest-impact system for your business.
+              Tell us what you want to automate and we&apos;ll map the highest impact system for your business.
             </p>
           </Reveal>
           <Reveal delay={0.2}>

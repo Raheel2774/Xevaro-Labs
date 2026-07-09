@@ -29,7 +29,7 @@ export default function Page() {
         style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 45%, #07091a 0%, #050505 70%)' }}
       />
 
-      {/* Storytelling text — fixed, driven by master progress */}
+      {/* Storytelling text, fixed, driven by master progress */}
       <StoryBeats progress={scrollYProgress} />
 
       {/* Tall scroll driver with sticky canvas */}

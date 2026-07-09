@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Block } from '@/lib/blog'
 
-// Parse a small inline subset — **bold** and [label](/path or url) — into React
+// Parse a small inline subset, **bold** and [label](/path or url), into React
 // nodes. Server component: the rendered prose is in the initial HTML.
 function renderInline(text: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = []

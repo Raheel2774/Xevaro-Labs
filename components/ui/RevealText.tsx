@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 /**
- * Word-by-word scroll reveal — words fade from dim to bright as they enter view.
+ * Word-by-word scroll reveal, words fade from dim to bright as they enter view.
  * Signature peachweb / award-site effect.
  */
 export default function RevealText({ text, className = '' }: { text: string; className?: string }) {

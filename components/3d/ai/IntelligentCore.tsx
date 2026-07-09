@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { coreVertex, coreFragment, glowVertex, glowFragment } from './coreShaders'
 
 /**
- * The Xevaro AI Core — a pulsing neural nucleus at the center of the system.
+ * The Xevaro AI Core, a pulsing neural nucleus at the center of the system.
  * Activity rises with scroll, making it brighter, larger, and more energetic.
  */
 export default function IntelligentCore({ activity = 0, quality = 'high' }: { activity?: number; quality?: 'high' | 'low' }) {

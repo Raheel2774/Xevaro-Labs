@@ -1,7 +1,7 @@
 import { LegalPage, Clause } from '@/components/os/Legal'
 import { CONTACT } from '@/lib/os'
 
-export const metadata = { title: 'Privacy Policy — Xevaro Labs' }
+export const metadata = { title: 'Privacy Policy, Xevaro Labs' }
 
 export default function PrivacyPage() {
   return (
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       </Clause>
 
       <Clause heading="2. Information we collect">
-        <p>When you submit a contact or pricing request, we collect the details you provide — such as
+        <p>When you submit a contact or pricing request, we collect the details you provide, such as
         your name, company, email address, phone number, the service you&apos;re interested in, and
         your message. For security and abuse prevention, we may also log your IP address and browser
         user agent.</p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
       </Clause>
 
       <Clause heading="8. Third parties">
-        <p>We may use third-party tools (hosting, AI providers, messaging, and analytics) to deliver
+        <p>We may use third party tools (hosting, AI providers, messaging, and analytics) to deliver
         the Services. These providers access data only as needed to perform their functions.</p>
       </Clause>
 
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
         Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any
         time, or HELP for help.</p>
         <p>No mobile information will be shared with third parties or affiliates for marketing or
-        promotional purposes. Text-messaging originator opt-in data and consent are not shared with any
+        promotional purposes. Text messaging originator opt in data and consent are not shared with any
         third parties. We share information with subprocessors (such as our messaging provider) solely to
         deliver the messaging service you requested.</p>
       </Clause>

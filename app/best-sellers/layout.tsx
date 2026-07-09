@@ -4,9 +4,9 @@ import { pageMeta, breadcrumbSchema, SITE } from '@/lib/seo'
 import { FLAGSHIP_AGENTS } from '@/lib/agents'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Best-Selling AI Agents',
+  title: 'Best Selling AI Agents',
   description:
-    'The 5 best-selling AI agents from Xevaro Labs: Speed-to-Lead, AI Booking, 24/7 Support, Sales Follow-Up and Reputation. Battle-tested agents that capture leads, book appointments and close deals 24/7.',
+    'The 5 best selling AI agents from Xevaro Labs: Speed to Lead, AI Booking, 24/7 Support, Sales Follow Up and Reputation. Battle tested agents that capture leads, book appointments and close deals 24/7.',
   path: '/best-sellers',
   keywords: [
     'best AI agents',
@@ -24,7 +24,7 @@ function flagshipItemListSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Xevaro Labs Best-Selling AI Agents',
+    name: 'Xevaro Labs Best Selling AI Agents',
     numberOfItems: FLAGSHIP_AGENTS.length,
     itemListElement: FLAGSHIP_AGENTS.map((a) => ({
       '@type': 'ListItem',

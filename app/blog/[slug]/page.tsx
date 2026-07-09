@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mt-16 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 text-center backdrop-blur-xl">
             <h2 className="font-display text-2xl font-semibold text-white/90">Want this built for your business?</h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/55">
-              Tell us your biggest manual bottleneck and we&apos;ll map the highest-impact system to automate it.
+              Tell us your biggest manual bottleneck and we&apos;ll map the highest impact system to automate it.
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-7 py-3 text-sm font-semibold text-white">

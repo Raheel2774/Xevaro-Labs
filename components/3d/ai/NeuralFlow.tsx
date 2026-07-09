@@ -14,7 +14,7 @@ interface NeuralFlowProps {
 const dummy = new THREE.Object3D()
 
 /**
- * Live AI neural network — instanced nodes drifting in a spherical volume,
+ * Live AI neural network, instanced nodes drifting in a spherical volume,
  * connected by pulsing data-packet lines that continuously re-route.
  * Nodes react to cursor proximity.
  */

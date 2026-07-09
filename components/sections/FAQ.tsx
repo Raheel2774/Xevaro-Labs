@@ -5,13 +5,13 @@ import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { Plus, Minus, Sparkles } from 'lucide-react'
 
 const faqs = [
-  { q: 'What types of AI automation do you build?', a: "We specialize in n8n workflow automation, custom AI agents powered by GPT-4 and Claude, CRM automations, lead qualification systems, customer support bots, WhatsApp AI agents, and end-to-end data pipelines. Every system is custom-built for your specific business processes." },
-  { q: 'How long does a typical project take?', a: "Timelines vary by scope: a focused AI workflow typically takes 2–4 weeks, a complete website rebuild 3–6 weeks, and a full SaaS platform 6–16 weeks. We provide a detailed timeline in every proposal with weekly milestones so you're always informed." },
-  { q: 'What is your pricing structure?', a: "We work on project-based pricing, not hourly rates. After the discovery call, we provide a fixed-price proposal. Projects typically range from $5,000 for focused automations to $50,000+ for enterprise-scale platforms." },
-  { q: 'Do you work with Shopify Plus stores?', a: "Yes — we handle everything from custom theme development and app integrations to store automations, CRO optimization, and headless Shopify builds." },
-  { q: 'What happens after the project launches?', a: "Every project includes a 30-day post-launch support period at no extra cost. After that, we offer ongoing retainer packages for monitoring, optimization, and continued development." },
+  { q: 'What types of AI automation do you build?', a: "We specialize in n8n workflow automation, custom AI agents powered by GPT-4 and Claude, CRM automations, lead qualification systems, customer support bots, WhatsApp AI agents, and end to end data pipelines. Every system is custom built for your specific business processes." },
+  { q: 'How long does a typical project take?', a: "Timelines vary by scope: a focused AI workflow typically takes 2 to 4 weeks, a complete website rebuild 3 to 6 weeks, and a full SaaS platform 6 to 16 weeks. We provide a detailed timeline in every proposal with weekly milestones so you're always informed." },
+  { q: 'What is your pricing structure?', a: "We work on project based pricing, not hourly rates. After the discovery call, we provide a fixed price proposal. Projects typically range from $5,000 for focused automations to $50,000+ for enterprise scale platforms." },
+  { q: 'Do you work with Shopify Plus stores?', a: "Yes, we handle everything from custom theme development and app integrations to store automations, CRO optimization, and headless Shopify builds." },
+  { q: 'What happens after the project launches?', a: "Every project includes a 30-day post launch support period at no extra cost. After that, we offer ongoing retainer packages for monitoring, optimization, and continued development." },
   { q: 'Can you integrate with our existing tools?', a: "Absolutely. We integrate with HubSpot, Salesforce, Slack, Notion, Google Workspace, Stripe, Shopify, and hundreds more via n8n, or custom API integrations." },
-  { q: 'How do you ensure quality and security?', a: "We follow enterprise-grade practices: code reviews, automated testing, staging environments, and security audits. For AI systems, we implement rate limiting, prompt injection protection, and data privacy controls." },
+  { q: 'How do you ensure quality and security?', a: "We follow enterprise grade practices: code reviews, automated testing, staging environments, and security audits. For AI systems, we implement rate limiting, prompt injection protection, and data privacy controls." },
   { q: 'Do you provide training for our team?', a: "Yes. Every delivery includes documentation and a live walkthrough. For complex systems, we provide video tutorials and a 30-day onboarding period so your team is fully empowered." },
 ]
 

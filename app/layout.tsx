@@ -8,11 +8,11 @@ import { SITE, organizationSchema, websiteSchema } from '@/lib/seo'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Xevaro Labs — Command the Autonomous Enterprise',
-    template: '%s — Xevaro Labs',
+    default: 'Xevaro Labs, Command the Autonomous Enterprise',
+    template: '%s, Xevaro Labs',
   },
   description:
-    'Xevaro Labs is an AI automation agency. We build custom AI agents, n8n workflow automation, lead-generation systems, and high-conversion websites that turn manual operations into self-running infrastructure.',
+    'Xevaro Labs is an AI automation agency. We build custom AI agents, n8n workflow automation, lead generation systems, and high conversion websites that turn manual operations into self-running infrastructure.',
   applicationName: SITE.name,
   keywords: [
     'AI automation agency',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'lead generation systems',
     'AI customer support',
     'Shopify development',
-    'high-conversion websites',
+    'high conversion websites',
   ],
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: '/icon.svg',
   },
   openGraph: {
-    title: 'Xevaro Labs — AI Automation Agency',
+    title: 'Xevaro Labs, AI Automation Agency',
     description:
       'We build AI agents, workflow automation, and lead systems that run your business on autopilot.',
     url: SITE.url,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Xevaro Labs — AI Automation Agency',
+    title: 'Xevaro Labs, AI Automation Agency',
     description:
       'We build AI agents, workflow automation, and lead systems that run your business on autopilot.',
     images: [SITE.ogImage],
@@ -67,7 +67,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Global structured data — Organization + WebSite (AEO/GEO entity graph) */}
+        {/* Global structured data, Organization + WebSite (AEO/GEO entity graph) */}
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
       <body className="bg-[#050505] text-white antialiased overflow-x-hidden">

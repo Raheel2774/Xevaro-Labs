@@ -71,6 +71,24 @@ export default function ContactPage() {
                   return a module map for your operations.
                 </p>
               </GlassCard>
+              <GlassCard className="p-7">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">What happens next</div>
+                <ol className="mt-4 space-y-3.5">
+                  {[
+                    ['1', 'We reply within one business day to book a short call.'],
+                    ['2', 'We map your highest return automation and send a clear plan.'],
+                    ['3', 'We build and launch your system, usually within one to two weeks.'],
+                  ].map(([n, t]) => (
+                    <li key={n} className="flex gap-3">
+                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#00D6FF]/30 bg-[#00D6FF]/5 font-mono text-[11px] text-[#00D6FF]">{n}</span>
+                      <span className="text-sm leading-relaxed text-white/60">{t}</span>
+                    </li>
+                  ))}
+                </ol>
+                <p className="mt-5 border-t border-white/[0.06] pt-4 text-xs text-white/40">
+                  No obligation, no pressure, no jargon.
+                </p>
+              </GlassCard>
             </div>
           </Reveal>
 
@@ -99,7 +117,7 @@ export default function ContactPage() {
                       <option className="bg-[#0A0A0C]">AI Automation Systems</option>
                       <option className="bg-[#0A0A0C]">AI Agents &amp; Voice Systems</option>
                       <option className="bg-[#0A0A0C]">Lead Generation Systems</option>
-                      <option className="bg-[#0A0A0C]">High-Conversion Website Systems</option>
+                      <option className="bg-[#0A0A0C]">High Conversion Website Systems</option>
                       <option className="bg-[#0A0A0C]">Shopify AI Commerce Systems</option>
                       <option className="bg-[#0A0A0C]">Business Intelligence Systems</option>
                     </select>

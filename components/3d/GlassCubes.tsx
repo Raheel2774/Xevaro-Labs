@@ -72,7 +72,7 @@ function GlassCube({ data }: { data: typeof testimonials[0] }) {
           position={[0, -0.35, 0.1]}
           font="/fonts/SpaceGrotesk-Medium.woff"
         >
-          — {data.name} · {data.role}
+         , {data.name} · {data.role}
         </Text>
       </Billboard>
     </group>

@@ -10,7 +10,7 @@ const framePath = (i: number) => `/robot/ezgif-frame-${String(i).padStart(3, '0'
  * Persistent robotic AI "brain" rendered behind the entire OS.
  * - Preloads the 150-frame sequence once (shared across route changes).
  * - Each route selects a frame window (ROBOT_STATES); scroll interpolates it.
- * - Eased every rAF for buttery, flicker-free transformation.
+ * - Eased every rAF for buttery, flicker free transformation.
  * - Pauses when tab hidden; mobile shows a single static frame (no scroll cost).
  */
 export default function RobotCore() {

@@ -63,7 +63,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
-              We build AI systems that scale businesses. From automation to full-stack development — we deliver transformation.
+              We build AI systems that scale businesses. From automation to full stack development, we deliver transformation.
             </p>
 
             <a href="mailto:hello@xevarolabs.com"

@@ -103,19 +103,19 @@ export default async function AdminPage() {
               {rows.map((r) => (
                 <tr key={r.id} className="align-top transition-colors hover:bg-white/[0.02]">
                   <td className="px-4 py-3 font-mono text-white/40">{r.id}</td>
-                  <td className="px-4 py-3 text-white/85">{r.name || '—'}</td>
+                  <td className="px-4 py-3 text-white/85">{r.name || ', '}</td>
                   <td className="px-4 py-3">
                     <a href={`mailto:${r.email}`} className="text-[#00D6FF] hover:underline">{r.email}</a>
                   </td>
                   <td className="px-4 py-3 whitespace-nowrap">
-                    {r.phone ? <a href={`tel:${r.phone}`} className="text-[#00D6FF] hover:underline">{r.phone}</a> : <span className="text-white/40">—</span>}
+                    {r.phone ? <a href={`tel:${r.phone}`} className="text-[#00D6FF] hover:underline">{r.phone}</a> : <span className="text-white/40">, </span>}
                   </td>
-                  <td className="px-4 py-3 text-white/60">{r.company || '—'}</td>
-                  <td className="px-4 py-3 text-white/60">{r.system || '—'}</td>
+                  <td className="px-4 py-3 text-white/60">{r.company || ', '}</td>
+                  <td className="px-4 py-3 text-white/60">{r.system || ', '}</td>
                   <td className="px-4 py-3">
                     <span className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${r.source === 'pricing' ? 'bg-[#00D6FF]/15 text-[#00D6FF]' : 'bg-white/10 text-white/50'}`}>{r.source || 'contact'}</span>
                   </td>
-                  <td className="px-4 py-3 max-w-xs text-white/55">{r.message || '—'}</td>
+                  <td className="px-4 py-3 max-w-xs text-white/55">{r.message || ', '}</td>
                   <td className="px-4 py-3 whitespace-nowrap font-mono text-xs text-white/40">{r.created_at}</td>
                 </tr>
               ))}

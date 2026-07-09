@@ -6,7 +6,7 @@ import { NICHES, TOTAL_AGENTS } from '@/lib/agents'
 export const metadata: Metadata = pageMeta({
   title: 'AI Agents for 25 Industries',
   description:
-    `Browse ${TOTAL_AGENTS} deployable AI agents across 25 industries — booking, lead capture, follow-up, support and reputation agents. Pick the agent you want and Xevaro Labs sets it up for you.`,
+    `Browse ${TOTAL_AGENTS} deployable AI agents across 25 industries, booking, lead capture, follow up, support and reputation agents. Pick the agent you want and Xevaro Labs sets it up for you.`,
   path: '/agents',
   keywords: [
     'AI agents',

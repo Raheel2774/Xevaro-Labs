@@ -24,8 +24,8 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-2xl text-lg font-light text-white/55">
-              Six productized AI systems that replace manual operations with self-executing
-              infrastructure — capturing leads, booking work, running support and surfacing insight, 24/7.
+              Six productized AI systems that replace manual operations with self executing
+              infrastructure, capturing leads, booking work, running support and surfacing insight, 24/7.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -99,11 +99,11 @@ export default function ServicesPage() {
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
                   <h3 className="max-w-xl font-display text-2xl font-semibold text-white/90 md:text-3xl">
-                    Want a ready-made agent for your industry?
+                    Want a ready made agent for your industry?
                   </h3>
                   <p className="mt-3 max-w-lg text-sm text-white/55">
-                    {TOTAL_AGENTS} pre-built AI agents across 25 industries — booking, lead capture,
-                    follow-up, support and reputation. Pick one and we set it up for you.
+                    {TOTAL_AGENTS} prebuilt AI agents across 25 industries, booking, lead capture,
+                    follow up, support and reputation. Pick one and we set it up for you.
                   </p>
                 </div>
                 <MagneticButton href="/agents">Explore AI Agents</MagneticButton>
@@ -179,7 +179,7 @@ export default function ServicesPage() {
         <Reveal><H2 className="text-4xl md:text-6xl">Compose your automation stack.</H2></Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mt-5 max-w-xl text-white/55">
-            Book a free audit and we&apos;ll map the highest-ROI systems for your operation — no pressure, no jargon.
+            Book a free audit and we&apos;ll map the highest ROI systems for your operation, no pressure, no jargon.
           </p>
         </Reveal>
         <Reveal delay={0.12}>

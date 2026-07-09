@@ -56,7 +56,7 @@ export default function AgentsPage() {
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-2xl text-lg font-light text-white/55">
               Deployable AI agents engineered to capture leads, book appointments, recover revenue
-              and run support — around the clock. Pick the agent you want, and we&apos;ll set it up for you.
+              and run support, around the clock. Pick the agent you want, and we&apos;ll set it up for you.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -80,10 +80,10 @@ export default function AgentsPage() {
                     <Zap className="h-3 w-3" /> Top 5 Best Sellers
                   </div>
                   <h3 className="mt-4 max-w-xl font-display text-2xl font-semibold text-white/90 md:text-3xl">
-                    The 5 agents our clients deploy first — and swear by.
+                    The 5 agents our clients deploy first, and swear by.
                   </h3>
                   <p className="mt-3 max-w-lg text-sm text-white/55">
-                    Cross-industry heroes: {FLAGSHIP_AGENTS.map((f) => f.name).slice(0, 3).join(', ')} and more.
+                    Cross industry heroes: {FLAGSHIP_AGENTS.map((f) => f.name).slice(0, 3).join(', ')} and more.
                   </p>
                 </div>
                 <MagneticButton href="/best-sellers">Explore Best Sellers</MagneticButton>
@@ -181,7 +181,7 @@ export default function AgentsPage() {
         <Reveal><H2 className="text-4xl md:text-6xl">Don&apos;t see your exact use case?</H2></Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mt-5 max-w-xl text-white/55">
-            Every agent is custom-built to your workflow. Tell us what you want automated and
+            Every agent is custom built to your workflow. Tell us what you want automated and
             we&apos;ll scope it for you.
           </p>
         </Reveal>

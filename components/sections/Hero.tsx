@@ -195,7 +195,7 @@ export default function Hero() {
           style={{ background: 'rgba(155,28,28,0.12)', borderColor: 'rgba(155,28,28,0.35)', color: '#FC8181' }}
         >
           <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#E53E3E' }} />
-          Next-generation AI Automation Agency
+          Next generation AI Automation Agency
           <ArrowRight size={14} />
         </motion.div>
 
@@ -234,7 +234,7 @@ export default function Hero() {
           Transform your business with{' '}
           <span className="text-white font-medium">AI Automation</span>,{' '}
           <span className="text-white font-medium">Intelligent Workflows</span>,
-          High-Converting Websites, Shopify Development, and Custom Software Solutions.
+          High Converting Websites, Shopify Development, and Custom Software Solutions.
         </motion.p>
 
         {/* CTAs */}
@@ -273,7 +273,7 @@ export default function Hero() {
             { icon: TrendingUp, label: '300% avg ROI' },
             { icon: Users, label: '100+ Clients' },
             { icon: Star, label: '5-Star Rated' },
-            { icon: Zap, label: 'AI-Powered' },
+            { icon: Zap, label: 'AI Powered' },
           ].map(({ icon: Icon, label }, i) => (
             <motion.div
               key={i}

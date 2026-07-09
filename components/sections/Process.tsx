@@ -7,8 +7,8 @@ import { Search, Lightbulb, Code2, Rocket, Sparkles } from 'lucide-react'
 
 const steps = [
   {
-    step: '01', icon: Search,    title: 'Discovery',    subtitle: 'Deep-dive into your business',
-    description: 'We start with a thorough analysis of your goals, workflows, tech stack, and growth bottlenecks. No generic proposals — we go deep.',
+    step: '01', icon: Search,    title: 'Discovery',    subtitle: 'Deep dive into your business',
+    description: 'We start with a thorough analysis of your goals, workflows, tech stack, and growth bottlenecks. No generic proposals, we go deep.',
     items: ['Business goals alignment', 'Technical audit', 'Competitive analysis', 'ROI projection'],
     img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&q=80',
     imgAlt: 'Discovery and research',
@@ -24,7 +24,7 @@ const steps = [
   },
   {
     step: '03', icon: Code2,     title: 'Development', subtitle: 'Build with precision',
-    description: 'Our team executes with weekly updates and live demos. You see progress from day one — no black boxes, no surprises.',
+    description: 'Our team executes with weekly updates and live demos. You see progress from day one, no black boxes, no surprises.',
     items: ['Agile sprints', 'Weekly demos', 'QA & testing', 'Performance optimization'],
     img: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=500&q=80',
     imgAlt: 'Software development',
@@ -33,7 +33,7 @@ const steps = [
   {
     step: '04', icon: Rocket,    title: 'Scale',       subtitle: 'Launch and grow',
     description: "We don't just deliver and disappear. We monitor, optimize, and iterate so your systems continue to improve over time.",
-    items: ['Go-live support', 'Analytics setup', 'Ongoing optimization', '24/7 monitoring'],
+    items: ['Go live support', 'Analytics setup', 'Ongoing optimization', '24/7 monitoring'],
     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80',
     imgAlt: 'Business growth analytics',
     color: '#E53E3E',
@@ -75,7 +75,7 @@ export default function Process() {
           </motion.p>
         </div>
 
-        {/* Steps — alternating layout */}
+        {/* Steps, alternating layout */}
         <div className="space-y-20">
           {steps.map((step, i) => (
             <motion.div
@@ -121,7 +121,7 @@ export default function Process() {
               {/* Content side */}
               <div className={i % 2 === 1 ? 'lg:col-start-1' : ''}>
                 <span className="text-xs uppercase tracking-widest font-semibold mb-2 block" style={{ color: step.color }}>
-                  Step {step.step} — {step.subtitle}
+                  Step {step.step}, {step.subtitle}
                 </span>
                 <h3 className="font-heading font-bold text-3xl md:text-4xl text-white mb-4">{step.title}</h3>
                 <p className="text-gray-400 leading-relaxed mb-6">{step.description}</p>

@@ -22,7 +22,7 @@ export default function ClaimPage() {
       email:      fd.get('email'),
       phone:      fd.get('phone'),
       message:    fd.get('message'),
-      system:     'High-Conversion Website Systems',
+      system:     'High Conversion Website Systems',
       source:     'claim',
       smsConsent,
     }
@@ -54,8 +54,8 @@ export default function ClaimPage() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/55">
-            Tell us your business and we&apos;ll send you a live demo of a professional site — built for
-            your company, with click-to-call, a quote form, and Google visibility. $0 to build, $199/mo
+            Tell us your business and we&apos;ll send you a live demo of a professional site, built for
+            your company, with click to call, a quote form, and Google visibility. $0 to build, $199/mo
             once it&apos;s live. No obligation to look.
           </p>
         </Reveal>
@@ -67,18 +67,18 @@ export default function ClaimPage() {
               <GlassCard className="p-7">
                 <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">What you get</div>
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/60">
-                  <li>· A live demo site with your business name — free to preview</li>
-                  <li>· Mobile-friendly 5-page build (Home, Services, Area, About, Contact)</li>
-                  <li>· Click-to-call + quote form so no lead slips through</li>
+                  <li>· A live demo site with your business name, free to preview</li>
+                  <li>· Mobile friendly 5-page build (Home, Services, Area, About, Contact)</li>
+                  <li>· Click to call + quote form so no lead slips through</li>
                   <li>· Google Business Profile setup for &ldquo;near me&rdquo; searches</li>
-                  <li>· Hosting, edits, and local SEO included — $0 down, $199/mo</li>
+                  <li>· Hosting, edits, and local SEO included, $0 down, $199/mo</li>
                 </ul>
               </GlassCard>
               <GlassCard className="p-7">
                 <div className="font-mono text-[10px] uppercase tracking-widest text-white/35">How it works</div>
                 <p className="mt-3 text-sm leading-relaxed text-white/50">
-                  Submit the form. We build your demo and send you the link — by email, or by text if you
-                  opt in. Like it? We make it yours. Don&apos;t? No charge, no follow-up.
+                  Submit the form. We build your demo and send you the link, by email, or by text if you
+                  opt in. Like it? We make it yours. Don&apos;t? No charge, no follow up.
                 </p>
               </GlassCard>
             </div>
@@ -108,14 +108,13 @@ export default function ClaimPage() {
                     <textarea name="message" rows={3} placeholder="Your city, trade, or what you'd like on the site..." className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#00D6FF]/50" />
                   </div>
 
-                  {/* SMS consent — unchecked by default, not required to submit */}
+                  {/* SMS consent, unchecked by default, not required to submit */}
                   <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/[0.1] bg-white/[0.02] p-4">
                     <input type="checkbox" name="smsConsent" value="yes" className="mt-1 h-4 w-4 shrink-0 accent-[#00D6FF]" />
                     <span className="text-[13px] leading-relaxed text-white/55">
                       Text me my website demo. By checking this box, I agree to receive automated and
-                      conversational SMS text messages from Xevaro Labs at the mobile number provided —
-                      including my website demo link, replies to my questions, appointment scheduling, and
-                      related follow-ups. Message frequency varies. Message and data rates may apply. Reply
+                      conversational SMS text messages from Xevaro Labs at the mobile number provided,                       including my website demo link, replies to my questions, appointment scheduling, and
+                      related follow ups. Message frequency varies. Message and data rates may apply. Reply
                       STOP to unsubscribe or HELP for help. Consent is not a condition of any purchase. See
                       our{' '}
                       <Link href="/privacy" className="text-[#00D6FF] hover:underline">Privacy Policy</Link> and{' '}

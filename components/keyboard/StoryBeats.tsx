@@ -54,7 +54,7 @@ const P = 'text-white/55 leading-relaxed font-light'
 export default function StoryBeats({ progress }: { progress: MotionValue<number> }) {
   return (
     <>
-      {/* HERO 0–15% */}
+      {/* HERO 0 to 15% */}
       <Beat progress={progress} start={0} end={0.16} align="center">
         <Eyebrow>Autonomous Infrastructure</Eyebrow>
         <h1 className={`${H} text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95]`}>
@@ -62,7 +62,7 @@ export default function StoryBeats({ progress }: { progress: MotionValue<number>
           <span className="bg-gradient-to-b from-white to-[#7fb0ff] bg-clip-text text-transparent">Autonomous Enterprise.</span>
         </h1>
         <p className={`${P} mx-auto mt-7 max-w-md text-lg`}>
-          We translate complex operations into flawless, zero-friction automated
+          We translate complex operations into flawless, zero friction automated
           infrastructure. One keystroke ahead.
         </p>
         <div className="pointer-events-auto mt-9 flex items-center justify-center gap-2 text-white/30">
@@ -70,40 +70,40 @@ export default function StoryBeats({ progress }: { progress: MotionValue<number>
         </div>
       </Beat>
 
-      {/* DECONSTRUCTION 16–40% */}
+      {/* DECONSTRUCTION 16 to 40% */}
       <Beat progress={progress} start={0.17} end={0.41} align="left">
         <Eyebrow>Agent Architecture</Eyebrow>
         <h2 className={`${H} text-4xl md:text-6xl leading-[0.98]`}>Deconstructing<br />Complexity.</h2>
         <p className={`${P} mt-6 text-base md:text-lg`}>
           We audit your operational bottlenecks, breaking down manual workflows
-          into modular, AI-driven nodes — custom orchestrator loops and autonomous
+          into modular, AI driven nodes, custom orchestrator loops and autonomous
           agents built to execute without human intervention.
         </p>
       </Beat>
 
-      {/* CORE CIRCUIT 41–65% */}
+      {/* CORE CIRCUIT 41 to 65% */}
       <Beat progress={progress} start={0.42} end={0.66} align="right">
         <Eyebrow>Connected Infrastructure</Eyebrow>
         <h2 className={`${H} text-4xl md:text-6xl leading-[0.98]`}>Connected<br />Infrastructure.</h2>
         <p className={`${P} mt-6 text-base md:text-lg`}>
           Native API integrations and webhook architectures that bridge your legacy
-          stacks with cutting-edge cognitive models. Secure, hardware-accelerated
+          stacks with cutting edge cognitive models. Secure, hardware-accelerated
           data routing engineered for enterprise stability.
         </p>
       </Beat>
 
-      {/* EFFICIENCY 66–85% */}
+      {/* EFFICIENCY 66 to 85% */}
       <Beat progress={progress} start={0.67} end={0.84} align="left">
         <Eyebrow>Operational Velocity</Eyebrow>
         <h2 className={`${H} text-4xl md:text-6xl leading-[0.98]`}>Acoustically Tuned<br />Efficiency.</h2>
         <p className={`${P} mt-6 text-base md:text-lg`}>
           Eliminating noise from your pipelines. Our automated systems run silently
-          in the background — maximizing operational velocity while stripping away
+          in the background, maximizing operational velocity while stripping away
           overhead.
         </p>
       </Beat>
 
-      {/* REASSEMBLY + CTA 86–100% */}
+      {/* REASSEMBLY + CTA 86 to 100% */}
       <Beat progress={progress} start={0.86} end={1.0} align="center">
         <Eyebrow>Press Enter</Eyebrow>
         <h2 className={`${H} text-5xl md:text-7xl leading-[0.95]`}>

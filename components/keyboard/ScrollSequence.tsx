@@ -8,11 +8,11 @@ const framePath = (i: number) =>
   `/sequence/ezgif-frame-${String(i).padStart(3, '0')}.jpg`
 
 /**
- * Sticky full-screen canvas that plays a 240-frame keyboard image sequence,
+ * Sticky full screen canvas that plays a 240-frame keyboard image sequence,
  * driven by scroll. 0 → EXPLODE_END maps assembled → fully exploded; the final
  * stretch reverses back toward assembled for the "reassembly" CTA beat.
  *
- * Frame index is eased (lerp) every rAF for buttery, flicker-free playback.
+ * Frame index is eased (lerp) every rAF for buttery, flicker free playback.
  */
 export default function ScrollSequence({ progressRef }: { progressRef: React.RefObject<number> }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)

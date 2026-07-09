@@ -5,7 +5,7 @@ import { pageMeta, breadcrumbSchema, servicesItemListSchema } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'AI Systems & Products',
   description:
-    'Explore the six productized AI systems from Xevaro Labs: AI automation, AI agents & voice, lead generation, high-conversion websites, Shopify commerce, and business intelligence.',
+    'Explore the six productized AI systems from Xevaro Labs: AI automation, AI agents & voice, lead generation, high conversion websites, Shopify commerce, and business intelligence.',
   path: '/products',
   keywords: [
     'AI systems',

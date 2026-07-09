@@ -9,7 +9,7 @@ const services = [
   {
     icon: Bot,
     title: 'AI Automation',
-    description: 'End-to-end automation powered by AI agents and n8n workflows that work 24/7.',
+    description: 'End to end automation powered by AI agents and n8n workflows that work 24/7.',
     features: ['n8n Workflow Automation', 'AI Agents & Copilots', 'CRM Automations', 'Lead Generation Systems', 'Data Pipeline Orchestration'],
     img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80',
     imgAlt: 'AI automation visualization',
@@ -20,8 +20,8 @@ const services = [
   {
     icon: Globe,
     title: 'Website Development',
-    description: 'Conversion-optimized websites that reflect your premium brand and capture leads.',
-    features: ['Custom Corporate Websites', 'High-Performance Landing Pages', 'CRO & A/B Testing', 'Next.js & React Apps', 'SEO Architecture'],
+    description: 'Conversion optimized websites that reflect your premium brand and capture leads.',
+    features: ['Custom Corporate Websites', 'High Performance Landing Pages', 'CRO & A/B Testing', 'Next.js & React Apps', 'SEO Architecture'],
     img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80',
     imgAlt: 'Web development',
     gradient: 'from-[#1a0a0a] to-[#7F1D1D]',
@@ -43,7 +43,7 @@ const services = [
     icon: MessageSquare,
     title: 'AI Chatbots',
     description: 'Intelligent conversational AI that qualifies leads and supports customers 24/7.',
-    features: ['Customer Support AI', 'Lead Qualification Bots', 'WhatsApp AI Agents', 'GPT-4 Integration', 'Multi-channel Deployment'],
+    features: ['Customer Support AI', 'Lead Qualification Bots', 'WhatsApp AI Agents', 'GPT-4 Integration', 'Multi channel Deployment'],
     img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80',
     imgAlt: 'AI chatbot interface',
     gradient: 'from-[#3B0000] to-[#7F1D1D]',
@@ -53,8 +53,8 @@ const services = [
   {
     icon: Layers,
     title: 'SaaS Development',
-    description: 'Full-stack SaaS platforms built for scale, with beautiful UX and solid architecture.',
-    features: ['Custom SaaS Platforms', 'Admin Dashboards', 'Multi-tenant Architecture', 'API Development', 'Internal Tools'],
+    description: 'Full stack SaaS platforms built for scale, with beautiful UX and solid architecture.',
+    features: ['Custom SaaS Platforms', 'Admin Dashboards', 'Multi tenant Architecture', 'API Development', 'Internal Tools'],
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
     imgAlt: 'SaaS dashboard',
     gradient: 'from-[#200000] to-[#5C0F0F]',
@@ -64,7 +64,7 @@ const services = [
   {
     icon: GitBranch,
     title: 'Business Process Automation',
-    description: 'Eliminate manual work, reduce costs, and free your team for high-value tasks.',
+    description: 'Eliminate manual work, reduce costs, and free your team for high value tasks.',
     features: ['CRM Integration', 'Email Automation', 'Data Pipelines', 'Report Generation', 'Zapier / Make Migrations'],
     img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
     imgAlt: 'Business automation',
@@ -194,7 +194,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 text-lg max-w-xl mx-auto"
           >
-            From AI automation to full-stack development — every service is built to maximize your ROI.
+            From AI automation to full stack development, every service is built to maximize your ROI.
           </motion.p>
         </div>
 

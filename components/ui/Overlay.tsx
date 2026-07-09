@@ -109,7 +109,7 @@ function Hero() {
           transition={{ duration: 1, delay: 1.1 }}
           className="mt-9 text-white/55 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light"
         >
-          Xevaro Labs builds autonomous AI workflows, high-converting websites,
+          Xevaro Labs builds autonomous AI workflows, high converting websites,
           and custom software that run your business on autopilot.
         </motion.p>
 
@@ -168,7 +168,7 @@ function Intro() {
       <div className="max-w-5xl mx-auto">
         <Tag>Our mission</Tag>
         <RevealText
-          text="Most businesses drown in manual work. We replace it with AI that thinks, automates, and scales — so you focus on growth while the machine runs the rest."
+          text="Most businesses drown in manual work. We replace it with AI that thinks, automates, and scales, so you focus on growth while the machine runs the rest."
           className="font-display font-semibold text-white text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.02em]"
         />
       </div>
@@ -183,7 +183,7 @@ const services = [
   { n: '02', name: 'Web Development', desc: 'Next.js 15 sites engineered to convert.', span: '' },
   { n: '03', name: 'Shopify AI',      desc: 'Intelligent storefronts that sell while you sleep.', span: '' },
   { n: '04', name: 'AI Chatbots',     desc: 'GPT-4o agents with memory, tools & RAG.', span: 'md:col-span-2' },
-  { n: '05', name: 'SaaS Products',   desc: 'Full-stack SaaS from idea to launch.', span: '' },
+  { n: '05', name: 'SaaS Products',   desc: 'Full stack SaaS from idea to launch.', span: '' },
   { n: '06', name: 'Process Automation', desc: 'BPA that eliminates repetitive work at scale.', span: '' },
 ]
 
@@ -199,7 +199,7 @@ function Services() {
             </h2>
           </div>
           <p className="text-white/45 text-base max-w-sm font-light">
-            Six core services, one outcome — an autonomous business that grows without adding headcount.
+            Six core services, one outcome, an autonomous business that grows without adding headcount.
           </p>
         </div>
 
@@ -307,9 +307,9 @@ function Work() {
 // ─── Process ──────────────────────────────────────────────────────────────────
 
 const steps = [
-  { n: '01', title: 'Discovery', desc: 'We map your workflows and find the highest-leverage automation opportunities.' },
+  { n: '01', title: 'Discovery', desc: 'We map your workflows and find the highest leverage automation opportunities.' },
   { n: '02', title: 'Design',    desc: 'We architect AI systems tailored to your stack, data, and goals.' },
-  { n: '03', title: 'Build',     desc: 'We ship production-grade automations, agents, and interfaces — fast.' },
+  { n: '03', title: 'Build',     desc: 'We ship production grade automations, agents, and interfaces, fast.' },
   { n: '04', title: 'Scale',     desc: 'We monitor, optimize, and expand the system as your business grows.' },
 ]
 

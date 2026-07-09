@@ -26,15 +26,15 @@ export default function BestSellersPage() {
             <H2 className="mx-auto mt-7 max-w-4xl text-5xl md:text-8xl">
               Our{' '}
               <span className="bg-gradient-to-r from-[#0050FF] via-[#00A3FF] to-[#00D6FF] bg-clip-text text-transparent">
-                best-selling
+                best selling
               </span>{' '}
               AI agents.
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-white/55">
-              Five battle-tested agents that capture leads, book appointments, close deals and build
-              reputation — deployed across hundreds of businesses. These are the ones clients start with.
+              Five battle tested agents that capture leads, book appointments, close deals and build
+              reputation, deployed across hundreds of businesses. These are the ones clients start with.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -50,7 +50,7 @@ export default function BestSellersPage() {
               {[
                 { icon: Clock, v: '24/7', l: 'Always on' },
                 { icon: Zap, v: '<30s', l: 'Response time' },
-                { icon: Star, v: '5★', l: 'On-brand' },
+                { icon: Star, v: '5★', l: 'On brand' },
                 { icon: ShieldCheck, v: '100%', l: 'You own it' },
               ].map(({ icon: Icon, v, l }) => (
                 <div key={l} className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5">
@@ -165,9 +165,9 @@ export default function BestSellersPage() {
               <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#00D6FF]/15 blur-3xl" />
               <div className="relative grid grid-cols-1 gap-8 md:grid-cols-3">
                 {[
-                  { icon: Zap, t: 'Live in days, not months', d: 'We ship working agents fast — most go live within one to two weeks.' },
-                  { icon: ShieldCheck, t: 'You own the system', d: 'Self-hostable infrastructure. Your data, your accounts, your control.' },
-                  { icon: Star, t: 'Built for your workflow', d: 'Every agent is tailored to your business — not a generic chatbot.' },
+                  { icon: Zap, t: 'Live in days, not months', d: 'We ship working agents fast, most go live within one to two weeks.' },
+                  { icon: ShieldCheck, t: 'You own the system', d: 'Self hostable infrastructure. Your data, your accounts, your control.' },
+                  { icon: Star, t: 'Built for your workflow', d: 'Every agent is tailored to your business, not a generic chatbot.' },
                 ].map(({ icon: Icon, t, d }) => (
                   <div key={t}>
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#00D6FF]/20 bg-[#00D6FF]/5 text-[#00D6FF]">

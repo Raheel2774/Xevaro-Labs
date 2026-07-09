@@ -13,7 +13,7 @@ interface StreamProps {
 const PALETTE = ['#22d3ee', '#3b82f6', '#7c3aed', '#06b6d4']
 
 /**
- * Automation streams — curved "data rivers" that arc through the system,
+ * Automation streams, curved "data rivers" that arc through the system,
  * carrying glowing packets (API calls / workflows). They orbit slowly,
  * splitting and merging visually around the core.
  */
