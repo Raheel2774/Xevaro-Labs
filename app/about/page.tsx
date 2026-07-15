@@ -15,7 +15,7 @@ export default function AboutPage() {
             <H2 className="max-w-4xl text-5xl md:text-7xl">We build the systems<br />that build the future.</H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-7 max-w-2xl text-lg font-light leading-relaxed text-white/60">
+            <p className="mt-7 max-w-2xl text-lg font-light leading-relaxed text-[#5D001E]/65">
               Xevaro Labs exists on one conviction: every manual business operation can become an
               autonomous system. We don&apos;t sell tools, we engineer living infrastructure that
               thinks, executes, and improves on its own.
@@ -28,11 +28,11 @@ export default function AboutPage() {
       <section className="relative px-6 pb-8 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#5D001E]/10 bg-white/60 md:grid-cols-4">
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-8 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">{s.value}</div>
-                  <div className="mt-2 text-xs uppercase tracking-wide text-white/40">{s.label}</div>
+                  <div className="bg-gradient-to-br from-white to-[#EE4C7C] bg-clip-text font-display text-4xl font-bold text-transparent md:text-5xl">{s.value}</div>
+                  <div className="mt-2 text-xs uppercase tracking-wide text-[#5D001E]/55">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -49,10 +49,10 @@ export default function AboutPage() {
             ['Automate', 'We reassemble everything into a self executing autonomous system.'],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.1}>
-              <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-8 backdrop-blur-xl">
-                <span className="font-mono text-xs tracking-widest text-[#E53E3E]">0{i + 1}</span>
-                <h3 className="mt-4 font-display text-2xl font-semibold text-white/90">{t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/55">{d}</p>
+              <div className="rounded-2xl border border-[#5D001E]/10 bg-white/55 p-8 backdrop-blur-xl">
+                <span className="font-mono text-xs tracking-widest text-[#EE4C7C]">0{i + 1}</span>
+                <h3 className="mt-4 font-display text-2xl font-semibold text-[#5D001E]/90">{t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#5D001E]/60">{d}</p>
               </div>
             </Reveal>
           ))}
@@ -66,11 +66,11 @@ export default function AboutPage() {
           <div className="mt-12 space-y-px">
             {TIMELINE.map((t, i) => (
               <Reveal key={t.year} delay={i * 0.08}>
-                <div className="group flex gap-8 border-l border-white/10 py-7 pl-8 transition-colors hover:border-[#E53E3E]/50">
-                  <span className="font-mono text-sm text-[#E53E3E]">{t.year}</span>
+                <div className="group flex gap-8 border-l border-[#5D001E]/15 py-7 pl-8 transition-colors hover:border-[#EE4C7C]/50">
+                  <span className="font-mono text-sm text-[#EE4C7C]">{t.year}</span>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-white/90">{t.title}</h3>
-                    <p className="mt-1.5 text-sm text-white/55">{t.desc}</p>
+                    <h3 className="font-display text-xl font-semibold text-[#5D001E]/90">{t.title}</h3>
+                    <p className="mt-1.5 text-sm text-[#5D001E]/60">{t.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -87,11 +87,11 @@ export default function AboutPage() {
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
             {DIFFERENTIATORS.map((d, i) => (
               <Reveal key={d.title} delay={(i % 2) * 0.08}>
-                <div className="flex h-full gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
-                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#E53E3E]" />
+                <div className="flex h-full gap-4 rounded-2xl border border-[#5D001E]/10 bg-white/55 p-7">
+                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#EE4C7C]" />
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-white/90">{d.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/55">{d.desc}</p>
+                    <h3 className="font-display text-lg font-semibold text-[#5D001E]/90">{d.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/60">{d.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -105,11 +105,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <Reveal>
             <GlassCard className="p-10 text-center md:p-14">
-              <div className="flex justify-center gap-0.5 text-[#E53E3E]">★★★★★</div>
-              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">
+              <div className="flex justify-center gap-0.5 text-[#EE4C7C]">★★★★★</div>
+              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-[#5D001E]/85 md:text-3xl">
                 “{TESTIMONIALS[0].quote}”
               </p>
-              <div className="mt-6 text-sm text-white/50">
+              <div className="mt-6 text-sm text-[#5D001E]/60">
                 {TESTIMONIALS[0].name} · {TESTIMONIALS[0].role}, {TESTIMONIALS[0].industry}
               </div>
             </GlassCard>

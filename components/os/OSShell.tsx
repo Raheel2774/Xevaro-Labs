@@ -1,10 +1,9 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import RobotCore from './RobotCore'
+import AmbientBackground from './AmbientBackground'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import HUD from './HUD'
 
 // Standalone immersive experiences manage their own chrome / background.
 const STANDALONE = ['/system', '/deconstruct', '/admin']
@@ -17,8 +16,7 @@ export default function OSShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <RobotCore />
-      <HUD />
+      <AmbientBackground />
       <Navbar />
       <main className="relative z-10">{children}</main>
       <Footer />

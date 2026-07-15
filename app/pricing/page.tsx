@@ -97,7 +97,7 @@ export default function PricingPage() {
             <H2 className="text-5xl md:text-7xl">Tailored to your<br />operations.</H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-white/55">
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#5D001E]/60">
               Every Xevaro system is scoped to your workflows, so pricing is tailored. Most engagements
               pair a one time build with a monthly retainer for hosting, monitoring and improvements.
               Pick the tier that fits and we&apos;ll send a precise quote.
@@ -113,35 +113,35 @@ export default function PricingPage() {
             <Reveal key={pkg.name} delay={(i % 3) * 0.08}>
               <div className={`relative flex h-full flex-col rounded-3xl border p-8 ${
                 pkg.featured
-                  ? 'border-[#E53E3E]/40 bg-gradient-to-b from-[#7F1D1D]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(229,62,62,0.12)]'
-                  : 'border-white/[0.08] bg-white/[0.02]'
+                  ? 'border-[#EE4C7C]/40 bg-gradient-to-b from-[#9A1750]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(238, 76, 124,0.12)]'
+                  : 'border-[#5D001E]/10 bg-white/55'
               }`}>
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
                     Most Popular
                   </span>
                 )}
-                <h3 className="font-display text-2xl font-bold text-white/90">{pkg.name}</h3>
-                <p className="mt-2 text-sm text-white/60">{pkg.tagline}</p>
-                <div className="mt-5 border-t border-white/[0.07] pt-5">
-                  <span className="font-display text-3xl font-bold text-white/90">Custom</span>
-                  <span className="ml-2 text-sm text-white/40">tailored quote</span>
+                <h3 className="font-display text-2xl font-bold text-[#5D001E]/90">{pkg.name}</h3>
+                <p className="mt-2 text-sm text-[#5D001E]/65">{pkg.tagline}</p>
+                <div className="mt-5 border-t border-[#5D001E]/10 pt-5">
+                  <span className="font-display text-3xl font-bold text-[#5D001E]/90">Custom</span>
+                  <span className="ml-2 text-sm text-[#5D001E]/55">tailored quote</span>
                 </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-white/65">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#E53E3E]" />{f}
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-[#5D001E]/65">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#EE4C7C]" />{f}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs text-white/40">{pkg.for}</p>
+                <p className="mt-6 text-xs text-[#5D001E]/55">{pkg.for}</p>
                 <a
                   href="#quote"
                   className={`group relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-semibold ${
-                    pkg.featured ? 'text-white' : 'border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:text-white'
+                    pkg.featured ? 'text-[#5D001E]' : 'border border-[#5D001E]/20 text-[#5D001E]/85 transition-colors hover:border-white/40 hover:text-[#5D001E]'
                   }`}
                 >
-                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />}
+                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />}
                   <span className="relative">Get {pkg.name} Quote</span>
                 </a>
               </div>
@@ -154,14 +154,14 @@ export default function PricingPage() {
       <section className="relative px-6 pb-20 md:px-10">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <div className="grid grid-cols-2 gap-6 rounded-3xl border border-white/[0.07] bg-white/[0.02] p-8 md:grid-cols-4 md:p-10">
+            <div className="grid grid-cols-2 gap-6 rounded-3xl border border-[#5D001E]/10 bg-white/55 p-8 md:grid-cols-4 md:p-10">
               {PROMISES.map(({ icon, title, desc }) => {
                 const Icon = PROMISE_ICONS[icon] ?? Rocket
                 return (
                   <div key={title}>
-                    <Icon className="h-5 w-5 text-[#E53E3E]" />
-                    <h4 className="mt-3 font-display text-sm font-semibold text-white/90">{title}</h4>
-                    <p className="mt-1.5 text-xs leading-relaxed text-white/50">{desc}</p>
+                    <Icon className="h-5 w-5 text-[#EE4C7C]" />
+                    <h4 className="mt-3 font-display text-sm font-semibold text-[#5D001E]/90">{title}</h4>
+                    <p className="mt-1.5 text-xs leading-relaxed text-[#5D001E]/60">{desc}</p>
                   </div>
                 )
               })}
@@ -176,28 +176,28 @@ export default function PricingPage() {
           <GlassCard className="p-8 md:p-10">
             {sent ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E53E3E]/10 text-2xl text-[#E53E3E]">✓</span>
-                <h3 className="font-display text-2xl text-white/90">Request received.</h3>
-                <p className="mt-2 max-w-sm text-sm text-white/55">
+                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EE4C7C]/10 text-2xl text-[#EE4C7C]">✓</span>
+                <h3 className="font-display text-2xl text-[#5D001E]/90">Request received.</h3>
+                <p className="mt-2 max-w-sm text-sm text-[#5D001E]/60">
                   Thanks, we&apos;ll review your needs and reach out within one business day with pricing.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <p className="text-sm text-white/55">
-                  Request a custom quote. Fields marked <span className="text-[#E53E3E]">*</span> are required.
+                <p className="text-sm text-[#5D001E]/60">
+                  Request a custom quote. Fields marked <span className="text-[#EE4C7C]">*</span> are required.
                 </p>
 
                 {/* Required service */}
                 <div>
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-                    Service you need pricing for <span className="text-[#E53E3E]">*</span>
+                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">
+                    Service you need pricing for <span className="text-[#EE4C7C]">*</span>
                   </label>
                   <select
                     name="system"
                     required
                     defaultValue=""
-                    className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors focus:border-[#E53E3E]/50"
+                    className="mt-2 w-full rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors focus:border-[#EE4C7C]/50"
                   >
                     <option value="" disabled className="bg-[#0A0A0C]">Select a system…</option>
                     {PRODUCTS.map(p => (
@@ -215,20 +215,20 @@ export default function PricingPage() {
                   <Field label="Phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
                 </div>
                 <div>
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">Project details</label>
-                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50" />
+                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">Project details</label>
+                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50" />
                 </div>
 
-                <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-white disabled:opacity-60">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
-                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
+                <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#5D001E] disabled:opacity-60">
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
+                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(238, 76, 124,0.5)] transition-opacity group-hover:opacity-100" />
                   <span className="relative">{busy ? 'Sending…' : 'Request My Quote'}</span>
                 </button>
                 {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
 
-                <p className="text-center text-xs text-white/30">
-                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-white/50 hover:text-[#E53E3E]">{CONTACT.phone}</a> or
-                  email <a href={`mailto:${CONTACT.email}`} className="text-white/50 hover:text-[#E53E3E]">{CONTACT.email}</a>.
+                <p className="text-center text-xs text-[#5D001E]/55">
+                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-[#5D001E]/60 hover:text-[#EE4C7C]">{CONTACT.phone}</a> or
+                  email <a href={`mailto:${CONTACT.email}`} className="text-[#5D001E]/60 hover:text-[#EE4C7C]">{CONTACT.email}</a>.
                 </p>
               </form>
             )}
@@ -242,12 +242,12 @@ export default function PricingPage() {
 function Field({ label, name, type = 'text', placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
   return (
     <div>
-      <label className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-        {label} {required && <span className="text-[#E53E3E]">*</span>}
+      <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">
+        {label} {required && <span className="text-[#EE4C7C]">*</span>}
       </label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/[0.1] bg-white/[0.03] px-4 py-3 text-sm text-white/80 outline-none transition-colors placeholder:text-white/25 focus:border-[#E53E3E]/50"
+        className="mt-2 w-full rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50"
       />
     </div>
   )

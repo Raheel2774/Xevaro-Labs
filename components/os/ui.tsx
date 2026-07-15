@@ -3,19 +3,20 @@
 import { useRef, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
-const EASE = [0.16, 1, 0.3, 1] as const
+// Organic spring ease with slight overshoot
+const EASE = [0.34, 1.56, 0.64, 1] as const
 
 // ─── Reveal-on-scroll wrapper ─────────────────────────────────────────────────
 
 export function Reveal({
-  children, delay = 0, y = 30, className = '',
+  children, delay = 0, y = 34, className = '',
 }: { children: React.ReactNode; delay?: number; y?: number; className?: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.8, delay, ease: EASE }}
+      transition={{ duration: 0.85, delay, ease: EASE }}
       className={className}
     >
       {children}
@@ -28,24 +29,24 @@ export function Reveal({
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-5 inline-flex items-center gap-2.5">
-      <span className="h-1.5 w-1.5 rounded-full bg-[#E53E3E] shadow-[0_0_10px_rgba(229,62,62,0.9)]" />
-      <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-white/45">{children}</span>
+      <span className="h-2 w-2 rounded-full bg-[#EE4C7C]" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-[#9A1750]/70">{children}</span>
     </div>
   )
 }
 
-// ─── Glass card ───────────────────────────────────────────────────────────────
+// ─── Soft card ────────────────────────────────────────────────────────────────
 
 export function GlassCard({
   children, className = '', glow = false,
 }: { children: React.ReactNode; className?: string; glow?: boolean }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] backdrop-blur-xl transition-all duration-500 hover:border-[#E53E3E]/40 ${className}`}
+      className={`group relative overflow-hidden rounded-[28px] border border-[#5D001E]/10 bg-white/60 backdrop-blur-xl shadow-[0_6px_28px_rgba(93,0,30,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-[#EE4C7C]/40 hover:shadow-[0_16px_48px_rgba(154,23,80,0.16)] ${className}`}
     >
       {glow && (
-        <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(229,62,62,0.08), transparent 60%)' }} />
+        <div className="pointer-events-none absolute -inset-px rounded-[28px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(238,76,124,0.1), transparent 60%)' }} />
       )}
       <div className="relative">{children}</div>
     </div>
@@ -60,8 +61,8 @@ export function MagneticButton({
   const ref = useRef<HTMLAnchorElement>(null)
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
-  const x = useSpring(mx, { stiffness: 250, damping: 18 })
-  const y = useSpring(my, { stiffness: 250, damping: 18 })
+  const x = useSpring(mx, { stiffness: 220, damping: 15 })
+  const y = useSpring(my, { stiffness: 220, damping: 15 })
 
   const onMove = (e: React.MouseEvent) => {
     const r = ref.current?.getBoundingClientRect()
@@ -71,10 +72,10 @@ export function MagneticButton({
   }
   const reset = () => { mx.set(0); my.set(0) }
 
-  const base = 'relative inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold tracking-wide overflow-hidden'
+  const base = 'relative inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold tracking-wide overflow-hidden transition-shadow duration-300'
   const styles = variant === 'primary'
-    ? 'text-white'
-    : 'text-white/75 border border-white/15 hover:border-white/40 hover:text-white backdrop-blur-sm transition-colors'
+    ? 'text-white shadow-[0_8px_28px_rgba(238,76,124,0.35)] hover:shadow-[0_12px_40px_rgba(238,76,124,0.5)]'
+    : 'text-[#5D001E] border-2 border-[#5D001E]/20 hover:border-[#9A1750]/60 hover:text-[#9A1750] backdrop-blur-sm transition-colors'
 
   return (
     <motion.a
@@ -83,24 +84,23 @@ export function MagneticButton({
       style={{ x, y }}
       onMouseMove={onMove}
       onMouseLeave={reset}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.97 }}
       className={`${base} ${styles} ${className}`}
     >
       {variant === 'primary' && (
-        <>
-          <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
-          <span className="absolute inset-0 opacity-0 shadow-[0_0_36px_rgba(229,62,62,0.55)] transition-opacity duration-300 hover:opacity-100" />
-        </>
+        <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
       )}
       <span className="relative">{children}</span>
     </motion.a>
   )
 }
 
-// ─── Gradient heading ─────────────────────────────────────────────────────────
+// ─── Heading ──────────────────────────────────────────────────────────────────
 
 export function H2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`font-display font-bold tracking-tight text-white/90 [text-shadow:0_2px_40px_rgba(0,0,0,0.5)] ${className}`}>
+    <h2 className={`font-display font-bold tracking-tight text-[#5D001E] ${className}`}>
       {children}
     </h2>
   )

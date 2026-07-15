@@ -51,66 +51,111 @@ export interface Product {
   id: string
   index: string
   name: string
-  function: string
+  tagline: string
+  description: string
+  monthlyPrice: number
+  setupPrice: number
+  features: string[]
   outcome: string
-  integration: string   // system integration level
-  includes: string[]
+  icon: string // emoji or icon name
 }
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'automation',
-    index: 'SYS 01',
-    name: 'AI Automation Systems',
-    function: 'Enterprise workflow automation engine that replaces manual operations with self executing pipelines.',
-    outcome: 'Fully automated workflows, scalable business execution, zero manual overhead.',
-    integration: 'Core · Tier 1',
-    includes: ['n8n workflow orchestration', 'CRM automation systems', 'Email automation pipelines', 'Business process automation', 'API integration layer'],
+    id: 'human-resources',
+    index: '01',
+    name: 'AI Human Resources',
+    tagline: 'Screening, onboarding, compliance',
+    description: 'Auto-screen resumes, schedule interviews, generate offers, onboard hires.',
+    monthlyPrice: 900,
+    setupPrice: 1000,
+    features: [
+      'Resume screening & scoring',
+      'Interview scheduling',
+      'Offer letter generation',
+    ],
+    outcome: 'Hire 3x faster with zero admin work.',
+    icon: 'users',
   },
   {
-    id: 'agents',
-    index: 'SYS 02',
-    name: 'AI Agents & Voice Systems',
-    function: 'Autonomous AI workforce handling communication, sales, and support around the clock.',
-    outcome: 'A fully autonomous communication layer, human like interaction, 24/7.',
-    integration: 'Cognitive · Tier 1',
-    includes: ['AI customer support agents', 'AI sales agents', 'WhatsApp automation bots', 'Voice AI calling systems', 'Lead qualification agents'],
+    id: 'business-assistant',
+    index: '02',
+    name: 'AI Business Assistant',
+    tagline: 'Email summaries, task automation, CRM sync',
+    description: 'Claude summarizes emails, creates tasks, syncs to CRM automatically.',
+    monthlyPrice: 200,
+    setupPrice: 800,
+    features: [
+      'Email summarization',
+      'Auto task creation',
+      'CRM sync automation',
+    ],
+    outcome: 'Cut admin overhead by 50%.',
+    icon: 'sparkles',
   },
   {
-    id: 'leadgen',
-    index: 'SYS 03',
-    name: 'Lead Generation Systems',
-    function: 'AI powered acquisition engine producing a predictable, automated sales pipeline.',
-    outcome: 'Predictable lead flow, lower acquisition cost, automated pipeline.',
-    integration: 'Growth · Tier 2',
-    includes: ['Cold outreach automation', 'LinkedIn + email automation', 'CRM enrichment systems', 'Data scraping + validation', 'Funnel automation systems'],
+    id: 'lead-generation',
+    index: '03',
+    name: 'AI Lead Generation',
+    tagline: '50+ qualified leads per month',
+    description: 'Scrape, qualify, and outreach to leads automatically. Cold email sequences included.',
+    monthlyPrice: 1000,
+    setupPrice: 1200,
+    features: [
+      '50+ qualified leads per month',
+      'Automatic resume screening via Claude',
+      '3-step cold email sequences',
+    ],
+    outcome: 'Predictable lead flow, lower acquisition cost.',
+    icon: 'target',
   },
   {
-    id: 'web',
-    index: 'SYS 04',
-    name: 'High Conversion Website Systems',
-    function: 'Premium AI driven web infrastructure engineered for performance and conversion.',
-    outcome: 'High performance presence, conversion optimized architecture, premium positioning.',
-    integration: 'Interface · Tier 2',
-    includes: ['Corporate websites', 'SaaS platforms', 'Landing pages', 'AI integrated web apps', 'Conversion optimization systems'],
+    id: 'appointment-recovery',
+    index: '04',
+    name: 'AI Appointment Recovery',
+    tagline: 'Auto text missed appointments',
+    description: 'Recover 40% of no-shows with AI recovery sequences. SMS + email.',
+    monthlyPrice: 800,
+    setupPrice: 1000,
+    features: [
+      'Auto-text missed appointments',
+      '40% recovery rate average',
+      'Rebooking links included',
+    ],
+    outcome: 'Recover lost revenue from no-shows.',
+    icon: 'calendar',
   },
   {
-    id: 'commerce',
-    index: 'SYS 05',
-    name: 'Shopify AI Commerce Systems',
-    function: 'AI powered ecommerce engine that grows revenue per customer automatically.',
-    outcome: 'Increased revenue per customer, automated ecommerce growth.',
-    integration: 'Commerce · Tier 2',
-    includes: ['Shopify store development', 'AI product recommendations', 'Automated marketing funnels', 'Cart optimization systems', 'Customer behavior AI tracking'],
+    id: 'voice-agent',
+    index: '05',
+    name: 'AI Voice Agent',
+    tagline: 'Answer 24/7 missed calls automatically',
+    description: 'Intelligent AI agent answers calls, qualifies leads, books appointments.',
+    monthlyPrice: 1200,
+    setupPrice: 1000,
+    features: [
+      '24/7 call answering',
+      'Auto lead qualification',
+      'Appointment booking',
+    ],
+    outcome: 'Never miss a call. 24/7 lead capture.',
+    icon: 'phone',
   },
   {
-    id: 'bi',
-    index: 'SYS 06',
-    name: 'Business Intelligence Systems',
-    function: 'Real time decision automation layer turning raw data into live business insight.',
-    outcome: 'Live insights, smarter decisions, automated reporting infrastructure.',
-    integration: 'Analytics · Tier 1',
-    includes: ['AI dashboards', 'KPI tracking systems', 'Business analytics pipelines', 'Reporting automation', 'Data visualization systems'],
+    id: 'content-generation',
+    index: '06',
+    name: 'AI Content Generation',
+    tagline: '4 blog posts + 20 social posts monthly',
+    description: 'AI writes, publishes, schedules all your content. Blog + social included.',
+    monthlyPrice: 1000,
+    setupPrice: 500,
+    features: [
+      '4 blog posts per month',
+      '20 social media captions',
+      'Auto publishing & scheduling',
+    ],
+    outcome: 'Consistent content, zero writer overhead.',
+    icon: 'pencil',
   },
 ]
 
@@ -160,4 +205,128 @@ export const TIMELINE = [
   { year: '2024', title: 'The Engine', desc: 'Launched the orchestrator core, autonomous multi agent execution.' },
   { year: '2025', title: 'Scale', desc: '100+ workflows deployed across commerce, SaaS, and enterprise.' },
   { year: '2026', title: 'Operating System', desc: 'Unified every capability into the Xevaro AI OS.' },
+]
+
+// ─── Agents (75 specialized AI agents) ────────────────────────────────────────
+
+export interface Agent {
+  id: string
+  name: string
+  niche: string
+  description: string
+  monthlyPrice: number
+  setupPrice: number
+  features: string[]
+  icon: string
+}
+
+export const AGENTS: Agent[] = [
+  // Home Services: Cleaning
+  { id: 'cleaning-lead-gen', name: 'Cleaning Lead Generator', niche: 'Cleaning', description: 'Find residential cleaning prospects in your area', monthlyPrice: 500, setupPrice: 800, features: ['Local lead sourcing', 'Auto-qualify by property size', 'SMS outreach'], icon: 'sparkles' },
+  { id: 'cleaning-scheduler', name: 'Cleaning Scheduler', niche: 'Cleaning', description: 'Auto-book cleaning appointments 24/7', monthlyPrice: 400, setupPrice: 600, features: ['Calendar sync', 'SMS confirmation', 'Rescheduling auto-handled'], icon: 'calendar' },
+  { id: 'cleaning-recovery', name: 'Cleaning No Show Recovery', niche: 'Cleaning', description: 'Recover missed cleaning appointments', monthlyPrice: 300, setupPrice: 500, features: ['Auto text customers', '35% recovery rate', 'Rebooking links'], icon: 'phone' },
+
+  // Home Services: HVAC
+  { id: 'hvac-emergency', name: 'HVAC Emergency Dispatcher', niche: 'HVAC', description: 'Handle emergency HVAC calls 24/7', monthlyPrice: 700, setupPrice: 1000, features: ['Call qualification', 'Auto dispatch', 'Warranty check'], icon: 'phone' },
+  { id: 'hvac-maintenance', name: 'HVAC Maintenance Reminder', niche: 'HVAC', description: 'Auto-remind customers for maintenance', monthlyPrice: 350, setupPrice: 600, features: ['Seasonal scheduling', 'SMS/email campaigns', 'Booking links'], icon: 'calendar' },
+  { id: 'hvac-leads', name: 'HVAC Lead Qualifier', niche: 'HVAC', description: 'Qualify HVAC repair leads instantly', monthlyPrice: 550, setupPrice: 750, features: ['Damage assessment', 'Estimate generation', 'Lead scoring'], icon: 'target' },
+
+  // Home Services: Roofing
+  { id: 'roofing-inspection', name: 'Roofing Inspection Bot', niche: 'Roofing', description: 'Schedule and pre-qualify roof inspections', monthlyPrice: 600, setupPrice: 900, features: ['Photo assessment requests', 'Insurance quote prep', 'Site surveys'], icon: 'camera' },
+  { id: 'roofing-follow-up', name: 'Roofing Follow Up Agent', niche: 'Roofing', description: 'Follow up on roof quotes automatically', monthlyPrice: 450, setupPrice: 700, features: ['Multi-touch sequences', 'Insurance coordination', 'Deadline tracking'], icon: 'mail' },
+  { id: 'roofing-leads', name: 'Roofing Storm Lead Hunter', niche: 'Roofing', description: 'Find storm damage roofing leads in real time', monthlyPrice: 800, setupPrice: 1200, features: ['Weather tracking', 'Permit monitoring', 'Geo-targeting'], icon: 'target' },
+
+  // Home Services: Landscaping
+  { id: 'landscape-seasonal', name: 'Landscaping Seasonal Planner', niche: 'Landscaping', description: 'Manage seasonal landscaping projects', monthlyPrice: 400, setupPrice: 600, features: ['Weather-based scheduling', 'Service reminders', 'Photo galleries'], icon: 'calendar' },
+  { id: 'landscape-estimates', name: 'Landscaping Estimate Agent', niche: 'Landscaping', description: 'Generate landscaping quotes instantly', monthlyPrice: 550, setupPrice: 800, features: ['Space measurement', 'Plant databases', 'Price calculations'], icon: 'pencil' },
+  { id: 'landscape-retention', name: 'Landscaping Retention Bot', niche: 'Landscaping', description: 'Keep landscaping customers coming back', monthlyPrice: 350, setupPrice: 500, features: ['Upsell automation', 'Referral requests', 'Seasonal offers'], icon: 'sparkles' },
+
+  // Home Services: Auto Repair
+  { id: 'auto-service-reminder', name: 'Auto Service Reminder', niche: 'Auto Repair', description: 'Auto remind customers for maintenance', monthlyPrice: 400, setupPrice: 650, features: ['Mileage tracking', 'SMS reminders', 'Booking links'], icon: 'calendar' },
+  { id: 'auto-repair-booking', name: 'Auto Repair Booking Agent', niche: 'Auto Repair', description: 'Book auto repair appointments 24/7', monthlyPrice: 500, setupPrice: 800, features: ['Symptom diagnosis', 'Parts check', 'Warranty verification'], icon: 'phone' },
+  { id: 'auto-warranty', name: 'Auto Warranty Inspector', niche: 'Auto Repair', description: 'Check warranty coverage automatically', monthlyPrice: 350, setupPrice: 600, features: ['VIN lookup', 'Coverage verification', 'Claim filing'], icon: 'shield' },
+
+  // Health & Wellness: Fitness
+  { id: 'fitness-onboarding', name: 'Fitness Onboarding Bot', niche: 'Fitness', description: 'Onboard gym members automatically', monthlyPrice: 400, setupPrice: 600, features: ['Assessment quizzes', 'Program matching', 'Intro class booking'], icon: 'sparkles' },
+  { id: 'fitness-retention', name: 'Fitness Retention Agent', niche: 'Fitness', description: 'Reduce gym member churn', monthlyPrice: 450, setupPrice: 700, features: ['Engagement tracking', 'Re-engagement campaigns', 'Cancellation prevention'], icon: 'heart' },
+  { id: 'fitness-class-booking', name: 'Fitness Class Scheduler', niche: 'Fitness', description: 'Auto-book fitness classes and trainers', monthlyPrice: 350, setupPrice: 500, features: ['Calendar sync', 'Waitlist management', 'Cancellation handling'], icon: 'calendar' },
+
+  // Health & Wellness: Medical Practices
+  { id: 'medical-appointment', name: 'Medical Appointment Agent', niche: 'Medical', description: 'Book and manage medical appointments', monthlyPrice: 600, setupPrice: 900, features: ['Insurance verification', 'Pre-visit screening', 'HIPAA compliant'], icon: 'phone' },
+  { id: 'medical-recall', name: 'Medical Recall Bot', niche: 'Medical', description: 'Auto-send patient recalls and follow ups', monthlyPrice: 500, setupPrice: 800, features: ['Patient database sync', 'Multi-channel reminders', 'Outcomes tracking'], icon: 'mail' },
+  { id: 'medical-billing', name: 'Medical Billing Assistant', niche: 'Medical', description: 'Automate medical billing and collections', monthlyPrice: 700, setupPrice: 1100, features: ['Insurance claims', 'Payment processing', 'Reconciliation'], icon: 'receipt' },
+
+  // Health & Wellness: Wellness Coaching
+  { id: 'wellness-coaching', name: 'Wellness Coaching Bot', niche: 'Wellness', description: 'AI wellness coach for clients', monthlyPrice: 450, setupPrice: 700, features: ['Daily check ins', 'Progress tracking', 'Goal management'], icon: 'heart' },
+  { id: 'wellness-retention', name: 'Wellness Client Retention', niche: 'Wellness', description: 'Keep wellness clients engaged', monthlyPrice: 400, setupPrice: 600, features: ['Engagement scoring', 'Personalized content', 'Re-engagement flows'], icon: 'sparkles' },
+
+  // Health & Wellness: Dental
+  { id: 'dental-appointment', name: 'Dental Appointment Bot', niche: 'Dental', description: 'Manage dental appointments 24/7', monthlyPrice: 500, setupPrice: 800, features: ['Insurance pre-auth', 'Treatment reminders', 'Cancellation management'], icon: 'phone' },
+
+  // Professional Services: Legal
+  { id: 'legal-intake', name: 'Legal Client Intake', niche: 'Professional Services', description: 'Automated legal client intake forms', monthlyPrice: 600, setupPrice: 900, features: ['Document gathering', 'Case classification', 'Follow up sequencing'], icon: 'pencil' },
+  { id: 'legal-follow-up', name: 'Legal Follow Up Agent', niche: 'Professional Services', description: 'Follow up on legal leads and cases', monthlyPrice: 500, setupPrice: 800, features: ['Matter tracking', 'Deadline reminders', 'Status updates'], icon: 'mail' },
+  { id: 'legal-consultation', name: 'Legal Consultation Scheduler', niche: 'Professional Services', description: 'Book legal consultations automatically', monthlyPrice: 450, setupPrice: 700, features: ['Calendar integration', 'Pre-consultation questionnaire', 'Conflict checking'], icon: 'calendar' },
+
+  // Professional Services: Accounting
+  { id: 'accounting-client-onboard', name: 'Accounting Client Onboarding', niche: 'Professional Services', description: 'Automate accounting client setup', monthlyPrice: 550, setupPrice: 850, features: ['Document requests', 'System setup guides', 'Initial review scheduling'], icon: 'receipt' },
+
+  // Retail & Commerce: Ecommerce
+  { id: 'ecommerce-cart-recovery', name: 'Ecommerce Cart Recovery', niche: 'Retail', description: 'Recover abandoned shopping carts', monthlyPrice: 400, setupPrice: 600, features: ['Auto email sequences', 'SMS reminders', 'Discount incentives'], icon: 'shopping-cart' },
+  { id: 'ecommerce-recommendations', name: 'Ecommerce Recommender', niche: 'Retail', description: 'AI product recommendations engine', monthlyPrice: 500, setupPrice: 800, features: ['Behavior tracking', 'Personalized suggestions', 'A/B testing'], icon: 'sparkles' },
+  { id: 'ecommerce-retention', name: 'Ecommerce Retention Bot', niche: 'Retail', description: 'Increase customer lifetime value', monthlyPrice: 600, setupPrice: 900, features: ['Repurchase predictions', 'Loyalty programs', 'VIP segmentation'], icon: 'heart' },
+
+  // Retail & Commerce: Brick & Mortar
+  { id: 'retail-customer-flow', name: 'Retail Customer Flow Optimizer', niche: 'Retail', description: 'Optimize in-store customer experience', monthlyPrice: 450, setupPrice: 700, features: ['Foot traffic tracking', 'Staff scheduling', 'Promotion timing'], icon: 'chart' },
+  { id: 'retail-loyalty', name: 'Retail Loyalty Program', niche: 'Retail', description: 'Manage loyalty program automation', monthlyPrice: 400, setupPrice: 650, features: ['Point tracking', 'Redemption processing', 'Tier management'], icon: 'gift' },
+
+  // Property & Finance: Real Estate
+  { id: 'real-estate-lead-qual', name: 'Real Estate Lead Qualifier', niche: 'Property & Finance', description: 'Qualify real estate leads instantly', monthlyPrice: 650, setupPrice: 1000, features: ['Property valuation', 'Buyer/seller classification', 'Timeline detection'], icon: 'target' },
+  { id: 'real-estate-showing', name: 'Real Estate Showing Scheduler', niche: 'Property & Finance', description: 'Book property showings 24/7', monthlyPrice: 550, setupPrice: 850, features: ['MLS integration', 'Buyer pre-qual', 'Showing feedback'], icon: 'calendar' },
+  { id: 'real-estate-follow-up', name: 'Real Estate Follow Up Agent', niche: 'Property & Finance', description: 'Follow up on real estate leads', monthlyPrice: 500, setupPrice: 800, features: ['Multi-touch campaigns', 'CRM sync', 'Market updates'], icon: 'mail' },
+
+  // Property & Finance: Mortgage
+  { id: 'mortgage-pre-qual', name: 'Mortgage Pre Qualification', niche: 'Property & Finance', description: 'Pre-qualify mortgage applicants', monthlyPrice: 600, setupPrice: 900, features: ['Credit check', 'Income verification', 'Rate quotes'], icon: 'receipt' },
+  { id: 'mortgage-application', name: 'Mortgage Application Bot', niche: 'Property & Finance', description: 'Streamline mortgage applications', monthlyPrice: 700, setupPrice: 1100, features: ['Document collection', 'Compliance checks', 'Status updates'], icon: 'pencil' },
+
+  // Tech & Growth: SaaS
+  { id: 'saas-trial-onboard', name: 'SaaS Trial Onboarding', niche: 'Tech & Growth', description: 'Onboard trial users automatically', monthlyPrice: 450, setupPrice: 700, features: ['Interactive walkthroughs', 'Usage tracking', 'Success metrics'], icon: 'sparkles' },
+  { id: 'saas-churn-prevention', name: 'SaaS Churn Prevention', niche: 'Tech & Growth', description: 'Prevent SaaS customer churn', monthlyPrice: 550, setupPrice: 850, features: ['Health scoring', 'Intervention triggers', 'Win back campaigns'], icon: 'heart' },
+
+  // Add remaining agents to reach 75
+  { id: 'consulting-lead-gen', name: 'Consulting Lead Generator', niche: 'Professional Services', description: 'Generate qualified consulting leads', monthlyPrice: 600, setupPrice: 950, features: ['Industry targeting', 'Company research', 'Decision maker ID'], icon: 'target' },
+  { id: 'consulting-proposal', name: 'Consulting Proposal Bot', niche: 'Professional Services', description: 'Generate consulting proposals auto', monthlyPrice: 500, setupPrice: 800, features: ['Scope templating', 'Pricing logic', 'Version control'], icon: 'pencil' },
+  { id: 'saas-onboarding', name: 'SaaS Onboarding Specialist', niche: 'Tech & Growth', description: 'Complete SaaS customer onboarding', monthlyPrice: 500, setupPrice: 800, features: ['Video tutorials', 'Email sequences', 'Success tracking'], icon: 'sparkles' },
+  { id: 'saas-expansion', name: 'SaaS Expansion Agent', niche: 'Tech & Growth', description: 'Identify and pursue upsell opps', monthlyPrice: 600, setupPrice: 900, features: ['Usage analytics', 'Feature adoption', 'Upgrade triggers'], icon: 'rocket' },
+  { id: 'restaurant-reservation', name: 'Restaurant Reservation Bot', niche: 'Retail', description: 'Manage restaurant reservations', monthlyPrice: 400, setupPrice: 650, features: ['Booking management', 'Wait list handling', 'No show prevention'], icon: 'calendar' },
+  { id: 'restaurant-orders', name: 'Restaurant Order Bot', niche: 'Retail', description: 'Handle takeout and delivery orders', monthlyPrice: 450, setupPrice: 700, features: ['Menu management', 'Order processing', 'Payment handling'], icon: 'shopping-cart' },
+  { id: 'restaurant-loyalty', name: 'Restaurant Loyalty Program', niche: 'Retail', description: 'Manage restaurant loyalty members', monthlyPrice: 350, setupPrice: 550, features: ['Point tracking', 'Rewards redemption', 'Personalized offers'], icon: 'gift' },
+  { id: 'hotel-booking', name: 'Hotel Booking Agent', niche: 'Retail', description: 'Boost hotel direct bookings', monthlyPrice: 550, setupPrice: 850, features: ['Rate management', 'Upsell offers', 'Loyalty integration'], icon: 'calendar' },
+  { id: 'hotel-guest-experience', name: 'Hotel Guest Experience', niche: 'Retail', description: 'Personalize hotel guest journey', monthlyPrice: 500, setupPrice: 800, features: ['Check in automation', 'Service requests', 'Feedback collection'], icon: 'sparkles' },
+  { id: 'insurance-quote', name: 'Insurance Quote Agent', niche: 'Property & Finance', description: 'Generate insurance quotes instantly', monthlyPrice: 600, setupPrice: 900, features: ['Risk assessment', 'Coverage comparison', 'Premium calculation'], icon: 'receipt' },
+  { id: 'insurance-claims', name: 'Insurance Claims Processor', niche: 'Property & Finance', description: 'Automate insurance claims filing', monthlyPrice: 700, setupPrice: 1100, features: ['Document collection', 'Adjuster coordination', 'Status tracking'], icon: 'pencil' },
+  { id: 'education-enrollment', name: 'Education Enrollment Bot', niche: 'Professional Services', description: 'Automate student enrollment', monthlyPrice: 450, setupPrice: 700, features: ['Application processing', 'Document verification', 'Payment collection'], icon: 'pencil' },
+  { id: 'education-retention', name: 'Education Student Retention', niche: 'Professional Services', description: 'Reduce student dropout rates', monthlyPrice: 400, setupPrice: 650, features: ['Engagement tracking', 'Intervention alerts', 'Success coaching'], icon: 'heart' },
+  { id: 'logistics-tracking', name: 'Logistics Package Tracker', niche: 'Tech & Growth', description: 'Automated package tracking updates', monthlyPrice: 350, setupPrice: 550, features: ['Multi carrier support', 'Exception alerts', 'Delivery confirmation'], icon: 'truck' },
+  { id: 'logistics-dispatch', name: 'Logistics Dispatch Optimizer', niche: 'Tech & Growth', description: 'Optimize delivery routing', monthlyPrice: 600, setupPrice: 950, features: ['Route optimization', 'Driver assignment', 'Real time tracking'], icon: 'map' },
+  { id: 'manufacturing-lead', name: 'Manufacturing Lead Generator', niche: 'Professional Services', description: 'Find B2B manufacturing prospects', monthlyPrice: 700, setupPrice: 1100, features: ['Industry databases', 'Company research', 'Decision maker targeting'], icon: 'target' },
+  { id: 'recruitment-sourcing', name: 'Recruitment Sourcing Bot', niche: 'Professional Services', description: 'AI recruiter for talent sourcing', monthlyPrice: 650, setupPrice: 1000, features: ['Resume screening', 'Skill matching', 'Interview scheduling'], icon: 'users' },
+  { id: 'recruitment-retention', name: 'Recruitment Candidate Retention', niche: 'Professional Services', description: 'Keep candidates engaged in process', monthlyPrice: 450, setupPrice: 700, features: ['Status updates', 'Interview prep', 'Offer acceptance'], icon: 'heart' },
+  { id: 'nonprofit-donor', name: 'Nonprofit Donor Manager', niche: 'Professional Services', description: 'Manage donor relationships and giving', monthlyPrice: 500, setupPrice: 800, features: ['Donor tracking', 'Campaign emails', 'Impact reporting'], icon: 'heart' },
+  { id: 'nonprofit-volunteer', name: 'Nonprofit Volunteer Coordinator', niche: 'Professional Services', description: 'Coordinate volunteer programs', monthlyPrice: 400, setupPrice: 650, features: ['Shift scheduling', 'Task assignment', 'Hour tracking'], icon: 'calendar' },
+  { id: 'beauty-salon-booking', name: 'Beauty Salon Booking', niche: 'Health & Wellness', description: 'Book salon appointments 24/7', monthlyPrice: 450, setupPrice: 700, features: ['Stylist assignment', 'Service catalog', 'Rescheduling'], icon: 'calendar' },
+  { id: 'beauty-retention', name: 'Beauty Client Retention', niche: 'Health & Wellness', description: 'Keep beauty clients loyal', monthlyPrice: 400, setupPrice: 650, features: ['Appointment reminders', 'Loyalty rewards', 'Product recommendations'], icon: 'heart' },
+  { id: 'veterinary-appointment', name: 'Veterinary Appointment Bot', niche: 'Health & Wellness', description: 'Manage pet appointment scheduling', monthlyPrice: 450, setupPrice: 700, features: ['Pet records', 'Vaccine reminders', 'Owner communication'], icon: 'calendar' },
+  { id: 'veterinary-retention', name: 'Veterinary Client Retention', niche: 'Health & Wellness', description: 'Keep pet owner clients returning', monthlyPrice: 400, setupPrice: 650, features: ['Health reminders', 'Service recommendations', 'Loyalty programs'], icon: 'heart' },
+  { id: 'education-marketing', name: 'Education Marketing Bot', niche: 'Professional Services', description: 'Generate qualified education leads', monthlyPrice: 500, setupPrice: 800, features: ['Student targeting', 'Parent outreach', 'Program recommendations'], icon: 'target' },
+  { id: 'government-contractor', name: 'Government Contractor Bot', niche: 'Professional Services', description: 'Find government contract opportunities', monthlyPrice: 800, setupPrice: 1200, features: ['SAM.gov monitoring', 'RFP analysis', 'Bid preparation'], icon: 'target' },
+  { id: 'nonprofit-grant', name: 'Nonprofit Grant Finder', niche: 'Professional Services', description: 'Identify matching grant opportunities', monthlyPrice: 600, setupPrice: 950, features: ['Database matching', 'Deadline alerts', 'Application support'], icon: 'target' },
+  { id: 'franchise-lead', name: 'Franchise Lead Generator', niche: 'Retail', description: 'Generate franchise inquiry leads', monthlyPrice: 550, setupPrice: 850, features: ['Prospect qualifying', 'Info packet automation', 'Follow up sequencing'], icon: 'target' },
+  { id: 'franchise-recruitment', name: 'Franchise Recruitment Agent', niche: 'Professional Services', description: 'Automate franchise recruitment', monthlyPrice: 650, setupPrice: 1000, features: ['Candidate screening', 'Territory matching', 'Financial qualification'], icon: 'users' },
+  { id: 'plumbing-dispatch', name: 'Plumbing Emergency Dispatcher', niche: 'Plumbing', description: 'Handle emergency plumbing calls 24/7', monthlyPrice: 650, setupPrice: 950, features: ['Call qualification', 'Auto dispatch', 'Job estimation'], icon: 'phone' },
+  { id: 'plumbing-follow-up', name: 'Plumbing Quote Follow Up', niche: 'Plumbing', description: 'Follow up on plumbing quotes automatically', monthlyPrice: 450, setupPrice: 700, features: ['Multi touch sequences', 'Quote reminders', 'Rebooking links'], icon: 'mail' },
+  { id: 'electrical-scheduler', name: 'Electrician Scheduling Agent', niche: 'Electrical', description: 'Book electrical service calls 24/7', monthlyPrice: 500, setupPrice: 800, features: ['Job type triage', 'Calendar sync', 'Permit reminders'], icon: 'calendar' },
+  { id: 'electrical-leads', name: 'Electrician Lead Qualifier', niche: 'Electrical', description: 'Qualify electrical repair leads instantly', monthlyPrice: 550, setupPrice: 800, features: ['Scope assessment', 'Estimate generation', 'Lead scoring'], icon: 'target' },
+  { id: 'pest-control-booking', name: 'Pest Control Booking Agent', niche: 'Pest Control', description: 'Book pest inspections and treatments 24/7', monthlyPrice: 450, setupPrice: 700, features: ['Service scheduling', 'Recurring treatment plans', 'SMS reminders'], icon: 'calendar' },
+  { id: 'pest-control-retention', name: 'Pest Control Retention Bot', niche: 'Pest Control', description: 'Keep pest control customers on recurring plans', monthlyPrice: 400, setupPrice: 650, features: ['Plan renewals', 'Seasonal offers', 'Referral requests'], icon: 'heart' },
 ]

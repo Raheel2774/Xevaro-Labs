@@ -61,8 +61,8 @@ export default function TermsPage() {
       </Clause>
 
       <Clause heading="10. Contact">
-        <p>Questions about these terms? Email <a href={`mailto:${CONTACT.email}`} className="text-[#E53E3E] hover:underline">{CONTACT.email}</a> or
-        call <a href={`tel:${CONTACT.phone}`} className="text-[#E53E3E] hover:underline">{CONTACT.phone}</a>.</p>
+        <p>Questions about these terms? Email <a href={`mailto:${CONTACT.email}`} className="text-[#EE4C7C] hover:underline">{CONTACT.email}</a> or
+        call <a href={`tel:${CONTACT.phone}`} className="text-[#EE4C7C] hover:underline">{CONTACT.phone}</a>.</p>
       </Clause>
     </LegalPage>
   )
