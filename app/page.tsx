@@ -1,14 +1,14 @@
 'use client'
 
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Users, Sparkles, Target, Calendar, Phone, Pencil,
-  Star, ArrowRight, Quote, Rocket, ShieldCheck, Wrench, LineChart, Zap,
+  ArrowRight, Quote, Rocket, ShieldCheck, Wrench, LineChart,
 } from 'lucide-react'
 import { MagneticButton } from '@/components/os/ui'
-import { BentoCard, Sticker, CountUp, Pop, Marquee } from '@/components/os/bento'
-import OrganicRobot from '@/components/os/OrganicRobot'
+import { BentoCard, CountUp, Pop, Marquee } from '@/components/os/bento'
 import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
 import { TOTAL_AGENTS } from '@/lib/agents'
 import { TESTIMONIALS, INDUSTRIES_SERVED, PROCESS, PROMISES } from '@/lib/social'
@@ -23,79 +23,81 @@ const EASE = [0.34, 1.56, 0.64, 1] as const
 const PSPAN = ['md:col-span-3', 'md:col-span-3', 'md:col-span-2', 'md:col-span-2', 'md:col-span-2', 'md:col-span-6']
 
 export default function Home() {
+  // Load the Spline viewer and strip its badge from the shadow DOM.
+  useEffect(() => {
+    const id = 'spline-viewer-script'
+    if (!document.getElementById(id)) {
+      const s = document.createElement('script')
+      s.id = id
+      s.type = 'module'
+      s.src = 'https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js'
+      document.head.appendChild(s)
+    }
+    const strip = () => {
+      const v = document.querySelector('spline-viewer') as HTMLElement & { shadowRoot?: ShadowRoot }
+      const logo = v?.shadowRoot?.querySelector('#logo')
+      if (logo) { logo.remove(); return true }
+      return false
+    }
+    const iv = setInterval(() => { if (strip()) clearInterval(iv) }, 300)
+    const stop = setTimeout(() => clearInterval(iv), 15000)
+    return () => { clearInterval(iv); clearTimeout(stop) }
+  }, [])
+
   return (
     <>
-      {/* ── HERO (bento) ── */}
-      <section className="relative px-6 pb-10 pt-28 md:px-10">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-6">
-          {/* Big headline cell */}
+      {/* ── HERO (Spline robot) ── */}
+      <section className="relative -mt-16 min-h-screen overflow-hidden bg-[#5D001E]">
+        {/* Giant background wordmark */}
+        <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+          <span className="select-none whitespace-nowrap font-display text-[26vw] font-bold leading-none tracking-tighter text-white/[0.06]">
+            Xevaro Labs
+          </span>
+        </div>
+
+        {/* Spline robot */}
+        <div
+          className="absolute inset-0 z-[1]"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<spline-viewer url="https://prod.spline.design/Huf4LpsOTFHoF-qD/scene.splinecode" style="width:100%;height:100%;"></spline-viewer>',
+          }}
+        />
+
+        {/* Scrims */}
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-[#5D001E] via-[#5D001E]/40 to-transparent" />
+        <div className="pointer-events-none absolute -left-24 bottom-10 z-[2] h-[420px] w-[420px] rounded-full bg-[#EE4C7C]/18 blur-[120px]" />
+        {/* Badge cover fallback */}
+        <div className="pointer-events-none absolute bottom-0 right-0 z-[3] h-16 w-44 bg-[#5D001E]" />
+
+        {/* Hero copy, anchored lower */}
+        <div className="pointer-events-none relative z-10 flex min-h-screen flex-col justify-end px-6 pb-16 md:px-12 md:pb-20">
           <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="relative overflow-hidden rounded-[32px] bg-[#5D001E] p-8 md:col-span-4 md:p-12"
+            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: EASE }}
+            className="max-w-3xl"
           >
-            <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#EE4C7C]/30 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-[#9A1750]/40 blur-3xl" />
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-[#EE4C7C]" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#E3AFBC]">Xevaro AI Operating System</span>
-              </div>
-              <h1 className="mt-6 font-display text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl">
-                The living AI system that{' '}
-                <span className="bg-gradient-to-r from-[#EE4C7C] to-[#E3AFBC] bg-clip-text text-transparent">runs your business.</span>
-              </h1>
-              <p className="mt-6 max-w-lg text-lg font-light leading-relaxed text-[#E3AFBC]/85">
-                A network of AI agents, automations and data pipelines that capture leads,
-                book work and run support around the clock.
-              </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <MagneticButton href="/contact">Book a Free Automation Audit</MagneticButton>
-                <MagneticButton href="/agents" variant="ghost" className="!border-white/25 !text-white hover:!border-white/60">Explore AI Agents</MagneticButton>
-              </div>
+            <div className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#EE4C7C]" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#E3AFBC]">Xevaro AI Operating System</span>
             </div>
-          </motion.div>
-
-          {/* Robot cell */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
-            className="relative flex items-center justify-center overflow-hidden rounded-[32px] bg-gradient-to-br from-[#E3AFBC]/60 to-white/60 p-6 md:col-span-2"
-          >
-            <Sticker className="absolute right-4 top-4 z-10 bg-white text-[#5D001E]" rotate={8}>
-              <Zap className="h-3 w-3 text-[#EE4C7C]" /> Always on
-            </Sticker>
-            <OrganicRobot className="aspect-[400/480] w-full max-w-[240px]" />
-          </motion.div>
-
-          {/* Stat cells */}
-          {[
-            { v: 100, s: '+', l: 'Systems deployed', bg: 'bg-white/70', fg: 'text-[#EE4C7C]', sub: 'text-[#5D001E]/55' },
-            { v: 75, s: '', l: 'AI agents ready', bg: 'bg-[#EE4C7C]', fg: 'text-white', sub: 'text-white/80' },
-            { v: 25, s: '+', l: 'Industries served', bg: 'bg-[#E3AFBC]/50', fg: 'text-[#9A1750]', sub: 'text-[#5D001E]/60' },
-            { v: 48, s: 'h', l: 'Average setup', bg: 'bg-white/70', fg: 'text-[#9A1750]', sub: 'text-[#5D001E]/55' },
-          ].map((m, i) => (
-            <motion.div
-              key={m.l}
-              initial={{ opacity: 0, y: 24, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 + i * 0.08, ease: EASE }}
-              whileHover={{ y: -5 }}
-              className={`flex flex-col justify-center rounded-[24px] p-6 shadow-[0_6px_24px_rgba(93,0,30,0.07)] md:col-span-3 lg:col-span-1 ${m.bg}`}
-            >
-              <div className={`font-display text-4xl font-bold ${m.fg}`}><CountUp value={m.v} suffix={m.s} /></div>
-              <div className={`mt-1 text-xs uppercase tracking-wide ${m.sub}`}>{m.l}</div>
-            </motion.div>
-          ))}
-          {/* rating cell */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: EASE }}
-            className="flex items-center gap-3 rounded-[24px] bg-white/70 p-6 shadow-[0_6px_24px_rgba(93,0,30,0.07)] md:col-span-6 lg:col-span-2"
-          >
-            <span className="flex gap-0.5">
-              {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-[#EE4C7C] text-[#EE4C7C]" />)}
-            </span>
-            <span className="text-sm font-medium text-[#5D001E]/70">Rated 4.9/5 across client engagements</span>
+            <h1 className="mt-5 font-display text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl">
+              The living AI system that{' '}
+              <span className="bg-gradient-to-r from-[#EE4C7C] to-[#E3AFBC] bg-clip-text text-transparent">runs your business.</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-lg font-light leading-relaxed text-[#E3AFBC]/90">
+              A network of AI agents, automations and data pipelines that capture leads,
+              book work and run support around the clock.
+            </p>
+            <div className="pointer-events-auto mt-8 flex flex-col gap-4 sm:flex-row">
+              <MagneticButton href="/contact">Book a Free Automation Audit</MagneticButton>
+              <MagneticButton href="/agents" variant="ghost" className="!border-white/25 !text-white hover:!border-white/60">Explore AI Agents</MagneticButton>
+            </div>
+            <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/70">
+              <span>⭐ Rated 4.9/5</span>
+              <span className="hidden h-4 w-px bg-white/20 sm:block" />
+              <span>100+ systems deployed across 25+ industries</span>
+            </div>
           </motion.div>
         </div>
       </section>
