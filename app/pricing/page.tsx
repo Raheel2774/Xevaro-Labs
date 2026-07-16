@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Check, Rocket, ShieldCheck, Wrench, LineChart } from 'lucide-react'
 import { Reveal, Eyebrow, GlassCard, H2 } from '@/components/os/ui'
-import { PRODUCTS, CONTACT } from '@/lib/os'
+import { PRODUCTS, AGENTS, CONTACT } from '@/lib/os'
 import { PROMISES } from '@/lib/social'
 
 const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wrench, LineChart }
@@ -138,7 +138,7 @@ export default function PricingPage() {
                 <a
                   href="#quote"
                   className={`group relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-semibold ${
-                    pkg.featured ? 'text-[#5D001E]' : 'border border-[#5D001E]/20 text-[#5D001E]/85 transition-colors hover:border-white/40 hover:text-[#5D001E]'
+                    pkg.featured ? 'text-white' : 'border border-[#5D001E]/20 text-[#5D001E]/85 transition-colors hover:border-[#9A1750]/50 hover:text-[#9A1750]'
                   }`}
                 >
                   {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />}
@@ -147,6 +147,76 @@ export default function PricingPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* ── Core product pricing ── */}
+      <section className="relative px-6 pb-16 md:px-10">
+        <div className="mx-auto max-w-6xl">
+          <Reveal><Eyebrow>Core product pricing</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">Six products. Clear prices.</H2></Reveal>
+          <div className="mt-10 overflow-x-auto rounded-3xl border border-[#5D001E]/10 bg-white/55">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-[#5D001E]/10">
+                  <th className="px-5 py-4 font-semibold text-[#5D001E]">Product</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#5D001E]">Monthly</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#5D001E]">Setup</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#5D001E]">Year 1</th>
+                </tr>
+              </thead>
+              <tbody>
+                {PRODUCTS.map((p) => (
+                  <tr key={p.id} className="border-b border-[#5D001E]/10 transition-colors last:border-0 hover:bg-[#E3AFBC]/20">
+                    <td className="px-5 py-4">
+                      <a href={`/products/${p.id}`} className="font-semibold text-[#5D001E] hover:text-[#9A1750]">{p.name}</a>
+                      <div className="text-xs text-[#5D001E]/55">{p.tagline}</div>
+                    </td>
+                    <td className="px-5 py-4 text-right font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}</td>
+                    <td className="px-5 py-4 text-right text-[#5D001E]/75">${p.setupPrice.toLocaleString()}</td>
+                    <td className="px-5 py-4 text-right font-semibold text-[#5D001E]">${(p.monthlyPrice * 12 + p.setupPrice).toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── All 75 agents pricing ── */}
+      <section className="relative px-6 pb-20 md:px-10">
+        <div className="mx-auto max-w-6xl">
+          <Reveal><Eyebrow>AI agent pricing</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">All {AGENTS.length} agents, priced.</H2></Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-10 max-h-[520px] overflow-auto rounded-3xl border border-[#5D001E]/10 bg-white/55">
+              <table className="w-full text-left text-sm">
+                <thead className="sticky top-0 bg-[#E3E2DF]">
+                  <tr className="border-b border-[#5D001E]/10">
+                    <th className="px-5 py-4 font-semibold text-[#5D001E]">Agent</th>
+                    <th className="px-5 py-4 font-semibold text-[#5D001E]">Niche</th>
+                    <th className="px-5 py-4 text-right font-semibold text-[#5D001E]">Monthly</th>
+                    <th className="px-5 py-4 text-right font-semibold text-[#5D001E]">Setup</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {AGENTS.map((a) => (
+                    <tr key={a.id} className="border-b border-[#5D001E]/10 transition-colors last:border-0 hover:bg-[#E3AFBC]/20">
+                      <td className="px-5 py-3 font-medium text-[#5D001E]">{a.name}</td>
+                      <td className="px-5 py-3 text-[#5D001E]/60">{a.niche}</td>
+                      <td className="px-5 py-3 text-right font-bold text-[#EE4C7C]">${a.monthlyPrice}</td>
+                      <td className="px-5 py-3 text-right text-[#5D001E]/75">${a.setupPrice}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="mt-4 text-center text-sm text-[#5D001E]/55">
+              Browse full details, filter by niche and build your stack on the <a href="/agents" className="font-semibold text-[#9A1750] hover:text-[#EE4C7C]">agents page</a>.
+            </p>
+          </Reveal>
         </div>
       </section>
 
