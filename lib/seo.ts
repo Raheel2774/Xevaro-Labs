@@ -44,22 +44,47 @@ export function pageMeta(opts: {
   description: string
   path: string
   keywords?: string[]
+  // Pass this on blog posts / any article so the OG card is typed correctly
+  // (og:type=article) and carries published/modified/author signals that
+  // Google, LinkedIn, and answer engines use to date and attribute content.
+  article?: {
+    publishedTime: string
+    modifiedTime?: string
+    authors?: string[]
+    section?: string
+    tags?: string[]
+  }
 }): Metadata {
   const url = SITE.url + opts.path
   const fullTitle = `${opts.title}, ${SITE.name}`
+  const openGraph: NonNullable<Metadata['openGraph']> = opts.article
+    ? {
+        title: fullTitle,
+        description: opts.description,
+        url,
+        siteName: SITE.name,
+        type: 'article',
+        publishedTime: opts.article.publishedTime,
+        modifiedTime: opts.article.modifiedTime ?? opts.article.publishedTime,
+        authors: opts.article.authors,
+        section: opts.article.section,
+        tags: opts.article.tags,
+        images: [{ url: SITE.ogImage, width: SITE.ogWidth, height: SITE.ogHeight, alt: SITE.name }],
+      }
+    : {
+        title: fullTitle,
+        description: opts.description,
+        url,
+        siteName: SITE.name,
+        type: 'website',
+        images: [{ url: SITE.ogImage, width: SITE.ogWidth, height: SITE.ogHeight, alt: SITE.name }],
+      }
   return {
     title: opts.title,
     description: opts.description,
     keywords: opts.keywords,
     alternates: { canonical: url },
-    openGraph: {
-      title: fullTitle,
-      description: opts.description,
-      url,
-      siteName: SITE.name,
-      type: 'website',
-      images: [{ url: SITE.ogImage, width: SITE.ogWidth, height: SITE.ogHeight, alt: SITE.name }],
-    },
+    openGraph,
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
