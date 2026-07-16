@@ -269,9 +269,9 @@ export default function PricingPage() {
                     defaultValue=""
                     className="mt-2 w-full rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors focus:border-[#EE4C7C]/50"
                   >
-                    <option value="" disabled className="bg-[#0A0A0C]">Select a system…</option>
+                    <option value="" disabled className="bg-white text-[#5D001E]">Select a system…</option>
                     {PRODUCTS.map(p => (
-                      <option key={p.id} value={p.name} className="bg-[#0A0A0C]">{p.name}</option>
+                      <option key={p.id} value={p.name} className="bg-white text-[#5D001E]">{p.name}</option>
                     ))}
                   </select>
                 </div>

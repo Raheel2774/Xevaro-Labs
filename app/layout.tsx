@@ -70,7 +70,7 @@ export default function RootLayout({
         {/* Global structured data, Organization + WebSite (AEO/GEO entity graph) */}
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
-      <body className="bg-[#050505] text-white antialiased overflow-x-hidden">
+      <body className="bg-[#E3E2DF] text-[#5D001E] antialiased overflow-x-hidden">
         <Analytics />
         <OSShell>{children}</OSShell>
       </body>

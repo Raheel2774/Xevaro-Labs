@@ -45,8 +45,8 @@ export default function TestimonialsPage() {
           <Reveal>
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#5D001E]/10 bg-white/60 md:grid-cols-4">
               {TRUST_STATS.map((s) => (
-                <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-7 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
+                <div key={s.label} className="bg-white/70 p-7 text-center backdrop-blur-xl">
+                  <div className="bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
                   <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#5D001E]/55">{s.label}</div>
                 </div>
               ))}

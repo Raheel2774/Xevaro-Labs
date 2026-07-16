@@ -114,12 +114,12 @@ export default function ContactPage() {
                   <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">System of interest</label>
                     <select name="system" className="mt-2 w-full rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors focus:border-[#EE4C7C]/50">
-                      <option className="bg-[#0A0A0C]">AI Automation Systems</option>
-                      <option className="bg-[#0A0A0C]">AI Agents &amp; Voice Systems</option>
-                      <option className="bg-[#0A0A0C]">Lead Generation Systems</option>
-                      <option className="bg-[#0A0A0C]">High Conversion Website Systems</option>
-                      <option className="bg-[#0A0A0C]">Shopify AI Commerce Systems</option>
-                      <option className="bg-[#0A0A0C]">Business Intelligence Systems</option>
+                      <option className="bg-white text-[#5D001E]">AI Automation Systems</option>
+                      <option className="bg-white text-[#5D001E]">AI Agents &amp; Voice Systems</option>
+                      <option className="bg-white text-[#5D001E]">Lead Generation Systems</option>
+                      <option className="bg-white text-[#5D001E]">High Conversion Website Systems</option>
+                      <option className="bg-white text-[#5D001E]">Shopify AI Commerce Systems</option>
+                      <option className="bg-white text-[#5D001E]">Business Intelligence Systems</option>
                     </select>
                   </div>
                   <div>

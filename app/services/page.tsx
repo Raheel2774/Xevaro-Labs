@@ -17,7 +17,7 @@ export default function ServicesPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Automation that runs<br />
-              <span className="bg-gradient-to-r from-[#7F1D1D] to-[#EE4C7C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] bg-clip-text text-transparent">
                 your business for you.
               </span>
             </H2>
@@ -43,8 +43,8 @@ export default function ServicesPage() {
           <Reveal>
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
-                <div key={s.label} className="bg-[rgba(5,5,7,0.6)] p-7 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-br from-white to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
+                <div key={s.label} className="bg-white/70 p-7 text-center backdrop-blur-xl">
+                  <div className="bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
                   <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#5D001E]/55">{s.label}</div>
                 </div>
               ))}
@@ -94,8 +94,8 @@ export default function ServicesPage() {
       <section className="relative px-6 py-12 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-[#EE4C7C]/20 bg-gradient-to-br from-[#7F1D1D]/[0.08] via-white/[0.02] to-transparent p-8 md:p-12">
-              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#7F1D1D]/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-[#EE4C7C]/20 bg-gradient-to-br from-[#9A1750]/[0.08] via-white/[0.02] to-transparent p-8 md:p-12">
+              <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#9A1750]/20 blur-3xl" />
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
                   <h3 className="max-w-xl font-display text-2xl font-semibold text-[#5D001E] md:text-3xl">

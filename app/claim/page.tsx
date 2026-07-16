@@ -123,7 +123,7 @@ export default function ClaimPage() {
                   </label>
 
                   <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-white disabled:opacity-60">
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#7F1D1D] to-[#E53E3E]" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#E53E3E]" />
                     <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(229,62,62,0.5)] transition-opacity group-hover:opacity-100" />
                     <span className="relative">{busy ? 'Sending…' : 'Send me my demo'}</span>
                   </button>

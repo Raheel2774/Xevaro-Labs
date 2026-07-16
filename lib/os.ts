@@ -47,17 +47,30 @@ export const FRAME_COUNT = 150
 
 // ─── Products (productized AI systems) ────────────────────────────────────────
 
+export interface ProductStep { title: string; desc: string }
+export interface ProductStat { value: string; label: string }
+export interface ProductFAQ { q: string; a: string }
+
 export interface Product {
   id: string
   index: string
   name: string
   tagline: string
   description: string
+  longDescription: string
   monthlyPrice: number
   setupPrice: number
   features: string[]
   outcome: string
-  icon: string // emoji or icon name
+  icon: string          // lucide-react icon name
+  accent: string        // palette hex used for this product's bento theming
+  bestSellerRank: number
+  badge: string         // short marketing badge shown on best-sellers
+  howItWorks: ProductStep[]
+  integrations: string[]
+  useCases: string[]
+  stats: ProductStat[]
+  faq: ProductFAQ[]
 }
 
 export const PRODUCTS: Product[] = [
@@ -66,98 +79,238 @@ export const PRODUCTS: Product[] = [
     index: '01',
     name: 'AI Human Resources',
     tagline: 'Screening, onboarding, compliance',
-    description: 'Auto-screen resumes, schedule interviews, generate offers, onboard hires.',
+    description: 'Auto screen resumes, schedule interviews, generate offers and onboard new hires.',
+    longDescription: 'Your always on HR teammate. It reads every inbound resume, scores candidates against the role, books interviews on your calendar, drafts offer letters and walks new hires through onboarding. What used to eat a full day of admin per hire runs in the background while you focus on picking the right people.',
     monthlyPrice: 900,
     setupPrice: 1000,
     features: [
-      'Resume screening & scoring',
+      'Resume screening and scoring',
       'Interview scheduling',
       'Offer letter generation',
+      'New hire onboarding flows',
+      'Compliance document tracking',
     ],
     outcome: 'Hire 3x faster with zero admin work.',
     icon: 'users',
+    accent: '#9A1750',
+    bestSellerRank: 1,
+    badge: 'Team favorite',
+    howItWorks: [
+      { title: 'Resume lands', desc: 'Every application flows into one inbox and is parsed instantly.' },
+      { title: 'AI scores it', desc: 'Candidates are ranked against your role criteria in seconds.' },
+      { title: 'Interviews booked', desc: 'Top matches get a calendar link and self schedule.' },
+      { title: 'Offer and onboard', desc: 'Offer letters draft automatically and onboarding kicks off.' },
+    ],
+    integrations: ['Gmail', 'Google Calendar', 'Notion', 'Slack', 'DocuSign', 'Airtable'],
+    useCases: ['High volume hiring', 'Agencies and staffing', 'Franchises', 'Growing teams'],
+    stats: [
+      { value: '3x', label: 'Faster time to hire' },
+      { value: '90%', label: 'Screening automated' },
+      { value: '8 hrs', label: 'Saved per hire' },
+    ],
+    faq: [
+      { q: 'Does it work with our existing ATS?', a: 'Yes. It connects to your inbox, calendar and common HR tools, or runs standalone with its own candidate board.' },
+      { q: 'Can it handle our compliance docs?', a: 'It tracks required documents per hire and flags anything missing before day one.' },
+    ],
   },
   {
     id: 'business-assistant',
     index: '02',
     name: 'AI Business Assistant',
     tagline: 'Email summaries, task automation, CRM sync',
-    description: 'Claude summarizes emails, creates tasks, syncs to CRM automatically.',
+    description: 'Summarizes your inbox, creates tasks and keeps your CRM up to date automatically.',
+    longDescription: 'A chief of staff that never sleeps. It reads and summarizes your inbox, turns important threads into tasks, updates your CRM after every conversation and surfaces what actually needs you. The busywork that quietly eats your day just disappears.',
     monthlyPrice: 200,
     setupPrice: 800,
     features: [
-      'Email summarization',
-      'Auto task creation',
-      'CRM sync automation',
+      'Daily inbox summaries',
+      'Automatic task creation',
+      'CRM sync after every thread',
+      'Meeting prep briefs',
+      'Follow up reminders',
     ],
     outcome: 'Cut admin overhead by 50%.',
     icon: 'sparkles',
+    accent: '#EE4C7C',
+    bestSellerRank: 2,
+    badge: 'Best value',
+    howItWorks: [
+      { title: 'Connect inbox', desc: 'Securely link your email and CRM in a few clicks.' },
+      { title: 'It reads everything', desc: 'Threads are summarized and prioritized every morning.' },
+      { title: 'Tasks appear', desc: 'Action items become tasks with owners and due dates.' },
+      { title: 'CRM stays clean', desc: 'Contacts and deals update themselves after each exchange.' },
+    ],
+    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Notion', 'Slack', 'Google Calendar'],
+    useCases: ['Founders', 'Sales teams', 'Consultants', 'Busy operators'],
+    stats: [
+      { value: '50%', label: 'Less admin time' },
+      { value: '2 hrs', label: 'Saved daily' },
+      { value: '100%', label: 'CRM coverage' },
+    ],
+    faq: [
+      { q: 'Is my email data safe?', a: 'It uses read scoped access and never stores full message bodies beyond the summary you approve.' },
+      { q: 'Which CRM does it support?', a: 'HubSpot, Pipedrive, Salesforce and most common CRMs, or a simple built in pipeline.' },
+    ],
   },
   {
     id: 'lead-generation',
     index: '03',
     name: 'AI Lead Generation',
     tagline: '50+ qualified leads per month',
-    description: 'Scrape, qualify, and outreach to leads automatically. Cold email sequences included.',
+    description: 'Sources, qualifies and reaches out to leads automatically with built in cold email sequences.',
+    longDescription: 'A full outbound engine on autopilot. It builds targeted lead lists, enriches and qualifies each contact, then runs personalized cold email sequences that book meetings straight onto your calendar. Predictable pipeline without a single hour of manual prospecting.',
     monthlyPrice: 1000,
     setupPrice: 1200,
     features: [
-      '50+ qualified leads per month',
-      'Automatic resume screening via Claude',
-      '3-step cold email sequences',
+      '50 plus qualified leads per month',
+      'Automatic lead sourcing and enrichment',
+      'Personalized cold email sequences',
+      'Reply detection and routing',
+      'Meetings booked to your calendar',
     ],
-    outcome: 'Predictable lead flow, lower acquisition cost.',
+    outcome: 'Predictable lead flow at lower cost per meeting.',
     icon: 'target',
+    accent: '#5D001E',
+    bestSellerRank: 3,
+    badge: 'Top seller',
+    howItWorks: [
+      { title: 'Define your buyer', desc: 'We set your ideal customer profile and targeting rules.' },
+      { title: 'Lists build themselves', desc: 'Fresh, enriched leads are sourced every week.' },
+      { title: 'Sequences send', desc: 'Personalized outreach goes out and follows up automatically.' },
+      { title: 'Meetings land', desc: 'Interested replies are booked straight to your calendar.' },
+    ],
+    integrations: ['Instantly', 'Apollo', 'HubSpot', 'Google Calendar', 'Slack', 'Clay'],
+    useCases: ['Agencies', 'B2B services', 'SaaS', 'Local service businesses'],
+    stats: [
+      { value: '50+', label: 'Leads per month' },
+      { value: '3 step', label: 'Follow up cadence' },
+      { value: '24/7', label: 'Always prospecting' },
+    ],
+    faq: [
+      { q: 'Will this hurt our domain reputation?', a: 'No. We warm inboxes, stay inside safe sending limits and monitor deliverability continuously.' },
+      { q: 'Do you write the copy?', a: 'Yes. We craft and test the sequences, then optimize based on reply data.' },
+    ],
   },
   {
     id: 'appointment-recovery',
     index: '04',
     name: 'AI Appointment Recovery',
     tagline: 'Auto text missed appointments',
-    description: 'Recover 40% of no-shows with AI recovery sequences. SMS + email.',
+    description: 'Recovers up to 40 percent of no shows with automatic SMS and email rebooking sequences.',
+    longDescription: 'Every missed appointment is lost revenue you can win back. The moment someone no shows or cancels, this agent texts and emails them with a friendly rebooking link and keeps nudging until they book again. It quietly rescues thousands in revenue every month.',
     monthlyPrice: 800,
     setupPrice: 1000,
     features: [
-      'Auto-text missed appointments',
-      '40% recovery rate average',
-      'Rebooking links included',
+      'Auto text missed appointments',
+      '40 percent average recovery rate',
+      'One tap rebooking links',
+      'SMS and email sequences',
+      'Revenue recovered reporting',
     ],
-    outcome: 'Recover lost revenue from no-shows.',
+    outcome: 'Recover lost revenue from no shows.',
     icon: 'calendar',
+    accent: '#9A1750',
+    bestSellerRank: 4,
+    badge: 'Fast payback',
+    howItWorks: [
+      { title: 'No show detected', desc: 'A missed or cancelled appointment triggers instantly.' },
+      { title: 'Outreach fires', desc: 'A warm SMS and email go out within minutes.' },
+      { title: 'Rebooking link', desc: 'One tap lets them grab a new slot on your calendar.' },
+      { title: 'Revenue reported', desc: 'You see exactly how much was recovered each month.' },
+    ],
+    integrations: ['Twilio', 'Google Calendar', 'Calendly', 'Acuity', 'HubSpot', 'Square'],
+    useCases: ['Clinics and dental', 'Salons and spas', 'Home services', 'Med spas'],
+    stats: [
+      { value: '40%', label: 'No shows recovered' },
+      { value: '5 min', label: 'To first outreach' },
+      { value: '10x', label: 'Return on cost' },
+    ],
+    faq: [
+      { q: 'Does it use our booking system?', a: 'Yes. It plugs into your calendar or booking tool and sends real available slots.' },
+      { q: 'Will messages feel spammy?', a: 'No. Sequences are warm, branded and stop the moment someone rebooks.' },
+    ],
   },
   {
     id: 'voice-agent',
     index: '05',
     name: 'AI Voice Agent',
-    tagline: 'Answer 24/7 missed calls automatically',
-    description: 'Intelligent AI agent answers calls, qualifies leads, books appointments.',
+    tagline: 'Answer every call 24/7',
+    description: 'An intelligent voice agent that answers calls, qualifies leads and books appointments around the clock.',
+    longDescription: 'The phone never goes unanswered again. This natural sounding voice agent picks up every call, answers common questions, qualifies the caller and books them straight into your calendar. Nights, weekends and busy afternoons all covered without hiring a single receptionist.',
     monthlyPrice: 1200,
     setupPrice: 1000,
     features: [
       '24/7 call answering',
-      'Auto lead qualification',
-      'Appointment booking',
+      'Natural sounding conversation',
+      'Live lead qualification',
+      'Appointment booking on the call',
+      'Call transcripts and summaries',
     ],
-    outcome: 'Never miss a call. 24/7 lead capture.',
+    outcome: 'Never miss a call. Capture leads around the clock.',
     icon: 'phone',
+    accent: '#EE4C7C',
+    bestSellerRank: 5,
+    badge: 'Never miss a lead',
+    howItWorks: [
+      { title: 'Call comes in', desc: 'The agent answers instantly in a natural voice.' },
+      { title: 'It understands', desc: 'Callers are greeted, helped and qualified in real time.' },
+      { title: 'Books the slot', desc: 'Qualified callers get booked onto your calendar live.' },
+      { title: 'You get the recap', desc: 'A transcript and summary land in your inbox.' },
+    ],
+    integrations: ['Twilio', 'Google Calendar', 'Calendly', 'HubSpot', 'Slack', 'Zapier'],
+    useCases: ['Home services', 'Clinics', 'Law firms', 'Real estate'],
+    stats: [
+      { value: '24/7', label: 'Always answering' },
+      { value: '0', label: 'Missed calls' },
+      { value: '100%', label: 'Calls logged' },
+    ],
+    faq: [
+      { q: 'Does it sound robotic?', a: 'No. It uses natural voice and handles interruptions and follow up questions smoothly.' },
+      { q: 'Can it transfer to a human?', a: 'Yes. It routes complex or high value calls to your team when needed.' },
+    ],
   },
   {
     id: 'content-generation',
     index: '06',
     name: 'AI Content Generation',
-    tagline: '4 blog posts + 20 social posts monthly',
-    description: 'AI writes, publishes, schedules all your content. Blog + social included.',
+    tagline: '4 blog posts plus 20 social posts monthly',
+    description: 'Writes, schedules and publishes your blog and social content on autopilot.',
+    longDescription: 'A content team in a box. It researches topics in your niche, writes on brand blog posts and social captions, then schedules and publishes them across your channels. Consistent presence that compounds, with zero writer overhead and nothing left to chase.',
     monthlyPrice: 1000,
     setupPrice: 500,
     features: [
       '4 blog posts per month',
       '20 social media captions',
-      'Auto publishing & scheduling',
+      'On brand voice and tone',
+      'Auto scheduling and publishing',
+      'SEO optimized drafts',
     ],
-    outcome: 'Consistent content, zero writer overhead.',
+    outcome: 'Consistent content with zero writer overhead.',
     icon: 'pencil',
+    accent: '#5D001E',
+    bestSellerRank: 6,
+    badge: 'Set and forget',
+    howItWorks: [
+      { title: 'Set your voice', desc: 'We tune the agent to your brand, topics and audience.' },
+      { title: 'It writes', desc: 'Blog posts and captions are drafted on a schedule.' },
+      { title: 'You approve', desc: 'Review and tweak in one place, or let it run.' },
+      { title: 'It publishes', desc: 'Content posts and schedules across your channels.' },
+    ],
+    integrations: ['WordPress', 'Webflow', 'LinkedIn', 'Instagram', 'X', 'Buffer'],
+    useCases: ['Personal brands', 'Agencies', 'Local businesses', 'SaaS marketing'],
+    stats: [
+      { value: '24', label: 'Pieces per month' },
+      { value: '0', label: 'Writers to manage' },
+      { value: '100%', label: 'On schedule' },
+    ],
+    faq: [
+      { q: 'Will it sound like us?', a: 'Yes. We train it on your voice and examples so every piece stays on brand.' },
+      { q: 'Do we approve before it posts?', a: 'Your choice. Run it fully automatic or keep a one click approval step.' },
+    ],
   },
 ]
+
+export const BEST_SELLERS = [...PRODUCTS].sort((a, b) => a.bestSellerRank - b.bestSellerRank)
 
 // ─── Case studies ─────────────────────────────────────────────────────────────
 

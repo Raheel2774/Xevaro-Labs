@@ -40,3 +40,5 @@
 
 # internal marketing strategy (Reddit/GEO playbooks) — keep out of public repo
 /marketing/
+.vercel
+.env*

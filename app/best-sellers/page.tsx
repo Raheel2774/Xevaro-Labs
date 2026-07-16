@@ -1,334 +1,208 @@
 'use client'
 
-import { useState } from 'react'
-import { Check, X, Zap, ArrowRight, Star, ShieldCheck, Clock, Sparkles } from 'lucide-react'
-import { Reveal, Eyebrow, GlassCard, H2, MagneticButton, useGlow } from '@/components/os/ui'
-import { FLAGSHIP_AGENTS, type Flagship } from '@/lib/agents'
-import { trackLead } from '@/components/Analytics'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import {
+  Users, Sparkles, Target, Calendar, Phone, Pencil,
+  ArrowRight, Star, Check, Zap, TrendingUp,
+} from 'lucide-react'
+import { BEST_SELLERS, CONTACT } from '@/lib/os'
+import { MagneticButton } from '@/components/os/ui'
+import { BentoCard, Sticker, CountUp, Pop, Marquee } from '@/components/os/bento'
+
+const ICONS: Record<string, typeof Users> = {
+  users: Users, sparkles: Sparkles, target: Target,
+  calendar: Calendar, phone: Phone, pencil: Pencil,
+}
+
+const EASE = [0.34, 1.56, 0.64, 1] as const
+
+// bento sizing per rank for a varied, playful grid
+const SPAN = [
+  'md:col-span-4', 'md:col-span-2', 'md:col-span-3',
+  'md:col-span-3', 'md:col-span-2', 'md:col-span-4',
+]
 
 export default function BestSellersPage() {
-  const glow = useGlow()
-  const [selected, setSelected] = useState<Flagship | null>(null)
-
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-40 md:px-10">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[540px] w-[900px] -translate-x-1/2 rounded-full bg-[#9A1750]/[0.10] blur-[120px]" />
-        <div className="relative mx-auto max-w-7xl text-center">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#EE4C7C]/30 bg-[#EE4C7C]/[0.06] px-4 py-1.5">
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden px-6 pb-16 pt-36 md:px-10">
+        <div className="mx-auto max-w-7xl text-center">
+          <Pop>
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#5D001E] px-4 py-2 text-white">
               <Zap className="h-3.5 w-3.5 text-[#EE4C7C]" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-[#5D001E]/65">The Flagship Five</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em]">The Best Selling Six</span>
             </div>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <H2 className="mx-auto mt-7 max-w-4xl text-5xl md:text-8xl">
+          </Pop>
+
+          <div className="relative mt-8">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: EASE }}
+              className="mx-auto max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-[#5D001E] md:text-8xl"
+            >
               Our{' '}
-              <span className="bg-gradient-to-r from-[#9A1750] via-[#9A1750] to-[#EE4C7C] bg-clip-text text-transparent">
-                best selling
-              </span>{' '}
-              AI agents.
-            </H2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-[#5D001E]/60">
-              Five battle tested agents that capture leads, book appointments, close deals and build
-              reputation, deployed across hundreds of businesses. These are the ones clients start with.
-            </p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <MagneticButton href="#agents">See the Five</MagneticButton>
-              <MagneticButton href="/agents" variant="ghost">Full Catalog →</MagneticButton>
-            </div>
-          </Reveal>
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] bg-clip-text text-transparent">best sellers</span>
+                <motion.svg
+                  viewBox="0 0 300 20" className="absolute -bottom-3 left-0 w-full"
+                >
+                  <motion.path d="M5 12 Q150 2 295 12" fill="none" stroke="#EE4C7C" strokeWidth="4" strokeLinecap="round"
+                    initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+                    transition={{ duration: 1, delay: 0.6, ease: 'easeInOut' }} />
+                </motion.svg>
+              </span>
+              <br />that do the work.
+            </motion.h1>
 
-          {/* Trust bar */}
-          <Reveal delay={0.2}>
-            <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4">
-              {[
-                { icon: Clock, v: '24/7', l: 'Always on' },
-                { icon: Zap, v: '<30s', l: 'Response time' },
-                { icon: Star, v: '5★', l: 'On brand' },
-                { icon: ShieldCheck, v: '100%', l: 'You own it' },
-              ].map(({ icon: Icon, v, l }) => (
-                <div key={l} className="rounded-2xl border border-[#5D001E]/10 bg-white/55 p-5">
-                  <Icon className="mx-auto h-5 w-5 text-[#EE4C7C]" />
-                  <div className="mt-2 font-display text-2xl font-bold text-[#5D001E]/90">{v}</div>
-                  <div className="mt-0.5 text-[11px] uppercase tracking-wider text-[#5D001E]/55">{l}</div>
-                </div>
-              ))}
+            {/* floating stickers */}
+            <Sticker className="absolute -left-2 top-2 bg-[#EE4C7C] text-white md:left-16" rotate={-8}>
+              <Star className="h-3.5 w-3.5 fill-white" /> Loved by 100+ teams
+            </Sticker>
+            <Sticker className="absolute -right-1 bottom-0 bg-[#E3AFBC] text-[#5D001E] md:right-20" rotate={7}>
+              <TrendingUp className="h-3.5 w-3.5" /> 48 hour setup
+            </Sticker>
+          </div>
+
+          <Pop delay={0.15}>
+            <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#5D001E]/70">
+              These six products get deployed the most, and for good reason. Clear pricing,
+              live in 48 hours, and built to pay for themselves fast.
+            </p>
+          </Pop>
+          <Pop delay={0.2}>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <MagneticButton href="/contact">Book a Free Audit</MagneticButton>
+              <MagneticButton href="/agents" variant="ghost">Browse all agents</MagneticButton>
             </div>
-          </Reveal>
+          </Pop>
         </div>
       </section>
 
-      {/* ── Flagship agents ──────────────────────────────────────────────── */}
-      <section id="agents" className="relative scroll-mt-24 px-6 pb-24 md:px-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8">
-          {FLAGSHIP_AGENTS.map((agent, i) => (
-            <Reveal key={agent.id} delay={0.04}>
-              <div onMouseMove={glow}>
-                <GlassCard glow className="p-8 md:p-12">
-                  <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-                    {/* Left: identity + problem + how */}
-                    <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                      <div className="flex items-center gap-4">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] font-display text-lg font-bold text-white shadow-[0_0_24px_rgba(238, 76, 124,0.35)]">
-                          {agent.rank}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-[#EE4C7C]/30 bg-[#EE4C7C]/5 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#EE4C7C]">
-                          <Star className="h-3 w-3" /> {agent.badge}
-                        </span>
-                      </div>
-
-                      <h3 className="mt-6 font-display text-3xl font-bold text-[#5D001E]/90 md:text-4xl">{agent.name}</h3>
-                      <p className="mt-3 text-lg font-light text-[#5D001E]/75">{agent.tagline}</p>
-
-                      <div className="mt-6 rounded-xl border border-[#5D001E]/10 bg-white/55 p-5">
-                        <div className="font-mono text-[10px] uppercase tracking-widest text-[#E0A86A]/80">The problem</div>
-                        <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{agent.problem}</p>
-                      </div>
-
-                      <div className="mt-6">
-                        <div className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">How it works</div>
-                        <ol className="mt-3 space-y-3">
-                          {agent.how.map((step, s) => (
-                            <li key={step} className="flex gap-3">
-                              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#EE4C7C]/30 bg-[#EE4C7C]/5 font-mono text-[11px] text-[#EE4C7C]">
-                                {s + 1}
-                              </span>
-                              <span className="text-sm leading-relaxed text-[#5D001E]/75">{step}</span>
-                            </li>
-                          ))}
-                        </ol>
-                      </div>
-
-                      <button
-                        onClick={() => setSelected(agent)}
-                        className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#5D001E]"
+      {/* ── Bento grid of best sellers ── */}
+      <section className="relative px-6 py-16 md:px-10">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-6">
+          {BEST_SELLERS.map((p, i) => {
+            const Icon = ICONS[p.icon] ?? Sparkles
+            return (
+              <div key={p.id} className={SPAN[i] ?? 'md:col-span-3'}>
+                <BentoCard accent={p.accent} delay={i * 0.06} className="p-7">
+                  <Link href={`/products/${p.id}`} className="flex h-full flex-col">
+                    <div className="flex items-start justify-between">
+                      <span
+                        className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg"
+                        style={{ background: `linear-gradient(135deg, ${p.accent}, #EE4C7C)` }}
                       >
-                        <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
-                        <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(238, 76, 124,0.5)] transition-opacity group-hover:opacity-100" />
-                        <span className="relative flex items-center gap-2">
-                          Deploy {agent.name}
-                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        <Icon className="h-6 w-6" />
+                      </span>
+                      <span className="rounded-full bg-[#E3AFBC]/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#9A1750]">
+                        {p.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-5 font-display text-2xl font-bold text-[#5D001E] transition-colors group-hover:text-[#9A1750]">
+                      {p.name}
+                    </h3>
+                    <p className="mt-2 text-sm font-medium text-[#9A1750]/80">{p.tagline}</p>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[#5D001E]/60">{p.description}</p>
+
+                    {/* stat chips */}
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {p.stats.map(s => (
+                        <span key={s.label} className="rounded-full bg-[#E3E2DF] px-3 py-1 text-xs font-semibold text-[#5D001E]">
+                          <span className="text-[#EE4C7C]">{s.value}</span> {s.label}
                         </span>
-                      </button>
+                      ))}
                     </div>
 
-                    {/* Right: results + integrations + best for */}
-                    <div className={`flex flex-col gap-5 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-                      <div className="grid grid-cols-3 gap-3">
-                        {agent.results.map((r) => (
-                          <div key={r.label} className="rounded-2xl border border-[#5D001E]/10 bg-gradient-to-b from-white/[0.04] to-transparent p-4 text-center">
-                            <div className="bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-2xl font-bold text-transparent md:text-3xl">
-                              {r.stat}
-                            </div>
-                            <div className="mt-1 text-[10px] uppercase leading-tight tracking-wider text-[#5D001E]/55">{r.label}</div>
-                          </div>
-                        ))}
+                    <div className="mt-6 flex items-center justify-between border-t border-[#5D001E]/10 pt-5">
+                      <div>
+                        <span className="font-display text-2xl font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}</span>
+                        <span className="text-sm text-[#5D001E]/55">/mo</span>
+                        <div className="text-xs text-[#5D001E]/45">+ ${p.setupPrice.toLocaleString()} setup</div>
                       </div>
-
-                      <div className="rounded-2xl border border-[#5D001E]/10 bg-white/55 p-6">
-                        <div className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">Connects with</div>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {agent.integrations.map((int) => (
-                            <span key={int} className="rounded-full border border-[#5D001E]/15 bg-white/55 px-3 py-1.5 text-xs text-[#5D001E]/65">
-                              {int}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="rounded-2xl border border-[#EE4C7C]/15 bg-[#EE4C7C]/[0.03] p-6">
-                        <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-[#EE4C7C]">
-                          <Sparkles className="h-3 w-3" /> Best for
-                        </div>
-                        <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/75">{agent.bestFor}</p>
-                      </div>
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#5D001E] px-4 py-2 text-sm font-semibold text-white transition-transform group-hover:scale-105">
+                        View <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                      </span>
                     </div>
-                  </div>
-                </GlassCard>
+                  </Link>
+                </BentoCard>
               </div>
-            </Reveal>
-          ))}
+            )
+          })}
         </div>
       </section>
 
-      {/* ── Guarantee band ───────────────────────────────────────────────── */}
-      <section className="relative px-6 pb-24 md:px-10">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-[#5D001E]/10 bg-gradient-to-br from-[#9A1750]/[0.08] via-white/[0.02] to-transparent p-10 md:p-14">
-              <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#EE4C7C]/15 blur-3xl" />
-              <div className="relative grid grid-cols-1 gap-8 md:grid-cols-3">
-                {[
-                  { icon: Zap, t: 'Live in days, not months', d: 'We ship working agents fast, most go live within one to two weeks.' },
-                  { icon: ShieldCheck, t: 'You own the system', d: 'Self hostable infrastructure. Your data, your accounts, your control.' },
-                  { icon: Star, t: 'Built for your workflow', d: 'Every agent is tailored to your business, not a generic chatbot.' },
-                ].map(({ icon: Icon, t, d }) => (
-                  <div key={t}>
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#EE4C7C]/20 bg-[#EE4C7C]/5 text-[#EE4C7C]">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <h4 className="mt-4 font-display text-lg font-semibold text-[#5D001E]/90">{t}</h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/60">{d}</p>
-                  </div>
-                ))}
+      {/* ── Stats band ── */}
+      <section className="relative px-6 py-12 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 gap-4 rounded-[32px] bg-[#5D001E] p-8 text-center md:grid-cols-4 md:p-12">
+            {[
+              { v: 100, s: '+', l: 'Systems deployed' },
+              { v: 48, s: 'h', l: 'Average setup time' },
+              { v: 95, s: '%', l: 'Client retention' },
+              { v: 25, s: '+', l: 'Industries served' },
+            ].map((m) => (
+              <div key={m.l}>
+                <div className="font-display text-4xl font-bold text-[#EE4C7C] md:text-6xl">
+                  <CountUp value={m.v} suffix={m.s} />
+                </div>
+                <div className="mt-2 text-xs uppercase tracking-wide text-[#E3AFBC]/80">{m.l}</div>
               </div>
-            </div>
-          </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ── Final CTA ────────────────────────────────────────────────────── */}
+      {/* ── Why these win ── */}
+      <section className="relative px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <Pop><h2 className="text-center font-display text-3xl font-bold text-[#5D001E] md:text-5xl">Why teams pick these first</h2></Pop>
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {[
+              { t: 'Live in 48 hours', d: 'No long builds. We set it up, test it and hand you the keys within two days.' },
+              { t: 'Clear flat pricing', d: 'Know exactly what you pay every month. No surprise usage bills, month to month.' },
+              { t: 'Pays for itself', d: 'Each product is scoped to return more than it costs, usually within the first month.' },
+            ].map((c, i) => (
+              <BentoCard key={c.t} delay={i * 0.08} className="p-7">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E3AFBC]/50 text-[#9A1750]">
+                  <Check className="h-5 w-5" />
+                </span>
+                <h3 className="mt-4 font-display text-xl font-bold text-[#5D001E]">{c.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{c.d}</p>
+              </BentoCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Marquee ── */}
+      <section className="relative py-10">
+        <Marquee
+          className="font-display text-2xl font-bold text-[#5D001E]/25"
+          items={['Deploy fast', '•', 'Automate everything', '•', 'Never miss a lead', '•', 'Scale without hiring', '•']}
+        />
+      </section>
+
+      {/* ── CTA ── */}
       <section className="relative px-6 py-24 text-center md:px-10">
-        <Reveal><Eyebrow>Deploy your first agent</Eyebrow></Reveal>
-        <Reveal delay={0.05}>
-          <H2 className="mx-auto max-w-3xl text-4xl md:text-6xl">Pick an agent. We build it. You grow.</H2>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <MagneticButton href="#agents">Choose a Best Seller</MagneticButton>
-            <MagneticButton href="/agents" variant="ghost">Browse All 75 Agents →</MagneticButton>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ── Inquiry modal ────────────────────────────────────────────────── */}
-      {selected && <FlagshipModal agent={selected} onClose={() => setSelected(null)} />}
-    </>
-  )
-}
-
-// ─── Flagship inquiry modal ───────────────────────────────────────────────────
-
-function FlagshipModal({ agent, onClose }: { agent: Flagship; onClose: () => void }) {
-  const [sent, setSent] = useState(false)
-  const [busy, setBusy] = useState(false)
-  const [error, setError] = useState('')
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setBusy(true)
-    setError('')
-    const fd = new FormData(e.currentTarget)
-    const payload = {
-      name: fd.get('name'),
-      company: fd.get('company'),
-      email: fd.get('email'),
-      phone: fd.get('phone'),
-      system: `${agent.name} (Best Seller #${agent.rank})`,
-      message: fd.get('message'),
-      source: 'best-sellers',
-    }
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data.error ?? 'Transmission failed. Please try again.')
-      }
-      setSent(true)
-      trackLead()
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Transmission failed.')
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  return (
-    <div
-      className="fixed inset-0 z-[100] flex items-end justify-center overflow-y-auto bg-[#5D001E]/40 p-4 backdrop-blur-sm sm:items-center"
-      onClick={onClose}
-    >
-      <div
-        className="relative my-auto w-full max-w-lg overflow-hidden rounded-2xl border border-[#5D001E]/15 bg-[#0A0A0C] shadow-[0_0_60px_rgba(238, 76, 124,0.12)]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-[#5D001E]/15 text-[#5D001E]/60 transition-colors hover:border-white/30 hover:text-[#5D001E]"
-        >
-          <X className="h-4 w-4" />
-        </button>
-
-        {sent ? (
-          <div className="flex min-h-[320px] flex-col items-center justify-center px-8 py-12 text-center">
-            <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EE4C7C]/10 text-[#EE4C7C]">
-              <Check className="h-7 w-7" />
-            </span>
-            <h3 className="font-display text-2xl text-[#5D001E]/90">Request received.</h3>
-            <p className="mt-2 max-w-xs text-sm text-[#5D001E]/60">
-              We&apos;ll reach out within one business day to deploy your <span className="text-[#5D001E]/85">{agent.name}</span>.
+        <div className="mx-auto max-w-3xl">
+          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">Pick your best seller.</h2></Pop>
+          <Pop delay={0.1}>
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#5D001E]/65">
+              Tell us your biggest bottleneck and we will recommend the product that clears it fastest.
             </p>
-            <button onClick={onClose} className="mt-6 rounded-full border border-[#5D001E]/20 px-6 py-2.5 text-sm text-[#5D001E]/75 transition-colors hover:border-white/40 hover:text-[#5D001E]">
-              Close
-            </button>
-          </div>
-        ) : (
-          <div className="max-h-[85vh] overflow-y-auto">
-            <div className="border-b border-[#5D001E]/10 bg-gradient-to-br from-[#9A1750]/[0.08] to-transparent p-6 pr-14">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-[#EE4C7C]">Deploy best seller #{agent.rank}</div>
-              <h3 className="mt-2 font-display text-xl font-semibold text-[#5D001E]/90">{agent.name}</h3>
-              <p className="mt-1 text-[13px] text-[#5D001E]/60">{agent.tagline}</p>
+          </Pop>
+          <Pop delay={0.15}>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <MagneticButton href="/contact">Book a Free Audit</MagneticButton>
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#5D001E]/60 transition-colors hover:text-[#EE4C7C]">{CONTACT.email}</a>
             </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4 p-6">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <ModalField label="Name" name="name" placeholder="Your name" />
-                <ModalField label="Company" name="company" placeholder="Business name" />
-              </div>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <ModalField label="Email" name="email" type="email" placeholder="you@company.com" required />
-                <ModalField label="Phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
-              </div>
-              <div>
-                <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">Anything we should know?</label>
-                <textarea
-                  name="message"
-                  rows={3}
-                  placeholder="Tell us about your business…"
-                  className="mt-2 w-full resize-none rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={busy}
-                className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-3.5 text-sm font-semibold text-[#5D001E] disabled:opacity-60"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
-                <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(238, 76, 124,0.5)] transition-opacity group-hover:opacity-100" />
-                <span className="relative">{busy ? 'Sending…' : 'Request Setup'}</span>
-              </button>
-              {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
-              <p className="text-center text-[11px] text-[#5D001E]/55">No obligation. We&apos;ll reply within one business day.</p>
-            </form>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
-
-function ModalField({ label, name, type = 'text', placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
-  return (
-    <div>
-      <label className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">{label}</label>
-      <input
-        type={type}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-        className="mt-2 w-full rounded-xl border border-[#5D001E]/15 bg-white/55 px-4 py-3 text-sm text-[#5D001E]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50"
-      />
-    </div>
+          </Pop>
+        </div>
+      </section>
+    </>
   )
 }
