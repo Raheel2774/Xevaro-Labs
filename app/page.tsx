@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
@@ -23,30 +22,9 @@ const EASE = [0.34, 1.56, 0.64, 1] as const
 const PSPAN = ['md:col-span-3', 'md:col-span-3', 'md:col-span-2', 'md:col-span-2', 'md:col-span-2', 'md:col-span-6']
 
 export default function Home() {
-  // Load the Spline viewer and strip its badge from the shadow DOM.
-  useEffect(() => {
-    const id = 'spline-viewer-script'
-    if (!document.getElementById(id)) {
-      const s = document.createElement('script')
-      s.id = id
-      s.type = 'module'
-      s.src = 'https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js'
-      document.head.appendChild(s)
-    }
-    const strip = () => {
-      const v = document.querySelector('spline-viewer') as HTMLElement & { shadowRoot?: ShadowRoot }
-      const logo = v?.shadowRoot?.querySelector('#logo')
-      if (logo) { logo.remove(); return true }
-      return false
-    }
-    const iv = setInterval(() => { if (strip()) clearInterval(iv) }, 300)
-    const stop = setTimeout(() => clearInterval(iv), 15000)
-    return () => { clearInterval(iv); clearTimeout(stop) }
-  }, [])
-
   return (
     <>
-      {/* ── HERO (Spline robot) ── */}
+      {/* ── HERO ── */}
       <section className="relative -mt-16 min-h-screen overflow-hidden bg-[#5D001E]">
         {/* Giant background wordmark */}
         <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
@@ -55,20 +33,9 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Spline robot */}
-        <div
-          className="absolute inset-0 z-[1]"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<spline-viewer url="https://prod.spline.design/Huf4LpsOTFHoF-qD/scene.splinecode" style="width:100%;height:100%;"></spline-viewer>',
-          }}
-        />
-
         {/* Scrims */}
         <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-[#5D001E] via-[#5D001E]/40 to-transparent" />
         <div className="pointer-events-none absolute -left-24 bottom-10 z-[2] h-[420px] w-[420px] rounded-full bg-[#EE4C7C]/18 blur-[120px]" />
-        {/* Badge cover fallback */}
-        <div className="pointer-events-none absolute bottom-0 right-0 z-[3] h-16 w-44 bg-[#5D001E]" />
 
         {/* Hero copy, anchored lower */}
         <div className="pointer-events-none relative z-10 flex min-h-screen flex-col justify-end px-6 pb-16 md:px-12 md:pb-20">
