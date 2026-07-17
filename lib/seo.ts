@@ -27,12 +27,14 @@ export const SITE = {
   ogWidth: 1500,
   ogHeight: 844,
   // Real public-profile URLs are a strong entity/GEO signal for AI engines.
-  // Add more (X, Instagram, Crunchbase, Clutch, G2) here as they go live.
+  // Add more (X, G2) here as they go live.
   sameAs: [
     'https://www.linkedin.com/company/xevaro-labs/',
-    'https://clutch.co/profile/xevarolabs',
+    'https://www.instagram.com/xevaro_labs/',
+    'https://www.facebook.com/profile.php?id=61563330963890',
     'https://www.crunchbase.com/organization/xevaro-labs',
-    'https://www.facebook.com/people/Xevaro-Labs/61563330963890/',
+    'https://clutch.co/profile/xevarolabs',
+    'https://www.reddit.com/user/Secure-Square-8066/',
   ] as string[],
 } as const
 
