@@ -22,20 +22,20 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
       <motion.div
         className={`group relative h-full overflow-hidden rounded-xl border-2 p-5 backdrop-blur-xl transition-all duration-300 cursor-pointer ${
           isSelected
-            ? 'border-[#EE4C7C] bg-[#EE4C7C]/[0.1]'
-            : 'border-white/15 bg-white/[0.06] hover:border-[#EE4C7C]/50'
+            ? 'border-[#B41D24] bg-[#B41D24]/[0.1]'
+            : 'border-white/15 bg-white/[0.06] hover:border-[#B41D24]/50'
         }`}
         onClick={() => onSelect(agent)}
         whileHover={{
           scale: 1.02,
-          boxShadow: '0 0 30px rgba(238, 76, 124, 0.2)',
+          boxShadow: '0 0 30px rgba(180, 29, 36, 0.2)',
         }}
       >
         {/* Background glow */}
         <div className={`pointer-events-none absolute inset-0 transition-all duration-300 ${
           isSelected
-            ? 'bg-gradient-to-br from-[#EE4C7C]/20 to-[#9A1750]/10'
-            : 'bg-gradient-to-br from-[#EE4C7C]/0 to-[#9A1750]/0 group-hover:from-[#EE4C7C]/10 group-hover:to-[#9A1750]/5'
+            ? 'bg-gradient-to-br from-[#B41D24]/20 to-[#7C1418]/10'
+            : 'bg-gradient-to-br from-[#B41D24]/0 to-[#7C1418]/0 group-hover:from-[#B41D24]/10 group-hover:to-[#7C1418]/5'
         }`} />
 
         {/* Content */}
@@ -43,17 +43,17 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
           {/* Header */}
           <div className="flex items-start justify-between gap-3">
             <div className="flex-1">
-              <div className="text-xs font-mono tracking-widest text-[#EE4C7C]/70 uppercase mb-2">
+              <div className="text-xs font-mono tracking-widest text-[#B41D24]/70 uppercase mb-2">
                 {agent.niche}
               </div>
-              <h3 className="font-display text-lg font-bold text-[#F4E9EC] leading-tight">
+              <h3 className="font-display text-lg font-bold text-[#FBF8F8] leading-tight">
                 {agent.name}
               </h3>
             </div>
           </div>
 
           {/* Description */}
-          <p className="mt-3 text-sm text-[#F4E9EC]/65 line-clamp-2">
+          <p className="mt-3 text-sm text-[#FBF8F8]/65 line-clamp-2">
             {agent.description}
           </p>
 
@@ -61,19 +61,19 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
           <div className="mt-4 space-y-2">
             {agent.features.map((feature, i) => (
               <div key={i} className="flex items-start gap-2">
-                <span className="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-[#EE4C7C]/60 group-hover:bg-[#EE4C7C]" />
-                <span className="text-xs text-[#F4E9EC]/60 group-hover:text-[#F4E9EC]/75">{feature}</span>
+                <span className="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-[#B41D24]/60 group-hover:bg-[#B41D24]" />
+                <span className="text-xs text-[#FBF8F8]/60 group-hover:text-[#FBF8F8]/75">{feature}</span>
               </div>
             ))}
           </div>
 
           {/* Pricing */}
           <div className="mt-5 flex items-baseline gap-2 border-t border-white/15 pt-4">
-            <span className="text-2xl font-bold text-[#EE4C7C]">
+            <span className="text-2xl font-bold text-[#B41D24]">
               ${agent.monthlyPrice}
             </span>
-            <span className="text-xs text-[#F4E9EC]/60">/month</span>
-            <span className="text-xs text-[#F4E9EC]/55 ml-auto">
+            <span className="text-xs text-[#FBF8F8]/60">/month</span>
+            <span className="text-xs text-[#FBF8F8]/55 ml-auto">
               +${agent.setupPrice} setup
             </span>
           </div>
@@ -84,7 +84,7 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
               e.stopPropagation()
               onAddToCart(agent)
             }}
-            className="mt-4 w-full rounded-lg border border-[#EE4C7C]/50 bg-[#EE4C7C]/[0.05] px-3 py-2 text-xs font-semibold text-[#F4E9EC] transition-all hover:border-[#EE4C7C] hover:bg-[#EE4C7C]/[0.15]"
+            className="mt-4 w-full rounded-lg border border-[#B41D24]/50 bg-[#B41D24]/[0.05] px-3 py-2 text-xs font-semibold text-[#FBF8F8] transition-all hover:border-[#B41D24] hover:bg-[#B41D24]/[0.15]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

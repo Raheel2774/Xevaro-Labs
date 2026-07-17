@@ -62,7 +62,7 @@ export default async function AdminPage() {
     <Shell>
       <div className="mb-8 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <span className="h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#9A1750] to-[#E53E3E] shadow-[0_0_14px_rgba(229,62,62,0.5)]" />
+          <span className="h-4 w-4 rounded-[4px] bg-gradient-to-br from-[#7C1418] to-[#E53E3E] shadow-[0_0_14px_rgba(229,62,62,0.5)]" />
           <span className="font-display font-semibold tracking-tight text-white/90">Xevaro OS · Admin</span>
         </div>
         <LogoutButton />

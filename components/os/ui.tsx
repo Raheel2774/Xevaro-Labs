@@ -29,8 +29,8 @@ export function Reveal({
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-5 inline-flex items-center gap-2.5">
-      <span className="h-2 w-2 rounded-full bg-[#EE4C7C]" />
-      <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-[#9A1750]/70">{children}</span>
+      <span className="h-2 w-2 rounded-full bg-[#B41D24]" />
+      <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-[#7C1418]/70">{children}</span>
     </div>
   )
 }
@@ -42,11 +42,11 @@ export function GlassCard({
 }: { children: React.ReactNode; className?: string; glow?: boolean }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_6px_28px_rgba(93,0,30,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-[#EE4C7C]/40 hover:shadow-[0_16px_48px_rgba(154,23,80,0.16)] ${className}`}
+      className={`group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_6px_28px_rgba(74, 8, 16,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B41D24]/40 hover:shadow-[0_16px_48px_rgba(124, 20, 24,0.16)] ${className}`}
     >
       {glow && (
         <div className="pointer-events-none absolute -inset-px rounded-[28px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(238,76,124,0.1), transparent 60%)' }} />
+          style={{ background: 'radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(180, 29, 36,0.1), transparent 60%)' }} />
       )}
       <div className="relative">{children}</div>
     </div>
@@ -74,8 +74,8 @@ export function MagneticButton({
 
   const base = 'relative inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold tracking-wide overflow-hidden transition-shadow duration-300'
   const styles = variant === 'primary'
-    ? 'text-white shadow-[0_8px_28px_rgba(238,76,124,0.35)] hover:shadow-[0_12px_40px_rgba(238,76,124,0.5)]'
-    : 'text-[#F4E9EC] border-2 border-white/20 hover:border-[#9A1750]/60 hover:text-[#9A1750] backdrop-blur-sm transition-colors'
+    ? 'text-white shadow-[0_8px_28px_rgba(180, 29, 36,0.35)] hover:shadow-[0_12px_40px_rgba(180, 29, 36,0.5)]'
+    : 'text-[#FBF8F8] border-2 border-white/20 hover:border-[#7C1418]/60 hover:text-[#7C1418] backdrop-blur-sm transition-colors'
 
   return (
     <motion.a
@@ -89,7 +89,7 @@ export function MagneticButton({
       className={`${base} ${styles} ${className}`}
     >
       {variant === 'primary' && (
-        <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
+        <span className="absolute inset-0 bg-gradient-to-r from-[#7C1418] to-[#B41D24]" />
       )}
       <span className="relative">{children}</span>
     </motion.a>
@@ -100,7 +100,7 @@ export function MagneticButton({
 
 export function H2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`font-display font-bold tracking-tight text-[#F4E9EC] ${className}`}>
+    <h2 className={`font-display font-bold tracking-tight text-[#FBF8F8] ${className}`}>
       {children}
     </h2>
   )

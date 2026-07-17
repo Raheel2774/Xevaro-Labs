@@ -32,11 +32,11 @@ export default function BlogIndex() {
 
       <section className="relative px-6 pb-10 pt-40 md:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-[#EE4C7C]/80">Insights</span>
-          <h1 className="mt-5 font-display text-5xl font-bold tracking-tight text-[#F4E9EC]/90 md:text-7xl">
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-[#B41D24]/80">Insights</span>
+          <h1 className="mt-5 font-display text-5xl font-bold tracking-tight text-[#FBF8F8]/90 md:text-7xl">
             The automation<br />playbook.
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#F4E9EC]/60">
+          <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#FBF8F8]/60">
             Plain English guides on AI agents, workflow automation, and the systems that quietly run a business, written to actually be useful.
           </p>
         </div>
@@ -46,18 +46,18 @@ export default function BlogIndex() {
         <div className="mx-auto max-w-3xl divide-y divide-white/10 border-y border-white/10">
           {posts.map((p) => (
             <Link key={p.slug} href={`/blog/${p.slug}`} className="group block py-8">
-              <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest text-[#F4E9EC]/55">
-                <span className="text-[#EE4C7C]">{p.category}</span>
+              <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest text-[#FBF8F8]/55">
+                <span className="text-[#B41D24]">{p.category}</span>
                 <span>·</span>
                 <span>{fmt(p.date)}</span>
                 <span>·</span>
                 <span>{p.readingMinutes} min read</span>
               </div>
-              <h2 className="mt-3 font-display text-2xl font-semibold text-[#F4E9EC]/90 transition-colors group-hover:text-[#EE4C7C] md:text-3xl">
+              <h2 className="mt-3 font-display text-2xl font-semibold text-[#FBF8F8]/90 transition-colors group-hover:text-[#B41D24] md:text-3xl">
                 {p.title}
               </h2>
-              <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#F4E9EC]/60">{p.description}</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm text-[#F4E9EC]/55 transition-colors group-hover:text-[#EE4C7C]">
+              <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#FBF8F8]/60">{p.description}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm text-[#FBF8F8]/55 transition-colors group-hover:text-[#B41D24]">
                 Read article <span className="transition-transform group-hover:translate-x-1">→</span>
               </span>
             </Link>

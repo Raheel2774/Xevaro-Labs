@@ -6,11 +6,11 @@
 
 :root {
   /* Red and Lively palette, dark theme */
-  --ink:        #F4E9EC;   /* cream, primary text on dark */
-  --bg:         #120207;   /* near-black wine, background */
-  --blush:      #E3AFBC;   /* soft pink, surfaces */
-  --magenta:    #9A1750;   /* rich magenta, secondary accent */
-  --pink:       #EE4C7C;   /* bright pink, primary CTA */
+  --ink:        #FBF8F8;   /* cream, primary text on dark */
+  --bg:         #0B0506;   /* near-black wine, background */
+  --blush:      #E2A5A5;   /* soft pink, surfaces */
+  --magenta:    #7C1418;   /* rich magenta, secondary accent */
+  --pink:       #B41D24;   /* bright pink, primary CTA */
 
   --surface:       rgba(255, 255, 255, 0.05);
   --surface-hover: rgba(255, 255, 255, 0.09);
@@ -51,21 +51,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background-color: rgba(238, 76, 124, 0.35);
-  color: #F4E9EC;
+  background-color: rgba(180, 29, 36, 0.35);
+  color: #FBF8F8;
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #120207; }
+::-webkit-scrollbar-track { background: #0B0506; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(154, 23, 80, 0.4);
+  background: rgba(124, 20, 24, 0.4);
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(238, 76, 124, 0.7); }
+::-webkit-scrollbar-thumb:hover { background: rgba(180, 29, 36, 0.7); }
 
 @layer utilities {
   .text-gradient {
-    background-image: linear-gradient(100deg, #9A1750, #EE4C7C, #9A1750);
+    background-image: linear-gradient(100deg, #7C1418, #B41D24, #7C1418);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -80,14 +80,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .card-blush {
-    background: rgba(227, 175, 188, 0.35);
+    background: rgba(226, 165, 165, 0.35);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(154, 23, 80, 0.15);
+    border: 1px solid rgba(124, 20, 24, 0.15);
   }
 
   .shadow-organic {
-    box-shadow: 0 12px 44px rgba(154, 23, 80, 0.16), 0 4px 12px rgba(93, 0, 30, 0.06);
+    box-shadow: 0 12px 44px rgba(124, 20, 24, 0.16), 0 4px 12px rgba(74, 8, 16, 0.06);
   }
 
   .section-padding { @apply px-6 md:px-12 lg:px-20 xl:px-28; }
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Shimmer skeleton */
 .shimmer-bg {
-  background: linear-gradient(90deg, rgba(227,175,188,0.25) 25%, rgba(227,175,188,0.5) 50%, rgba(227,175,188,0.25) 75%);
+  background: linear-gradient(90deg, rgba(226, 165, 165,0.25) 25%, rgba(226, 165, 165,0.5) 50%, rgba(226, 165, 165,0.25) 75%);
   background-size: 200% 100%;
   animation: shimmer 2.5s linear infinite;
 }

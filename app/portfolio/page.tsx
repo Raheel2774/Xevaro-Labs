@@ -26,13 +26,13 @@ export default function PortfolioPage() {
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Real businesses.
               <br />
-              <span className="bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#7C1418] to-[#B41D24] bg-clip-text text-transparent">
                 Real AI systems.
               </span>
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg font-light text-[#F4E9EC]/60">
+            <p className="mt-6 max-w-2xl text-lg font-light text-[#FBF8F8]/60">
               Five production systems across hiring, lead generation, and voice. Scroll the deck for
               the story behind each, or download the full portfolio as a PDF.
             </p>
@@ -55,8 +55,8 @@ export default function PortfolioPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 md:gap-8">
           {SLIDES.map((src, i) => (
             <Reveal key={src} delay={i < 4 ? 0.04 * i : 0.05}>
-              <figure className="relative overflow-hidden rounded-3xl border border-white/12 bg-[#120207] shadow-[0_36px_90px_-44px_rgba(93,0,30,0.55)]">
-                <span className="absolute left-4 top-4 z-10 rounded-full bg-[#5D001E]/70 px-3 py-1 font-display text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm">
+              <figure className="relative overflow-hidden rounded-3xl border border-white/12 bg-[#0B0506] shadow-[0_36px_90px_-44px_rgba(74, 8, 16,0.55)]">
+                <span className="absolute left-4 top-4 z-10 rounded-full bg-[#4A0810]/70 px-3 py-1 font-display text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm">
                   {String(i + 1).padStart(2, '0')} / 10
                 </span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}

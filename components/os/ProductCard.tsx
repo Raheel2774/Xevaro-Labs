@@ -22,43 +22,43 @@ export function ProductCard({ product, delay = 0, onMouseMove }: ProductCardProp
     >
       <Link href={`/products/${product.id}`}>
         <motion.div
-          className="group relative h-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-7 backdrop-blur-xl shadow-[0_6px_28px_rgba(93,0,30,0.07)] transition-colors duration-300 hover:border-[#EE4C7C]/50"
+          className="group relative h-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-7 backdrop-blur-xl shadow-[0_6px_28px_rgba(74, 8, 16,0.07)] transition-colors duration-300 hover:border-[#B41D24]/50"
           onMouseMove={onMouseMove}
-          whileHover={{ y: -8, scale: 1.015, boxShadow: '0 20px 56px rgba(154, 23, 80, 0.2)' }}
+          whileHover={{ y: -8, scale: 1.015, boxShadow: '0 20px 56px rgba(124, 20, 24, 0.2)' }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         >
           {/* Soft blush wash on hover */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#E3AFBC]/0 to-[#EE4C7C]/0 transition-all duration-500 group-hover:from-[#E3AFBC]/30 group-hover:to-[#EE4C7C]/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#E2A5A5]/0 to-[#B41D24]/0 transition-all duration-500 group-hover:from-[#E2A5A5]/30 group-hover:to-[#B41D24]/10" />
 
           {/* Content */}
           <div className="relative z-10">
             {/* Header: Index + Price */}
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs font-bold tracking-widest text-[#9A1750]">
+              <span className="font-mono text-xs font-bold tracking-widest text-[#7C1418]">
                 PRODUCT {product.index}
               </span>
-              <span className="text-xl font-bold text-[#EE4C7C]">
+              <span className="text-xl font-bold text-[#B41D24]">
                 ${product.monthlyPrice.toLocaleString()}/mo
               </span>
             </div>
 
             {/* Setup fee badge */}
-            <div className="mt-2 inline-block rounded-full bg-[#E3AFBC]/40 px-3 py-1 text-xs text-[#F4E9EC]/70">
+            <div className="mt-2 inline-block rounded-full bg-[#E2A5A5]/40 px-3 py-1 text-xs text-[#FBF8F8]/70">
               Setup: ${product.setupPrice}
             </div>
 
             {/* Product name */}
-            <h3 className="mt-5 font-display text-2xl font-bold text-[#F4E9EC] transition-colors duration-300 group-hover:text-[#9A1750]">
+            <h3 className="mt-5 font-display text-2xl font-bold text-[#FBF8F8] transition-colors duration-300 group-hover:text-[#7C1418]">
               {product.name}
             </h3>
 
             {/* Tagline */}
-            <p className="mt-2 text-sm font-medium text-[#9A1750]/80">
+            <p className="mt-2 text-sm font-medium text-[#7C1418]/80">
               {product.tagline}
             </p>
 
             {/* Description */}
-            <p className="mt-4 text-sm leading-relaxed text-[#F4E9EC]/65">
+            <p className="mt-4 text-sm leading-relaxed text-[#FBF8F8]/65">
               {product.description}
             </p>
 
@@ -66,20 +66,20 @@ export function ProductCard({ product, delay = 0, onMouseMove }: ProductCardProp
             <div className="mt-6 space-y-2">
               {product.features.map((feature, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#EE4C7C]/70 transition-colors group-hover:bg-[#EE4C7C]" />
-                  <span className="text-xs text-[#F4E9EC]/70">{feature}</span>
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#B41D24]/70 transition-colors group-hover:bg-[#B41D24]" />
+                  <span className="text-xs text-[#FBF8F8]/70">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Outcome box */}
-            <div className="mt-6 rounded-2xl border border-[#9A1750]/15 bg-[#E3AFBC]/25 p-3 transition-all duration-300 group-hover:border-[#EE4C7C]/40 group-hover:bg-[#E3AFBC]/45">
-              <p className="text-xs font-semibold text-[#F4E9EC]">{product.outcome}</p>
+            <div className="mt-6 rounded-2xl border border-[#7C1418]/15 bg-[#E2A5A5]/25 p-3 transition-all duration-300 group-hover:border-[#B41D24]/40 group-hover:bg-[#E2A5A5]/45">
+              <p className="text-xs font-semibold text-[#FBF8F8]">{product.outcome}</p>
             </div>
 
             {/* CTA */}
             <motion.button
-              className="mt-6 w-full rounded-full border-2 border-[#9A1750]/30 bg-transparent px-4 py-2.5 text-sm font-semibold text-[#F4E9EC] transition-all duration-300 group-hover:border-[#EE4C7C] group-hover:bg-[#EE4C7C] group-hover:text-white"
+              className="mt-6 w-full rounded-full border-2 border-[#7C1418]/30 bg-transparent px-4 py-2.5 text-sm font-semibold text-[#FBF8F8] transition-all duration-300 group-hover:border-[#B41D24] group-hover:bg-[#B41D24] group-hover:text-white"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >

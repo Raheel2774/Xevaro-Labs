@@ -97,7 +97,7 @@ export default function PricingPage() {
             <H2 className="text-5xl md:text-7xl">Tailored to your<br />operations.</H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#F4E9EC]/60">
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#FBF8F8]/60">
               Every Xevaro system is scoped to your workflows, so pricing is tailored. Most engagements
               pair a one time build with a monthly retainer for hosting, monitoring and improvements.
               Pick the tier that fits and we&apos;ll send a precise quote.
@@ -113,35 +113,35 @@ export default function PricingPage() {
             <Reveal key={pkg.name} delay={(i % 3) * 0.08}>
               <div className={`relative flex h-full flex-col rounded-3xl border p-8 ${
                 pkg.featured
-                  ? 'border-[#EE4C7C]/40 bg-gradient-to-b from-[#9A1750]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(238, 76, 124,0.12)]'
+                  ? 'border-[#B41D24]/40 bg-gradient-to-b from-[#7C1418]/[0.10] to-white/[0.02] shadow-[0_0_40px_rgba(180, 29, 36,0.12)]'
                   : 'border-white/10 bg-white/55'
               }`}>
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#7C1418] to-[#B41D24] px-4 py-1 font-mono text-[10px] uppercase tracking-widest text-white">
                     Most Popular
                   </span>
                 )}
-                <h3 className="font-display text-2xl font-bold text-[#F4E9EC]/90">{pkg.name}</h3>
-                <p className="mt-2 text-sm text-[#F4E9EC]/65">{pkg.tagline}</p>
+                <h3 className="font-display text-2xl font-bold text-[#FBF8F8]/90">{pkg.name}</h3>
+                <p className="mt-2 text-sm text-[#FBF8F8]/65">{pkg.tagline}</p>
                 <div className="mt-5 border-t border-white/10 pt-5">
-                  <span className="font-display text-3xl font-bold text-[#F4E9EC]/90">Custom</span>
-                  <span className="ml-2 text-sm text-[#F4E9EC]/55">tailored quote</span>
+                  <span className="font-display text-3xl font-bold text-[#FBF8F8]/90">Custom</span>
+                  <span className="ml-2 text-sm text-[#FBF8F8]/55">tailored quote</span>
                 </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-[#F4E9EC]/65">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#EE4C7C]" />{f}
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-[#FBF8F8]/65">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#B41D24]" />{f}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs text-[#F4E9EC]/55">{pkg.for}</p>
+                <p className="mt-6 text-xs text-[#FBF8F8]/55">{pkg.for}</p>
                 <a
                   href="#quote"
                   className={`group relative mt-6 inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-semibold ${
-                    pkg.featured ? 'text-white' : 'border border-white/20 text-[#F4E9EC]/85 transition-colors hover:border-[#9A1750]/50 hover:text-[#9A1750]'
+                    pkg.featured ? 'text-white' : 'border border-white/20 text-[#FBF8F8]/85 transition-colors hover:border-[#7C1418]/50 hover:text-[#7C1418]'
                   }`}
                 >
-                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />}
+                  {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#7C1418] to-[#B41D24]" />}
                   <span className="relative">Get {pkg.name} Quote</span>
                 </a>
               </div>
@@ -159,22 +159,22 @@ export default function PricingPage() {
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="px-5 py-4 font-semibold text-[#F4E9EC]">Product</th>
-                  <th className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">Monthly</th>
-                  <th className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">Setup</th>
-                  <th className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">Year 1</th>
+                  <th className="px-5 py-4 font-semibold text-[#FBF8F8]">Product</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">Monthly</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">Setup</th>
+                  <th className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">Year 1</th>
                 </tr>
               </thead>
               <tbody>
                 {PRODUCTS.map((p) => (
-                  <tr key={p.id} className="border-b border-white/10 transition-colors last:border-0 hover:bg-[#E3AFBC]/20">
+                  <tr key={p.id} className="border-b border-white/10 transition-colors last:border-0 hover:bg-[#E2A5A5]/20">
                     <td className="px-5 py-4">
-                      <a href={`/products/${p.id}`} className="font-semibold text-[#F4E9EC] hover:text-[#9A1750]">{p.name}</a>
-                      <div className="text-xs text-[#F4E9EC]/55">{p.tagline}</div>
+                      <a href={`/products/${p.id}`} className="font-semibold text-[#FBF8F8] hover:text-[#7C1418]">{p.name}</a>
+                      <div className="text-xs text-[#FBF8F8]/55">{p.tagline}</div>
                     </td>
-                    <td className="px-5 py-4 text-right font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}</td>
-                    <td className="px-5 py-4 text-right text-[#F4E9EC]/75">${p.setupPrice.toLocaleString()}</td>
-                    <td className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">${(p.monthlyPrice * 12 + p.setupPrice).toLocaleString()}</td>
+                    <td className="px-5 py-4 text-right font-bold text-[#B41D24]">${p.monthlyPrice.toLocaleString()}</td>
+                    <td className="px-5 py-4 text-right text-[#FBF8F8]/75">${p.setupPrice.toLocaleString()}</td>
+                    <td className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">${(p.monthlyPrice * 12 + p.setupPrice).toLocaleString()}</td>
                   </tr>
                 ))}
               </tbody>
@@ -191,21 +191,21 @@ export default function PricingPage() {
           <Reveal delay={0.1}>
             <div className="mt-10 max-h-[520px] overflow-auto rounded-3xl border border-white/10 bg-white/55">
               <table className="w-full text-left text-sm">
-                <thead className="sticky top-0 bg-[#120207]">
+                <thead className="sticky top-0 bg-[#0B0506]">
                   <tr className="border-b border-white/10">
-                    <th className="px-5 py-4 font-semibold text-[#F4E9EC]">Agent</th>
-                    <th className="px-5 py-4 font-semibold text-[#F4E9EC]">Niche</th>
-                    <th className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">Monthly</th>
-                    <th className="px-5 py-4 text-right font-semibold text-[#F4E9EC]">Setup</th>
+                    <th className="px-5 py-4 font-semibold text-[#FBF8F8]">Agent</th>
+                    <th className="px-5 py-4 font-semibold text-[#FBF8F8]">Niche</th>
+                    <th className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">Monthly</th>
+                    <th className="px-5 py-4 text-right font-semibold text-[#FBF8F8]">Setup</th>
                   </tr>
                 </thead>
                 <tbody>
                   {AGENTS.map((a) => (
-                    <tr key={a.id} className="border-b border-white/10 transition-colors last:border-0 hover:bg-[#E3AFBC]/20">
-                      <td className="px-5 py-3 font-medium text-[#F4E9EC]">{a.name}</td>
-                      <td className="px-5 py-3 text-[#F4E9EC]/60">{a.niche}</td>
-                      <td className="px-5 py-3 text-right font-bold text-[#EE4C7C]">${a.monthlyPrice}</td>
-                      <td className="px-5 py-3 text-right text-[#F4E9EC]/75">${a.setupPrice}</td>
+                    <tr key={a.id} className="border-b border-white/10 transition-colors last:border-0 hover:bg-[#E2A5A5]/20">
+                      <td className="px-5 py-3 font-medium text-[#FBF8F8]">{a.name}</td>
+                      <td className="px-5 py-3 text-[#FBF8F8]/60">{a.niche}</td>
+                      <td className="px-5 py-3 text-right font-bold text-[#B41D24]">${a.monthlyPrice}</td>
+                      <td className="px-5 py-3 text-right text-[#FBF8F8]/75">${a.setupPrice}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -213,8 +213,8 @@ export default function PricingPage() {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-4 text-center text-sm text-[#F4E9EC]/55">
-              Browse full details, filter by niche and build your stack on the <a href="/agents" className="font-semibold text-[#9A1750] hover:text-[#EE4C7C]">agents page</a>.
+            <p className="mt-4 text-center text-sm text-[#FBF8F8]/55">
+              Browse full details, filter by niche and build your stack on the <a href="/agents" className="font-semibold text-[#7C1418] hover:text-[#B41D24]">agents page</a>.
             </p>
           </Reveal>
         </div>
@@ -229,9 +229,9 @@ export default function PricingPage() {
                 const Icon = PROMISE_ICONS[icon] ?? Rocket
                 return (
                   <div key={title}>
-                    <Icon className="h-5 w-5 text-[#EE4C7C]" />
-                    <h4 className="mt-3 font-display text-sm font-semibold text-[#F4E9EC]/90">{title}</h4>
-                    <p className="mt-1.5 text-xs leading-relaxed text-[#F4E9EC]/60">{desc}</p>
+                    <Icon className="h-5 w-5 text-[#B41D24]" />
+                    <h4 className="mt-3 font-display text-sm font-semibold text-[#FBF8F8]/90">{title}</h4>
+                    <p className="mt-1.5 text-xs leading-relaxed text-[#FBF8F8]/60">{desc}</p>
                   </div>
                 )
               })}
@@ -246,32 +246,32 @@ export default function PricingPage() {
           <GlassCard className="p-8 md:p-10">
             {sent ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EE4C7C]/10 text-2xl text-[#EE4C7C]">✓</span>
-                <h3 className="font-display text-2xl text-[#F4E9EC]/90">Request received.</h3>
-                <p className="mt-2 max-w-sm text-sm text-[#F4E9EC]/60">
+                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#B41D24]/10 text-2xl text-[#B41D24]">✓</span>
+                <h3 className="font-display text-2xl text-[#FBF8F8]/90">Request received.</h3>
+                <p className="mt-2 max-w-sm text-sm text-[#FBF8F8]/60">
                   Thanks, we&apos;ll review your needs and reach out within one business day with pricing.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <p className="text-sm text-[#F4E9EC]/60">
-                  Request a custom quote. Fields marked <span className="text-[#EE4C7C]">*</span> are required.
+                <p className="text-sm text-[#FBF8F8]/60">
+                  Request a custom quote. Fields marked <span className="text-[#B41D24]">*</span> are required.
                 </p>
 
                 {/* Required service */}
                 <div>
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">
-                    Service you need pricing for <span className="text-[#EE4C7C]">*</span>
+                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">
+                    Service you need pricing for <span className="text-[#B41D24]">*</span>
                   </label>
                   <select
                     name="system"
                     required
                     defaultValue=""
-                    className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors focus:border-[#EE4C7C]/50"
+                    className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors focus:border-[#B41D24]/50"
                   >
-                    <option value="" disabled className="bg-white/[0.06] text-[#F4E9EC]">Select a system…</option>
+                    <option value="" disabled className="bg-white/[0.06] text-[#FBF8F8]">Select a system…</option>
                     {PRODUCTS.map(p => (
-                      <option key={p.id} value={p.name} className="bg-white/[0.06] text-[#F4E9EC]">{p.name}</option>
+                      <option key={p.id} value={p.name} className="bg-white/[0.06] text-[#FBF8F8]">{p.name}</option>
                     ))}
                   </select>
                 </div>
@@ -285,20 +285,20 @@ export default function PricingPage() {
                   <Field label="Phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
                 </div>
                 <div>
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">Project details</label>
-                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50" />
+                  <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">Project details</label>
+                  <textarea name="message" rows={4} placeholder="Tell us about your operations and goals…" className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#B41D24]/50" />
                 </div>
 
-                <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#F4E9EC] disabled:opacity-60">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
-                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(238, 76, 124,0.5)] transition-opacity group-hover:opacity-100" />
+                <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#FBF8F8] disabled:opacity-60">
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#7C1418] to-[#B41D24]" />
+                  <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(180, 29, 36,0.5)] transition-opacity group-hover:opacity-100" />
                   <span className="relative">{busy ? 'Sending…' : 'Request My Quote'}</span>
                 </button>
                 {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
 
-                <p className="text-center text-xs text-[#F4E9EC]/55">
-                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-[#F4E9EC]/60 hover:text-[#EE4C7C]">{CONTACT.phone}</a> or
-                  email <a href={`mailto:${CONTACT.email}`} className="text-[#F4E9EC]/60 hover:text-[#EE4C7C]">{CONTACT.email}</a>.
+                <p className="text-center text-xs text-[#FBF8F8]/55">
+                  Prefer to talk now? Call <a href={`tel:${CONTACT.phone}`} className="text-[#FBF8F8]/60 hover:text-[#B41D24]">{CONTACT.phone}</a> or
+                  email <a href={`mailto:${CONTACT.email}`} className="text-[#FBF8F8]/60 hover:text-[#B41D24]">{CONTACT.email}</a>.
                 </p>
               </form>
             )}
@@ -312,12 +312,12 @@ export default function PricingPage() {
 function Field({ label, name, type = 'text', placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
   return (
     <div>
-      <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">
-        {label} {required && <span className="text-[#EE4C7C]">*</span>}
+      <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">
+        {label} {required && <span className="text-[#B41D24]">*</span>}
       </label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50"
+        className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#B41D24]/50"
       />
     </div>
   )

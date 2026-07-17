@@ -25,7 +25,7 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-[#5D001E]/40 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-[#4A0810]/40 backdrop-blur-sm"
           />
 
           {/* Modal */}
@@ -35,13 +35,13 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-6"
           >
-            <div className="w-full max-w-2xl rounded-2xl border border-white/15 bg-[#120207] p-8 backdrop-blur-xl max-h-[90vh] overflow-y-auto">
+            <div className="w-full max-w-2xl rounded-2xl border border-white/15 bg-[#0B0506] p-8 backdrop-blur-xl max-h-[90vh] overflow-y-auto">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl font-bold text-[#F4E9EC]">Pricing Calculator</h2>
+                <h2 className="text-2xl font-bold text-[#FBF8F8]">Pricing Calculator</h2>
                 <button
                   onClick={onClose}
-                  className="text-[#F4E9EC]/60 hover:text-[#F4E9EC] transition-colors"
+                  className="text-[#FBF8F8]/60 hover:text-[#FBF8F8] transition-colors"
                 >
                   ✕
                 </button>
@@ -49,7 +49,7 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
 
               {/* Items List */}
               <div className="mb-8">
-                <h3 className="text-xs font-semibold text-[#F4E9EC]/65 uppercase tracking-widest mb-4">
+                <h3 className="text-xs font-semibold text-[#FBF8F8]/65 uppercase tracking-widest mb-4">
                   Selected Agents ({items.length})
                 </h3>
                 <div className="space-y-3">
@@ -62,17 +62,17 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
                       className="flex items-center justify-between p-4 rounded-lg border border-white/15 bg-white/55"
                     >
                       <div className="flex-1">
-                        <div className="font-semibold text-[#F4E9EC]">{item.name}</div>
-                        <div className="text-xs text-[#F4E9EC]/60 mt-1">{item.niche}</div>
+                        <div className="font-semibold text-[#FBF8F8]">{item.name}</div>
+                        <div className="text-xs text-[#FBF8F8]/60 mt-1">{item.niche}</div>
                       </div>
                       <div className="flex items-center gap-6">
                         <div className="text-right">
-                          <div className="font-semibold text-[#F4E9EC]">${item.monthlyPrice}/mo</div>
-                          <div className="text-xs text-[#F4E9EC]/60">+${item.setupPrice}</div>
+                          <div className="font-semibold text-[#FBF8F8]">${item.monthlyPrice}/mo</div>
+                          <div className="text-xs text-[#FBF8F8]/60">+${item.setupPrice}</div>
                         </div>
                         <button
                           onClick={() => onRemoveItem(item.id)}
-                          className="text-[#F4E9EC]/55 hover:text-[#EE4C7C] transition-colors"
+                          className="text-[#FBF8F8]/55 hover:text-[#B41D24] transition-colors"
                         >
                           ✕
                         </button>
@@ -83,23 +83,23 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
               </div>
 
               {/* Pricing Summary */}
-              <div className="rounded-xl border border-[#EE4C7C]/30 bg-[#EE4C7C]/[0.05] p-6 mb-8">
+              <div className="rounded-xl border border-[#B41D24]/30 bg-[#B41D24]/[0.05] p-6 mb-8">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-[#F4E9EC]/75">Monthly Subscription</span>
-                    <span className="text-2xl font-bold text-[#EE4C7C]">
+                    <span className="text-[#FBF8F8]/75">Monthly Subscription</span>
+                    <span className="text-2xl font-bold text-[#B41D24]">
                       ${totalMonthly.toLocaleString()}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#F4E9EC]/75">One time Setup</span>
-                    <span className="text-lg font-semibold text-[#F4E9EC]">
+                    <span className="text-[#FBF8F8]/75">One time Setup</span>
+                    <span className="text-lg font-semibold text-[#FBF8F8]">
                       ${totalSetup.toLocaleString()}
                     </span>
                   </div>
                   <div className="border-t border-white/15 pt-4 flex justify-between items-center">
-                    <span className="text-sm font-semibold text-[#F4E9EC]">Year 1 Total Investment</span>
-                    <span className="text-3xl font-bold text-[#EE4C7C]">
+                    <span className="text-sm font-semibold text-[#FBF8F8]">Year 1 Total Investment</span>
+                    <span className="text-3xl font-bold text-[#B41D24]">
                       ${year1Value.toLocaleString()}
                     </span>
                   </div>
@@ -108,17 +108,17 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
 
               {/* Breakdown Table */}
               <div className="mb-8">
-                <h4 className="text-xs font-semibold text-[#F4E9EC]/65 uppercase tracking-widest mb-4">
+                <h4 className="text-xs font-semibold text-[#FBF8F8]/65 uppercase tracking-widest mb-4">
                   Detailed Breakdown
                 </h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
                       <tr className="border-b border-white/15">
-                        <th className="text-left py-3 px-3 font-semibold text-[#F4E9EC]">Agent</th>
-                        <th className="text-right py-3 px-3 font-semibold text-[#F4E9EC]">Monthly</th>
-                        <th className="text-right py-3 px-3 font-semibold text-[#F4E9EC]">Setup</th>
-                        <th className="text-right py-3 px-3 font-semibold text-[#F4E9EC]">Year 1</th>
+                        <th className="text-left py-3 px-3 font-semibold text-[#FBF8F8]">Agent</th>
+                        <th className="text-right py-3 px-3 font-semibold text-[#FBF8F8]">Monthly</th>
+                        <th className="text-right py-3 px-3 font-semibold text-[#FBF8F8]">Setup</th>
+                        <th className="text-right py-3 px-3 font-semibold text-[#FBF8F8]">Year 1</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -130,19 +130,19 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
                           transition={{ delay: i * 0.05 }}
                           className="border-b border-white/10 hover:bg-white/55"
                         >
-                          <td className="py-3 px-3 text-[#F4E9EC]/80">{item.name}</td>
-                          <td className="text-right py-3 px-3 text-[#F4E9EC] font-medium">${item.monthlyPrice}</td>
-                          <td className="text-right py-3 px-3 text-[#F4E9EC]/75">${item.setupPrice}</td>
-                          <td className="text-right py-3 px-3 text-[#F4E9EC] font-medium">
+                          <td className="py-3 px-3 text-[#FBF8F8]/80">{item.name}</td>
+                          <td className="text-right py-3 px-3 text-[#FBF8F8] font-medium">${item.monthlyPrice}</td>
+                          <td className="text-right py-3 px-3 text-[#FBF8F8]/75">${item.setupPrice}</td>
+                          <td className="text-right py-3 px-3 text-[#FBF8F8] font-medium">
                             ${((item.monthlyPrice * 12) + item.setupPrice).toLocaleString()}
                           </td>
                         </motion.tr>
                       ))}
-                      <tr className="bg-[#EE4C7C]/[0.05]">
-                        <td colSpan={1} className="py-4 px-3 font-bold text-[#F4E9EC]">TOTAL</td>
-                        <td className="text-right py-4 px-3 font-bold text-[#EE4C7C] text-lg">${totalMonthly.toLocaleString()}</td>
-                        <td className="text-right py-4 px-3 font-bold text-[#F4E9EC]">${totalSetup.toLocaleString()}</td>
-                        <td className="text-right py-4 px-3 font-bold text-[#EE4C7C] text-lg">${year1Value.toLocaleString()}</td>
+                      <tr className="bg-[#B41D24]/[0.05]">
+                        <td colSpan={1} className="py-4 px-3 font-bold text-[#FBF8F8]">TOTAL</td>
+                        <td className="text-right py-4 px-3 font-bold text-[#B41D24] text-lg">${totalMonthly.toLocaleString()}</td>
+                        <td className="text-right py-4 px-3 font-bold text-[#FBF8F8]">${totalSetup.toLocaleString()}</td>
+                        <td className="text-right py-4 px-3 font-bold text-[#B41D24] text-lg">${year1Value.toLocaleString()}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -153,7 +153,7 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
               <div className="flex gap-4">
                 <motion.button
                   onClick={onClose}
-                  className="flex-1 rounded-lg border border-white/25 px-6 py-3 font-semibold text-[#F4E9EC] hover:bg-white/[0.06] transition-all"
+                  className="flex-1 rounded-lg border border-white/25 px-6 py-3 font-semibold text-[#FBF8F8] hover:bg-white/[0.06] transition-all"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -161,7 +161,7 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
                 </motion.button>
                 <motion.a
                   href="/contact"
-                  className="flex-1 rounded-lg bg-[#EE4C7C] px-6 py-3 font-semibold text-white hover:bg-[#9A1750] transition-all text-center"
+                  className="flex-1 rounded-lg bg-[#B41D24] px-6 py-3 font-semibold text-white hover:bg-[#7C1418] transition-all text-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -170,7 +170,7 @@ export function PricingCalculatorModal({ isOpen, onClose, items, onRemoveItem }:
               </div>
 
               {/* Disclaimer */}
-              <p className="text-xs text-[#F4E9EC]/55 text-center mt-6">
+              <p className="text-xs text-[#FBF8F8]/55 text-center mt-6">
                 Prices shown are starting rates. Final pricing may vary based on deployment complexity, custom integrations, and service level agreements.
               </p>
             </div>

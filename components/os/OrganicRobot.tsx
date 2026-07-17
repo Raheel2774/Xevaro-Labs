@@ -56,22 +56,22 @@ export default function OrganicRobot({ className = '' }: { className?: string })
       onMouseLeave={() => setWaving(false)}
     >
       {/* Morphing blob glow behind robot */}
-      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#EE4C7C]/35 via-[#E3AFBC]/50 to-[#9A1750]/25 blur-2xl" />
+      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#B41D24]/35 via-[#E2A5A5]/50 to-[#7C1418]/25 blur-2xl" />
 
       {/* Floating wrapper */}
       <motion.div
         className="animate-float"
         style={{ rotate: bodyTilt }}
       >
-        <svg viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full drop-shadow-[0_24px_48px_rgba(93,0,30,0.25)]">
+        <svg viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full drop-shadow-[0_24px_48px_rgba(74, 8, 16,0.25)]">
           {/* ── Left arm (static, relaxed) ── */}
           <motion.g
             animate={{ rotate: [0, 4, 0, -3, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             style={{ originX: '110px', originY: '250px' }}
           >
-            <path d="M115 250 Q80 280 78 330 Q77 352 92 356 Q108 360 112 338 Q116 300 135 275 Z" fill="#9A1750" />
-            <circle cx="92" cy="352" r="20" fill="#EE4C7C" />
+            <path d="M115 250 Q80 280 78 330 Q77 352 92 356 Q108 360 112 338 Q116 300 135 275 Z" fill="#7C1418" />
+            <circle cx="92" cy="352" r="20" fill="#B41D24" />
           </motion.g>
 
           {/* ── Right arm (waves on hover) ── */}
@@ -84,8 +84,8 @@ export default function OrganicRobot({ className = '' }: { className?: string })
               : { duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
             style={{ originX: '290px', originY: '250px' }}
           >
-            <path d="M285 250 Q320 280 322 330 Q323 352 308 356 Q292 360 288 338 Q284 300 265 275 Z" fill="#9A1750" />
-            <circle cx="308" cy="352" r="20" fill="#EE4C7C" />
+            <path d="M285 250 Q320 280 322 330 Q323 352 308 356 Q292 360 288 338 Q284 300 265 275 Z" fill="#7C1418" />
+            <circle cx="308" cy="352" r="20" fill="#B41D24" />
           </motion.g>
 
           {/* ── Body (breathing) ── */}
@@ -93,20 +93,20 @@ export default function OrganicRobot({ className = '' }: { className?: string })
             {/* Torso: soft organic rounded shape */}
             <path
               d="M130 260 Q125 230 155 225 L245 225 Q275 230 270 260 L268 360 Q268 405 200 408 Q132 405 132 360 Z"
-              fill="#5D001E"
+              fill="#4A0810"
             />
             {/* Belly panel */}
-            <ellipse cx="200" cy="330" rx="52" ry="58" fill="#E3AFBC" opacity="0.9" />
+            <ellipse cx="200" cy="330" rx="52" ry="58" fill="#E2A5A5" opacity="0.9" />
             {/* Heart core, pulsing */}
             <motion.circle
               cx="200" cy="322" r="16"
-              fill="#EE4C7C"
+              fill="#B41D24"
               animate={{ r: [16, 19, 16], opacity: [0.9, 1, 0.9] }}
               transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
             />
             <motion.circle
               cx="200" cy="322" r="24"
-              stroke="#9A1750" strokeWidth="2" fill="none"
+              stroke="#7C1418" strokeWidth="2" fill="none"
               animate={{ r: [24, 32], opacity: [0.5, 0] }}
               transition={{ duration: 1.6, repeat: Infinity, ease: 'easeOut' }}
             />
@@ -114,10 +114,10 @@ export default function OrganicRobot({ className = '' }: { className?: string })
 
           {/* ── Legs ── */}
           <g>
-            <path d="M160 400 Q158 435 160 448 Q162 460 178 460 Q192 460 192 448 L190 405 Z" fill="#9A1750" />
-            <path d="M240 400 Q242 435 240 448 Q238 460 222 460 Q208 460 208 448 L210 405 Z" fill="#9A1750" />
-            <ellipse cx="172" cy="462" rx="26" ry="12" fill="#5D001E" />
-            <ellipse cx="228" cy="462" rx="26" ry="12" fill="#5D001E" />
+            <path d="M160 400 Q158 435 160 448 Q162 460 178 460 Q192 460 192 448 L190 405 Z" fill="#7C1418" />
+            <path d="M240 400 Q242 435 240 448 Q238 460 222 460 Q208 460 208 448 L210 405 Z" fill="#7C1418" />
+            <ellipse cx="172" cy="462" rx="26" ry="12" fill="#4A0810" />
+            <ellipse cx="228" cy="462" rx="26" ry="12" fill="#4A0810" />
           </g>
 
           {/* ── Head group (cursor tracking) ── */}
@@ -128,10 +128,10 @@ export default function OrganicRobot({ className = '' }: { className?: string })
               transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
               style={{ originX: '200px', originY: '86px' }}
             >
-              <path d="M198 86 Q196 60 200 44" stroke="#9A1750" strokeWidth="6" strokeLinecap="round" fill="none" />
+              <path d="M198 86 Q196 60 200 44" stroke="#7C1418" strokeWidth="6" strokeLinecap="round" fill="none" />
               <motion.circle
                 cx="200" cy="36" r="11"
-                fill="#EE4C7C"
+                fill="#B41D24"
                 animate={{ scale: [1, 1.25, 1], opacity: [0.85, 1, 0.85] }}
                 transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
               />
@@ -140,7 +140,7 @@ export default function OrganicRobot({ className = '' }: { className?: string })
             {/* Head: soft rounded organic shape */}
             <path
               d="M120 150 Q118 92 175 86 L225 86 Q282 92 280 150 L280 175 Q282 225 220 230 L180 230 Q118 225 120 175 Z"
-              fill="#5D001E"
+              fill="#4A0810"
             />
             {/* Face screen */}
             <path
@@ -155,20 +155,20 @@ export default function OrganicRobot({ className = '' }: { className?: string })
                 initial={{ ry: 14 }}
                 animate={{ ry: blink ? 1.5 : 14 }}
                 transition={{ duration: 0.08 }}
-                fill="#9A1750"
+                fill="#7C1418"
               />
               <motion.ellipse
                 cx="225" cy="152" rx="11" ry="14"
                 initial={{ ry: 14 }}
                 animate={{ ry: blink ? 1.5 : 14 }}
                 transition={{ duration: 0.08 }}
-                fill="#9A1750"
+                fill="#7C1418"
               />
               {/* Eye shine */}
               {!blink && (
                 <>
-                  <circle cx="178" cy="147" r="3.5" fill="#EE4C7C" />
-                  <circle cx="228" cy="147" r="3.5" fill="#EE4C7C" />
+                  <circle cx="178" cy="147" r="3.5" fill="#B41D24" />
+                  <circle cx="228" cy="147" r="3.5" fill="#B41D24" />
                 </>
               )}
             </motion.g>
@@ -176,28 +176,28 @@ export default function OrganicRobot({ className = '' }: { className?: string })
             {/* Smile */}
             <motion.path
               d="M182 185 Q200 198 218 185"
-              stroke="#EE4C7C" strokeWidth="5" strokeLinecap="round" fill="none"
+              stroke="#B41D24" strokeWidth="5" strokeLinecap="round" fill="none"
               animate={waving ? { d: 'M178 183 Q200 204 222 183' } : { d: 'M182 185 Q200 198 218 185' }}
               transition={{ duration: 0.4 }}
             />
 
             {/* Cheek blushes */}
-            <ellipse cx="152" cy="172" rx="9" ry="6" fill="#E3AFBC" />
-            <ellipse cx="248" cy="172" rx="9" ry="6" fill="#E3AFBC" />
+            <ellipse cx="152" cy="172" rx="9" ry="6" fill="#E2A5A5" />
+            <ellipse cx="248" cy="172" rx="9" ry="6" fill="#E2A5A5" />
 
             {/* Ears */}
-            <circle cx="118" cy="158" r="12" fill="#9A1750" />
-            <circle cx="282" cy="158" r="12" fill="#9A1750" />
+            <circle cx="118" cy="158" r="12" fill="#7C1418" />
+            <circle cx="282" cy="158" r="12" fill="#7C1418" />
           </motion.g>
 
           {/* Neck */}
-          <rect x="188" y="226" width="24" height="14" rx="7" fill="#9A1750" />
+          <rect x="188" y="226" width="24" height="14" rx="7" fill="#7C1418" />
         </svg>
       </motion.div>
 
       {/* Ground shadow, breathing with the float */}
       <motion.div
-        className="absolute -bottom-3 left-1/2 h-6 w-[55%] -translate-x-1/2 rounded-[50%] bg-[#5D001E]/15 blur-md"
+        className="absolute -bottom-3 left-1/2 h-6 w-[55%] -translate-x-1/2 rounded-[50%] bg-[#4A0810]/15 blur-md"
         animate={{ scaleX: [1, 0.88, 1], opacity: [0.6, 0.4, 0.6] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />

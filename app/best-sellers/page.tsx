@@ -30,8 +30,8 @@ export default function BestSellersPage() {
       <section className="relative overflow-hidden px-6 pb-16 pt-36 md:px-10">
         <div className="mx-auto max-w-7xl text-center">
           <Pop>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#5D001E] px-4 py-2 text-white">
-              <Zap className="h-3.5 w-3.5 text-[#EE4C7C]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#4A0810] px-4 py-2 text-white">
+              <Zap className="h-3.5 w-3.5 text-[#B41D24]" />
               <span className="font-mono text-[11px] uppercase tracking-[0.3em]">The Best Selling Six</span>
             </div>
           </Pop>
@@ -41,15 +41,15 @@ export default function BestSellersPage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="mx-auto max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-[#F4E9EC] md:text-8xl"
+              className="mx-auto max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-[#FBF8F8] md:text-8xl"
             >
               Our{' '}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-[#9A1750] to-[#EE4C7C] bg-clip-text text-transparent">best sellers</span>
+                <span className="bg-gradient-to-r from-[#7C1418] to-[#B41D24] bg-clip-text text-transparent">best sellers</span>
                 <motion.svg
                   viewBox="0 0 300 20" className="absolute -bottom-3 left-0 w-full"
                 >
-                  <motion.path d="M5 12 Q150 2 295 12" fill="none" stroke="#EE4C7C" strokeWidth="4" strokeLinecap="round"
+                  <motion.path d="M5 12 Q150 2 295 12" fill="none" stroke="#B41D24" strokeWidth="4" strokeLinecap="round"
                     initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
                     transition={{ duration: 1, delay: 0.6, ease: 'easeInOut' }} />
                 </motion.svg>
@@ -58,16 +58,16 @@ export default function BestSellersPage() {
             </motion.h1>
 
             {/* floating stickers */}
-            <Sticker className="absolute -left-2 top-2 bg-[#EE4C7C] text-white md:left-16" rotate={-8}>
+            <Sticker className="absolute -left-2 top-2 bg-[#B41D24] text-white md:left-16" rotate={-8}>
               <Star className="h-3.5 w-3.5 fill-white" /> Loved by 100+ teams
             </Sticker>
-            <Sticker className="absolute -right-1 bottom-0 bg-[#E3AFBC] text-[#F4E9EC] md:right-20" rotate={7}>
+            <Sticker className="absolute -right-1 bottom-0 bg-[#E2A5A5] text-[#FBF8F8] md:right-20" rotate={7}>
               <TrendingUp className="h-3.5 w-3.5" /> 48 hour setup
             </Sticker>
           </div>
 
           <Pop delay={0.15}>
-            <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#F4E9EC]/70">
+            <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#FBF8F8]/70">
               These six products get deployed the most, and for good reason. Clear pricing,
               live in 48 hours, and built to pay for themselves fast.
             </p>
@@ -93,37 +93,37 @@ export default function BestSellersPage() {
                     <div className="flex items-start justify-between">
                       <span
                         className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg"
-                        style={{ background: `linear-gradient(135deg, ${p.accent}, #EE4C7C)` }}
+                        style={{ background: `linear-gradient(135deg, ${p.accent}, #B41D24)` }}
                       >
                         <Icon className="h-6 w-6" />
                       </span>
-                      <span className="rounded-full bg-[#E3AFBC]/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#9A1750]">
+                      <span className="rounded-full bg-[#E2A5A5]/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[#7C1418]">
                         {p.badge}
                       </span>
                     </div>
 
-                    <h3 className="mt-5 font-display text-2xl font-bold text-[#F4E9EC] transition-colors group-hover:text-[#9A1750]">
+                    <h3 className="mt-5 font-display text-2xl font-bold text-[#FBF8F8] transition-colors group-hover:text-[#7C1418]">
                       {p.name}
                     </h3>
-                    <p className="mt-2 text-sm font-medium text-[#9A1750]/80">{p.tagline}</p>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[#F4E9EC]/60">{p.description}</p>
+                    <p className="mt-2 text-sm font-medium text-[#7C1418]/80">{p.tagline}</p>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[#FBF8F8]/60">{p.description}</p>
 
                     {/* stat chips */}
                     <div className="mt-5 flex flex-wrap gap-2">
                       {p.stats.map(s => (
-                        <span key={s.label} className="rounded-full bg-[#120207] px-3 py-1 text-xs font-semibold text-[#F4E9EC]">
-                          <span className="text-[#EE4C7C]">{s.value}</span> {s.label}
+                        <span key={s.label} className="rounded-full bg-[#0B0506] px-3 py-1 text-xs font-semibold text-[#FBF8F8]">
+                          <span className="text-[#B41D24]">{s.value}</span> {s.label}
                         </span>
                       ))}
                     </div>
 
                     <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                       <div>
-                        <span className="font-display text-2xl font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}</span>
-                        <span className="text-sm text-[#F4E9EC]/55">/mo</span>
-                        <div className="text-xs text-[#F4E9EC]/45">+ ${p.setupPrice.toLocaleString()} setup</div>
+                        <span className="font-display text-2xl font-bold text-[#B41D24]">${p.monthlyPrice.toLocaleString()}</span>
+                        <span className="text-sm text-[#FBF8F8]/55">/mo</span>
+                        <div className="text-xs text-[#FBF8F8]/45">+ ${p.setupPrice.toLocaleString()} setup</div>
                       </div>
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#5D001E] px-4 py-2 text-sm font-semibold text-white transition-transform group-hover:scale-105">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#4A0810] px-4 py-2 text-sm font-semibold text-white transition-transform group-hover:scale-105">
                         View <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </div>
@@ -138,7 +138,7 @@ export default function BestSellersPage() {
       {/* ── Stats band ── */}
       <section className="relative px-6 py-12 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-4 rounded-[32px] bg-[#5D001E] p-8 text-center md:grid-cols-4 md:p-12">
+          <div className="grid grid-cols-2 gap-4 rounded-[32px] bg-[#4A0810] p-8 text-center md:grid-cols-4 md:p-12">
             {[
               { v: 100, s: '+', l: 'Systems deployed' },
               { v: 48, s: 'h', l: 'Average setup time' },
@@ -146,10 +146,10 @@ export default function BestSellersPage() {
               { v: 25, s: '+', l: 'Industries served' },
             ].map((m) => (
               <div key={m.l}>
-                <div className="font-display text-4xl font-bold text-[#EE4C7C] md:text-6xl">
+                <div className="font-display text-4xl font-bold text-[#B41D24] md:text-6xl">
                   <CountUp value={m.v} suffix={m.s} />
                 </div>
-                <div className="mt-2 text-xs uppercase tracking-wide text-[#E3AFBC]/80">{m.l}</div>
+                <div className="mt-2 text-xs uppercase tracking-wide text-[#E2A5A5]/80">{m.l}</div>
               </div>
             ))}
           </div>
@@ -159,7 +159,7 @@ export default function BestSellersPage() {
       {/* ── Why these win ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="text-center font-display text-3xl font-bold text-[#F4E9EC] md:text-5xl">Why teams pick these first</h2></Pop>
+          <Pop><h2 className="text-center font-display text-3xl font-bold text-[#FBF8F8] md:text-5xl">Why teams pick these first</h2></Pop>
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
               { t: 'Live in 48 hours', d: 'No long builds. We set it up, test it and hand you the keys within two days.' },
@@ -167,11 +167,11 @@ export default function BestSellersPage() {
               { t: 'Pays for itself', d: 'Each product is scoped to return more than it costs, usually within the first month.' },
             ].map((c, i) => (
               <BentoCard key={c.t} delay={i * 0.08} className="p-7">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E3AFBC]/50 text-[#9A1750]">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E2A5A5]/50 text-[#7C1418]">
                   <Check className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 font-display text-xl font-bold text-[#F4E9EC]">{c.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{c.d}</p>
+                <h3 className="mt-4 font-display text-xl font-bold text-[#FBF8F8]">{c.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#FBF8F8]/65">{c.d}</p>
               </BentoCard>
             ))}
           </div>
@@ -181,7 +181,7 @@ export default function BestSellersPage() {
       {/* ── Marquee ── */}
       <section className="relative py-10">
         <Marquee
-          className="font-display text-2xl font-bold text-[#F4E9EC]/25"
+          className="font-display text-2xl font-bold text-[#FBF8F8]/25"
           items={['Deploy fast', '•', 'Automate everything', '•', 'Never miss a lead', '•', 'Scale without hiring', '•']}
         />
       </section>
@@ -189,16 +189,16 @@ export default function BestSellersPage() {
       {/* ── CTA ── */}
       <section className="relative px-6 py-24 text-center md:px-10">
         <div className="mx-auto max-w-3xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">Pick your best seller.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#FBF8F8] md:text-6xl">Pick your best seller.</h2></Pop>
           <Pop delay={0.1}>
-            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#F4E9EC]/65">
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#FBF8F8]/65">
               Tell us your biggest bottleneck and we will recommend the product that clears it fastest.
             </p>
           </Pop>
           <Pop delay={0.15}>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Book a Free Audit</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#F4E9EC]/60 transition-colors hover:text-[#EE4C7C]">{CONTACT.email}</a>
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#FBF8F8]/60 transition-colors hover:text-[#B41D24]">{CONTACT.email}</a>
             </div>
           </Pop>
         </div>

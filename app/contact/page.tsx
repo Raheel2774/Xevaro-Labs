@@ -56,23 +56,23 @@ export default function ContactPage() {
           <Reveal>
             <div className="flex h-full flex-col gap-5">
               <GlassCard className="p-7">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">Direct uplink</div>
-                <a href={`mailto:${CONTACT.email}`} className="mt-3 block font-display text-xl text-[#F4E9EC]/90 transition-colors hover:text-[#EE4C7C]">{CONTACT.email}</a>
-                <a href={`tel:${CONTACT.phone}`} className="mt-2 block font-display text-xl text-[#F4E9EC]/90 transition-colors hover:text-[#EE4C7C]">{CONTACT.phone}</a>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">Direct uplink</div>
+                <a href={`mailto:${CONTACT.email}`} className="mt-3 block font-display text-xl text-[#FBF8F8]/90 transition-colors hover:text-[#B41D24]">{CONTACT.email}</a>
+                <a href={`tel:${CONTACT.phone}`} className="mt-2 block font-display text-xl text-[#FBF8F8]/90 transition-colors hover:text-[#B41D24]">{CONTACT.phone}</a>
               </GlassCard>
               <GlassCard className="p-7">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">System status</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">System status</div>
                 <div className="mt-3 flex items-center gap-2.5">
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-[#EE4C7C] shadow-[0_0_10px_#EE4C7C]" />
-                  <span className="text-[#F4E9EC]/75">All systems operational · accepting deployments</span>
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-[#B41D24] shadow-[0_0_10px_#B41D24]" />
+                  <span className="text-[#FBF8F8]/75">All systems operational · accepting deployments</span>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-[#F4E9EC]/60">
+                <p className="mt-4 text-sm leading-relaxed text-[#FBF8F8]/60">
                   Typical response within one business day. We&apos;ll scope your automation audit and
                   return a module map for your operations.
                 </p>
               </GlassCard>
               <GlassCard className="p-7">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">What happens next</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">What happens next</div>
                 <ol className="mt-4 space-y-3.5">
                   {[
                     ['1', 'We reply within one business day to book a short call.'],
@@ -80,12 +80,12 @@ export default function ContactPage() {
                     ['3', 'We build and launch your system, usually within one to two weeks.'],
                   ].map(([n, t]) => (
                     <li key={n} className="flex gap-3">
-                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#EE4C7C]/30 bg-[#EE4C7C]/5 font-mono text-[11px] text-[#EE4C7C]">{n}</span>
-                      <span className="text-sm leading-relaxed text-[#F4E9EC]/65">{t}</span>
+                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-[#B41D24]/30 bg-[#B41D24]/5 font-mono text-[11px] text-[#B41D24]">{n}</span>
+                      <span className="text-sm leading-relaxed text-[#FBF8F8]/65">{t}</span>
                     </li>
                   ))}
                 </ol>
-                <p className="mt-5 border-t border-white/10 pt-4 text-xs text-[#F4E9EC]/55">
+                <p className="mt-5 border-t border-white/10 pt-4 text-xs text-[#FBF8F8]/55">
                   No obligation, no pressure, no jargon.
                 </p>
               </GlassCard>
@@ -97,9 +97,9 @@ export default function ContactPage() {
             <GlassCard className="p-8 md:p-10">
               {sent ? (
                 <div className="flex h-full min-h-[340px] flex-col items-center justify-center text-center">
-                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EE4C7C]/10 text-2xl text-[#EE4C7C]">✓</span>
-                  <h3 className="font-display text-2xl text-[#F4E9EC]/90">Signal received.</h3>
-                  <p className="mt-2 text-sm text-[#F4E9EC]/60">Our core will respond to your channel shortly.</p>
+                  <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#B41D24]/10 text-2xl text-[#B41D24]">✓</span>
+                  <h3 className="font-display text-2xl text-[#FBF8F8]/90">Signal received.</h3>
+                  <p className="mt-2 text-sm text-[#FBF8F8]/60">Our core will respond to your channel shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -112,23 +112,23 @@ export default function ContactPage() {
                     <Field label="Phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
                   </div>
                   <div>
-                    <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">System of interest</label>
-                    <select name="system" className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors focus:border-[#EE4C7C]/50">
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">AI Automation Systems</option>
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">AI Agents &amp; Voice Systems</option>
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">Lead Generation Systems</option>
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">High Conversion Website Systems</option>
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">Shopify AI Commerce Systems</option>
-                      <option className="bg-white/[0.06] text-[#F4E9EC]">Business Intelligence Systems</option>
+                    <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">System of interest</label>
+                    <select name="system" className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors focus:border-[#B41D24]/50">
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">AI Automation Systems</option>
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">AI Agents &amp; Voice Systems</option>
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">Lead Generation Systems</option>
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">High Conversion Website Systems</option>
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">Shopify AI Commerce Systems</option>
+                      <option className="bg-white/[0.06] text-[#FBF8F8]">Business Intelligence Systems</option>
                     </select>
                   </div>
                   <div>
-                    <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">Message</label>
-                    <textarea name="message" rows={4} placeholder="Describe your operations..." className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50" />
+                    <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">Message</label>
+                    <textarea name="message" rows={4} placeholder="Describe your operations..." className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#B41D24]/50" />
                   </div>
-                  <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#F4E9EC] disabled:opacity-60">
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#9A1750] to-[#EE4C7C]" />
-                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(238, 76, 124,0.5)] transition-opacity group-hover:opacity-100" />
+                  <button type="submit" disabled={busy} className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full px-8 py-4 text-sm font-semibold text-[#FBF8F8] disabled:opacity-60">
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#7C1418] to-[#B41D24]" />
+                    <span className="absolute inset-0 opacity-0 shadow-[0_0_30px_rgba(180, 29, 36,0.5)] transition-opacity group-hover:opacity-100" />
                     <span className="relative">{busy ? 'Transmitting…' : 'Transmit to Core'}</span>
                   </button>
                   {error && <p className="text-center text-sm text-[#E0A86A]" role="alert">{error}</p>}
@@ -145,10 +145,10 @@ export default function ContactPage() {
 function Field({ label, name, type = 'text', placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
   return (
     <div>
-      <label className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">{label}</label>
+      <label className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">{label}</label>
       <input
         type={type} name={name} placeholder={placeholder} required={required}
-        className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#F4E9EC]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#EE4C7C]/50"
+        className="mt-2 w-full rounded-xl border border-white/15 bg-white/55 px-4 py-3 text-sm text-[#FBF8F8]/85 outline-none transition-colors placeholder:text-white/25 focus:border-[#B41D24]/50"
       />
     </div>
   )

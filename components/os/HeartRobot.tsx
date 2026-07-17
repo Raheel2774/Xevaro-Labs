@@ -59,10 +59,10 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
   return (
     <div className={`relative select-none ${className}`}>
       {/* glow puddle */}
-      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#EE4C7C]/40 via-[#9A1750]/30 to-[#5D001E]/20 blur-3xl" />
+      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#B41D24]/40 via-[#7C1418]/30 to-[#4A0810]/20 blur-3xl" />
 
       <motion.div className="animate-float" style={{ rotate: tilt }}>
-        <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full drop-shadow-[0_30px_50px_rgba(93,0,30,0.45)]">
+        <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full drop-shadow-[0_30px_50px_rgba(74, 8, 16,0.45)]">
           <defs>
             <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#FFFFFF" />
@@ -70,7 +70,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
             </linearGradient>
             <linearGradient id="bodyShade" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0" stopColor="#ffffff" stopOpacity="0" />
-              <stop offset="1" stopColor="#9A1750" stopOpacity="0.18" />
+              <stop offset="1" stopColor="#7C1418" stopOpacity="0.18" />
             </linearGradient>
             <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#3A0713" />
@@ -83,12 +83,12 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
             </radialGradient>
             <linearGradient id="limb" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#FFFFFF" />
-              <stop offset="1" stopColor="#E3AFBC" />
+              <stop offset="1" stopColor="#E2A5A5" />
             </linearGradient>
           </defs>
 
           {/* ground shadow */}
-          <ellipse cx="210" cy="500" rx="120" ry="18" fill="#5D001E" opacity="0.25" />
+          <ellipse cx="210" cy="500" rx="120" ry="18" fill="#4A0810" opacity="0.25" />
 
           {/* ── Left arm holding bouquet ── */}
           <motion.g
@@ -97,7 +97,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
             style={{ transformOrigin: '150px 300px' }}
           >
             <rect x="120" y="292" width="34" height="96" rx="17" fill="url(#limb)" />
-            <rect x="120" y="360" width="34" height="30" rx="15" fill="#9A1750" />
+            <rect x="120" y="360" width="34" height="30" rx="15" fill="#7C1418" />
             <circle cx="137" cy="392" r="22" fill="url(#limb)" />
             {/* bouquet */}
             <g transform="translate(96 250)">
@@ -122,7 +122,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
             style={{ transformOrigin: '270px 300px' }}
           >
             <rect x="266" y="292" width="34" height="96" rx="17" fill="url(#limb)" />
-            <rect x="266" y="360" width="34" height="30" rx="15" fill="#9A1750" />
+            <rect x="266" y="360" width="34" height="30" rx="15" fill="#7C1418" />
             <circle cx="283" cy="392" r="22" fill="url(#limb)" />
           </motion.g>
 
@@ -130,8 +130,8 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
           <g>
             <rect x="168" y="430" width="34" height="60" rx="17" fill="url(#limb)" />
             <rect x="218" y="430" width="34" height="60" rx="17" fill="url(#limb)" />
-            <ellipse cx="185" cy="492" rx="26" ry="14" fill="#9A1750" />
-            <ellipse cx="235" cy="492" rx="26" ry="14" fill="#9A1750" />
+            <ellipse cx="185" cy="492" rx="26" ry="14" fill="#7C1418" />
+            <ellipse cx="235" cy="492" rx="26" ry="14" fill="#7C1418" />
           </g>
 
           {/* ── Body (breathing) ── */}
@@ -139,7 +139,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
             <rect x="146" y="252" width="128" height="176" rx="46" fill="url(#body)" />
             <rect x="146" y="252" width="128" height="176" rx="46" fill="url(#bodyShade)" />
             {/* seam grid, subtle */}
-            <g stroke="#5D001E" strokeOpacity="0.06" strokeWidth="2">
+            <g stroke="#4A0810" strokeOpacity="0.06" strokeWidth="2">
               <line x1="180" y1="262" x2="180" y2="418" />
               <line x1="210" y1="262" x2="210" y2="418" />
               <line x1="240" y1="262" x2="240" y2="418" />
@@ -163,12 +163,12 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
           {/* ── Head (cursor tracking) ── */}
           <motion.g style={{ x: headX, y: headY }}>
             {/* neck */}
-            <rect x="196" y="232" width="28" height="26" rx="10" fill="#E3AFBC" />
+            <rect x="196" y="232" width="28" height="26" rx="10" fill="#E2A5A5" />
             {/* ears */}
             <circle cx="150" cy="150" r="18" fill="url(#limb)" />
-            <circle cx="150" cy="150" r="8" fill="#9A1750" />
+            <circle cx="150" cy="150" r="8" fill="#7C1418" />
             <circle cx="270" cy="150" r="18" fill="url(#limb)" />
-            <circle cx="270" cy="150" r="8" fill="#9A1750" />
+            <circle cx="270" cy="150" r="8" fill="#7C1418" />
             {/* head shell */}
             <rect x="150" y="70" width="120" height="160" rx="40" fill="url(#body)" />
             <rect x="150" y="70" width="120" height="160" rx="40" fill="url(#bodyShade)" />
@@ -198,7 +198,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
               transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
               style={{ transformOrigin: '210px 70px' }}
             >
-              <path d="M210 70 Q208 44 210 30" stroke="#E3AFBC" strokeWidth="6" strokeLinecap="round" />
+              <path d="M210 70 Q208 44 210 30" stroke="#E2A5A5" strokeWidth="6" strokeLinecap="round" />
               <motion.circle cx="210" cy="24" r="10" fill="#EE1F45"
                 animate={{ scale: [1, 1.25, 1] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }} />
             </motion.g>
