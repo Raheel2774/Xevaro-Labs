@@ -28,7 +28,7 @@ export default function Home() {
       <section className="relative -mt-16 min-h-screen overflow-hidden bg-black">
         {/* Giant background wordmark */}
         <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
-          <span className="select-none whitespace-nowrap font-display text-[26vw] font-bold leading-none tracking-tighter text-white/[0.06]">
+          <span className="select-none whitespace-nowrap font-display text-[26vw] font-bold leading-none tracking-tighter text-white/20">
             Xevaro Labs
           </span>
         </div>
