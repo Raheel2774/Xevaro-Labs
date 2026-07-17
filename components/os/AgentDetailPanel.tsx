@@ -17,7 +17,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="sticky top-32 rounded-xl border border-[#5D001E]/15 bg-white/60 p-6 backdrop-blur-xl"
+      className="sticky top-32 rounded-xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-xl"
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-4">
@@ -25,12 +25,12 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
           <div className="text-xs font-mono tracking-widest text-[#EE4C7C]/70 uppercase mb-2">
             {agent.niche}
           </div>
-          <h2 className="text-xl font-bold text-[#5D001E]">{agent.name}</h2>
+          <h2 className="text-xl font-bold text-[#F4E9EC]">{agent.name}</h2>
         </div>
       </div>
 
       {/* Description */}
-      <p className="text-sm text-[#5D001E]/65 mb-6">
+      <p className="text-sm text-[#F4E9EC]/65 mb-6">
         {agent.description}
       </p>
 
@@ -38,13 +38,13 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       <div className="rounded-lg border border-[#EE4C7C]/30 bg-[#EE4C7C]/[0.05] p-4 mb-6">
         <div className="flex items-baseline gap-2 mb-3">
           <span className="text-3xl font-bold text-[#EE4C7C]">${agent.monthlyPrice}</span>
-          <span className="text-xs text-[#5D001E]/60">/month</span>
+          <span className="text-xs text-[#F4E9EC]/60">/month</span>
         </div>
-        <div className="text-xs text-[#5D001E]/65 mb-3">Setup: ${agent.setupPrice.toLocaleString()}</div>
-        <div className="border-t border-[#5D001E]/15 pt-3">
+        <div className="text-xs text-[#F4E9EC]/65 mb-3">Setup: ${agent.setupPrice.toLocaleString()}</div>
+        <div className="border-t border-white/15 pt-3">
           <div className="flex justify-between text-sm">
-            <span className="text-[#5D001E]/65">Year 1 Value:</span>
-            <span className="font-bold text-[#5D001E]">
+            <span className="text-[#F4E9EC]/65">Year 1 Value:</span>
+            <span className="font-bold text-[#F4E9EC]">
               ${((agent.monthlyPrice * 12) + agent.setupPrice).toLocaleString()}
             </span>
           </div>
@@ -53,12 +53,12 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
 
       {/* Features */}
       <div className="mb-6">
-        <h4 className="text-xs font-semibold text-[#5D001E]/80 mb-3 uppercase tracking-widest">Features</h4>
+        <h4 className="text-xs font-semibold text-[#F4E9EC]/80 mb-3 uppercase tracking-widest">Features</h4>
         <div className="space-y-2">
           {agent.features.map((feature, i) => (
             <div key={i} className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#EE4C7C]" />
-              <span className="text-sm text-[#5D001E]/75">{feature}</span>
+              <span className="text-sm text-[#F4E9EC]/75">{feature}</span>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       {isInCart ? (
         <motion.button
           onClick={onRemoveFromCart}
-          className="w-full rounded-lg bg-white/70 px-4 py-3 text-sm font-semibold text-[#5D001E] hover:bg-white/80 transition-all"
+          className="w-full rounded-lg bg-white/[0.06] px-4 py-3 text-sm font-semibold text-[#F4E9EC] hover:bg-white/[0.07] transition-all"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -86,7 +86,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       )}
 
       {/* Info text */}
-      <p className="text-xs text-[#5D001E]/55 text-center mt-4">
+      <p className="text-xs text-[#F4E9EC]/55 text-center mt-4">
         Selected agents combine into your custom automation stack.
       </p>
     </motion.div>

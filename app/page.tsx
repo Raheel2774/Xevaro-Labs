@@ -62,7 +62,7 @@ export default function Home() {
             </div>
             <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/70">
               <span>⭐ Rated 4.9/5</span>
-              <span className="hidden h-4 w-px bg-white/20 sm:block" />
+              <span className="hidden h-4 w-px bg-white/[0.03] sm:block" />
               <span>100+ systems deployed across 25+ industries</span>
             </div>
           </motion.div>
@@ -72,7 +72,7 @@ export default function Home() {
       {/* ── Trust marquee ── */}
       <section className="relative py-8">
         <Marquee
-          className="whitespace-nowrap font-display text-lg font-medium text-[#5D001E]/35"
+          className="whitespace-nowrap font-display text-lg font-medium text-[#F4E9EC]/35"
           items={INDUSTRIES_SERVED.flatMap(n => [n, <span key={n + '-dot'} className="text-[#EE4C7C]">•</span>])}
         />
       </section>
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </Pop>
           <Pop delay={0.05}>
-            <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#5D001E] md:text-6xl">
+            <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#F4E9EC] md:text-6xl">
               Six AI agents that work like your full time team.
             </h2>
           </Pop>
@@ -104,12 +104,12 @@ export default function Home() {
                           style={{ background: `linear-gradient(135deg, ${p.accent}, #EE4C7C)` }}>
                           <Icon className="h-6 w-6" />
                         </span>
-                        <span className="font-display text-xl font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}<span className="text-sm text-[#5D001E]/50">/mo</span></span>
+                        <span className="font-display text-xl font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}<span className="text-sm text-[#F4E9EC]/50">/mo</span></span>
                       </div>
-                      <h3 className="mt-5 font-display text-2xl font-bold text-[#5D001E] transition-colors group-hover:text-[#9A1750]">{p.name}</h3>
+                      <h3 className="mt-5 font-display text-2xl font-bold text-[#F4E9EC] transition-colors group-hover:text-[#9A1750]">{p.name}</h3>
                       <p className="mt-2 text-sm font-medium text-[#9A1750]/80">{p.tagline}</p>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#5D001E]/60">{p.description}</p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#5D001E] transition-colors group-hover:text-[#EE4C7C]">
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#F4E9EC]/60">{p.description}</p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F4E9EC] transition-colors group-hover:text-[#EE4C7C]">
                         Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </Link>
@@ -169,13 +169,13 @@ export default function Home() {
       {/* ── Process bento ── */}
       <section className="relative px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">From audit to autonomous in four steps.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">From audit to autonomous in four steps.</h2></Pop>
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((p, i) => (
               <BentoCard key={p.step} delay={i * 0.08} className="p-7">
                 <span className="font-display text-4xl font-bold text-[#EE4C7C]/30">{p.step}</span>
-                <h3 className="mt-3 font-display text-xl font-bold text-[#5D001E]">{p.title}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[#5D001E]/65">{p.desc}</p>
+                <h3 className="mt-3 font-display text-xl font-bold text-[#F4E9EC]">{p.title}</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-[#F4E9EC]/65">{p.desc}</p>
               </BentoCard>
             ))}
           </div>
@@ -185,18 +185,18 @@ export default function Home() {
       {/* ── Case studies ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">Real systems. Real impact.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">Real systems. Real impact.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {CASE_STUDIES.map((c, i) => (
               <BentoCard key={c.client} delay={(i % 2) * 0.08} accent="#9A1750" className="p-8">
                 <Link href="/case-studies" className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-display text-2xl font-bold text-[#5D001E] transition-transform group-hover:translate-x-1 md:text-3xl">{c.client}</h3>
-                    <span className="text-sm text-[#5D001E]/50">{c.sector}</span>
+                    <h3 className="font-display text-2xl font-bold text-[#F4E9EC] transition-transform group-hover:translate-x-1 md:text-3xl">{c.client}</h3>
+                    <span className="text-sm text-[#F4E9EC]/50">{c.sector}</span>
                   </div>
                   <div className="text-right">
                     <div className="bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-5xl">{c.metric}</div>
-                    <div className="text-xs uppercase tracking-wide text-[#5D001E]/45">{c.label}</div>
+                    <div className="text-xs uppercase tracking-wide text-[#F4E9EC]/45">{c.label}</div>
                   </div>
                 </Link>
               </BentoCard>
@@ -208,16 +208,16 @@ export default function Home() {
       {/* ── Testimonials bento ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">Results people feel.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">Results people feel.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {TESTIMONIALS.slice(0, 6).map((t, i) => (
               <BentoCard key={t.name} delay={(i % 3) * 0.08} className="flex flex-col p-7">
                 <Quote className="h-6 w-6 text-[#EE4C7C]/60" />
-                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#5D001E]/75">“{t.quote}”</p>
-                <div className="mt-6 flex items-center justify-between border-t border-[#5D001E]/10 pt-5">
+                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#F4E9EC]/75">“{t.quote}”</p>
+                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                   <div>
-                    <div className="text-sm font-semibold text-[#5D001E]">{t.name}</div>
-                    <div className="text-xs text-[#5D001E]/55">{t.role} · {t.industry}</div>
+                    <div className="text-sm font-semibold text-[#F4E9EC]">{t.name}</div>
+                    <div className="text-xs text-[#F4E9EC]/55">{t.role} · {t.industry}</div>
                   </div>
                   <span className="rounded-full bg-[#E3AFBC]/40 px-3 py-1 font-mono text-[10px] text-[#9A1750]">{t.result}</span>
                 </div>
@@ -236,9 +236,9 @@ export default function Home() {
                 const Icon = PROMISE_ICONS[icon] ?? Rocket
                 return (
                   <div key={title}>
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/80 text-[#EE4C7C]"><Icon className="h-5 w-5" /></span>
-                    <h4 className="mt-4 font-display text-lg font-bold text-[#5D001E]">{title}</h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{desc}</p>
+                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.07] text-[#EE4C7C]"><Icon className="h-5 w-5" /></span>
+                    <h4 className="mt-4 font-display text-lg font-bold text-[#F4E9EC]">{title}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{desc}</p>
                   </div>
                 )
               })}
@@ -252,15 +252,15 @@ export default function Home() {
       {/* ── Blog ── */}
       <section className="relative px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">Automation, explained.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">Automation, explained.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[...POSTS].sort((a, b) => +new Date(b.date) - +new Date(a.date)).slice(0, 3).map((p, i) => (
               <BentoCard key={p.slug} delay={(i % 3) * 0.08} className="flex flex-col p-7">
                 <Link href={`/blog/${p.slug}`} className="flex h-full flex-col">
                   <span className="font-mono text-xs tracking-widest text-[#EE4C7C]">{p.category}</span>
-                  <h3 className="mt-4 font-display text-lg font-bold text-[#5D001E] transition-transform group-hover:translate-x-1">{p.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[#5D001E]/60">{p.description}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#5D001E]/60 transition-colors group-hover:text-[#EE4C7C]">Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+                  <h3 className="mt-4 font-display text-lg font-bold text-[#F4E9EC] transition-transform group-hover:translate-x-1">{p.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[#F4E9EC]/60">{p.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#F4E9EC]/60 transition-colors group-hover:text-[#EE4C7C]">Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
                 </Link>
               </BentoCard>
             ))}

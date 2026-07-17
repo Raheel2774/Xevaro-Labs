@@ -40,7 +40,7 @@ export default function AgentsPage() {
             <H2 className="text-4xl md:text-6xl">{filteredAgents.length} specialized AI agents<br />ready to deploy.</H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg text-[#5D001E]/65 font-light">
+            <p className="mt-6 max-w-2xl text-lg text-[#F4E9EC]/65 font-light">
               Browse our complete catalog. Filter by niche, add to cart, and combine agents into your perfect automation stack.
             </p>
           </Reveal>
@@ -51,15 +51,15 @@ export default function AgentsPage() {
         <div className="mx-auto w-full max-w-7xl flex gap-8">
           {/* Sidebar: Niche Filter */}
           <div className="sticky top-32 h-fit w-48 flex-shrink-0">
-            <div className="rounded-lg border border-[#5D001E]/15 bg-white/55 p-4 backdrop-blur-xl">
-              <h3 className="text-sm font-semibold text-[#5D001E] mb-4">FILTER BY NICHE</h3>
+            <div className="rounded-lg border border-white/15 bg-white/55 p-4 backdrop-blur-xl">
+              <h3 className="text-sm font-semibold text-[#F4E9EC] mb-4">FILTER BY NICHE</h3>
               <div className="space-y-2">
                 <motion.button
                   onClick={() => setSelectedNiche(null)}
                   className={`block w-full text-left px-3 py-2 rounded-lg transition-all ${
                     selectedNiche === null
                       ? 'bg-[#EE4C7C] text-white font-semibold'
-                      : 'text-[#5D001E]/75 hover:text-[#5D001E]'
+                      : 'text-[#F4E9EC]/75 hover:text-[#F4E9EC]'
                   }`}
                   whileHover={{ x: 4 }}
                 >
@@ -74,12 +74,12 @@ export default function AgentsPage() {
                       className={`block w-full text-left px-3 py-2 rounded-lg transition-all text-sm ${
                         selectedNiche === niche
                           ? 'bg-[#EE4C7C] text-white font-semibold'
-                          : 'text-[#5D001E]/75 hover:text-[#5D001E]'
+                          : 'text-[#F4E9EC]/75 hover:text-[#F4E9EC]'
                       }`}
                       whileHover={{ x: 4 }}
                     >
                       {niche}
-                      <span className="ml-2 text-xs text-[#5D001E]/60">({count})</span>
+                      <span className="ml-2 text-xs text-[#F4E9EC]/60">({count})</span>
                     </motion.button>
                   )
                 })}
@@ -92,23 +92,23 @@ export default function AgentsPage() {
                 <div className="text-xs font-semibold text-[#EE4C7C] mb-3">CART ({cartItems.length})</div>
                 <div className="space-y-2 mb-4 max-h-40 overflow-y-auto">
                   {cartItems.map(item => (
-                    <div key={item.id} className="flex justify-between items-center text-xs text-[#5D001E]/80">
+                    <div key={item.id} className="flex justify-between items-center text-xs text-[#F4E9EC]/80">
                       <span className="truncate">{item.name}</span>
                       <button
                         onClick={() => removeFromCart(item.id)}
-                        className="text-[#5D001E]/60 hover:text-[#EE4C7C]"
+                        className="text-[#F4E9EC]/60 hover:text-[#EE4C7C]"
                       >
                         ✕
                       </button>
                     </div>
                   ))}
                 </div>
-                <div className="border-t border-[#5D001E]/15 pt-3 mb-3">
-                  <div className="flex justify-between text-sm font-semibold text-[#5D001E]">
+                <div className="border-t border-white/15 pt-3 mb-3">
+                  <div className="flex justify-between text-sm font-semibold text-[#F4E9EC]">
                     <span>Monthly:</span>
                     <span className="text-[#EE4C7C]">${cartItems.reduce((sum, a) => sum + a.monthlyPrice, 0).toLocaleString()}</span>
                   </div>
-                  <div className="flex justify-between text-xs text-[#5D001E]/65 mt-1">
+                  <div className="flex justify-between text-xs text-[#F4E9EC]/65 mt-1">
                     <span>Setup:</span>
                     <span>${cartItems.reduce((sum, a) => sum + a.setupPrice, 0).toLocaleString()}</span>
                   </div>
@@ -165,11 +165,11 @@ export default function AgentsPage() {
       />
 
       {/* CTA */}
-      <section className="relative px-6 py-28 md:px-10 border-t border-[#5D001E]/10">
+      <section className="relative px-6 py-28 md:px-10 border-t border-white/10">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal><H2 className="text-4xl md:text-5xl">Need help choosing?</H2></Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 text-lg text-[#5D001E]/65">
+            <p className="mt-6 text-lg text-[#F4E9EC]/65">
               Schedule a 30 minute consultation with our experts. We&apos;ll recommend the perfect agent combo for your business.
             </p>
           </Reveal>

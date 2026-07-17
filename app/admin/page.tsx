@@ -138,7 +138,7 @@ function Shell({ children }: { children: React.ReactNode }) {
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
-      <div className="bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text font-display text-4xl font-bold text-transparent">{value}</div>
+      <div className="bg-gradient-to-br from-white/[0.06] to-[#E53E3E] bg-clip-text font-display text-4xl font-bold text-transparent">{value}</div>
       <div className="mt-1 text-xs uppercase tracking-wide text-white/40">{label}</div>
     </div>
   )

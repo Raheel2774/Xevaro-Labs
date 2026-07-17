@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg font-light text-[#5D001E]/60">
+            <p className="mt-6 max-w-2xl text-lg font-light text-[#F4E9EC]/60">
               Every deployment reports back. These are real automation outcomes measured across
               commerce, SaaS, retail and enterprise operations.
             </p>
@@ -31,11 +31,11 @@ export default function CaseStudiesPage() {
       <section className="relative px-6 pb-16 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#5D001E]/10 bg-white/60 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
-                <div key={s.label} className="bg-white/70 p-7 text-center backdrop-blur-xl">
+                <div key={s.label} className="bg-white/[0.06] p-7 text-center backdrop-blur-xl">
                   <div className="bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
-                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#5D001E]/55">{s.label}</div>
+                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#F4E9EC]/55">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -54,27 +54,27 @@ export default function CaseStudiesPage() {
                     <div>
                       <div className="flex items-center gap-4">
                         <span className="font-mono text-xs tracking-widest text-[#EE4C7C]">CASE-0{i + 1}</span>
-                        <span className="rounded-full border border-[#5D001E]/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#5D001E]/55">{c.sector}</span>
+                        <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#F4E9EC]/55">{c.sector}</span>
                       </div>
-                      <h3 className="mt-5 font-display text-2xl font-bold text-[#5D001E]/90 md:text-3xl">{c.client}</h3>
+                      <h3 className="mt-5 font-display text-2xl font-bold text-[#F4E9EC]/90 md:text-3xl">{c.client}</h3>
 
                       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                         <div>
                           <div className="font-mono text-[10px] uppercase tracking-widest text-[#E0A86A]/80">Challenge</div>
-                          <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{c.challenge}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{c.challenge}</p>
                         </div>
                         <div>
                           <div className="font-mono text-[10px] uppercase tracking-widest text-[#EE4C7C]/80">System deployed</div>
-                          <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{c.solution}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{c.solution}</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Result */}
-                    <div className="flex flex-col justify-center rounded-2xl border border-[#5D001E]/10 bg-gradient-to-b from-white/[0.04] to-transparent p-7 text-center">
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-[#5D001E]/55">Result</div>
+                    <div className="flex flex-col justify-center rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-7 text-center">
+                      <div className="font-mono text-[10px] uppercase tracking-widest text-[#F4E9EC]/55">Result</div>
                       <div className="mt-2 bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">{c.metric}</div>
-                      <div className="mt-1 text-xs uppercase tracking-wide text-[#5D001E]/55">{c.label}</div>
+                      <div className="mt-1 text-xs uppercase tracking-wide text-[#F4E9EC]/55">{c.label}</div>
                       <div className="mt-5 flex h-10 items-end justify-center gap-1">
                         {[40, 65, 50, 80, 95].map((h, k) => (
                           <span key={k} className="w-1.5 rounded-t bg-gradient-to-t from-[#9A1750] to-[#EE4C7C]" style={{ height: `${h}%` }} />
@@ -95,10 +95,10 @@ export default function CaseStudiesPage() {
           <Reveal>
             <GlassCard className="p-10 text-center md:p-14">
               <div className="flex justify-center gap-0.5 text-[#EE4C7C]">★★★★★</div>
-              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-[#5D001E]/85 md:text-3xl">
+              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-[#F4E9EC]/85 md:text-3xl">
                 “{TESTIMONIALS[3].quote}”
               </p>
-              <div className="mt-6 text-sm text-[#5D001E]/60">
+              <div className="mt-6 text-sm text-[#F4E9EC]/60">
                 {TESTIMONIALS[3].name} · {TESTIMONIALS[3].role}, {TESTIMONIALS[3].industry}
               </div>
             </GlassCard>

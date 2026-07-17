@@ -70,7 +70,7 @@ export function BentoCard({
       transition={{ duration: 0.7, delay, ease: EASE }}
       whileHover={{ y: -6 }}
       style={tilt ? { rotateX, rotateY, transformPerspective: 900 } : undefined}
-      className={`group relative h-full overflow-hidden rounded-[28px] border border-[#5D001E]/10 bg-white/70 backdrop-blur-xl shadow-[0_8px_30px_rgba(93,0,30,0.07)] transition-shadow duration-300 hover:shadow-[0_24px_60px_rgba(154,23,80,0.2)] ${className}`}
+      className={`group relative h-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_8px_30px_rgba(93,0,30,0.07)] transition-shadow duration-300 hover:shadow-[0_24px_60px_rgba(154,23,80,0.2)] ${className}`}
     >
       {/* pointer glow */}
       <motion.div

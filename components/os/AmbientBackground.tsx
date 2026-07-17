@@ -7,7 +7,7 @@
  */
 export default function AmbientBackground() {
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#E3E2DF]">
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#120207]">
       {/* Large drifting blobs */}
       <div
         className="animate-blob absolute -left-40 -top-40 h-[560px] w-[560px] bg-[#E3AFBC]/50 blur-[90px]"

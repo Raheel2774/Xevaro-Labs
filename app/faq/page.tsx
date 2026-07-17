@@ -19,7 +19,7 @@ export default function FaqPage() {
             <H2 className="text-5xl md:text-7xl">Questions,<br />answered.</H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#5D001E]/60">
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#F4E9EC]/60">
               Everything you might ask about AI automation, AI agents, timelines, pricing, and
               working with Xevaro Labs, in plain language.
             </p>
@@ -29,7 +29,7 @@ export default function FaqPage() {
 
       <section className="relative px-6 pb-28 md:px-10">
         <div className="mx-auto max-w-3xl">
-          <div className="divide-y divide-[#5D001E]/10 border-y border-[#5D001E]/10">
+          <div className="divide-y divide-white/10 border-y border-white/10">
             {FAQS.map((f, i) => {
               const isOpen = open === i
               return (
@@ -41,7 +41,7 @@ export default function FaqPage() {
                       aria-expanded={isOpen}
                       className="flex w-full items-center justify-between gap-6 py-6 text-left"
                     >
-                      <span className={`font-display text-lg font-medium transition-colors md:text-xl ${isOpen ? 'text-[#5D001E]' : 'text-[#5D001E]/85'}`}>
+                      <span className={`font-display text-lg font-medium transition-colors md:text-xl ${isOpen ? 'text-[#F4E9EC]' : 'text-[#F4E9EC]/85'}`}>
                         {f.q}
                       </span>
                       <span
@@ -57,7 +57,7 @@ export default function FaqPage() {
                     className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                   >
                     <div className="overflow-hidden">
-                      <p className="max-w-2xl pb-7 text-[15px] leading-relaxed text-[#5D001E]/60">
+                      <p className="max-w-2xl pb-7 text-[15px] leading-relaxed text-[#F4E9EC]/60">
                         {f.a}
                       </p>
                     </div>
@@ -73,14 +73,14 @@ export default function FaqPage() {
         <div className="mx-auto max-w-2xl">
           <Reveal><H2 className="text-4xl md:text-6xl">Still have a question?</H2></Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-lg text-lg font-light text-[#5D001E]/60">
+            <p className="mx-auto mt-6 max-w-lg text-lg font-light text-[#F4E9EC]/60">
               Tell us what you want to automate and we&apos;ll map the highest impact system for your business.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Book an Automation Audit</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#5D001E]/60 transition-colors hover:text-[#EE4C7C]">
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#F4E9EC]/60 transition-colors hover:text-[#EE4C7C]">
                 {CONTACT.email}
               </a>
             </div>

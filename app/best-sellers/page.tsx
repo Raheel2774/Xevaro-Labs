@@ -41,7 +41,7 @@ export default function BestSellersPage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="mx-auto max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-[#5D001E] md:text-8xl"
+              className="mx-auto max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-[#F4E9EC] md:text-8xl"
             >
               Our{' '}
               <span className="relative inline-block">
@@ -61,13 +61,13 @@ export default function BestSellersPage() {
             <Sticker className="absolute -left-2 top-2 bg-[#EE4C7C] text-white md:left-16" rotate={-8}>
               <Star className="h-3.5 w-3.5 fill-white" /> Loved by 100+ teams
             </Sticker>
-            <Sticker className="absolute -right-1 bottom-0 bg-[#E3AFBC] text-[#5D001E] md:right-20" rotate={7}>
+            <Sticker className="absolute -right-1 bottom-0 bg-[#E3AFBC] text-[#F4E9EC] md:right-20" rotate={7}>
               <TrendingUp className="h-3.5 w-3.5" /> 48 hour setup
             </Sticker>
           </div>
 
           <Pop delay={0.15}>
-            <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#5D001E]/70">
+            <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#F4E9EC]/70">
               These six products get deployed the most, and for good reason. Clear pricing,
               live in 48 hours, and built to pay for themselves fast.
             </p>
@@ -102,26 +102,26 @@ export default function BestSellersPage() {
                       </span>
                     </div>
 
-                    <h3 className="mt-5 font-display text-2xl font-bold text-[#5D001E] transition-colors group-hover:text-[#9A1750]">
+                    <h3 className="mt-5 font-display text-2xl font-bold text-[#F4E9EC] transition-colors group-hover:text-[#9A1750]">
                       {p.name}
                     </h3>
                     <p className="mt-2 text-sm font-medium text-[#9A1750]/80">{p.tagline}</p>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[#5D001E]/60">{p.description}</p>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[#F4E9EC]/60">{p.description}</p>
 
                     {/* stat chips */}
                     <div className="mt-5 flex flex-wrap gap-2">
                       {p.stats.map(s => (
-                        <span key={s.label} className="rounded-full bg-[#E3E2DF] px-3 py-1 text-xs font-semibold text-[#5D001E]">
+                        <span key={s.label} className="rounded-full bg-[#120207] px-3 py-1 text-xs font-semibold text-[#F4E9EC]">
                           <span className="text-[#EE4C7C]">{s.value}</span> {s.label}
                         </span>
                       ))}
                     </div>
 
-                    <div className="mt-6 flex items-center justify-between border-t border-[#5D001E]/10 pt-5">
+                    <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                       <div>
                         <span className="font-display text-2xl font-bold text-[#EE4C7C]">${p.monthlyPrice.toLocaleString()}</span>
-                        <span className="text-sm text-[#5D001E]/55">/mo</span>
-                        <div className="text-xs text-[#5D001E]/45">+ ${p.setupPrice.toLocaleString()} setup</div>
+                        <span className="text-sm text-[#F4E9EC]/55">/mo</span>
+                        <div className="text-xs text-[#F4E9EC]/45">+ ${p.setupPrice.toLocaleString()} setup</div>
                       </div>
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-[#5D001E] px-4 py-2 text-sm font-semibold text-white transition-transform group-hover:scale-105">
                         View <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -159,7 +159,7 @@ export default function BestSellersPage() {
       {/* ── Why these win ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="text-center font-display text-3xl font-bold text-[#5D001E] md:text-5xl">Why teams pick these first</h2></Pop>
+          <Pop><h2 className="text-center font-display text-3xl font-bold text-[#F4E9EC] md:text-5xl">Why teams pick these first</h2></Pop>
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
               { t: 'Live in 48 hours', d: 'No long builds. We set it up, test it and hand you the keys within two days.' },
@@ -170,8 +170,8 @@ export default function BestSellersPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E3AFBC]/50 text-[#9A1750]">
                   <Check className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 font-display text-xl font-bold text-[#5D001E]">{c.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{c.d}</p>
+                <h3 className="mt-4 font-display text-xl font-bold text-[#F4E9EC]">{c.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{c.d}</p>
               </BentoCard>
             ))}
           </div>
@@ -181,7 +181,7 @@ export default function BestSellersPage() {
       {/* ── Marquee ── */}
       <section className="relative py-10">
         <Marquee
-          className="font-display text-2xl font-bold text-[#5D001E]/25"
+          className="font-display text-2xl font-bold text-[#F4E9EC]/25"
           items={['Deploy fast', '•', 'Automate everything', '•', 'Never miss a lead', '•', 'Scale without hiring', '•']}
         />
       </section>
@@ -189,16 +189,16 @@ export default function BestSellersPage() {
       {/* ── CTA ── */}
       <section className="relative px-6 py-24 text-center md:px-10">
         <div className="mx-auto max-w-3xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#5D001E] md:text-6xl">Pick your best seller.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#F4E9EC] md:text-6xl">Pick your best seller.</h2></Pop>
           <Pop delay={0.1}>
-            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#5D001E]/65">
+            <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#F4E9EC]/65">
               Tell us your biggest bottleneck and we will recommend the product that clears it fastest.
             </p>
           </Pop>
           <Pop delay={0.15}>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton href="/contact">Book a Free Audit</MagneticButton>
-              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#5D001E]/60 transition-colors hover:text-[#EE4C7C]">{CONTACT.email}</a>
+              <a href={`mailto:${CONTACT.email}`} className="font-mono text-sm text-[#F4E9EC]/60 transition-colors hover:text-[#EE4C7C]">{CONTACT.email}</a>
             </div>
           </Pop>
         </div>

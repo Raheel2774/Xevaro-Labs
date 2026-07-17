@@ -42,7 +42,7 @@ export function GlassCard({
 }: { children: React.ReactNode; className?: string; glow?: boolean }) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[28px] border border-[#5D001E]/10 bg-white/60 backdrop-blur-xl shadow-[0_6px_28px_rgba(93,0,30,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-[#EE4C7C]/40 hover:shadow-[0_16px_48px_rgba(154,23,80,0.16)] ${className}`}
+      className={`group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_6px_28px_rgba(93,0,30,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-[#EE4C7C]/40 hover:shadow-[0_16px_48px_rgba(154,23,80,0.16)] ${className}`}
     >
       {glow && (
         <div className="pointer-events-none absolute -inset-px rounded-[28px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
@@ -75,7 +75,7 @@ export function MagneticButton({
   const base = 'relative inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold tracking-wide overflow-hidden transition-shadow duration-300'
   const styles = variant === 'primary'
     ? 'text-white shadow-[0_8px_28px_rgba(238,76,124,0.35)] hover:shadow-[0_12px_40px_rgba(238,76,124,0.5)]'
-    : 'text-[#5D001E] border-2 border-[#5D001E]/20 hover:border-[#9A1750]/60 hover:text-[#9A1750] backdrop-blur-sm transition-colors'
+    : 'text-[#F4E9EC] border-2 border-white/20 hover:border-[#9A1750]/60 hover:text-[#9A1750] backdrop-blur-sm transition-colors'
 
   return (
     <motion.a
@@ -100,7 +100,7 @@ export function MagneticButton({
 
 export function H2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`font-display font-bold tracking-tight text-[#5D001E] ${className}`}>
+    <h2 className={`font-display font-bold tracking-tight text-[#F4E9EC] ${className}`}>
       {children}
     </h2>
   )

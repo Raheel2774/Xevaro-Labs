@@ -327,6 +327,36 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
+    client: 'Bridgewater Mechanical', sector: 'HVAC & Plumbing', metric: '$75K', label: 'Client-reported value',
+    desc: 'AI Hiring Agent sourced 1,240 candidates and made 24 hires on autopilot, with time to fill down 12%.',
+    challenge: 'Manual job posting across Indeed and Facebook, with hours lost reviewing applicants and no consistent way to spot qualified techs.',
+    solution: 'An AI Hiring Agent that centralizes every application, screens against defined criteria, and runs the pipeline end to end into one dashboard.',
+  },
+  {
+    client: 'NYC Skincare Studio', sector: 'Medical Spa', metric: '< 3 wks', label: 'Time to fill roles',
+    desc: 'AI Hiring Agent filled open roles in under three weeks on a fully automated candidate pipeline.',
+    challenge: 'Facebook recruitment could not fill positions fast enough to keep pace with demand, capping bookable appointments.',
+    solution: 'Automated candidate engagement, qualification, and interview booking through a live, self updating hiring dashboard.',
+  },
+  {
+    client: 'HM Marketing Studio', sector: 'Digital Marketing', metric: '198', label: 'Interviews booked',
+    desc: 'AI outbound engine using the Interview Method, with 30,000 emails sent and 198 interviews booked.',
+    challenge: 'Manual outreach for podcast and interview opportunities generated limited results and burned hours.',
+    solution: 'AI personalized cold email and follow up sequences that invite prospects onto an interview series instead of pitching.',
+  },
+  {
+    client: 'Trafficost', sector: 'Software', metric: '+$30K', label: 'First-year revenue',
+    desc: 'AI cold email layered on Meta and Google Ads drove 14.1K sends and a repeatable qualified lead flow.',
+    challenge: 'The team wanted predictable recurring revenue but lacked a repeatable qualified lead pipeline.',
+    solution: 'AI email campaigns combined with paid demand from Meta and Google Ads into one measured funnel.',
+  },
+  {
+    client: 'Luxe Aesthetics', sector: 'Medical Spa', metric: '30+/wk', label: 'Appointments booked',
+    desc: 'AVA, a 24/7 AI voice receptionist, booked 30+ appointments in a single week from calls that would have been missed.',
+    challenge: 'The clinic missed calls and appointments during busy periods, losing bookable revenue.',
+    solution: 'AVA answers calls, handles FAQs, books appointments, and confirms by SMS, live around the clock.',
+  },
+  {
     client: 'RetailCo', sector: 'Ecommerce', metric: '+340%', label: 'Revenue growth',
     desc: 'Deployed Shopify AI Commerce + automation engine; revenue tripled in 90 days.',
     challenge: 'Manual marketing and a leaky checkout were capping growth despite strong traffic.',

@@ -27,7 +27,7 @@ function NavBar() {
         {[['Capabilities', '#services'], ['Work', '#work'], ['Process', '#process'], ['Contact', '#contact']].map(([l, h]) => (
           <a key={l} href={h} className="relative group">
             {l}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white/[0.06] group-hover:w-full transition-all duration-300" />
           </a>
         ))}
       </div>
@@ -36,7 +36,7 @@ function NavBar() {
         href="#contact"
         className="group relative px-5 py-2 text-[13px] font-semibold text-white overflow-hidden rounded-full border border-white/20"
       >
-        <span className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
+        <span className="absolute inset-0 bg-white/[0.06] -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
         <span className="relative group-hover:text-black transition-colors duration-300">Let&apos;s talk →</span>
       </a>
     </motion.nav>
@@ -247,7 +247,7 @@ function Stats() {
             transition={{ duration: 0.6, delay: i * 0.1 }}
             className="bg-black/40 backdrop-blur-md p-8 md:p-10 text-center group hover:bg-[#9B1C1C]/10 transition-colors duration-500"
           >
-            <div className="font-display font-black text-4xl md:text-6xl bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text text-transparent">{n}</div>
+            <div className="font-display font-black text-4xl md:text-6xl bg-gradient-to-br from-white/[0.06] to-[#E53E3E] bg-clip-text text-transparent">{n}</div>
             <div className="mt-2 text-white/40 text-xs md:text-sm tracking-wide uppercase">{l}</div>
           </motion.div>
         ))}
@@ -293,7 +293,7 @@ function Work() {
                 </div>
               </div>
               <div className="text-right">
-                <div className="font-display font-black text-3xl md:text-5xl bg-gradient-to-br from-white to-[#E53E3E] bg-clip-text text-transparent">{w.metric}</div>
+                <div className="font-display font-black text-3xl md:text-5xl bg-gradient-to-br from-white/[0.06] to-[#E53E3E] bg-clip-text text-transparent">{w.metric}</div>
                 <div className="text-white/30 text-xs uppercase tracking-wide">{w.label}</div>
               </div>
             </motion.div>

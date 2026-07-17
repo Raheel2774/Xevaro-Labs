@@ -23,7 +23,7 @@ export default function ServicesPage() {
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg font-light text-[#5D001E]/65">
+            <p className="mt-6 max-w-2xl text-lg font-light text-[#F4E9EC]/65">
               Six productized AI systems that replace manual operations with self executing
               infrastructure, capturing leads, booking work, running support and surfacing insight, 24/7.
             </p>
@@ -43,9 +43,9 @@ export default function ServicesPage() {
           <Reveal>
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.05] md:grid-cols-4">
               {TRUST_STATS.map((s) => (
-                <div key={s.label} className="bg-white/70 p-7 text-center backdrop-blur-xl">
+                <div key={s.label} className="bg-white/[0.06] p-7 text-center backdrop-blur-xl">
                   <div className="bg-gradient-to-br from-[#9A1750] to-[#EE4C7C] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
-                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#5D001E]/55">{s.label}</div>
+                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#F4E9EC]/55">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -65,22 +65,22 @@ export default function ServicesPage() {
                   <GlassCard glow className="h-full p-8 md:p-10">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs tracking-widest text-[#EE4C7C]">{p.index}</span>
-                      <span className="rounded-full border border-[#5D001E]/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#5D001E]/55">{p.tagline}</span>
+                      <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#F4E9EC]/55">{p.tagline}</span>
                     </div>
-                    <h3 className="mt-6 font-display text-2xl font-semibold text-[#5D001E] md:text-3xl">{p.name}</h3>
-                    <p className="mt-4 text-[15px] leading-relaxed text-[#5D001E]/65">{p.description}</p>
+                    <h3 className="mt-6 font-display text-2xl font-semibold text-[#F4E9EC] md:text-3xl">{p.name}</h3>
+                    <p className="mt-4 text-[15px] leading-relaxed text-[#F4E9EC]/65">{p.description}</p>
 
                     <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                       {p.features.map((inc) => (
-                        <li key={inc} className="flex items-center gap-2 text-sm text-[#5D001E]/60">
+                        <li key={inc} className="flex items-center gap-2 text-sm text-[#F4E9EC]/60">
                           <Check className="h-3.5 w-3.5 flex-shrink-0 text-[#EE4C7C]" />{inc}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="mt-7 rounded-xl border border-[#5D001E]/10 bg-white/55 p-4">
+                    <div className="mt-7 rounded-xl border border-white/10 bg-white/55 p-4">
                       <div className="font-mono text-[10px] uppercase tracking-widest text-[#9A1750]/60">Outcome</div>
-                      <p className="mt-1.5 text-sm text-[#5D001E]/75">{p.outcome}</p>
+                      <p className="mt-1.5 text-sm text-[#F4E9EC]/75">{p.outcome}</p>
                     </div>
                   </GlassCard>
                 </div>
@@ -98,10 +98,10 @@ export default function ServicesPage() {
               <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#9A1750]/20 blur-3xl" />
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
-                  <h3 className="max-w-xl font-display text-2xl font-semibold text-[#5D001E] md:text-3xl">
+                  <h3 className="max-w-xl font-display text-2xl font-semibold text-[#F4E9EC] md:text-3xl">
                     Want a ready made agent for your industry?
                   </h3>
-                  <p className="mt-3 max-w-lg text-sm text-[#5D001E]/65">
+                  <p className="mt-3 max-w-lg text-sm text-[#F4E9EC]/65">
                     {TOTAL_AGENTS} prebuilt AI agents across 25 industries, booking, lead capture,
                     follow up, support and reputation. Pick one and we set it up for you.
                   </p>
@@ -123,8 +123,8 @@ export default function ServicesPage() {
               <Reveal key={p.step} delay={(i % 4) * 0.08}>
                 <div className="relative h-full rounded-2xl border border-white/[0.07] bg-white/55 p-7">
                   <span className="font-mono text-3xl font-bold text-[#EE4C7C]/20">{p.step}</span>
-                  <h3 className="mt-3 font-display text-xl font-semibold text-[#5D001E]">{p.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#5D001E]/65">{p.desc}</p>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-[#F4E9EC]">{p.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#F4E9EC]/65">{p.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -143,8 +143,8 @@ export default function ServicesPage() {
                 <div className="flex h-full gap-4 rounded-2xl border border-white/[0.07] bg-white/55 p-7">
                   <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#EE4C7C]" />
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-[#5D001E]">{d.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#5D001E]/65">{d.desc}</p>
+                    <h3 className="font-display text-lg font-semibold text-[#F4E9EC]">{d.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#F4E9EC]/65">{d.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
               <p className="mt-6 font-display text-2xl font-light leading-relaxed text-white/85 md:text-3xl">
                 “{TESTIMONIALS[4].quote}”
               </p>
-              <div className="mt-6 text-sm text-[#5D001E]/60">
+              <div className="mt-6 text-sm text-[#F4E9EC]/60">
                 {TESTIMONIALS[4].name} · {TESTIMONIALS[4].role}, {TESTIMONIALS[4].industry}
               </div>
             </GlassCard>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
       <section className="relative px-6 py-24 text-center md:px-10">
         <Reveal><H2 className="text-4xl md:text-6xl">Compose your automation stack.</H2></Reveal>
         <Reveal delay={0.08}>
-          <p className="mx-auto mt-5 max-w-xl text-[#5D001E]/65">
+          <p className="mx-auto mt-5 max-w-xl text-[#F4E9EC]/65">
             Book a free audit and we&apos;ll map the highest ROI systems for your operation, no pressure, no jargon.
           </p>
         </Reveal>
