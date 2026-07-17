@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import { MagneticButton } from '@/components/os/ui'
 import { BentoCard, CountUp, Pop, Marquee } from '@/components/os/bento'
-import { PRODUCTS, CASE_STUDIES, CONTACT } from '@/lib/os'
+import { BEST_SELLERS, CASE_STUDIES, CONTACT } from '@/lib/os'
 import { TOTAL_AGENTS } from '@/lib/agents'
 import { TESTIMONIALS, INDUSTRIES_SERVED, PROCESS, PROMISES } from '@/lib/social'
 import ProofStrip from '@/components/sections/ProofStrip'
@@ -93,7 +93,7 @@ export default function Home() {
           </Pop>
 
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-6">
-            {PRODUCTS.map((p, i) => {
+            {BEST_SELLERS.map((p, i) => {
               const Icon = PRODUCT_ICONS[p.icon] ?? Sparkles
               return (
                 <div key={p.id} className={PSPAN[i] ?? 'md:col-span-2'}>

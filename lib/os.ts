@@ -77,8 +77,8 @@ export interface Product {
 export const PRODUCTS: Product[] = [
   {
     id: 'human-resources',
-    index: '01',
-    name: 'AI Human Resources',
+    index: '02',
+    name: 'AI Hiring System',
     tagline: 'Screening, onboarding, compliance',
     description: 'Auto screen resumes, schedule interviews, generate offers and onboard new hires.',
     longDescription: 'Your always on HR teammate. It reads every inbound resume, scores candidates against the role, books interviews on your calendar, drafts offer letters and walks new hires through onboarding. What used to eat a full day of admin per hire runs in the background while you focus on picking the right people.',
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     outcome: 'Hire 3x faster with zero admin work.',
     icon: 'users',
     accent: '#9A1750',
-    bestSellerRank: 1,
+    bestSellerRank: 2,
     badge: 'Team favorite',
     howItWorks: [
       { title: 'Resume lands', desc: 'Every application flows into one inbox and is parsed instantly.' },
@@ -116,7 +116,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'business-assistant',
-    index: '02',
+    index: '06',
     name: 'AI Business Assistant',
     tagline: 'Email summaries, task automation, CRM sync',
     description: 'Summarizes your inbox, creates tasks and keeps your CRM up to date automatically.',
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     outcome: 'Cut admin overhead by 50%.',
     icon: 'sparkles',
     accent: '#EE4C7C',
-    bestSellerRank: 2,
+    bestSellerRank: 6,
     badge: 'Best value',
     howItWorks: [
       { title: 'Connect inbox', desc: 'Securely link your email and CRM in a few clicks.' },
@@ -155,7 +155,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'lead-generation',
-    index: '03',
+    index: '01',
     name: 'AI Lead Generation',
     tagline: '50+ qualified leads per month',
     description: 'Sources, qualifies and reaches out to leads automatically with built in cold email sequences.',
@@ -172,7 +172,7 @@ export const PRODUCTS: Product[] = [
     outcome: 'Predictable lead flow at lower cost per meeting.',
     icon: 'target',
     accent: '#5D001E',
-    bestSellerRank: 3,
+    bestSellerRank: 1,
     badge: 'Top seller',
     howItWorks: [
       { title: 'Define your buyer', desc: 'We set your ideal customer profile and targeting rules.' },
@@ -233,8 +233,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'voice-agent',
-    index: '05',
-    name: 'AI Voice Agent',
+    index: '03',
+    name: 'AI Voice Agents',
     tagline: 'Answer every call 24/7',
     description: 'An intelligent voice agent that answers calls, qualifies leads and books appointments around the clock.',
     longDescription: 'The phone never goes unanswered again. This natural sounding voice agent picks up every call, answers common questions, qualifies the caller and books them straight into your calendar. Nights, weekends and busy afternoons all covered without hiring a single receptionist.',
@@ -250,7 +250,7 @@ export const PRODUCTS: Product[] = [
     outcome: 'Never miss a call. Capture leads around the clock.',
     icon: 'phone',
     accent: '#EE4C7C',
-    bestSellerRank: 5,
+    bestSellerRank: 3,
     badge: 'Never miss a lead',
     howItWorks: [
       { title: 'Call comes in', desc: 'The agent answers instantly in a natural voice.' },
@@ -272,8 +272,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'content-generation',
-    index: '06',
-    name: 'AI Content Generation',
+    index: '05',
+    name: 'AI Content Creation',
     tagline: '4 blog posts plus 20 social posts monthly',
     description: 'Writes, schedules and publishes your blog and social content on autopilot.',
     longDescription: 'A content team in a box. It researches topics in your niche, writes on brand blog posts and social captions, then schedules and publishes them across your channels. Consistent presence that compounds, with zero writer overhead and nothing left to chase.',
@@ -289,7 +289,7 @@ export const PRODUCTS: Product[] = [
     outcome: 'Consistent content with zero writer overhead.',
     icon: 'pencil',
     accent: '#5D001E',
-    bestSellerRank: 6,
+    bestSellerRank: 5,
     badge: 'Set and forget',
     howItWorks: [
       { title: 'Set your voice', desc: 'We tune the agent to your brand, topics and audience.' },
