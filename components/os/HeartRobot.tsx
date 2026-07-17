@@ -59,7 +59,7 @@ export default function HeartRobot({ className = '' }: { className?: string }) {
   return (
     <div className={`relative select-none ${className}`}>
       {/* glow puddle */}
-      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#B41D24]/40 via-[#7C1418]/30 to-[#4A0810]/20 blur-3xl" />
+      <div className="animate-blob absolute left-1/2 top-1/2 -z-10 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-[#B41D24]/40 via-[#7C1418]/30 to-black/20 blur-3xl" />
 
       <motion.div className="animate-float" style={{ rotate: tilt }}>
         <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full drop-shadow-[0_30px_50px_rgba(74, 8, 16,0.45)]">

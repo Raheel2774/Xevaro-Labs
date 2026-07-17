@@ -96,7 +96,7 @@ function Hero() {
             We engineer
           </motion.span>
           <motion.span variants={line} initial="hidden" animate="show" custom={1} className="block">
-            <span className="bg-gradient-to-r from-[#9B1C1C] via-[#E53E3E] to-[#C41E1E] bg-clip-text text-transparent">intelligent</span> systems
+            <span className="text-white">intelligent</span> systems
           </motion.span>
           <motion.span variants={line} initial="hidden" animate="show" custom={2} className="block">
             that scale you.
@@ -351,7 +351,7 @@ function Contact() {
         <Tag>Get in touch</Tag>
         <h2 className="font-display font-black text-white text-6xl md:text-8xl leading-[0.9] tracking-[-0.03em]">
           Ready to build<br />
-          the <span className="bg-gradient-to-r from-[#9B1C1C] via-[#E53E3E] to-[#C41E1E] bg-clip-text text-transparent">future?</span>
+          the <span className="text-white">future?</span>
         </h2>
         <p className="mt-8 text-white/50 text-lg md:text-xl font-light max-w-xl mx-auto">
           Join 100+ businesses running on Xevaro AI infrastructure.

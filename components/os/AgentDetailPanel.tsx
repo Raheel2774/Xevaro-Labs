@@ -25,12 +25,12 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
           <div className="text-xs font-mono tracking-widest text-[#B41D24]/70 uppercase mb-2">
             {agent.niche}
           </div>
-          <h2 className="text-xl font-bold text-[#FBF8F8]">{agent.name}</h2>
+          <h2 className="text-xl font-bold text-[#FFFFFF]">{agent.name}</h2>
         </div>
       </div>
 
       {/* Description */}
-      <p className="text-sm text-[#FBF8F8]/65 mb-6">
+      <p className="text-sm text-[#FFFFFF]/65 mb-6">
         {agent.description}
       </p>
 
@@ -38,13 +38,13 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       <div className="rounded-lg border border-[#B41D24]/30 bg-[#B41D24]/[0.05] p-4 mb-6">
         <div className="flex items-baseline gap-2 mb-3">
           <span className="text-3xl font-bold text-[#B41D24]">${agent.monthlyPrice}</span>
-          <span className="text-xs text-[#FBF8F8]/60">/month</span>
+          <span className="text-xs text-[#FFFFFF]/60">/month</span>
         </div>
-        <div className="text-xs text-[#FBF8F8]/65 mb-3">Setup: ${agent.setupPrice.toLocaleString()}</div>
+        <div className="text-xs text-[#FFFFFF]/65 mb-3">Setup: ${agent.setupPrice.toLocaleString()}</div>
         <div className="border-t border-white/15 pt-3">
           <div className="flex justify-between text-sm">
-            <span className="text-[#FBF8F8]/65">Year 1 Value:</span>
-            <span className="font-bold text-[#FBF8F8]">
+            <span className="text-[#FFFFFF]/65">Year 1 Value:</span>
+            <span className="font-bold text-[#FFFFFF]">
               ${((agent.monthlyPrice * 12) + agent.setupPrice).toLocaleString()}
             </span>
           </div>
@@ -53,12 +53,12 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
 
       {/* Features */}
       <div className="mb-6">
-        <h4 className="text-xs font-semibold text-[#FBF8F8]/80 mb-3 uppercase tracking-widest">Features</h4>
+        <h4 className="text-xs font-semibold text-[#FFFFFF]/80 mb-3 uppercase tracking-widest">Features</h4>
         <div className="space-y-2">
           {agent.features.map((feature, i) => (
             <div key={i} className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#B41D24]" />
-              <span className="text-sm text-[#FBF8F8]/75">{feature}</span>
+              <span className="text-sm text-[#FFFFFF]/75">{feature}</span>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       {isInCart ? (
         <motion.button
           onClick={onRemoveFromCart}
-          className="w-full rounded-lg bg-white/[0.06] px-4 py-3 text-sm font-semibold text-[#FBF8F8] hover:bg-white/[0.07] transition-all"
+          className="w-full rounded-lg bg-white/[0.06] px-4 py-3 text-sm font-semibold text-[#FFFFFF] hover:bg-white/[0.07] transition-all"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -86,7 +86,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
       )}
 
       {/* Info text */}
-      <p className="text-xs text-[#FBF8F8]/55 text-center mt-4">
+      <p className="text-xs text-[#FFFFFF]/55 text-center mt-4">
         Selected agents combine into your custom automation stack.
       </p>
     </motion.div>

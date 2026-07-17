@@ -6,8 +6,8 @@
 
 :root {
   /* Red and Lively palette, dark theme */
-  --ink:        #FBF8F8;   /* cream, primary text on dark */
-  --bg:         #0B0506;   /* near-black wine, background */
+  --ink:        #FFFFFF;   /* cream, primary text on dark */
+  --bg:         #000000;   /* near-black wine, background */
   --blush:      #E2A5A5;   /* soft pink, surfaces */
   --magenta:    #7C1418;   /* rich magenta, secondary accent */
   --pink:       #B41D24;   /* bright pink, primary CTA */
@@ -52,11 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 
 ::selection {
   background-color: rgba(180, 29, 36, 0.35);
-  color: #FBF8F8;
+  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0B0506; }
+::-webkit-scrollbar-track { background: #000000; }
 ::-webkit-scrollbar-thumb {
   background: rgba(124, 20, 24, 0.4);
   border-radius: 3px;

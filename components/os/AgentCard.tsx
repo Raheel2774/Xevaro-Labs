@@ -46,14 +46,14 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
               <div className="text-xs font-mono tracking-widest text-[#B41D24]/70 uppercase mb-2">
                 {agent.niche}
               </div>
-              <h3 className="font-display text-lg font-bold text-[#FBF8F8] leading-tight">
+              <h3 className="font-display text-lg font-bold text-[#FFFFFF] leading-tight">
                 {agent.name}
               </h3>
             </div>
           </div>
 
           {/* Description */}
-          <p className="mt-3 text-sm text-[#FBF8F8]/65 line-clamp-2">
+          <p className="mt-3 text-sm text-[#FFFFFF]/65 line-clamp-2">
             {agent.description}
           </p>
 
@@ -62,7 +62,7 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
             {agent.features.map((feature, i) => (
               <div key={i} className="flex items-start gap-2">
                 <span className="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-[#B41D24]/60 group-hover:bg-[#B41D24]" />
-                <span className="text-xs text-[#FBF8F8]/60 group-hover:text-[#FBF8F8]/75">{feature}</span>
+                <span className="text-xs text-[#FFFFFF]/60 group-hover:text-[#FFFFFF]/75">{feature}</span>
               </div>
             ))}
           </div>
@@ -72,8 +72,8 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
             <span className="text-2xl font-bold text-[#B41D24]">
               ${agent.monthlyPrice}
             </span>
-            <span className="text-xs text-[#FBF8F8]/60">/month</span>
-            <span className="text-xs text-[#FBF8F8]/55 ml-auto">
+            <span className="text-xs text-[#FFFFFF]/60">/month</span>
+            <span className="text-xs text-[#FFFFFF]/55 ml-auto">
               +${agent.setupPrice} setup
             </span>
           </div>
@@ -84,7 +84,7 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
               e.stopPropagation()
               onAddToCart(agent)
             }}
-            className="mt-4 w-full rounded-lg border border-[#B41D24]/50 bg-[#B41D24]/[0.05] px-3 py-2 text-xs font-semibold text-[#FBF8F8] transition-all hover:border-[#B41D24] hover:bg-[#B41D24]/[0.15]"
+            className="mt-4 w-full rounded-lg border border-[#B41D24]/50 bg-[#B41D24]/[0.05] px-3 py-2 text-xs font-semibold text-[#FFFFFF] transition-all hover:border-[#B41D24] hover:bg-[#B41D24]/[0.15]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

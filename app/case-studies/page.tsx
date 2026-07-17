@@ -15,11 +15,11 @@ export default function CaseStudiesPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Real systems.<br />
-              <span className="bg-gradient-to-r from-[#7C1418] to-[#B41D24] bg-clip-text text-transparent">Measurable impact.</span>
+              <span className="text-white">Measurable impact.</span>
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg font-light text-[#FBF8F8]/60">
+            <p className="mt-6 max-w-2xl text-lg font-light text-[#FFFFFF]/60">
               Every deployment reports back. These are real automation outcomes measured across
               commerce, SaaS, retail and enterprise operations.
             </p>
@@ -35,7 +35,7 @@ export default function CaseStudiesPage() {
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-white/[0.06] p-7 text-center backdrop-blur-xl">
                   <div className="bg-gradient-to-br from-[#7C1418] to-[#B41D24] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
-                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#FBF8F8]/55">{s.label}</div>
+                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#FFFFFF]/55">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -54,27 +54,27 @@ export default function CaseStudiesPage() {
                     <div>
                       <div className="flex items-center gap-4">
                         <span className="font-mono text-xs tracking-widest text-[#B41D24]">CASE-0{i + 1}</span>
-                        <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#FBF8F8]/55">{c.sector}</span>
+                        <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#FFFFFF]/55">{c.sector}</span>
                       </div>
-                      <h3 className="mt-5 font-display text-2xl font-bold text-[#FBF8F8]/90 md:text-3xl">{c.client}</h3>
+                      <h3 className="mt-5 font-display text-2xl font-bold text-[#FFFFFF]/90 md:text-3xl">{c.client}</h3>
 
                       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                         <div>
                           <div className="font-mono text-[10px] uppercase tracking-widest text-[#E0A86A]/80">Challenge</div>
-                          <p className="mt-2 text-sm leading-relaxed text-[#FBF8F8]/65">{c.challenge}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-[#FFFFFF]/65">{c.challenge}</p>
                         </div>
                         <div>
                           <div className="font-mono text-[10px] uppercase tracking-widest text-[#B41D24]/80">System deployed</div>
-                          <p className="mt-2 text-sm leading-relaxed text-[#FBF8F8]/65">{c.solution}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-[#FFFFFF]/65">{c.solution}</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Result */}
                     <div className="flex flex-col justify-center rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-7 text-center">
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-[#FBF8F8]/55">Result</div>
+                      <div className="font-mono text-[10px] uppercase tracking-widest text-[#FFFFFF]/55">Result</div>
                       <div className="mt-2 bg-gradient-to-br from-[#7C1418] to-[#B41D24] bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">{c.metric}</div>
-                      <div className="mt-1 text-xs uppercase tracking-wide text-[#FBF8F8]/55">{c.label}</div>
+                      <div className="mt-1 text-xs uppercase tracking-wide text-[#FFFFFF]/55">{c.label}</div>
                       <div className="mt-5 flex h-10 items-end justify-center gap-1">
                         {[40, 65, 50, 80, 95].map((h, k) => (
                           <span key={k} className="w-1.5 rounded-t bg-gradient-to-t from-[#7C1418] to-[#B41D24]" style={{ height: `${h}%` }} />
@@ -95,10 +95,10 @@ export default function CaseStudiesPage() {
           <Reveal>
             <GlassCard className="p-10 text-center md:p-14">
               <div className="flex justify-center gap-0.5 text-[#B41D24]">★★★★★</div>
-              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-[#FBF8F8]/85 md:text-3xl">
+              <p className="mt-6 font-display text-2xl font-light leading-relaxed text-[#FFFFFF]/85 md:text-3xl">
                 “{TESTIMONIALS[3].quote}”
               </p>
-              <div className="mt-6 text-sm text-[#FBF8F8]/60">
+              <div className="mt-6 text-sm text-[#FFFFFF]/60">
                 {TESTIMONIALS[3].name} · {TESTIMONIALS[3].role}, {TESTIMONIALS[3].industry}
               </div>
             </GlassCard>

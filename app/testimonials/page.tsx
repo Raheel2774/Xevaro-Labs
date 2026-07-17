@@ -15,19 +15,19 @@ export default function TestimonialsPage() {
           <Reveal delay={0.05}>
             <H2 className="max-w-4xl text-5xl md:text-7xl">
               Loved by the businesses{' '}
-              <span className="bg-gradient-to-r from-[#7C1418] to-[#B41D24] bg-clip-text text-transparent">
+              <span className="text-white">
                 we run for.
               </span>
             </H2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg font-light text-[#FBF8F8]/60">
+            <p className="mt-6 max-w-2xl text-lg font-light text-[#FFFFFF]/60">
               Real outcomes from real deployments. Owners, founders and operators who put an AI agent
               to work and never looked back.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="mt-7 flex items-center gap-3 text-sm text-[#FBF8F8]/60">
+            <div className="mt-7 flex items-center gap-3 text-sm text-[#FFFFFF]/60">
               <span className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-[#B41D24] text-[#B41D24]" />
@@ -47,7 +47,7 @@ export default function TestimonialsPage() {
               {TRUST_STATS.map((s) => (
                 <div key={s.label} className="bg-white/[0.06] p-7 text-center backdrop-blur-xl">
                   <div className="bg-gradient-to-br from-[#7C1418] to-[#B41D24] bg-clip-text font-display text-3xl font-bold text-transparent md:text-4xl">{s.value}</div>
-                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#FBF8F8]/55">{s.label}</div>
+                  <div className="mt-1.5 text-[11px] uppercase tracking-wide text-[#FFFFFF]/55">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -64,11 +64,11 @@ export default function TestimonialsPage() {
                 <div onMouseMove={glow} className="break-inside-avoid">
                   <GlassCard glow className="flex flex-col p-7">
                     <Quote className="h-6 w-6 text-[#B41D24]/50" />
-                    <p className="mt-4 text-[15px] leading-relaxed text-[#FBF8F8]/75">“{t.quote}”</p>
+                    <p className="mt-4 text-[15px] leading-relaxed text-[#FFFFFF]/75">“{t.quote}”</p>
                     <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                       <div>
-                        <div className="text-sm font-semibold text-[#FBF8F8]/85">{t.name}</div>
-                        <div className="text-xs text-[#FBF8F8]/55">{t.role} · {t.industry}</div>
+                        <div className="text-sm font-semibold text-[#FFFFFF]/85">{t.name}</div>
+                        <div className="text-xs text-[#FFFFFF]/55">{t.role} · {t.industry}</div>
                       </div>
                       <span className="rounded-full border border-[#B41D24]/30 bg-[#B41D24]/5 px-3 py-1 font-mono text-[10px] text-[#B41D24]">{t.result}</span>
                     </div>

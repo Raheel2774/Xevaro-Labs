@@ -13,7 +13,7 @@ function renderInline(text: string): React.ReactNode[] {
     if (m.index > last) nodes.push(text.slice(last, m.index))
     if (m[1] !== undefined) {
       nodes.push(
-        <strong key={key++} className="font-semibold text-[#FBF8F8]/90">{m[1]}</strong>,
+        <strong key={key++} className="font-semibold text-[#FFFFFF]/90">{m[1]}</strong>,
       )
     } else {
       const label = m[2]
@@ -38,19 +38,19 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
       {blocks.map((b, i) => {
         switch (b.type) {
           case 'h2':
-            return <h2 key={i} className="pt-6 font-display text-2xl font-semibold text-[#FBF8F8]/90 md:text-3xl">{renderInline(b.text)}</h2>
+            return <h2 key={i} className="pt-6 font-display text-2xl font-semibold text-[#FFFFFF]/90 md:text-3xl">{renderInline(b.text)}</h2>
           case 'h3':
-            return <h3 key={i} className="pt-2 font-display text-lg font-semibold text-[#FBF8F8]/85 md:text-xl">{renderInline(b.text)}</h3>
+            return <h3 key={i} className="pt-2 font-display text-lg font-semibold text-[#FFFFFF]/85 md:text-xl">{renderInline(b.text)}</h3>
           case 'p':
-            return <p key={i} className="text-[15px] leading-relaxed text-[#FBF8F8]/65 md:text-base">{renderInline(b.text)}</p>
+            return <p key={i} className="text-[15px] leading-relaxed text-[#FFFFFF]/65 md:text-base">{renderInline(b.text)}</p>
           case 'ul':
             return (
-              <ul key={i} className="ml-5 list-disc space-y-2 text-[15px] leading-relaxed text-[#FBF8F8]/65 marker:text-[#B41D24] md:text-base">
+              <ul key={i} className="ml-5 list-disc space-y-2 text-[15px] leading-relaxed text-[#FFFFFF]/65 marker:text-[#B41D24] md:text-base">
                 {b.items.map((it, j) => <li key={j}>{renderInline(it)}</li>)}
               </ul>
             )
           case 'quote':
-            return <blockquote key={i} className="border-l-2 border-[#B41D24]/50 pl-4 italic text-[#FBF8F8]/75">{renderInline(b.text)}</blockquote>
+            return <blockquote key={i} className="border-l-2 border-[#B41D24]/50 pl-4 italic text-[#FFFFFF]/75">{renderInline(b.text)}</blockquote>
         }
       })}
     </div>

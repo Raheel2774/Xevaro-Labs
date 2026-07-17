@@ -43,12 +43,12 @@ export function ProductCard({ product, delay = 0, onMouseMove }: ProductCardProp
             </div>
 
             {/* Setup fee badge */}
-            <div className="mt-2 inline-block rounded-full bg-[#E2A5A5]/40 px-3 py-1 text-xs text-[#FBF8F8]/70">
+            <div className="mt-2 inline-block rounded-full bg-[#E2A5A5]/40 px-3 py-1 text-xs text-[#FFFFFF]/70">
               Setup: ${product.setupPrice}
             </div>
 
             {/* Product name */}
-            <h3 className="mt-5 font-display text-2xl font-bold text-[#FBF8F8] transition-colors duration-300 group-hover:text-[#7C1418]">
+            <h3 className="mt-5 font-display text-2xl font-bold text-[#FFFFFF] transition-colors duration-300 group-hover:text-[#7C1418]">
               {product.name}
             </h3>
 
@@ -58,7 +58,7 @@ export function ProductCard({ product, delay = 0, onMouseMove }: ProductCardProp
             </p>
 
             {/* Description */}
-            <p className="mt-4 text-sm leading-relaxed text-[#FBF8F8]/65">
+            <p className="mt-4 text-sm leading-relaxed text-[#FFFFFF]/65">
               {product.description}
             </p>
 
@@ -67,19 +67,19 @@ export function ProductCard({ product, delay = 0, onMouseMove }: ProductCardProp
               {product.features.map((feature, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#B41D24]/70 transition-colors group-hover:bg-[#B41D24]" />
-                  <span className="text-xs text-[#FBF8F8]/70">{feature}</span>
+                  <span className="text-xs text-[#FFFFFF]/70">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Outcome box */}
             <div className="mt-6 rounded-2xl border border-[#7C1418]/15 bg-[#E2A5A5]/25 p-3 transition-all duration-300 group-hover:border-[#B41D24]/40 group-hover:bg-[#E2A5A5]/45">
-              <p className="text-xs font-semibold text-[#FBF8F8]">{product.outcome}</p>
+              <p className="text-xs font-semibold text-[#FFFFFF]">{product.outcome}</p>
             </div>
 
             {/* CTA */}
             <motion.button
-              className="mt-6 w-full rounded-full border-2 border-[#7C1418]/30 bg-transparent px-4 py-2.5 text-sm font-semibold text-[#FBF8F8] transition-all duration-300 group-hover:border-[#B41D24] group-hover:bg-[#B41D24] group-hover:text-white"
+              className="mt-6 w-full rounded-full border-2 border-[#7C1418]/30 bg-transparent px-4 py-2.5 text-sm font-semibold text-[#FFFFFF] transition-all duration-300 group-hover:border-[#B41D24] group-hover:bg-[#B41D24] group-hover:text-white"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >

@@ -15,14 +15,14 @@ export default function ProofStrip() {
         <div className="relative mt-7 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex shrink-0 animate-marquee items-center gap-12 pr-12">
             {items.map((name, i) => (
-              <span key={i} className="whitespace-nowrap font-display text-xl font-semibold text-[#FBF8F8]/50 transition-colors hover:text-[#7C1418]">
+              <span key={i} className="whitespace-nowrap font-display text-xl font-semibold text-[#FFFFFF]/50 transition-colors hover:text-[#7C1418]">
                 {name}
               </span>
             ))}
           </div>
           <div className="flex shrink-0 animate-marquee items-center gap-12 pr-12" aria-hidden>
             {items.map((name, i) => (
-              <span key={i} className="whitespace-nowrap font-display text-xl font-semibold text-[#FBF8F8]/50 transition-colors hover:text-[#7C1418]">
+              <span key={i} className="whitespace-nowrap font-display text-xl font-semibold text-[#FFFFFF]/50 transition-colors hover:text-[#7C1418]">
                 {name}
               </span>
             ))}

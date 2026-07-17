@@ -75,7 +75,7 @@ export function MagneticButton({
   const base = 'relative inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold tracking-wide overflow-hidden transition-shadow duration-300'
   const styles = variant === 'primary'
     ? 'text-white shadow-[0_8px_28px_rgba(180, 29, 36,0.35)] hover:shadow-[0_12px_40px_rgba(180, 29, 36,0.5)]'
-    : 'text-[#FBF8F8] border-2 border-white/20 hover:border-[#7C1418]/60 hover:text-[#7C1418] backdrop-blur-sm transition-colors'
+    : 'text-[#FFFFFF] border-2 border-white/20 hover:border-[#7C1418]/60 hover:text-[#7C1418] backdrop-blur-sm transition-colors'
 
   return (
     <motion.a
@@ -100,7 +100,7 @@ export function MagneticButton({
 
 export function H2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <h2 className={`font-display font-bold tracking-tight text-[#FBF8F8] ${className}`}>
+    <h2 className={`font-display font-bold tracking-tight text-[#FFFFFF] ${className}`}>
       {children}
     </h2>
   )

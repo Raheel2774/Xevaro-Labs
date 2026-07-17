@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative -mt-16 min-h-screen overflow-hidden bg-[#4A0810]">
+      <section className="relative -mt-16 min-h-screen overflow-hidden bg-black">
         {/* Giant background wordmark */}
         <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
           <span className="select-none whitespace-nowrap font-display text-[26vw] font-bold leading-none tracking-tighter text-white/[0.06]">
@@ -34,7 +34,7 @@ export default function Home() {
         </div>
 
         {/* Scrims */}
-        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-[#4A0810] via-[#4A0810]/40 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="pointer-events-none absolute -left-24 bottom-10 z-[2] h-[420px] w-[420px] rounded-full bg-[#B41D24]/18 blur-[120px]" />
 
         {/* Hero copy, anchored lower */}
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             <h1 className="mt-5 font-display text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl">
               The living AI system that{' '}
-              <span className="bg-gradient-to-r from-[#B41D24] to-[#E2A5A5] bg-clip-text text-transparent">runs your business.</span>
+              <span className="text-white">runs your business.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg font-light leading-relaxed text-[#E2A5A5]/90">
               A network of AI agents, automations and data pipelines that capture leads,
@@ -72,7 +72,7 @@ export default function Home() {
       {/* ── Trust marquee ── */}
       <section className="relative py-8">
         <Marquee
-          className="whitespace-nowrap font-display text-lg font-medium text-[#FBF8F8]/35"
+          className="whitespace-nowrap font-display text-lg font-medium text-[#FFFFFF]/35"
           items={INDUSTRIES_SERVED.flatMap(n => [n, <span key={n + '-dot'} className="text-[#B41D24]">•</span>])}
         />
       </section>
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </Pop>
           <Pop delay={0.05}>
-            <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#FBF8F8] md:text-6xl">
+            <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#FFFFFF] md:text-6xl">
               Six AI agents that work like your full time team.
             </h2>
           </Pop>
@@ -104,12 +104,12 @@ export default function Home() {
                           style={{ background: `linear-gradient(135deg, ${p.accent}, #B41D24)` }}>
                           <Icon className="h-6 w-6" />
                         </span>
-                        <span className="font-display text-xl font-bold text-[#B41D24]">${p.monthlyPrice.toLocaleString()}<span className="text-sm text-[#FBF8F8]/50">/mo</span></span>
+                        <span className="font-display text-xl font-bold text-[#B41D24]">${p.monthlyPrice.toLocaleString()}<span className="text-sm text-[#FFFFFF]/50">/mo</span></span>
                       </div>
-                      <h3 className="mt-5 font-display text-2xl font-bold text-[#FBF8F8] transition-colors group-hover:text-[#7C1418]">{p.name}</h3>
+                      <h3 className="mt-5 font-display text-2xl font-bold text-[#FFFFFF] transition-colors group-hover:text-[#7C1418]">{p.name}</h3>
                       <p className="mt-2 text-sm font-medium text-[#7C1418]/80">{p.tagline}</p>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#FBF8F8]/60">{p.description}</p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#FBF8F8] transition-colors group-hover:text-[#B41D24]">
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#FFFFFF]/60">{p.description}</p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#FFFFFF] transition-colors group-hover:text-[#B41D24]">
                         Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </Link>
@@ -131,13 +131,13 @@ export default function Home() {
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Pop>
-            <div className="relative overflow-hidden rounded-[36px] bg-[#4A0810] p-10 md:p-16">
+            <div className="relative overflow-hidden rounded-[36px] bg-black p-10 md:p-16">
               <div className="pointer-events-none absolute -right-10 -top-10 h-72 w-72 rounded-full bg-[#B41D24]/25 blur-3xl" />
               <div className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2">
                 <div>
                   <h2 className="font-display text-4xl font-bold leading-tight text-white md:text-6xl">
                     {TOTAL_AGENTS} AI agents.{' '}
-                    <span className="bg-gradient-to-r from-[#B41D24] to-[#E2A5A5] bg-clip-text text-transparent">25 industries.</span>
+                    <span className="text-white">25 industries.</span>
                   </h2>
                   <p className="mt-5 max-w-md text-lg font-light text-[#E2A5A5]/85">
                     Prebuilt agents that capture leads, book appointments and run support,
@@ -169,13 +169,13 @@ export default function Home() {
       {/* ── Process bento ── */}
       <section className="relative px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#FBF8F8] md:text-6xl">From audit to autonomous in four steps.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#FFFFFF] md:text-6xl">From audit to autonomous in four steps.</h2></Pop>
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((p, i) => (
               <BentoCard key={p.step} delay={i * 0.08} className="p-7">
                 <span className="font-display text-4xl font-bold text-[#B41D24]/30">{p.step}</span>
-                <h3 className="mt-3 font-display text-xl font-bold text-[#FBF8F8]">{p.title}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[#FBF8F8]/65">{p.desc}</p>
+                <h3 className="mt-3 font-display text-xl font-bold text-[#FFFFFF]">{p.title}</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-[#FFFFFF]/65">{p.desc}</p>
               </BentoCard>
             ))}
           </div>
@@ -185,18 +185,18 @@ export default function Home() {
       {/* ── Case studies ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#FBF8F8] md:text-6xl">Real systems. Real impact.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#FFFFFF] md:text-6xl">Real systems. Real impact.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {CASE_STUDIES.map((c, i) => (
               <BentoCard key={c.client} delay={(i % 2) * 0.08} accent="#7C1418" className="p-8">
                 <Link href="/case-studies" className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-display text-2xl font-bold text-[#FBF8F8] transition-transform group-hover:translate-x-1 md:text-3xl">{c.client}</h3>
-                    <span className="text-sm text-[#FBF8F8]/50">{c.sector}</span>
+                    <h3 className="font-display text-2xl font-bold text-[#FFFFFF] transition-transform group-hover:translate-x-1 md:text-3xl">{c.client}</h3>
+                    <span className="text-sm text-[#FFFFFF]/50">{c.sector}</span>
                   </div>
                   <div className="text-right">
                     <div className="bg-gradient-to-br from-[#7C1418] to-[#B41D24] bg-clip-text font-display text-3xl font-bold text-transparent md:text-5xl">{c.metric}</div>
-                    <div className="text-xs uppercase tracking-wide text-[#FBF8F8]/45">{c.label}</div>
+                    <div className="text-xs uppercase tracking-wide text-[#FFFFFF]/45">{c.label}</div>
                   </div>
                 </Link>
               </BentoCard>
@@ -208,16 +208,16 @@ export default function Home() {
       {/* ── Testimonials bento ── */}
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#FBF8F8] md:text-6xl">Results people feel.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#FFFFFF] md:text-6xl">Results people feel.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {TESTIMONIALS.slice(0, 6).map((t, i) => (
               <BentoCard key={t.name} delay={(i % 3) * 0.08} className="flex flex-col p-7">
                 <Quote className="h-6 w-6 text-[#B41D24]/60" />
-                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#FBF8F8]/75">“{t.quote}”</p>
+                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#FFFFFF]/75">“{t.quote}”</p>
                 <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                   <div>
-                    <div className="text-sm font-semibold text-[#FBF8F8]">{t.name}</div>
-                    <div className="text-xs text-[#FBF8F8]/55">{t.role} · {t.industry}</div>
+                    <div className="text-sm font-semibold text-[#FFFFFF]">{t.name}</div>
+                    <div className="text-xs text-[#FFFFFF]/55">{t.role} · {t.industry}</div>
                   </div>
                   <span className="rounded-full bg-[#E2A5A5]/40 px-3 py-1 font-mono text-[10px] text-[#7C1418]">{t.result}</span>
                 </div>
@@ -231,14 +231,14 @@ export default function Home() {
       <section className="relative px-6 py-16 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Pop>
-            <div className="grid grid-cols-1 gap-8 rounded-[36px] bg-gradient-to-br from-[#E2A5A5]/50 via-white/60 to-white/40 p-10 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-4 md:p-14">
+            <div className="grid grid-cols-1 gap-8 rounded-[36px] bg-gradient-to-br from-white/[0.06] via-white/60 to-white/40 p-10 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-4 md:p-14">
               {PROMISES.map(({ icon, title, desc }) => {
                 const Icon = PROMISE_ICONS[icon] ?? Rocket
                 return (
                   <div key={title}>
                     <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.07] text-[#B41D24]"><Icon className="h-5 w-5" /></span>
-                    <h4 className="mt-4 font-display text-lg font-bold text-[#FBF8F8]">{title}</h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[#FBF8F8]/65">{desc}</p>
+                    <h4 className="mt-4 font-display text-lg font-bold text-[#FFFFFF]">{title}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[#FFFFFF]/65">{desc}</p>
                   </div>
                 )
               })}
@@ -252,15 +252,15 @@ export default function Home() {
       {/* ── Blog ── */}
       <section className="relative px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Pop><h2 className="font-display text-4xl font-bold text-[#FBF8F8] md:text-6xl">Automation, explained.</h2></Pop>
+          <Pop><h2 className="font-display text-4xl font-bold text-[#FFFFFF] md:text-6xl">Automation, explained.</h2></Pop>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[...POSTS].sort((a, b) => +new Date(b.date) - +new Date(a.date)).slice(0, 3).map((p, i) => (
               <BentoCard key={p.slug} delay={(i % 3) * 0.08} className="flex flex-col p-7">
                 <Link href={`/blog/${p.slug}`} className="flex h-full flex-col">
                   <span className="font-mono text-xs tracking-widest text-[#B41D24]">{p.category}</span>
-                  <h3 className="mt-4 font-display text-lg font-bold text-[#FBF8F8] transition-transform group-hover:translate-x-1">{p.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[#FBF8F8]/60">{p.description}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#FBF8F8]/60 transition-colors group-hover:text-[#B41D24]">Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+                  <h3 className="mt-4 font-display text-lg font-bold text-[#FFFFFF] transition-transform group-hover:translate-x-1">{p.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[#FFFFFF]/60">{p.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#FFFFFF]/60 transition-colors group-hover:text-[#B41D24]">Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
                 </Link>
               </BentoCard>
             ))}
@@ -271,7 +271,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="relative px-6 py-24 md:px-10">
         <div className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-[40px] bg-[#4A0810] p-10 text-center md:p-20">
+          <div className="relative overflow-hidden rounded-[40px] bg-black p-10 text-center md:p-20">
             <div className="pointer-events-none absolute -left-16 -top-16 h-72 w-72 rounded-full bg-[#B41D24]/25 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-16 -right-16 h-72 w-72 rounded-full bg-[#7C1418]/40 blur-3xl" />
             <div className="relative">

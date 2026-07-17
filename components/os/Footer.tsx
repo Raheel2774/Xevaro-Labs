@@ -5,7 +5,7 @@ import { NAV, LEGAL, CONTACT } from '@/lib/os'
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 border-t border-white/10 bg-[#4A0810] text-[#E3E2DF]">
+    <footer className="relative z-10 border-t border-white/10 bg-black text-[#E3E2DF]">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>

@@ -197,7 +197,7 @@ export default function OrganicRobot({ className = '' }: { className?: string })
 
       {/* Ground shadow, breathing with the float */}
       <motion.div
-        className="absolute -bottom-3 left-1/2 h-6 w-[55%] -translate-x-1/2 rounded-[50%] bg-[#4A0810]/15 blur-md"
+        className="absolute -bottom-3 left-1/2 h-6 w-[55%] -translate-x-1/2 rounded-[50%] bg-black/15 blur-md"
         animate={{ scaleX: [1, 0.88, 1], opacity: [0.6, 0.4, 0.6] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
