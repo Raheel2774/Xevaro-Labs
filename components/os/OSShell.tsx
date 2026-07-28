@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import AmbientBackground from './AmbientBackground'
 import { CursorBlob } from './bento'
+import ChatWidget from './ChatWidget'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
@@ -22,6 +23,7 @@ export default function OSShell({ children }: { children: React.ReactNode }) {
       <Navbar />
       <main className="relative z-10">{children}</main>
       <Footer />
+      <ChatWidget />
     </>
   )
 }
