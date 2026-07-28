@@ -5,9 +5,9 @@ import { SYSTEM_PROMPT } from '@/lib/chatbot-knowledge'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-// Model: Opus 4.8 by default. For a high-traffic public chatbot you can switch
-// to "claude-haiku-4-5" (far cheaper, still strong) by changing this constant.
-const MODEL = 'claude-opus-4-8'
+// Model: Haiku 4.5 — fast and cost-effective for a public website chatbot.
+// Bump to "claude-opus-4-8" if you want maximum answer quality.
+const MODEL = 'claude-haiku-4-5'
 const MAX_TURNS = 12 // trim history to bound cost/abuse
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string }
