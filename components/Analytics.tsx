@@ -41,6 +41,14 @@ export default function Analytics() {
     if (!pathname) return
     window.rdt?.('track', 'PageVisit')
     if (GA_ID) window.gtag?.('config', GA_ID, { page_path: pathname })
+
+    // First-party pageview beacon (fire and forget) → powers the daily digest.
+    try {
+      const payload = JSON.stringify({ path: pathname, referrer: document.referrer })
+      const blob = new Blob([payload], { type: 'application/json' })
+      if (navigator.sendBeacon) navigator.sendBeacon('/api/track', blob)
+      else fetch('/api/track', { method: 'POST', body: payload, headers: { 'Content-Type': 'application/json' }, keepalive: true })
+    } catch { /* ignore */ }
   }, [pathname])
 
   return (

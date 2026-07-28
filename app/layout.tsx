@@ -3,6 +3,7 @@ import './globals.css'
 import OSShell from '@/components/os/OSShell'
 import JsonLd from '@/components/JsonLd'
 import Analytics from '@/components/Analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { SITE, organizationSchema, websiteSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -72,6 +73,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#000000] text-[#FFFFFF] antialiased overflow-x-hidden">
         <Analytics />
+        <VercelAnalytics />
         <OSShell>{children}</OSShell>
       </body>
     </html>
