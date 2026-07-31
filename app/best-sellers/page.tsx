@@ -68,8 +68,8 @@ export default function BestSellersPage() {
 
           <Pop delay={0.15}>
             <p className="mx-auto mt-10 max-w-2xl text-lg font-light text-[#FFFFFF]/70">
-              These six products get deployed the most, and for good reason. Clear pricing,
-              live in 48 hours, and built to pay for themselves fast.
+              These roles get hired the most, and for good reason. Clear pricing,
+              live in 14 days, and built to pay for themselves fast.
             </p>
           </Pop>
           <Pop delay={0.2}>
@@ -162,7 +162,7 @@ export default function BestSellersPage() {
           <Pop><h2 className="text-center font-display text-3xl font-bold text-[#FFFFFF] md:text-5xl">Why teams pick these first</h2></Pop>
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { t: 'Live in 48 hours', d: 'No long builds. We set it up, test it and hand you the keys within two days.' },
+              { t: 'Live in 14 days', d: 'No long builds. We set it up, test it and hand you the keys within two days.' },
               { t: 'Clear flat pricing', d: 'Know exactly what you pay every month. No surprise usage bills, month to month.' },
               { t: 'Pays for itself', d: 'Each product is scoped to return more than it costs, usually within the first month.' },
             ].map((c, i) => (

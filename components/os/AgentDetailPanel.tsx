@@ -34,19 +34,17 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
         {agent.description}
       </p>
 
-      {/* Pricing Box */}
+      {/* Included in a role */}
       <div className="rounded-lg border border-[#B41D24]/30 bg-[#B41D24]/[0.05] p-4 mb-6">
-        <div className="flex items-baseline gap-2 mb-3">
-          <span className="text-3xl font-bold text-[#B41D24]">${agent.monthlyPrice}</span>
-          <span className="text-xs text-[#FFFFFF]/60">/month</span>
-        </div>
-        <div className="text-xs text-[#FFFFFF]/65 mb-3">Setup: ${agent.setupPrice.toLocaleString()}</div>
-        <div className="border-t border-white/15 pt-3">
+        <div className="text-sm font-semibold text-[#FFFFFF] mb-2">Included in your role</div>
+        <p className="text-xs text-[#FFFFFF]/70 leading-relaxed">
+          This capability is deployed as part of an AI role we build, onboard and manage.
+          It is not a separate subscription.
+        </p>
+        <div className="border-t border-white/15 pt-3 mt-3">
           <div className="flex justify-between text-sm">
-            <span className="text-[#FFFFFF]/65">Year 1 Value:</span>
-            <span className="font-bold text-[#FFFFFF]">
-              ${((agent.monthlyPrice * 12) + agent.setupPrice).toLocaleString()}
-            </span>
+            <span className="text-[#FFFFFF]/65">Roles from</span>
+            <span className="font-bold text-[#B41D24]">$1,200/mo</span>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ export const KNOWLEDGE = `
 Xevaro Labs is an AI automation agency. We turn manual business operations into
 self running systems: AI agents, workflow automations and data pipelines that
 capture leads, book work and run support around the clock. Systems deploy in
-about 48 hours, pricing is month to month (no long contracts), and we have
+about 14 days, pricing is month to month after a 3 month minimum, and we have
 deployed 100+ systems across 25+ industries.
 
 # Contact
@@ -55,7 +55,7 @@ ${productBlock()}
 ${agentSummary()}
 
 # Key pages
-- / (home), /products (all six products), /products/<id> (product detail),
+- / (home), /products (all four roles), /products/<id> (product detail),
   /best-sellers (the six core products ranked), /agents (75 agent catalog),
   /pricing (full pricing tables + quote form), /contact (book an audit).
 `.trim()

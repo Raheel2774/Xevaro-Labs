@@ -26,13 +26,13 @@ export default function ProductsPage() {
           </Pop>
           <Pop delay={0.05}>
             <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#FFFFFF] md:text-6xl">
-              Six AI automation products. One unified platform.
+              Four AI roles. One workforce.
             </h1>
           </Pop>
           <Pop delay={0.1}>
             <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-[#FFFFFF]/65">
               Start with one product or combine them into a complete automation platform.
-              Deploy in 48 hours. Scale as you grow.
+              Live in 14 days. Hire the next role when you are ready.
             </p>
           </Pop>
         </div>

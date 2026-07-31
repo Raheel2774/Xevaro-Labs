@@ -41,7 +41,7 @@ export default function AgentsPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-2xl text-lg text-[#FFFFFF]/65 font-light">
-              Browse our complete catalog. Filter by niche, add to cart, and combine agents into your perfect automation stack.
+              Every capability we can deploy, by niche. These are the building blocks inside your AI roles, not separate subscriptions. Shortlist what you need and we will map it to the right role.
             </p>
           </Reveal>
         </div>
@@ -89,7 +89,7 @@ export default function AgentsPage() {
             {/* Cart Summary */}
             {cartItems.length > 0 && (
               <div className="mt-6 rounded-lg border border-[#B41D24]/30 bg-[#B41D24]/[0.05] p-4">
-                <div className="text-xs font-semibold text-[#B41D24] mb-3">CART ({cartItems.length})</div>
+                <div className="text-xs font-semibold text-[#B41D24] mb-3">SHORTLIST ({cartItems.length})</div>
                 <div className="space-y-2 mb-4 max-h-40 overflow-y-auto">
                   {cartItems.map(item => (
                     <div key={item.id} className="flex justify-between items-center text-xs text-[#FFFFFF]/80">
@@ -104,20 +104,15 @@ export default function AgentsPage() {
                   ))}
                 </div>
                 <div className="border-t border-white/15 pt-3 mb-3">
-                  <div className="flex justify-between text-sm font-semibold text-[#FFFFFF]">
-                    <span>Monthly:</span>
-                    <span className="text-[#B41D24]">${cartItems.reduce((sum, a) => sum + a.monthlyPrice, 0).toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-[#FFFFFF]/65 mt-1">
-                    <span>Setup:</span>
-                    <span>${cartItems.reduce((sum, a) => sum + a.setupPrice, 0).toLocaleString()}</span>
-                  </div>
+                  <p className="text-xs text-[#FFFFFF]/65">
+                    These capabilities ship inside an AI role. We will map them to the right one for you.
+                  </p>
                 </div>
                 <button
                   onClick={() => setShowPricingModal(true)}
                   className="w-full py-2 rounded-lg bg-[#B41D24] text-white text-xs font-semibold hover:bg-[#7C1418] transition-all"
                 >
-                  View Details
+                  Match to a role
                 </button>
               </div>
             )}

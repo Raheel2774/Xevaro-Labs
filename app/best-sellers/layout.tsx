@@ -6,7 +6,7 @@ import { BEST_SELLERS } from '@/lib/os'
 export const metadata: Metadata = pageMeta({
   title: 'Best Selling AI Products',
   description:
-    'The 6 best selling AI products from Xevaro Labs: AI Human Resources, Business Assistant, Lead Generation, Appointment Recovery, Voice Agent and Content Generation. Deployed in 48 hours with clear monthly pricing.',
+    'The AI roles businesses hire most from Xevaro Labs: the AI Recruiter, the AI Receptionist, the AI SDR and the AI Visibility Manager. Live in 14 days with clear monthly pricing.',
   path: '/best-sellers',
   keywords: [
     'best AI products',

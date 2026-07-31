@@ -88,7 +88,7 @@ export default function Home() {
           </Pop>
           <Pop delay={0.05}>
             <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-[#FFFFFF] md:text-6xl">
-              Six AI agents that work like your full time team.
+              Four AI roles that work like your full time team.
             </h2>
           </Pop>
 

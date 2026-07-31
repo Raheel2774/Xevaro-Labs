@@ -10,40 +10,47 @@ const PROMISE_ICONS: Record<string, typeof Rocket> = { Rocket, ShieldCheck, Wren
 
 const PACKAGES = [
   {
-    name: 'Launch',
-    tagline: 'One high impact system, live fast.',
-    for: 'Best for a single flagship agent or automation.',
+    name: 'One Role',
+    tagline: 'Hire one. Prove it. Add more when you are ready.',
+    price: 'from $1,200',
+    priceNote: '/month',
+    for: 'Best for a first hire, usually the AI Recruiter or the AI Receptionist.',
     features: [
-      '1 AI agent or automation',
-      'Core integration (calendar / CRM / SMS)',
-      'Setup, testing & go live',
-      'Email support',
+      'Any one AI role, fully deployed',
+      'Deployment from $2,000 one time',
+      'Live in 14 days',
+      '30, 60 and 90 day reviews included',
+      'Every capability that role needs, included',
     ],
     featured: false,
   },
   {
-    name: 'Growth',
-    tagline: 'A connected stack that compounds.',
-    for: 'Best for businesses automating multiple workflows.',
+    name: 'Two Roles',
+    tagline: 'The pair most clients settle on.',
+    price: 'from $2,700',
+    priceNote: '/month',
+    for: 'Best for businesses fixing hiring and the phone at the same time.',
     features: [
-      'Up to 3 agents + automations',
-      'Multi tool integration layer',
-      'Lead capture + follow up + support',
-      'Monthly optimization & reporting',
+      'Any two AI roles',
+      'Second deployment fee cut by half',
+      'Shared CRM and integration layer',
+      'One monthly report across both roles',
       'Priority support',
     ],
     featured: true,
   },
   {
-    name: 'Command',
-    tagline: 'Your entire operation, autonomous.',
-    for: 'Best for scaling companies going all in.',
+    name: 'Full Workforce',
+    tagline: 'All four roles, one team.',
+    price: '$5,700',
+    priceNote: '/month',
+    for: 'Best for owners who want hiring, phone, pipeline and visibility handled.',
     features: [
-      'Unlimited agents + full automation suite',
-      'Custom website / web app',
-      'Business intelligence dashboards',
-      'Dedicated build & strategy partner',
-      'Continuous optimization',
+      'AI Recruiter, Receptionist, SDR and Visibility Manager',
+      'Third and fourth deployment fees waived',
+      'Quarterly business review with the founder',
+      'Continuous optimization across all roles',
+      'Dedicated delivery lead',
     ],
     featured: false,
   },
@@ -94,13 +101,13 @@ export default function PricingPage() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal><div className="flex justify-center"><Eyebrow>Pricing</Eyebrow></div></Reveal>
           <Reveal delay={0.05}>
-            <H2 className="text-5xl md:text-7xl">Tailored to your<br />operations.</H2>
+            <H2 className="text-5xl md:text-7xl">Priced against<br />a salary.</H2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg font-light text-[#FFFFFF]/60">
-              Every Xevaro system is scoped to your workflows, so pricing is tailored. Most engagements
-              pair a one time build with a monthly retainer for hosting, monitoring and improvements.
-              Pick the tier that fits and we&apos;ll send a precise quote.
+              Every role costs a fraction of the person it works beside. Each one pairs a one time
+              deployment fee with a monthly rate that covers hosting, monitoring, tuning and support.
+              No proposals, no scoping calls before you know the number. The prices are below.
             </p>
           </Reveal>
         </div>
@@ -124,8 +131,8 @@ export default function PricingPage() {
                 <h3 className="font-display text-2xl font-bold text-[#FFFFFF]/90">{pkg.name}</h3>
                 <p className="mt-2 text-sm text-[#FFFFFF]/65">{pkg.tagline}</p>
                 <div className="mt-5 border-t border-white/10 pt-5">
-                  <span className="font-display text-3xl font-bold text-[#FFFFFF]/90">Custom</span>
-                  <span className="ml-2 text-sm text-[#FFFFFF]/55">tailored quote</span>
+                  <span className="font-display text-3xl font-bold text-[#FFFFFF]/90">{pkg.price}</span>
+                  <span className="ml-1 text-sm text-[#FFFFFF]/55">{pkg.priceNote}</span>
                 </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
@@ -142,7 +149,7 @@ export default function PricingPage() {
                   }`}
                 >
                   {pkg.featured && <span className="absolute inset-0 bg-gradient-to-r from-[#7C1418] to-[#B41D24]" />}
-                  <span className="relative">Get {pkg.name} Quote</span>
+                  <span className="relative">Hire {pkg.name}</span>
                 </a>
               </div>
             </Reveal>
@@ -154,7 +161,7 @@ export default function PricingPage() {
       <section className="relative px-6 pb-16 md:px-10">
         <div className="mx-auto max-w-6xl">
           <Reveal><Eyebrow>Core product pricing</Eyebrow></Reveal>
-          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">Six products. Clear prices.</H2></Reveal>
+          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">Four roles. Clear prices.</H2></Reveal>
           <div className="mt-10 overflow-x-auto rounded-3xl border border-white/10 bg-white/55">
             <table className="w-full text-left text-sm">
               <thead>
@@ -186,8 +193,8 @@ export default function PricingPage() {
       {/* ── All 75 agents pricing ── */}
       <section className="relative px-6 pb-20 md:px-10">
         <div className="mx-auto max-w-6xl">
-          <Reveal><Eyebrow>AI agent pricing</Eyebrow></Reveal>
-          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">All {AGENTS.length} agents, priced.</H2></Reveal>
+          <Reveal><Eyebrow>Capability catalog</Eyebrow></Reveal>
+          <Reveal delay={0.05}><H2 className="text-3xl md:text-5xl">All {AGENTS.length} capabilities, included.</H2></Reveal>
           <Reveal delay={0.1}>
             <div className="mt-10 max-h-[520px] overflow-auto rounded-3xl border border-white/10 bg-white/55">
               <table className="w-full text-left text-sm">
@@ -195,8 +202,7 @@ export default function PricingPage() {
                   <tr className="border-b border-white/10">
                     <th className="px-5 py-4 font-semibold text-[#FFFFFF]">Agent</th>
                     <th className="px-5 py-4 font-semibold text-[#FFFFFF]">Niche</th>
-                    <th className="px-5 py-4 text-right font-semibold text-[#FFFFFF]">Monthly</th>
-                    <th className="px-5 py-4 text-right font-semibold text-[#FFFFFF]">Setup</th>
+                    <th className="px-5 py-4 text-right font-semibold text-[#FFFFFF]">Ships inside</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -204,8 +210,7 @@ export default function PricingPage() {
                     <tr key={a.id} className="border-b border-white/10 transition-colors last:border-0 hover:bg-[#E2A5A5]/20">
                       <td className="px-5 py-3 font-medium text-[#FFFFFF]">{a.name}</td>
                       <td className="px-5 py-3 text-[#FFFFFF]/60">{a.niche}</td>
-                      <td className="px-5 py-3 text-right font-bold text-[#B41D24]">${a.monthlyPrice}</td>
-                      <td className="px-5 py-3 text-right text-[#FFFFFF]/75">${a.setupPrice}</td>
+                      <td className="px-5 py-3 text-right text-[#FFFFFF]/75">An AI role</td>
                     </tr>
                   ))}
                 </tbody>
@@ -214,7 +219,7 @@ export default function PricingPage() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-4 text-center text-sm text-[#FFFFFF]/55">
-              Browse full details, filter by niche and build your stack on the <a href="/agents" className="font-semibold text-[#7C1418] hover:text-[#B41D24]">agents page</a>.
+              These are capabilities, not separate subscriptions. Browse and shortlist them on the <a href="/agents" className="font-semibold text-[#7C1418] hover:text-[#B41D24]">agents page</a>.
             </p>
           </Reveal>
         </div>

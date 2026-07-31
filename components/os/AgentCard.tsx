@@ -67,14 +67,10 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
             ))}
           </div>
 
-          {/* Pricing */}
-          <div className="mt-5 flex items-baseline gap-2 border-t border-white/15 pt-4">
-            <span className="text-2xl font-bold text-[#B41D24]">
-              ${agent.monthlyPrice}
-            </span>
-            <span className="text-xs text-[#FFFFFF]/60">/month</span>
-            <span className="text-xs text-[#FFFFFF]/55 ml-auto">
-              +${agent.setupPrice} setup
+          {/* Included in a role */}
+          <div className="mt-5 border-t border-white/15 pt-4">
+            <span className="text-xs font-semibold text-[#B41D24]">
+              Included in your role
             </span>
           </div>
 
@@ -88,7 +84,7 @@ export function AgentCard({ agent, isSelected, onSelect, onAddToCart, delay = 0 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Add to Cart
+            Add to shortlist
           </motion.button>
         </div>
       </motion.div>

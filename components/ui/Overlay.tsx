@@ -260,9 +260,9 @@ function Stats() {
 
 const work = [
   { client: 'RetailCo',     tag: 'E-commerce AI',   metric: '+340%', label: 'Revenue growth' },
-  { client: 'TechFlow',     tag: 'SaaS Automation', metric: '80%',   label: 'Time saved' },
-  { client: 'OmegaShop',    tag: 'Chatbot Deploy',  metric: '2x',    label: 'Conversion rate' },
-  { client: 'AutoVentures', tag: 'BPA Pipeline',    metric: '$2M',   label: 'Recovered revenue' },
+  { client: 'TechFlow',     tag: 'SaaS Automation', metric: '80%',   label: 'Ops time saved' },
+  { client: 'OmegaShop',    tag: 'Chatbot Deploy',  metric: '2.1x',  label: 'Conversion rate' },
+  { client: 'AutoVentures', tag: 'BPA Pipeline',    metric: '$2M+',  label: 'Revenue unlocked' },
 ]
 
 function Work() {

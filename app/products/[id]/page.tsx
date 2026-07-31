@@ -73,7 +73,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 One time setup ${product.setupPrice.toLocaleString()}
               </div>
               <div className="mt-6 space-y-2.5 border-t border-white/10 pt-5">
-                {[['Year 1 investment', `$${year1.toLocaleString()}`], ['Deployment', '48 hours'], ['Contract', 'Month to month']].map(([k, v]) => (
+                {[['Year 1 investment', `$${year1.toLocaleString()}`], ['Deployment', '14 days'], ['Contract', 'Month to month']].map(([k, v]) => (
                   <div key={k} className="flex justify-between text-sm">
                     <span className="text-[#FFFFFF]/60">{k}</span>
                     <span className="font-bold text-[#FFFFFF]">{v}</span>
