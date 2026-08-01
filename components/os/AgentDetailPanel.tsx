@@ -70,7 +70,7 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          Remove from Cart
+          Remove from shortlist
         </motion.button>
       ) : (
         <motion.button
@@ -79,13 +79,13 @@ export function AgentDetailPanel({ agent, isInCart, onAddToCart, onRemoveFromCar
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          Add to Cart
+          Add to shortlist
         </motion.button>
       )}
 
       {/* Info text */}
       <p className="text-xs text-[#FFFFFF]/55 text-center mt-4">
-        Selected agents combine into your custom automation stack.
+        Shortlisted capabilities get mapped to the AI role that covers them.
       </p>
     </motion.div>
   )
